@@ -1,0 +1,5 @@
+interface:
+  display_name: Loom Git Guardrails
+  short_description: Claude Code hook that blocks owner-reserved git commands
+policy:
+  allow_implicit_invocation: false

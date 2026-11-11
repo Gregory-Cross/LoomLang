@@ -1,0 +1,5 @@
+interface:
+  display_name: Wait What (Loom)
+  short_description: Re-explain the last message in plain words, with the decision needed
+policy:
+  allow_implicit_invocation: false

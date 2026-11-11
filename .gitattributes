@@ -1,0 +1,3 @@
+* -text whitespace=cr-at-eol
+# Sealed copy with one trailing-space line (line 78); kept byte-identical
+docs/design/HOW-WE-SPECIFY.md whitespace=cr-at-eol,-blank-at-eol

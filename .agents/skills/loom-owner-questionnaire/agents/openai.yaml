@@ -1,0 +1,5 @@
+interface:
+  display_name: Loom Owner Questionnaire
+  short_description: Plain-language owner decision questions with one recommendation each
+policy:
+  allow_implicit_invocation: false
