@@ -1,12 +1,16 @@
-# Record and binding rules, revision 1
+# Record and binding rules, revision 2
 
-PROPOSED — Exactly four substantial DRAFT contracts, bounded by G0180:13-16. These are proposed encodings consistent with the selected R5 constraints, not uniquely required encodings. Adoption: NONE. Full REC-D remains gated.
+PROPOSED — The four inherited substantial DRAFT contracts remain proposed encodings, bounded by G0180:13-16 and qualified below. REC-005 and REC-006 record only the selected OC-01 A and OQ1 A policies; they supply no chosen encoding or implementation. No adoption beyond the owner records; full REC-D remains gated.
 
 SOURCE — Aliases, raw pins and physical-line convention are in SOURCE_NAMESPACES.json and INPUT_BINDINGS.json. R8 evaluator contracts are cited by number only; their text is not incorporated or edited. G0178:1,18,99 supplies a bounded SOUND disposition with this exact qualification: “Exact paired rules/gaps closure passes; CHANGES matches a separately stated old hash; coverage preservation passes against the reverse-delta candidate; independent old coverage identity and the three unchanged-file comparisons are NOT DONE.” This is source-attributed review evidence, not full record readiness. PLAN:147-148,154 and the current bounded card delimit this authoring task.
 
+SOURCE — Current-round aliases: OC01_RECORD = owner-record-2026-11-11-oc-01-core-let.json; WEB_RECORD = owner-record-2026-11-11-web-oq1-oq3-a.json; ARCH_WEB = the pinned Claude Arch web-round REPORT.md; WEB_DIGEST = the pinned DIGEST.md/DIGEST.json. INPUT_BINDINGS.json binds their exact paths and raw hashes. The earlier aliases and exact G boundaries in REC-001–004 are inherited R1 source locators and historical drafting boundaries, not renewed owner waits or a prohibition on the selected core let. They are not new R2 source verification or acceptance.
+
+SOURCE / INFERENCE — The raw OC-01 owner line (SHA-256 1f991efbcb8fc133b6cd32fd85a499a88fbd65feb9071b4eccd8b705989e78d4) and web owner line (50069223960d1d4728f93e85dae978e195f17b3f1db7f15967540c4162570b43) match the records' session, timestamp and text. The first OC-01 raw line is a peer attachment, despite the record's intervening_human_lines label; it is not owner intent. Raw question lines were not supplied or read, and are not authenticated here. The recorded authorizes_only fields bound this disposition. OQ2/OQ3 concern evaluator rules; these record files select no further policy. Changed bytes reopen review.
+
 ## REC-001 — Counted binder and application shapes
 
-- revision: 1
+- revision: 2
 
 - standing: DRAFT — PROPOSED; no adoption or phase authority.
 
@@ -20,7 +24,7 @@ SOURCE — Aliases, raw pins and physical-line convention are in SOURCE_NAMESPAC
 
 - case: PROPOSED C01-C05: the representation `lam(2, b)` retains one written binder and differs structurally from `lam(1, lam(1, b))`; the comparison grants no admission to the latter placement. With checked count two, two supplied arguments agree and one does not. A missing checked count leaves a prerequisite missing. The zero-count case remains outside this bounded draft.
 
-- excludes: PROPOSED No added let alternative; no normalization that merges written grouped and nested binders; no inferred arity from an arbitrary function node's shape; no lam0 admission or blanket lam0 refusal. Full syntax, sort, literal, placement and use-once checks still apply.
+- excludes: PROPOSED No selected let-node encoding in this shape contract; REC-005 records the selected core-let scope policy; no normalization that merges written grouped and nested binders; no inferred arity from an arbitrary function node's shape; no lam0 admission or blanket lam0 refusal. Full syntax, sort, literal, placement and use-once checks still apply.
 
 - exact G boundary: SOURCE Checked positive parameter-count cases only. Keep existing symbol/literal fields abstract; no new `let` constructor, zero-variable-parameter admission, complete scalar/sequence codec, quotation policy or content-byte identity is supplied. Count consistency uses checked signature/parameter information.
 
@@ -50,7 +54,7 @@ SOURCE — Aliases, raw pins and physical-line convention are in SOURCE_NAMESPAC
 
 ## REC-003 — Matching value environments and closure capture
 
-- revision: 1
+- revision: 2
 
 - standing: DRAFT — PROPOSED; no adoption or phase authority.
 
@@ -64,7 +68,7 @@ SOURCE — Aliases, raw pins and physical-line convention are in SOURCE_NAMESPAC
 
 - case: PROPOSED C13-C19: entering [a,b] over [x] yields [a,b,x]. A closure capturing outer value 1, then receiving 2, reads outer index 1 and argument index 0 to return pair(1,2), even if the caller holds 9. A rule block [3,4] swapped by indices returns pair(4,3). Entering [7,8] over [1] gives pair(7,1) at indices 0 and 2. The abstract obtained-value fixture calls work once, stores its ordinary result v and reads pair(v,v) without a second work event; it introduces no core-let translation. Stored none is returned at a valid address. C20-C23 distinguish a missing environment from that value and retain a completed prefix when a later argument stops, with no entered argument block.
 
-- excludes: PROPOSED No storing unevaluated work, extending the caller environment in place of the captured environment, treating all stored fields as held, or runtime-environment validity from S1 alone. The tagged valid-address observation in the checker is a test aid, not a proposed evaluator result wrapper. No activation identity, full evaluator-value/Node/Symbol/function codec, continuation/Ask layout or fuel tariff is provided. There is no let execution rule here.
+- excludes: PROPOSED No storing unevaluated work, extending the caller environment in place of the captured environment, treating all stored fields as held, or runtime-environment validity from S1 alone. The tagged valid-address observation in the checker is a test aid, not a proposed evaluator result wrapper. No activation identity, full evaluator-value/Node/Symbol/function codec, continuation/Ask layout or fuel tariff is provided. This environment draft supplies no core-let execution encoding; REC-005 records the selected scope policy.
 
 - exact G boundary: SOURCE Rule entry, binder entry and capture must preserve a well-formed matching environment. An already supplied external context is ordered consistently with that environment; this does not choose its canonical external order. Only already obtained values are stored. No full evaluator-value codec, dynamic activation identity, complete control/continuation layout or fuel charge follows.
 
@@ -92,4 +96,48 @@ SOURCE — Aliases, raw pins and physical-line convention are in SOURCE_NAMESPAC
 
 - gaps: B02/B04-B09/U01-U05/L01; G6/G8-G12; O1; I01/I04/I05/I07.
 
-INFERENCE — The finite checks are author evidence only. CASES.json declares their expected results; verify_records.py recomputes them for this small abstract representation. No source-author/reviewer program or full core evaluator was run. GAPS-RECORDS.md retains every routed item; no gap is closed by these drafts.
+## REC-005 — Selected core-let scope; encoding remains open
+
+- revision: 1
+
+- standing: SOURCE — OC-01 A selected by OC01_RECORD; record encoding and checks remain PROPOSED or open. No broader adoption or phase authority.
+
+- kind: requirement
+
+- subject: the selected core let's relationship to its enclosing use-once scope
+
+- from: SOURCE OC01_RECORD authorizes_only and authenticated owner line; WEB_DIGEST F065/F087; inherited O1/B01/I06
+
+- text: SOURCE OC-01 A adds a core let whose body belongs to the enclosing use-once scope, so an ordinary computed value may be used beside an outside use-once value. The no-core-let/narrow-applied-binder refusal branch B and the no-core-let/change-every-applied-binder branch C are not selected. INFERENCE This settles O1's owner outcome only; it does not choose a Node alternative, field order, reader syntax, admission algorithm, evaluation encoding, charge or planner translation.
+
+- case: SOURCE / INFERENCE In O1's schematic f(h) = let y = work(); use(y,h), h is an outer use-once value and work yields an ordinary value: selected A allows the core-let enclosing-scope reading. This schematic is not a chosen concrete reader form or an executed implementation check. PROPOSED Keep a companion control distinguishing this selected core let from a general change to every applied binder.
+
+- excludes: SOURCE / INFERENCE No repeat owner ballot for the answered A/B/C outcome; no automatic applied-binder exception, lam0 admission, detached-quotation policy, planner inlining permission, equal-budget result or full observation proof.
+
+- authority boundary: SOURCE Only the outcome named by OC01_RECORD is selected. PROPOSED Complete faithful let representation, use-once checking, environment/activation preservation and planner obligations through author/reviewer work; any additional observable policy keeps its existing authority route.
+
+- gaps: B01/B02/B05/B07; G1/G6/G7/G9/G11/G13; O1; I01/I04/I05/I06/I07.
+
+## REC-006 — Selected fresh-production identity and reuse condition
+
+- revision: 1
+
+- standing: SOURCE — OQ1 A with Arch's condition selected by WEB_RECORD; representation remains open. No broader adoption or phase authority.
+
+- kind: requirement
+
+- subject: fresh use-once production, consumption identity, and result reuse justified from the same term node
+
+- from: SOURCE WEB_RECORD authorizes_only and authenticated owner line; ARCH_WEB OQ1; WEB_DIGEST OQ1/F002/purityfresh
+
+- text: SOURCE OQ1 A selects a fresh production name for each fresh result; one shared term node does not identify two executions' fresh results. A term may be computed once and its result reused only if all five conditions hold: it makes nothing new; it has no effect; it has no open choice; it consumes nothing use-once; and its result may be copied. State-freedom alone is insufficient. Consumption is counted by the fresh production's semantic identity, not by interned content. INFERENCE These names do not select a counter, concrete namespace, address, wire format or allocation algorithm; node equality does not itself establish the five conditions, execution reuse or cache validity.
+
+- case: SOURCE / INFERENCE ARCH_WEB section 2.2 contrasts make(1, 0) written twice (one node and two sequences, which same tells apart) and a constant of a use-once sort (the same case). PROPOSED Pair a copyable ordinary-result reuse control satisfying all five conditions with separate controls failing each condition. Track two fresh results with equal content as two identities, and retain the required fresh use-once result's obligation when it appears unused or execution later fails. These are proposed controls, not newly run programs or a complete small-term test.
+
+- excludes: SOURCE / INFERENCE No fresh-result sharing or deletion justified by identical code/content, no purity-only reuse test, no merging of consumption counts by interned content, no reuse of an unfinished or invalidated cache result, and no selected activation/capture/held codec. The five conditions are necessary here, not a complete optimizer licence.
+
+- authority boundary: SOURCE Only WEB_RECORD's OQ1 outcome and all five Arch conditions are selected. INFERENCE The fresh-production duty cannot be discharged by leaving the corresponding fresh result unmade (WEB_DIGEST F002); faithful matched-run, failure and held-account evidence remains owed.
+
+- gaps: B07/B09; G1/G4/G5; I02/I04/I07/I11.
+
+SOURCE / INFERENCE — R1's finite-check account is historical author evidence only: its CASES.json and verify_records.py belong to the R1 folder and were not reopened or rerun here. R2's author check covers preservation, structure and selected-policy/gap text only; all newly proposed semantic controls are NOT RUN. No source-author/reviewer program or full core evaluator was run. Every inherited technical gap remains; only the authenticated OC-01/OQ1 owner waits are answered. Changed source needs independent review.
