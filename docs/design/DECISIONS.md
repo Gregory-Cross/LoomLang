@@ -15,6 +15,7 @@ This is a register for finding decisions quickly. It holds no authority of its o
 | O3: outcome B for now (a catcher may not take back what a failed part held), on condition that reconsidering A is recorded (R-1 below) | `_relay\inputs\owner-record-2026-11-11-o3-b-for-now.json` | `c6d9a61211ca0f82cc42e30e6cc6220b9f24dea59265a6d9649439c730e68bef` |
 | The repository writer is Codex Y (Writer) | `_relay\inputs\owner-record-2026-11-11-repo-writer-codex.json` | `97b2a5db3180ae505fa109de9d0a425e205ae97a6b9f42e981a8cd51a7c4e8be` |
 | Writer commits go by sealed manifest and a fixed script run by Claude A | `_relay\inputs\owner-record-2026-11-11-writer-commit-route-option-1.json` | `0b2dd543ea1ba27b1324562ad157dace4f81ac416b08bb2a667e6093d2629908` |
+| Loop count O1 (E-22): outcome A, a loop with bound two records its counter 0 then 1 | `_relay\inputs\owner-record-2026-11-11-loop-o1-a-and-arch-fixes.json` | `13d39778c71193ec5f7396cc0f0dfb4bb8d64828e3bc7064d8961e15a861355f` |
 
 ## To reconsider
 
@@ -23,13 +24,13 @@ Each item names what was chosen for now, what was set aside, and when to put it 
 ### R-1. O3 outcome A: taking back what a failed part held
 
 - **Chosen for now:** B. A catcher may go on only if the failed part held nothing or handed it back in its result; otherwise the failure carries on with the value held and named.
-- **Set aside:** A. The catcher may take back what the failed part held, using a new trusted take operation and live-slot bookkeeping in compiled programs.
+- **Set aside:** A. For a caught failure whose unfinished work can never run again, the catcher may take back eligible values the failed part held, using a new trusted take operation, with failure-sort and compiled live-slot information at calls that may fail. Take cannot take functions or values of sorts the rule cannot name.
 - **Put A back to the owner when any of these happens:**
-  1. the declared-residue test of RECOVERY-A section 6 fails or is inconclusive;
+  1. the declared-residue test of RECOVERY-A revision 2, section 6, has run on its frozen fixtures, and an eligible positive encoding is refused by the present check, or a control is accepted with an independently supported wrong account, or a case needs a new operation in the reference run. A result that is unresolved or not run is reported to Claude A, and is not by itself a reason for A;
   2. real programs show that unplanned failures while holding live values are common;
   3. before any rule letting a catcher return after a failed part held a live value is drafted (handlers arrive in slice 2);
   4. at the latest, at the slice 2 review.
-- **Sources:** `2026-11-11-CLAUDE-ARCH-RECOVERY-A\REPORT.md` sections 5 to 7; the O3 owner record above.
+- **Sources:** `2026-11-11-CLAUDE-ARCH-RECOVERY-A-R2\REPORT.md` (SHA-256 `1d30b247ada934556e70330cc5f7d6b41646cf185336f804893614ccf99c222e`; revision 1 re-checked by Codex Q, card 0109, whose repairs revision 2 applies) sections 5 to 7; the O3 owner record above.
 
 ### R-2. The backend beyond generated C
 
