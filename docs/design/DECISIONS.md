@@ -16,6 +16,11 @@ This is a register for finding decisions quickly. It holds no authority of its o
 | The repository writer is Codex Y (Writer) | `_relay\inputs\owner-record-2026-11-11-repo-writer-codex.json` | `97b2a5db3180ae505fa109de9d0a425e205ae97a6b9f42e981a8cd51a7c4e8be` |
 | Writer commits go by sealed manifest and a fixed script run by Claude A | `_relay\inputs\owner-record-2026-11-11-writer-commit-route-option-1.json` | `0b2dd543ea1ba27b1324562ad157dace4f81ac416b08bb2a667e6093d2629908` |
 | Loop count O1 (E-22): outcome A, a loop with bound two records its counter 0 then 1 | `_relay\inputs\owner-record-2026-11-11-loop-o1-a-and-arch-fixes.json` | `13d39778c71193ec5f7396cc0f0dfb4bb8d64828e3bc7064d8961e15a861355f` |
+| OC-01: a core let whose body belongs to the enclosing use-once scope, so an ordinary computed value may be used beside an outside use-once value | `_relay\inputs\owner-record-2026-11-11-oc-01-core-let.json` | `110cb0c0e4e49f249f177787b48959213a01ebddaa5cc71fcdd30d0646599cae` |
+| OC-03: incoming naturals are uncapped, limited only by the run's paid resources | `_relay\inputs\owner-record-2026-11-11-oc-03-05-08.json` | `c34fb1638e8a9e6ae31780de7a406e876ea5fbfa47c0398097ffe448c2feab83` |
+| OC-05: local variables are numbered, so renaming one does not change a run's identity (clarified by the next record) | `_relay\inputs\owner-record-2026-11-11-oc-03-05-08.json` | `c34fb1638e8a9e6ae31780de7a406e876ea5fbfa47c0398097ffe448c2feab83` |
+| OC-05 to OC-09: the digest's recommendations: OC-05 numbering (B), OC-06 every declaration counts toward identity (Keep), OC-07 one fixed order of names for every run (A), OC-08 byte slice takes start and length (A), OC-09 reading one byte gives its number 0 to 255 (A) | `_relay\inputs\owner-record-2026-11-11-oc-05-09-recs.json` | `0cf0a56733dc371a76bf5808d36829de565bd7a7e3e63ccda55b9244f35c75c6` |
+| OC-10: length extends to bytes | `_relay\inputs\owner-record-2026-11-11-oc-10-and-reissue.json` | `f045d11030a4058ab80190f9c2f5c7d70ffb7c690a3a8f72d1ad10ebfd2a8e3c` |
 
 ## To reconsider
 
