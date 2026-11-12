@@ -47,7 +47,7 @@ PROPOSED. An item binds in one of three ways, told apart by what it means to con
 | Reasons, alternatives, the seven places it may be wrong, the tests of open questions, measurements | Decision records and prose | SOURCE `docs/adr/README.md` L7-L13 keeps rule, rationale and evidence apart |
 | Surface syntax | Nothing yet | Open: D L152 |
 
-**Rule and text can disagree, and neither wins silently.** PROPOSED: for what a program's run observes, a build is compared with the reference run's text at its recorded hash, as D L346 has it. A rule that the text is found to break is a defect report against the trusted base. If mending it changes the outcome of any deciding case, the owner decides; otherwise the reviewer confirms that no case moved. INFERENCE: this keeps D L375 (the text defines) and still gives a reviewer something to hold the text against.
+**Rule and text can disagree, and neither wins silently.** PROPOSED: for what a program's run observes, a build is compared with the reference run's text at its recorded hash, as D L346 has it. A rule that the text is found to break is a defect report against the trusted base. If mending it can alter any of the six things named under "a change needs rules and evidence" (what some program's run observes; what is admitted or refused; a row; a reading of evidence, and so a licence; a format or hash on which two builds or a replay must agree; the trusted base), the owner decides. The deciding cases are evidence for that question and never the whole of it: a mend that leaves every case where it was can still change the contract. Only where none of the six can change does the reviewer confirm, and the confirmation says why. INFERENCE: this keeps D L375 (the text defines) and still gives a reviewer something to hold the text against.
 
 **Writing the defining texts is specification, not implementation.** INFERENCE from D L346 and L375: if the reference run is the definition, then until it is written the definition does not exist, and it can't be checked by reading alone. The specification phase therefore needs one evaluator able to run it. I state this as a dependency only.
 
@@ -67,7 +67,7 @@ excludes  one request (L346 as written: one node, one run for each activation)
 
 - **ID.** An area and a number. It is never reused and carries no section number or position. SOURCE `docs/adr/001-specification-traceability.md` L14-L17: paths and section numbers are not durable identities. The new rules need a namespace apart from the pilot's 240 (N L11).
 - **Revision and hash.** The ID names the rule through its changes. Each revision has a hash of its binding fields (kind, subject, text, case, excludes). Evidence cites the ID and that hash. A retired rule keeps its ID with what replaced it.
-- **Kind.** Definition (says what a word means, and nothing conforms to it), requirement, or permission (what a planner or lowering may do, as in C4).
+- **Kind.** Definition, requirement, or permission (what a planner or lowering may do, as in C4). A definition says what a word or a form denotes, and by itself nothing conforms to it or breaks it. A sentence that says what a build must do with the thing defined is a requirement, with the build as its subject; it is written as its own rule, or as a marked clause of one. A caution addressed to a reviewer or an author is neither: it goes in a note beside the rule and is no part of what is checked.
 - **Subject.** The kind of thing that can conform: an evaluator build, a named text, a lowering, a writer of records, a build.
 - **Case and excludes.** One concrete input with the outcome the rule requires, and the nearest wrong outcome it rules out. SOURCE: the corrections already work this way; C13, C18, C22 to C25, C31, C32, C34, C36, C37 and C42 each carry a labelled case. INFERENCE: a rule with no case that a plausible wrong subject would fail can't be tested and can't be put to the owner. The excluded outcome is also the fault to seed (section 4) and option B on the owner's card.
 - **From.** Exactly one of four:
@@ -76,10 +76,10 @@ excludes  one request (L346 as written: one node, one run for each activation)
   - derived, naming the rules it follows from;
   - **gap**: the design does not say, and the specifier had to choose.
   
-  A gap rule can't be approved until a design amendment or an owner decision gives it one of the other three. INFERENCE: the count of gap rules is the honest measure of whether the design is final. D L832 reports that the trusted base "has grown each time a builder read it".
+  A gap rule can't be approved until a design amendment or an owner decision gives it one of the other three. INFERENCE: the count of gap rules is the count of gaps someone has recorded, and no more. It depends on how finely gaps are cut and on what has been looked at, and it cannot count an omission nobody has found. A report gives it beside what was covered, what was out of scope and what is unknown. A smaller count alone is not evidence of readiness. D L832 reports that the trusted base "has grown each time a builder read it".
 - **Standing.** Draft, working, approved, retired. Working is for a rule made from an item marked Open or TO BE TESTED. It names the test that settles it and what falls with it. SOURCE C L188-L190, L277: C22 is "the working rule", "not adopted", and "If a wrong term is accepted there, this item falls". The format has to hold a rule like that without pretending it is settled.
 
-A rule never names code, a test or evidence. Those name the rule (section 3).
+A rule never names code, a test or evidence. Those name the rule (section 3). A rule's own case is part of the rule and is written in it. A longer fixture that exercises the rule names the rule. If a rule cannot be read without a fixture, the fixture's deciding content belongs in the rule.
 
 ## 3. The links
 
@@ -215,7 +215,7 @@ INFERENCE: step 6 is the strongest check on the rules, and it is the design's ow
 
 ### Where the owner decides
 
-One question sorts it: **does the required outcome of some deciding case change, or does a new case need an outcome the design does not fix?** If yes, the owner decides. That gives:
+One question sorts it: **can a change alter any of the six things named under "a change needs rules and evidence", or does a new case need an outcome the design does not fix?** If yes, the owner decides. That gives:
 
 - a gap rule whose choice some program could observe;
 - two design items that give different outcomes on one case;
@@ -224,7 +224,7 @@ One question sorts it: **does the required outcome of some deciding case change,
 - a change to an approved rule that moves a case;
 - the line of proposal 6 itself.
 
-Where no case moves, Codex G (Spec Reviewer) confirms that and the owner is not asked. A gap that no program can observe, such as a field's name, is the lead specifier's choice, reviewed, with a line of record.
+Only where none of the six can change does Codex G (Spec Reviewer) confirm, saying why, and the owner is not asked. A gap whose resolution cannot change any of the six is the lead specifier's choice, reviewed, with a line of record.
 
 ### E's proposal 3, a reviewer's check shown able to fail: accept, changed
 
@@ -235,7 +235,7 @@ Changes:
 - **No pass mark.** SOURCE O L197: the answer's 90% has no support as a bar for us.
 - **The record says so.** Each run record lists its controls. A record with none reads in the ledger as ran, and not shown able to fail.
 
-**The smallest trial that would show it wrong.** On the first area reviewed, take ten rules and build each one's excluded alternative. If the checks already written refuse all ten, the step adds little and can drop to a sample. If most alternatives can't be made to run, keep it for requirement rules only.
+**The smallest trial that would show it wrong.** On the first area reviewed, take ten rules and build each one's excluded alternative. If the checks already written refuse all ten, that shows those ten rules' checks can fail. It does not show the step is redundant for other rules. The step may drop to a sample only under a stated policy: which rules are sampled, how often, and what finding restores the full step. A rule whose kind, area or check differs from the ten keeps the full step until its own alternative has been refused. If most alternatives can't be made to run, report that limit; it does not license dropping the step for other rules.
 
 ### E's proposal 5, the owner's one-page card: accept
 
