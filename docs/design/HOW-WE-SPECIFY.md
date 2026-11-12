@@ -144,19 +144,24 @@ kind         run | derivation | counterexample      (a review is a note, filed w
 row          what the result leans on, each by hash: the check, the oracle and what the oracle
              was built from, the generator, the tools
 controls     the wrong subjects this check was shown to refuse (section 4)
+counts       for a run over generated or enumerated inputs: generated, admitted, reached, compared
+transfer     where a model or a fixture was examined and not the rule's subject: the account that
+             carries the result to that subject; or "none"
 assumptions  what was used and not discharged
 who          producer, reviewer
              (no status field: status is read)
 ```
 
-Two fields go beyond E's list.
+Four fields go beyond E's list.
 
 - **The statement, with its scope.** SOURCE D L251: "a claim never says more than its statement." Without this field, "evidence for rule R" always claims the whole rule. The record of C22's test is the model: it says what ran and then "Not covered: the whole language, handlers beyond small fixed cases, sort indices, and lowering" (C L267-L277).
 - **What the oracle was built from:** the rule's text, a design item, another implementation, or the subject itself. INFERENCE: two programs written apart are not two readings written apart. Every lane reads the same rule, and no record can show a rule that all of them misread alike. What this field does catch is a test derived from the code it tests.
+- **The four counts,** for a run over generated or enumerated inputs. Generated: the distinct inputs made. Admitted: those that passed every check standing before the thing under test. Reached: those whose run got as far as the thing under test. Compared: those whose outcome was set against the oracle's and given a verdict. Each count is at most the one before it. The statement's scope is the compared set and no larger one. For a comparison of agreement with the reference run, fuel exhaustion alone gives no verdict and does not count the input as compared. A mismatch already established by the completed prefix counts as a comparison for disagreement and is never erased by a later fuel cut; only the uncompleted remainder is inconclusive. A compared count of 0 has checked nothing, whatever the command returned. The record gives the main reason for the largest drop. A control is a run and gives its own four. A record of such a run without them reads in the ledger as ran, population not shown. This applies to records written from now on; an earlier record is not edited.
+- **The transfer account.** Where what was examined is a model on paper, a model in another language or a finite fixture, and not the subject the rule names, the record's subject is that model, by hash, and its statement says so. The record then gives the account that carries the result to the named subject, or says `none`. An account names the subject by its kind, and by its hash once it exists; says which part of the model answers to which part of the subject; and puts every step it does not show among the record's assumptions. The account is not evidence of its own steps: a step counts only where a record of its own shows it. With `none`, the record is a result about the model: it can show a rule's text wrong or its case consistent, and it is no evidence that any subject conforms. With an account, the ledger shows the record under the named subject as a model result with its open assumptions, and never as a plain yes while one is open. A model that serves as the oracle for a real subject needs no account: the subject is what ran, and the model is in the row. This applies to records written from now on; an earlier record is not edited.
 
 E's "two verdicts resting on one oracle count once" becomes: a reading counts distinct rows, not records.
 
-**The smallest trial that would show it wrong.** Write these records for the three lanes' tests of C22 (C L264-L273: one lane's census, and another's recount "with its own program"). It fails if a field can't be filled from the packages as delivered, if the record loses something the HANDOFF says that a reader needs, or if two records with different rows turn out to share a source the row did not show.
+**The smallest trial that would show it wrong.** Write these records for the three lanes' tests of C22 (C L264-L273: one lane's census, and another's recount "with its own program"). It fails if a field can't be filled from the packages as delivered, if the record loses something the HANDOFF says that a reader needs, or if two records with different rows turn out to share a source the row did not show. For this trial on packages delivered before the counts and transfer fields were required, record missing counts or transfer information as absent; their absence alone does not fail the trial or enlarge what the earlier evidence shows.
 
 ### How the links run
 
@@ -275,11 +280,13 @@ INFERENCE: the design's answer is the row. A derivation's row lists the laws it 
 PROPOSED, the widening: one short list for each kind of evidence, of how a yes says less than it seems. Ours so far, each from a source in front of me:
 - a command that returns success having checked nothing (N L17);
 - no test selected (AGENTS.md: "missing or zero selections fail");
-- a run cut short by fuel read as a pass. It "shows neither agreement nor disagreement" (C37, L586-L587);
+- a run cut short by fuel read as agreement, or as erasing a mismatch already established by its completed prefix; only the part not yet compared is inconclusive;
 - a checker that accepts everything (D L396; C29);
 - a table fitted to answers, checked in place of the operation that gave them (C30);
 - a damaged certificate that is still valid, counted as one that must be refused (C29, L442-L444);
-- INFERENCE: a generator whose inputs are mostly refused before the comparison runs, and two builds made from one source.
+- a generator whose inputs are mostly refused before the comparison runs; the record's four counts show it (section 3);
+- a result on a model read as a result on the subject it models; the record's transfer account is the answer (section 3);
+- INFERENCE: two builds made from one source.
 
 **Trial:** E's. Seed each Lean trick once in a small file and see whether the review catches it.
 
