@@ -21,6 +21,7 @@ This is a register for finding decisions quickly. It holds no authority of its o
 | OC-05: local variables are numbered, so renaming one does not change a run's identity (clarified by the next record) | `_relay\inputs\owner-record-2026-11-11-oc-03-05-08.json` | `c34fb1638e8a9e6ae31780de7a406e876ea5fbfa47c0398097ffe448c2feab83` |
 | OC-05 to OC-09: the digest's recommendations: OC-05 numbering (B), OC-06 every declaration counts toward identity (Keep), OC-07 one fixed order of names for every run (A), OC-08 byte slice takes start and length (A), OC-09 reading one byte gives its number 0 to 255 (A) | `_relay\inputs\owner-record-2026-11-11-oc-05-09-recs.json` | `0cf0a56733dc371a76bf5808d36829de565bd7a7e3e63ccda55b9244f35c75c6` |
 | OC-10: length extends to bytes | `_relay\inputs\owner-record-2026-11-11-oc-10-and-reissue.json` | `f045d11030a4058ab80190f9c2f5c7d70ffb7c690a3a8f72d1ad10ebfd2a8e3c` |
+| Web-round questions: OQ1 a term may be computed once and its result reused only if it makes nothing new, has no effect or open choice, consumes nothing use-once, and its result may be copied; OQ2 byte positions start at zero; OQ3 a memo call that reaches its own unfinished key runs on under ordinary fuel (no reuse of an unfinished result) | `_relay\inputs\owner-record-2026-11-11-web-oq1-oq3-a.json` | `a0d5d57eda178a25141c24284bc12cd5c41519bf38fc9e12a8692b9c319a830d` |
 
 ## To reconsider
 
@@ -36,10 +37,20 @@ Each item names what was chosen for now, what was set aside, and when to put it 
   3. before any rule letting a catcher return after a failed part held a live value is drafted (handlers arrive in slice 2);
   4. at the latest, at the slice 2 review.
 - **Sources:** `2026-11-11-CLAUDE-ARCH-RECOVERY-A-R2\REPORT.md` (SHA-256 `1d30b247ada934556e70330cc5f7d6b41646cf185336f804893614ccf99c222e`; revision 1 re-checked by Codex Q, card 0109, whose repairs revision 2 applies) sections 5 to 7; the O3 owner record above.
+- **Status (2026-11-11):** the section 6 test has run (Codex S, card 0023) and was reviewed SOUND (Codex Q, card 0112): trigger 1 has not fired. Two callback probes stayed unresolved and are reported; how often real programs meet the unrecovered failure is still unmeasured.
 
 ### R-2. The backend beyond generated C
 
 - **Chosen for now:** generated C, for the first compiled demo.
 - **Set aside:** Cranelift, LLVM, or an emitter of our own.
-- **Put back to the owner when:** the C route's qualification fails at a stage; a run-time build in slice 2 proves too costly under C; or slice 5's second target is planned.
-- **Sources:** `2026-11-11-CLAUDE-ARCH-BACKEND-TRIAGE-R2\REPORT.md`; the C-route plan revisions.
+- **Put back to the owner when:** the C route's qualification fails at a stage; a run-time build in slice 2 proves too costly under C; slice 5's second target is planned; builds during a run must be fast enough to edit code live; Loom is to choose its own instructions with evidence enough to drop the C compiler as a trusted part; programs need speed the C compiler cannot give; or the design's two independent evaluator builds (D-TB-1) would both have to pass through the same C compiler.
+- **Known limits of generated C** (keep these in view; each is a reason the question may come back):
+  1. **Trust.** The C compiler and Loom's lowering to C stay named as trusted. Checking generated programs is finite evidence, not a proof of the whole translation. Reducing that trust later needs a verified compiler or a proved emitter of our own.
+  2. **Pausing and resuming.** C has no built-in way to pause a computation and resume it later. Slice 2's effects with handlers need it, so the runtime must keep its own frames on the heap or switch stacks, which differs by platform.
+  3. **Building during a run.** It needs a C compiler on the machine where the program runs, and each build takes a noticeable fraction of a second: too slow for live editing.
+  4. **Discipline.** Printed C must stay inside a small checked part of C, and floating point needs exact settings wherever it runs.
+  5. **No guaranteed tail calls.** Deep recursion meets the depth guard instead; its clean stop is not yet qualified.
+  6. **Porting.** A new target machine needs more than recompiling the C: its calling convention, machine theory and decoder, stack handling, object and loader support, and a qualified toolchain.
+  7. **Self-hosting.** A Loom-written compiler can be built through C, but the result still needs a C compiler, and the Rust runtime until separate runtime work replaces it. Equal output over bootstrap rounds is a reproducibility check, not proof.
+- **What carries over to a second backend:** Loom's checked low-level form, the runtime, the test harness, the decoder and the loader. Only the C printer and the C subset checker would be left behind.
+- **Sources:** `2026-11-11-CLAUDE-ARCH-BACKEND-TRIAGE-R2\REPORT.md`; `2026-11-11-CLAUDE-ARCH-C-ROUTE-QUALIFICATION-R2\REPORT.md` section 9 (SHA-256 `5eee70871baf549aa692550f37f3a77cd7994d0bd5417a6109978664bc8ac7b2`; reviewed SOUND by Codex C, card 0539).
