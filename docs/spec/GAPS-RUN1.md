@@ -2,7 +2,7 @@
 
 INFERENCE — Fifteen bounded gap entries accompany the four contracts: the fourteen original groups RG-001–RG-014 and the reserved C4 question RG-015. These are unfinished work, not fifteen owner ballots. The morning questions are PROPOSED plain-language prompts; no answer, protocol, field or outcome is selected. An explicitly open branch stops there while independent transcription continues. Full operational RUN1 and C5 readiness are NOT ESTABLISHED.
 
-SOURCE — The exact source is R12 in INPUT_BINDINGS.json. PLAN:16–20 requires no overnight adoption, continued work on independent chains and a different reviewing lane. CARD:23–25 requires gaps wherever R12 leaves an outcome open. The leaf INTERFACE-GAPS files are advisory author assistance; the primary checked the decisive source passages and synthesized the disposition below.
+SOURCE — This draft carries the inherited R12 source account and later repairs explicitly citing R13; each citation uses the named revision's one-based physical lines. PLAN:16–20 requires no overnight adoption, continued work on independent chains and a different reviewing lane. CARD:23–25 requires gaps wherever R12 leaves an outcome open. The leaf INTERFACE-GAPS files are advisory author assistance; the primary checked the decisive source passages and synthesized the disposition below.
 
 ## RG-001 — State and transition representation
 
@@ -48,7 +48,7 @@ INFERENCE — Open interface outcome; **do not assign a concrete carrier or encl
 
 ## RG-006 — Ask records, reply provenance and host completion
 
-SOURCE — R12:408,597,599 leaves request/reply records, instantiated result-sort/index-context encoding, activation/identity, continuation, host completion, reply provenance/projections and system-call model open. One request takes one admitted reply. In slice 1, a refused attempt leaves the same asked request/continuation and permits retry or host ending. A never-answered request remains asked/waiting; it does not erase an established mismatch. The host's ability to end the run supplies no complete host-end outcome mapping.
+SOURCE — R12:408,597,599 leaves request/reply records, instantiated result-sort/index-context encoding, activation/identity, continuation, host completion, reply provenance/projections and system-call model open. One request takes one admitted reply. In slice 1, a refused attempt leaves the same asked request/continuation and permits retry or host ending. In slice 1, a never-answered request remains asked/waiting; it does not erase an established mismatch. The host's ability to end the run supplies no complete host-end outcome mapping.
 
 PROPOSED morning question: What records tie each accepted reply to its request, and what completion is reported when the host chooses to end an asked run?
 

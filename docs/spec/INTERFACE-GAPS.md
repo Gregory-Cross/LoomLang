@@ -111,7 +111,7 @@ INFERENCE classification: TECHNICAL_INTERFACE_PREPARATION_WITH_OPEN_COMPLETION. 
 
 SOURCE: R12:408 (D-TR-16); R12:597 (D-RUN-8 / GAP 7); R12:599 (D-RUN-9); ROW:98-104 (ROW1-004); REC:67-75 (REC-003).
 
-Known boundary: One request takes one admitted reply. In slice 1, a refused reply cannot resume the run; the same request and continuation remain asked and the refused attempt is recorded. An unanswered request remains waiting, without erasing an established mismatch.
+Known boundary: One request takes one admitted reply. In slice 1, a refused reply cannot resume the run; the same request and continuation remain asked and the refused attempt is recorded. In slice 1, an unanswered request remains waiting, without erasing an established mismatch.
 
 Morning question: What request/reply, context, provenance and completion interfaces let the host retry or end an asked run, and let comparison bind each admitted reply to exactly one request?
 
