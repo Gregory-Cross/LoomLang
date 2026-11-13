@@ -1,6 +1,6 @@
 # PROPOSED store rules, revision 2: the store in slice 1
 
-INFERENCE — DRAFT. Nineteen rules, STO-001 to STO-019. They transcribe six passages of design text R13: D-STO-1, D-STO-2, the first row of D-STO-3's table (the row of a node), D-TM-1, D-REC-3 and D-REC-4. Nothing here is reviewed, adopted or approved. No rule chooses anything R13 leaves open.
+INFERENCE — DRAFT. Nineteen rules, STO-001 to STO-019. They transcribe six passages of design text R13: D-STO-1, D-STO-2, the first row of D-STO-3's table (the row of a node), D-TM-1, D-REC-3 and D-REC-4. Nothing here is reviewed, adopted or approved. PROPOSED — Only the marked DRAFT TM-A requirement in STO-010 supplies a provisional restriction for SG-009; it is held for owner confirmation. [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A]
 
 SOURCE — R13 is `DESIGN-TEXT-R13.md`, SHA-256 `20c980f9bdeefe1e84320c50f444bb75ef18f2b96f2b7eadb6c5dd29722444ce`. Each rule's "from" names an R13 anchor. A line number beside an anchor is a physical line of that file and is a locator only. R13's own tag for the words is kept beside each rule. R13 itself waits on an independent review.
 
@@ -139,16 +139,16 @@ PROPOSED — Cases use small invented symbols such as `double`, `zero` and `even
 
 ## STO-010 — A term is an expression over theories, stored as a shared graph
 
-- revision: 1
-- binding-sha256: bc70e0a338b74334406cabf579522363927c5201bbc5159c25216f8ab2504918
+- revision: 3
+- binding-sha256: c9ef04d77ff2c15cfb60a6f8bfea294964d43290b3c5cc8ab35acd9c864c9276
 - standing: draft
-- kind: definition
-- subject: a term in the store
-- from: SOURCE R13 D-TM-1 (line 172), first sentence. R13 tag: `D L66 | kept`.
-- text: A term is an expression over theories. It is stored as a shared graph.
-- case: The term `pair(double(zero), double(zero))` has two arguments that are the same expression. In the store they are one node, reached from the pair at two places.
-- excludes: Storing a term as a tree in which each occurrence of an equal part is a separate copy.
-- gaps: SG-009 (direct term-constructor cycles, awaiting clarification/decision). Counting sites along paths of the shared graph remains the use-once rules' D-UO-2 obligation.
+- kind: definition; PROPOSED marked requirement for TM-A (standing: DRAFT) [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A]
+- subject: a term in the store; for the marked TM-A requirement, a term constructor or a reader of a described term [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A]
+- from: SOURCE R13 D-TM-1 (line 172), first sentence. R13 tag: `D L66 | kept`. PROPOSED — gap SG-009 for the marked TM-A requirement; [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A].
+- text: A term is an expression over theories. It is stored as a shared graph. PROPOSED — Marked requirement (standing: DRAFT): no term is among its own parts directly, with no name in between. Reference by a name stays, as a definition names itself or a group of definitions name each other (D-REC-4). [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A]
+- case: The term `pair(double(zero), double(zero))` has two arguments that are the same expression. In the store they are one node, reached from the pair at two places. PROPOSED — Marked TM-A case (DRAFT; paper description only): in n = app(n, zero), n labels a described node rather than a declared or defined symbol; a constructor edge returns to that node directly, with no name in between. Under the marked requirement this description is refused. [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A] No record bytes are supplied, and no looping record is admitted or refused in a run on this answer.
+- excludes: Storing a term as a tree in which each occurrence of an equal part is a separate copy. PROPOSED — The marked TM-A case excludes treating the direct self-part description as an admitted term under this DRAFT requirement. Reference by a name is outside this exclusion: a definition may name itself or a group of definitions may name each other (D-REC-4; STO-019). [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A] This is no result from a run.
+- gaps: SG-009 remains OPEN; TM-A is provisional and awaits owner confirmation. [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A] No record bytes, rejection algorithm or runtime admission/refusal is fixed on this answer. Counting sites along paths of the shared graph remains the use-once rules' D-UO-2 obligation.
 
 ## STO-011 — Equal terms are one node
 

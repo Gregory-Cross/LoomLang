@@ -8,7 +8,7 @@ INFERENCE — "Holds it" means a rule states the sentence, or a gap records what
 |---|---|---|---|---|---|
 | 1 | D-TH-1, 91 | "A theory is a vocabulary: sorts, operations, laws and rules." | kept | TERM-001 | TG-002, TG-005, TG-008, TG-012 |
 | 2 | D-TH-1, 91 | "The integers, a mutable store, a logic, an instruction set and a file format are all theories." | kept | TERM-002 | none |
-| 3 | D-TH-2, 93 | "A sort may be indexed by terms, as in a vector of length n." | kept | TERM-003 | TG-001, TG-011 |
+| 3 | D-TH-2, 93 | "A sort may be indexed by terms, as in a vector of length n." | kept | TERM-003 (permission unchanged; one marked provisional I-A restriction, standing DRAFT) | TG-001; TG-011 OPEN pending owner confirmation, timing/fuel/repeated-read rules still owed. PROPOSED — [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A] |
 | 4 | D-TH-3, 95 | "An operation may bind variables." | fold | TERM-004 | none |
 | 5 | D-TH-3, 95 | "A bound argument carries a multiplicity, declared in the operation's signature: how many times the operation calls it." | fold | TERM-005 (it is declared in the signature), TERM-006 (what it says) | TG-004, TG-010 |
 | 6 | D-TH-3, 95 | "It is one or any." | fold | TERM-007 | TG-003 |

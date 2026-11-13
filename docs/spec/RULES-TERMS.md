@@ -1,6 +1,6 @@
 # Terms and theories rules, revision 2, part 1
 
-INFERENCE — DRAFT. Twelve rules, TERM-001 to TERM-012. They transcribe five passages of design text R13: D-TH-1, D-TH-2, D-TH-3, D-TH-4 and D-TH-6. Nothing here is reviewed, adopted or approved. No rule chooses anything R13 leaves open. Part 2 (D-TH-5 and D-TH-7) is a later card.
+INFERENCE — DRAFT. Twelve rules, TERM-001 to TERM-012. They transcribe five passages of design text R13: D-TH-1, D-TH-2, D-TH-3, D-TH-4 and D-TH-6. Nothing here is reviewed, adopted or approved. PROPOSED — TERM-003 alone carries the marked provisional I-A restriction beside TG-011; all other rules choose nothing R13 leaves open. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A] Part 2 (D-TH-5 and D-TH-7) is a later card.
 
 SOURCE — R13 is `DESIGN-TEXT-R13.md`, SHA-256 `20c980f9bdeefe1e84320c50f444bb75ef18f2b96f2b7eadb6c5dd29722444ce`. Each rule's "from" names an R13 anchor. A line number beside an anchor is a physical line of that file and is a locator only. R13's own tag for the words is kept beside each rule. R13 itself waits on an independent review.
 
@@ -38,15 +38,15 @@ SOURCE — Slice 1 has no quotation form. [register: `2026-11-12-CODEX-F-REGISTE
 
 ## TERM-003 — A sort may be indexed by terms
 
-- revision: 1
+- revision: 3
 - standing: draft
 - kind: permission
 - subject: the declaration of a sort
-- from: SOURCE R13 D-TH-2 (line 93). R13 tag: `D L17 | kept`.
-- text: A sort may be indexed by terms.
-- case: A theory declares the sort `vector` with one index, a length n. The declaration is a sort declaration of the language. R13's own example is "a vector of length n".
-- excludes: A language in which no sort can carry an index, so that the length of a vector cannot appear in its sort.
-- gaps: TG-001 (whether slice 1 admits an indexed sort, and how two index terms are compared); TG-011 (what an index term may be).
+- from: SOURCE R13 D-TH-2 (line 93). R13 tag: `D L17 | kept`. PROPOSED — The marked restriction below is from gap TG-011 under [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A].
+- text: A sort may be indexed by terms. PROPOSED — Marked restriction (standing: DRAFT; kind: requirement; subject: an index term admitted for a sort): A plain index only: it may depend on earlier arguments, has no effect or open choice, makes and consumes no use-once value or sequence, and gives a result that may be copied. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A]
+- case: A theory declares the sort `vector` with one index, a length n. The declaration is a sort declaration of the language. R13's own example is "a vector of length n". PROPOSED — Restriction case (invented notation): probe is declared effectful; vector(probe(n)) is proposed as an indexed sort, with n an earlier ordinary argument. The proposed index is refused for the effect premise alone; this case runs no computation and chooses no timing or charge. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A]
+- excludes: A language in which no sort can carry an index, so that the length of a vector cannot appear in its sort. PROPOSED — Restriction excludes: admitting the proposed vector(probe(n)) index despite probe being declared effectful. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A]
+- gaps: TG-001 (whether slice 1 admits an indexed sort, and how two index terms are compared); TG-011 (what an index term may be). PROPOSED — TG-011 remains OPEN pending owner confirmation; timing, fuel and repeated reads of an index still need rules under either answer. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A]
 
 ## TERM-004 — An operation may bind variables
 

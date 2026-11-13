@@ -1,6 +1,6 @@
 # Terms and theories gaps, revision 2, part 1
 
-INFERENCE — Twelve gaps, TG-001 to TG-012. Each is a place where R13 does not say what a rule of `RULES-TERMS.md` would need. Each gives a case and two candidate outcomes with what each would cost. **None is chosen.** TG-001 to TG-006 are the gaps found in five short passages. TG-007 to TG-012 register six design choices that Codex G's ruling on an outside critique found to need a decision (its H2 and H4 to H8); each gives Codex G's statement of the choice word for word. Twelve is a count of what has been found. It is not a claim that there are no others.
+INFERENCE — Twelve gaps, TG-001 to TG-012. Each is a place where R13 does not say what a rule of `RULES-TERMS.md` would need. Each gives a case and two candidate outcomes with what each would cost. **None is owner-confirmed.** PROPOSED — TG-011 carries the provisional I-A restriction only, remains OPEN, and changes none of the other gaps. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A] TG-001 to TG-006 are the gaps found in five short passages. TG-007 to TG-012 register six design choices that Codex G's ruling on an outside critique found to need a decision (its H2 and H4 to H8); each gives Codex G's statement of the choice word for word. Twelve is a count of what has been found. It is not a claim that there are no others.
 
 SOURCE — R13 is `DESIGN-TEXT-R13.md`, SHA-256 `20c980f9bdeefe1e84320c50f444bb75ef18f2b96f2b7eadb6c5dd29722444ce`. Lines are physical lines of that file.
 
@@ -151,13 +151,14 @@ SOURCE — Two of these are questions already sent to Claude Arch: QA-13 and QA-
 - what R13 has: A sort may be indexed by terms. A sort's signature gives the sorts of its indices.
 - what is not stated: Whether an index term may perform an effect, consume a use-once value, or depend on another argument.
 - touches: TERM-003.
-- case: A sort is indexed by a term that reads a use-once value, or by a term that performs an effect.
+- provisional answer (PROPOSED; not owner-confirmed): A plain index only: it may depend on earlier arguments, has no effect or open choice, makes and consumes no use-once value or sequence, and gives a result that may be copied. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A]
+- case: A sort is indexed by a term that reads a use-once value, or by a term that performs an effect. PROPOSED — This compares the historical alternatives; the marked I-A requirement and its deciding effectful-index case are TERM-003, pending owner confirmation. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A]
   - outcome A: Such index terms are permitted.
   - outcome B: Such index terms are refused.
   - cost of A: Rules for the fuel that admission spends on them, for their scope, and for who owns what they consume.
   - cost of B: Stated limits, and programs that are refused.
-- choice as Codex G states it: Claude Arch should permit effectful/use-once or dependent index terms, costing admission fuel, scope and ownership rules, or restrict them, costing explicit restrictions and rejected programs; TG-001 stays open and neither policy is selected.
-- closes when: Claude Arch's answer is reviewed and the design text takes it. Open; routed by Claude A. Neither outcome is selected here. It stands beside TG-001, which stays open.
+- choice as Codex G states it: Claude Arch should permit effectful/use-once or dependent index terms, costing admission fuel, scope and ownership rules, or restrict them, costing explicit restrictions and rejected programs; TG-001 stays open and neither policy is selected. PROPOSED — The unselected wording here records Codex G's historical alternatives; the I-A answer above is provisional only and this gap remains OPEN. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A]
+- closes when: Claude Arch's answer is reviewed, the owner confirms it and the design text takes it. OPEN; routed by Claude A. PROPOSED — I-A is provisional only; timing, fuel and repeated reads of an index still need rules under either answer. TG-001 stays open. [provisional: Claude Arch under the owner's overnight record, card 0117, question I: I-A] [P0117:I-A]
 
 ## TG-012 — The order of a theory's declarations, and two declarations with one name (Codex G's H8)
 

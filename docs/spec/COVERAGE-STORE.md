@@ -18,7 +18,7 @@ INFERENCE — "Rule here" is a rule of `RULES-STORE.md`. "Cited" is a rule writt
 | 10 | D-STO-3, 504 | "The queries." | agreed | STO-008 | none | none |
 | 11 | D-STO-3, 508 | The table's first row, four cells: "Row of a node"; "The polynomial; its symbols; its reading under a bound"; "A kernel program"; "Yes" | agreed | STO-008 (what it returns), STO-009 (who answers; it can license) | none | SG-003 |
 | 12 | D-STO-3, 509 to 518 | The table's ten other rows, from "Status of a claim at a site" to "Find a value that satisfies a predicate" | agreed; two rows approved | no rule and no gap here | none | none here: outside SC-09's named scope; no first-needed slice is established here; QA-20 remains open for the uses result |
-| 13 | D-TM-1, 172 | "A term is an expression over theories, stored as a shared graph." | kept | STO-010 | none | SG-009 |
+| 13 | D-TM-1, 172 | "A term is an expression over theories, stored as a shared graph." | kept | STO-010; PROPOSED marked requirement, standing: DRAFT [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A] | none | SG-009 OPEN, owner confirmation pending; no record bytes or runtime admission/refusal fixed |
 | 14 | D-TM-1, 172 | "Equal terms are one node." | kept | STO-011 | EV-003 beside it | SG-001 |
 | 15 | D-TM-1, 172 | "A defined symbol is identified by its content, a declared symbol by its declaration, and a term by its structure with binders made nameless." | kept | STO-012, STO-013, STO-014 | REC-002 for the numbering | SG-001, SG-004 |
 | 16 | D-TM-1, 172 | "Programs, proofs, data and machine code are terms." | kept | STO-015 | none | none |

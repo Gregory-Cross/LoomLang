@@ -1,6 +1,6 @@
 # PROPOSED store gaps, revision 2
 
-INFERENCE - Nine proposed gap entries, SG-001 to SG-009, against the pinned R1 inventory. SG-001 to SG-006 retain their source-qualified scope; SG-007 and SG-008 record newly identified interface boundaries; SG-009 records the cycle-admission question awaiting Claude Arch and, if it changes the admitted domain, the owner. No outcome is selected. This count describes the inspected scope, not completeness of the language.
+INFERENCE - Nine proposed gap entries, SG-001 to SG-009, against the pinned R1 inventory. SG-001 to SG-006 retain their source-qualified scope; SG-007 and SG-008 record newly identified interface boundaries; SG-009 remains OPEN with only the marked provisional TM-A answer, held for owner confirmation; no final outcome is selected. [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A] This count describes the inspected scope, not completeness of the language.
 
 SOURCE — R13 is `DESIGN-TEXT-R13.md`, SHA-256 `20c980f9bdeefe1e84320c50f444bb75ef18f2b96f2b7eadb6c5dd29722444ce`. Lines are physical lines of that file.
 
@@ -106,13 +106,15 @@ SOURCE — Two of these are questions already sent to Claude Arch: QA-26 and QA-
 - boundary: Answer ordering/absence bytes remain SG-001. D-STO-2's ambiguity-triggered rerun remains required; this gap chooses neither eager/lazy scheduling nor a mandatory positive cache hit.
 - closes when: Claude Arch specifies the eligible reuse context and its representation; any new semantic reading or shared format follows the applicable owner route.
 
-## SG-009 - Direct cycles in admitted term-constructor edges (PROPOSED; NEEDS A DECISION)
+## SG-009 - Direct cycles in admitted term-constructor edges (PROPOSED; OPEN; TM-A provisional; owner confirmation pending) [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A]
 
 - anchor: D-TM-1 shared terms; D-REC-1's shape under GAP 5; D-REC-4's separate named-recursion proposal.
-- case: A builder offers n = app(n, zero), a direct constructor cycle rather than recursion through a named symbol.
+- provisional answer (PROPOSED; standing: DRAFT): no term is among its own parts directly, with no name in between. Reference by a name stays, as a definition names itself or a group of definitions name each other (D-REC-4). [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A] The marked requirement is STO-010. Codex G's limit stands (card 0227): it is a revisable draft and no baseline. Nothing may fix record bytes, or admit or refuse a looping record in a run, on this answer.
+- case: A builder offers n = app(n, zero), a direct constructor cycle rather than recursion through a named symbol. PROPOSED — Its TM-A expected refusal is only the marked paper case in STO-010. [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A]
   - candidate A: Admitted term-constructor edges must be well founded; specify the existing/intended admission invariant and its check/resource obligation.
   - candidate B: Such direct cycles are admitted; specify their identity, quotation, traversal, encoding and resource behavior.
   - costs: A requires the well-foundedness boundary and its validation. B requires cycle-aware semantics and a faithful codec; a group-hash proposal for named symbols does not by itself supply these.
-- closes when: Claude Arch confirms the intended admitted grammar; the owner decides any change to that domain. No cycle acceptance, rejection algorithm, graph order or byte profile is chosen here.
+- closes when: the owner confirms TM-A or changes the answer, and the intended admitted grammar and its required review are settled. Until then SG-009 is OPEN and the marked STO-010 requirement stays DRAFT. [provisional: Claude Arch under the owner's overnight record, card 0117, question TM: TM-A] [P0117:TM-A] No rejection algorithm, graph order or byte profile is chosen, and no looping record is admitted or refused in a run on this answer.
+- legacy unmarked dependencies (INFERENCE): The committed files written before tonight also need reading under TM-B: RULES-TERMS.md TERM-012 (147–159, continuation-site counting at154–155); RULES-STORE.md STO-014 (192–204, structural identity with nameless binders at200–201); RULES-RECORDS.md REC-002 (43–64, constructor-child depth-first numbering at55) and REC-004 (87–107, exact-once pattern depth-first walk and lexical checks at99); RULES-EVALUATOR.md EV-047 (859–870, whole-body inspection at866) and EV-121 (1756–1767, closure-wide forbidden-role scan at1763). A reversal needs accounts and deciding cases for constructor-cycle site counts, structural identity and binders, numbering, and syntactic scanning respectively; the old texts supply no direct-constructor-cycle account. These older unmarked accounts are not undone by searching the new mark: the named rules must be read under the owner's answer. Named-symbol recursion remains separate. This bounded inventory of supplied files fixes no record bytes, algorithm or runtime admission/refusal. [P0117:TM-A]
 
 END OF GAPS-STORE
