@@ -1,0 +1,385 @@
+[
+  {
+    "id": "S-SEQ-01",
+    "label": "PROPOSED",
+    "findings": [
+      "H1",
+      "C3",
+      "4A.1"
+    ],
+    "case": "Matched initial contents of the corresponding reachable input sequence, no host request and no use-once values: write(s,0,7); none versus none. Include two aliases of s; do not run the second case on the first case's already mutated physical object.",
+    "expected": "A checked dropped change violates the sequence obligation. With its checking absent, the comparison is incomplete, never full agreement.",
+    "status": "NOT RUN; fresh Codex S case required after P01 is drafted and source-bound."
+  },
+  {
+    "id": "S-SEQ-02",
+    "label": "PROPOSED",
+    "findings": [
+      "H1",
+      "C3",
+      "4A.1"
+    ],
+    "case": "Write 7 then restore 0 versus no writes: ordinary outcome and final contents coincide but the changes differ. Also distinguish two equal-content fresh sequences without choosing a concrete name encoding.",
+    "expected": "Final contents alone cannot certify the change history; identity/observation checks must use the supplied sequence contract, not content identity.",
+    "status": "NOT RUN; fresh Codex S case required, with identity construction left as an explicit premise."
+  },
+  {
+    "id": "S-REUSE-01",
+    "label": "PROPOSED",
+    "findings": [
+      "H1",
+      "C6"
+    ],
+    "case": "Read a row from s, change s through an alias, then read again; add an unchanged-state control and a guarded-state control.",
+    "expected": "Same sequence identity alone cannot validate the old contents result. If a read is not eligible under the effect conditions, reject reuse there; if it is eligible, still check observation/state validity.",
+    "status": "NOT RUN; fresh Codex S case required; do not assume contents is effect-free."
+  },
+  {
+    "id": "S-MATCH-01",
+    "label": "PROPOSED",
+    "findings": [
+      "H5"
+    ],
+    "case": "No rule matches: an observed ordinary argument and a held use-once argument survive to the uncaught no-match failure.",
+    "expected": "Payload identifies symbol and observed ordinary arguments; the use-once argument stays held and is not exposed in the payload.",
+    "status": "NOT RUN; fresh Codex S case required after the missing transcription is added."
+  },
+  {
+    "id": "S-MATCH-02",
+    "label": "PROPOSED",
+    "findings": [
+      "H5"
+    ],
+    "case": "An earlier constructor pattern partly inspects but rejects an obtained value; the next rule matches and consumes its obligation once.",
+    "expected": "Failed matching does not consume/drop the obtained argument; compare against a malformed matcher that loses it. A literal-pattern probe remains outside the admitted grammar.",
+    "status": "NOT RUN; fresh Codex S case required with an admitted constructor/variable example."
+  },
+  {
+    "id": "S-HOST-01",
+    "label": "PROPOSED",
+    "findings": [
+      "H7",
+      "C7"
+    ],
+    "case": "Reference step yields asked answered by a selected interpretation; compiled lowering implements that interpretation without a host request. Add a genuinely residual host request.",
+    "expected": "Compare the declared residual request projection; do not count the local yield as an extra host event or erase actual residual requests.",
+    "status": "NOT RUN; fresh Codex S case required after P04 is drafted."
+  },
+  {
+    "id": "S-HOST-02",
+    "label": "PROPOSED",
+    "findings": [
+      "H7",
+      "C7"
+    ],
+    "case": "Equal ask_line requests with different external replies; matched replies with a wrong compiled result; related unobserved reply representations; a separate known irreversible violation.",
+    "expected": "Unmatched or unchecked external context blocks the dependent conclusion; matched context reveals the genuine defect; independent established violations remain mismatches.",
+    "status": "NOT RUN; fresh Codex S case required with explicit observed sorts and tracking relation."
+  },
+  {
+    "id": "S-SCOPE-01",
+    "label": "PROPOSED",
+    "findings": [
+      "H9"
+    ],
+    "case": "Parameterize the source-policy check by slice: refused reply/wait and fixed literal allowance in slice 1 versus absence of a selected extension in slice 2.",
+    "expected": "Do not import the slice-1 policy through a generic gap summary or infer it from T4's slice-2 example.",
+    "status": "NOT RUN; a fresh Codex S scope/precondition control is required if its model represents multiple slices; otherwise perform the documentary scope check and leave slice-2 execution NOT DONE."
+  },
+  {
+    "id": "S-FAILURE-01-AFTER-DECISION",
+    "label": "PROPOSED",
+    "findings": [
+      "C4"
+    ],
+    "case": "Same observed payload, different observed payload, and related but unequal non-observed payload representations.",
+    "expected": "Observed equal payloads meet the payload requirement; checked observed unequal payloads establish mismatch. At an unobserved sort, use the supplied and checked tracking relation only for an independently eligible comparison in which a failure-payload comparison obligation is established to apply. Distinct admitted values may be related. An unchecked required relation witness leaves the dependent comparison incomplete unless another checked irreversible violation already establishes mismatch. An eligible comparison and an unobserved sort alone do not select either RG-015 candidate. No agreement or payload-based mismatch is inferred for RG-015's unresolved no-payload-reporting host.",
+    "status": "READY for Codex S after independent changed-line review only as the conditional specification stated here; NOT RUN. The unobserved branch additionally requires an established payload-comparison obligation. If its only proposed instance is RG-015's unresolved no-payload-reporting host, that branch remains NOT DONE. No later host policy or RG-015 outcome is selected."
+  },
+  {
+    "id": "C4-S01.related_unequal_hidden_payload",
+    "claim_label": "PROPOSED",
+    "status": "NOT RUN",
+    "reference": {
+      "status": "failed",
+      "failure": "F",
+      "payload": {
+        "sort": "S",
+        "value": "a"
+      },
+      "requests": [],
+      "counts": {},
+      "held": [],
+      "terminal": true
+    },
+    "compiled": {
+      "status": "failed",
+      "failure": "F",
+      "payload": {
+        "sort": "N",
+        "value": "b"
+      },
+      "requests": [],
+      "counts": {},
+      "held": [],
+      "terminal": true
+    },
+    "relation_witness": "names(b,a), supplied and checked in the proposed fixture",
+    "semantic_literal_equality": "false, checked as a finite carrier fact",
+    "all_other_requirements": "checked; empty requests, counts and held accounts; no sequence operations",
+    "expected_under_Arch": {
+      "payload_requirement": "met",
+      "full_conclusion": "agreement"
+    },
+    "expected_under_literal_alternative": {
+      "payload_requirement": "violated",
+      "full_conclusion": "established mismatch"
+    },
+    "distinguishing_reason": "A checked naming relation may relate distinct admitted values at an unobserved sort.",
+    "current_review_qualifications": {
+      "claim_label": "INFERENCE",
+      "payload_applicability": "Establish separately that the proposed terminal comparison is eligible and that a failure-payload comparison obligation applies at the unobserved sort. A bound relation and an unobserved sort alone do not establish the latter for a host that reports no payload. RG-015 selects neither candidate.",
+      "conclusion_scope": "The stated relation-versus-literal conclusions are conditional on an applicable payload predicate; the literal alternative changes that predicate, not whether it applies. If applicability depends on unresolved RG-015, these full conclusions do not transfer to a real run. This selects no later host theory. An independently checked irreversible violation of another applicable requirement remains a mismatch.",
+      "sequence_premise": "Treat P01 vacuity as a separate premise to check, not as a consequence of making or changing no sequence. Establish that no sequence is reachable in either compared initial state or introduced during either run. Otherwise supply and check S2's applicable account of matched initial contents, corresponding identity and changes under the tracking relation. No sequence operations alone does not discharge those obligations.",
+      "execution_status": "PROPOSED and NOT RUN. These are conditions on a future fixture, not supplied fixture proof, runtime evidence or a selected host policy."
+    },
+    "source_conditions": {
+      "claim_label": "PROPOSED",
+      "status": "NOT RUN",
+      "case_count": 3,
+      "model_cases_executed": 0,
+      "purpose": "Future distinguishing specifications for R3; no executable tests or source changes in this package.",
+      "common_premises": {
+        "claim_label": "PROPOSED",
+        "scope": "Conditional finite comparison specifications outside slice 1. No eligible later host theory or host completion policy is selected here.",
+        "eligibility_premise": "A separately supplied and checked theory, observation boundary, input, choices and tracking claim admit the terminal-failure comparison while S and N are not observed. If this premise cannot be established, these expected full conclusions do not transfer to a real run.",
+        "finite_carrier": "S and the target name sort N use the same two admitted model atoms a and b. The names relation swaps them. This shared carrier makes the alternative literal-equality predicate explicit; it is not an assertion about a Loom encoding.",
+        "names_relation": [
+          {
+            "name": "b",
+            "value": "a"
+          },
+          {
+            "name": "a",
+            "value": "b"
+          }
+        ],
+        "semantic_equality_premise": {
+          "a_equals_a": true,
+          "b_equals_b": true,
+          "a_equals_b": false,
+          "b_equals_a": false,
+          "standing": "Proposed finite fixture facts, not conclusions from serialized bytes."
+        },
+        "comparison_boundary": "The same failure F occurs on each side. The payload sort is not observed under the conditional eligibility premise. This neither creates a caught terminal failure nor settles how an unspecified host handles a payload it does not report.",
+        "other_obligations": "Every applicable prerequisite and agreement obligation is checked in the proposed fixture unless the case explicitly marks one unchecked: same initial input and choices, request projection and external context, matching failure, matched value and activation identities, held accounts, permitted use and all applicable tracking obligations. No resource stop occurs. No sequence is made or changed; P01 sequence obligations are vacuous.",
+        "interpretation_limit": "The literal alternative replaces the failure-payload predicate with semantic equality. Different representation bytes are not a premise of inequality. Equal observed payloads remain required by A1; no observed unequal-payload case is accepted.",
+        "implementation_status": "NOT RUN. The fixture proof, checked program/watch evidence and executable R3 adapter remain to be supplied later."
+      },
+      "observed_regression_note": "A proposed observed 7-versus-8 payload control would be a mismatch under both readings, so it is not counted as a distinguishing case here.",
+      "source_basis": [
+        "R2 lines 75-93",
+        "R13 D-REP-1, D-TR-4/5/16 and D-RUN-9",
+        "C PROPOSED_REPAIRS P01/P04; no additional source passage read"
+      ]
+    }
+  },
+  {
+    "id": "C4-S02.related_unequal_with_use_and_held",
+    "claim_label": "PROPOSED",
+    "status": "NOT RUN",
+    "reference": {
+      "status": "failed",
+      "failure": "F",
+      "payload": {
+        "sort": "S",
+        "value": "a"
+      },
+      "requests": [
+        [
+          "fixture_request_Q",
+          [
+            7
+          ]
+        ]
+      ],
+      "counts": {
+        "u0@activation0": 1
+      },
+      "held": [
+        "h0"
+      ],
+      "terminal": true
+    },
+    "compiled": {
+      "status": "failed",
+      "failure": "F",
+      "payload": {
+        "sort": "N",
+        "value": "b"
+      },
+      "requests": [
+        [
+          "fixture_request_Q",
+          [
+            7
+          ]
+        ]
+      ],
+      "counts": {
+        "u0@activation0": 1
+      },
+      "held": [
+        "h0"
+      ],
+      "terminal": true
+    },
+    "relation_witness": "names(b,a), supplied and checked in the proposed fixture",
+    "semantic_literal_equality": "false, checked as a finite carrier fact",
+    "all_other_requirements": "checked; Q is fixture metanotation rather than a selected Loom host symbol. The observed argument 7, accepted reply and matched external interaction context agree. u0 and h0 have separately checked corresponding identities and activations; the one consumption and the held account match. Neither use-once value is put in the payload. No sequence operations or licensed count changes.",
+    "expected_under_Arch": {
+      "payload_requirement": "met",
+      "full_conclusion": "agreement"
+    },
+    "expected_under_literal_alternative": {
+      "payload_requirement": "violated",
+      "full_conclusion": "established mismatch"
+    },
+    "distinguishing_reason": "The relation reading still owes the independent request, context, use and held-account checks; after they pass, unequal hidden payloads alone do not establish mismatch.",
+    "current_review_qualifications": {
+      "claim_label": "INFERENCE",
+      "payload_applicability": "Establish separately that the proposed terminal comparison is eligible and that a failure-payload comparison obligation applies at the unobserved sort. A bound relation and an unobserved sort alone do not establish the latter for a host that reports no payload. RG-015 selects neither candidate.",
+      "conclusion_scope": "The stated relation-versus-literal conclusions are conditional on an applicable payload predicate; the literal alternative changes that predicate, not whether it applies. If applicability depends on unresolved RG-015, these full conclusions do not transfer to a real run. This selects no later host theory. An independently checked irreversible violation of another applicable requirement remains a mismatch.",
+      "sequence_premise": "Treat P01 vacuity as a separate premise to check, not as a consequence of making or changing no sequence. Establish that no sequence is reachable in either compared initial state or introduced during either run. Otherwise supply and check S2's applicable account of matched initial contents, corresponding identity and changes under the tracking relation. No sequence operations alone does not discharge those obligations.",
+      "execution_status": "PROPOSED and NOT RUN. These are conditions on a future fixture, not supplied fixture proof, runtime evidence or a selected host policy."
+    },
+    "source_conditions": {
+      "claim_label": "PROPOSED",
+      "status": "NOT RUN",
+      "case_count": 3,
+      "model_cases_executed": 0,
+      "purpose": "Future distinguishing specifications for R3; no executable tests or source changes in this package.",
+      "common_premises": {
+        "claim_label": "PROPOSED",
+        "scope": "Conditional finite comparison specifications outside slice 1. No eligible later host theory or host completion policy is selected here.",
+        "eligibility_premise": "A separately supplied and checked theory, observation boundary, input, choices and tracking claim admit the terminal-failure comparison while S and N are not observed. If this premise cannot be established, these expected full conclusions do not transfer to a real run.",
+        "finite_carrier": "S and the target name sort N use the same two admitted model atoms a and b. The names relation swaps them. This shared carrier makes the alternative literal-equality predicate explicit; it is not an assertion about a Loom encoding.",
+        "names_relation": [
+          {
+            "name": "b",
+            "value": "a"
+          },
+          {
+            "name": "a",
+            "value": "b"
+          }
+        ],
+        "semantic_equality_premise": {
+          "a_equals_a": true,
+          "b_equals_b": true,
+          "a_equals_b": false,
+          "b_equals_a": false,
+          "standing": "Proposed finite fixture facts, not conclusions from serialized bytes."
+        },
+        "comparison_boundary": "The same failure F occurs on each side. The payload sort is not observed under the conditional eligibility premise. This neither creates a caught terminal failure nor settles how an unspecified host handles a payload it does not report.",
+        "other_obligations": "Every applicable prerequisite and agreement obligation is checked in the proposed fixture unless the case explicitly marks one unchecked: same initial input and choices, request projection and external context, matching failure, matched value and activation identities, held accounts, permitted use and all applicable tracking obligations. No resource stop occurs. No sequence is made or changed; P01 sequence obligations are vacuous.",
+        "interpretation_limit": "The literal alternative replaces the failure-payload predicate with semantic equality. Different representation bytes are not a premise of inequality. Equal observed payloads remain required by A1; no observed unequal-payload case is accepted.",
+        "implementation_status": "NOT RUN. The fixture proof, checked program/watch evidence and executable R3 adapter remain to be supplied later."
+      },
+      "observed_regression_note": "A proposed observed 7-versus-8 payload control would be a mismatch under both readings, so it is not counted as a distinguishing case here.",
+      "source_basis": [
+        "R2 lines 75-93",
+        "R13 D-REP-1, D-TR-4/5/16 and D-RUN-9",
+        "C PROPOSED_REPAIRS P01/P04; no additional source passage read"
+      ]
+    }
+  },
+  {
+    "id": "C4-S03.unchecked_relation_checked_inequality",
+    "claim_label": "PROPOSED",
+    "status": "NOT RUN",
+    "reference": {
+      "status": "failed",
+      "failure": "F",
+      "payload": {
+        "sort": "S",
+        "value": "a"
+      },
+      "requests": [],
+      "counts": {},
+      "held": [],
+      "terminal": true
+    },
+    "compiled": {
+      "status": "failed",
+      "failure": "F",
+      "payload": {
+        "sort": "N",
+        "value": "b"
+      },
+      "requests": [],
+      "counts": {},
+      "held": [],
+      "terminal": true
+    },
+    "relation_witness": "The comparison claim and eligibility are bound, but checking the outcome-pair witness under that claim is explicitly unfinished. Do not infer either a proved relation or a proved failure of it from this absence.",
+    "semantic_literal_equality": "false, independently checked as a finite carrier fact",
+    "all_other_requirements": "checked; no independent irreversible violation; the outcome-relation witness alone remains unchecked",
+    "expected_under_Arch": {
+      "payload_requirement": "unchecked",
+      "full_conclusion": "incomplete"
+    },
+    "expected_under_literal_alternative": {
+      "payload_requirement": "violated by independently checked inequality",
+      "full_conclusion": "established mismatch"
+    },
+    "distinguishing_reason": "When the relation is the required predicate, missing relation evidence leaves the comparison incomplete. The literal alternative instead has a checked unequal-payload violation, which A3 permits to establish mismatch independently.",
+    "current_review_qualifications": {
+      "claim_label": "INFERENCE",
+      "payload_applicability": "Establish separately that the proposed terminal comparison is eligible and that a failure-payload comparison obligation applies at the unobserved sort. A bound relation and an unobserved sort alone do not establish the latter for a host that reports no payload. RG-015 selects neither candidate.",
+      "conclusion_scope": "The stated relation-versus-literal conclusions are conditional on an applicable payload predicate; the literal alternative changes that predicate, not whether it applies. If applicability depends on unresolved RG-015, these full conclusions do not transfer to a real run. This selects no later host theory. An independently checked irreversible violation of another applicable requirement remains a mismatch.",
+      "sequence_premise": "Treat P01 vacuity as a separate premise to check, not as a consequence of making or changing no sequence. Establish that no sequence is reachable in either compared initial state or introduced during either run. Otherwise supply and check S2's applicable account of matched initial contents, corresponding identity and changes under the tracking relation. No sequence operations alone does not discharge those obligations.",
+      "execution_status": "PROPOSED and NOT RUN. These are conditions on a future fixture, not supplied fixture proof, runtime evidence or a selected host policy."
+    },
+    "source_conditions": {
+      "claim_label": "PROPOSED",
+      "status": "NOT RUN",
+      "case_count": 3,
+      "model_cases_executed": 0,
+      "purpose": "Future distinguishing specifications for R3; no executable tests or source changes in this package.",
+      "common_premises": {
+        "claim_label": "PROPOSED",
+        "scope": "Conditional finite comparison specifications outside slice 1. No eligible later host theory or host completion policy is selected here.",
+        "eligibility_premise": "A separately supplied and checked theory, observation boundary, input, choices and tracking claim admit the terminal-failure comparison while S and N are not observed. If this premise cannot be established, these expected full conclusions do not transfer to a real run.",
+        "finite_carrier": "S and the target name sort N use the same two admitted model atoms a and b. The names relation swaps them. This shared carrier makes the alternative literal-equality predicate explicit; it is not an assertion about a Loom encoding.",
+        "names_relation": [
+          {
+            "name": "b",
+            "value": "a"
+          },
+          {
+            "name": "a",
+            "value": "b"
+          }
+        ],
+        "semantic_equality_premise": {
+          "a_equals_a": true,
+          "b_equals_b": true,
+          "a_equals_b": false,
+          "b_equals_a": false,
+          "standing": "Proposed finite fixture facts, not conclusions from serialized bytes."
+        },
+        "comparison_boundary": "The same failure F occurs on each side. The payload sort is not observed under the conditional eligibility premise. This neither creates a caught terminal failure nor settles how an unspecified host handles a payload it does not report.",
+        "other_obligations": "Every applicable prerequisite and agreement obligation is checked in the proposed fixture unless the case explicitly marks one unchecked: same initial input and choices, request projection and external context, matching failure, matched value and activation identities, held accounts, permitted use and all applicable tracking obligations. No resource stop occurs. No sequence is made or changed; P01 sequence obligations are vacuous.",
+        "interpretation_limit": "The literal alternative replaces the failure-payload predicate with semantic equality. Different representation bytes are not a premise of inequality. Equal observed payloads remain required by A1; no observed unequal-payload case is accepted.",
+        "implementation_status": "NOT RUN. The fixture proof, checked program/watch evidence and executable R3 adapter remain to be supplied later."
+      },
+      "observed_regression_note": "A proposed observed 7-versus-8 payload control would be a mismatch under both readings, so it is not counted as a distinguishing case here.",
+      "source_basis": [
+        "R2 lines 75-93",
+        "R13 D-REP-1, D-TR-4/5/16 and D-RUN-9",
+        "C PROPOSED_REPAIRS P01/P04; no additional source passage read"
+      ]
+    }
+  }
+]
