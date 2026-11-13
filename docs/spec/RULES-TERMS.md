@@ -10,6 +10,8 @@ SOURCE / INFERENCE — Committed rules are cited and not repeated. REC-001 holds
 
 PROPOSED — Cases use small invented symbols such as `vector`, `twice`, `out` and `assoc`. They are examples for a reader. They are not Loom syntax and add no vocabulary. The surface syntax is open in R13 (D-SYN-1).
 
+SOURCE — Slice 1 has no quotation form. [register: `2026-11-12-CODEX-F-REGISTER-EDIT-7-HOST-LANGUAGE\DECISIONS.postimage.md` (SHA-256 `6ed970ec3dfcefe083c2c99521595e887ff1fb9473a9cff932f1b47e12128383`), row 48; recorded there as Claude Arch's own call with S-A.]
+
 ## TERM-001 — A theory is a vocabulary of four kinds of member
 
 - revision: 1

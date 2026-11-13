@@ -31,4 +31,6 @@ INFERENCE — Two rules carry words from a second R13 passage, named in the rule
 
 SOURCE — D-TH-5 (rules) and D-TH-7 (the three declarations of a sort, and the refusal) are part 2. D-CON-1 is a summary sentence and gets no rule. The record shapes of D-REC-1 to D-REC-4 belong to the record rules.
 
+SOURCE — Slice 1 has no quotation form. [register: `2026-11-12-CODEX-F-REGISTER-EDIT-7-HOST-LANGUAGE\DECISIONS.postimage.md` (SHA-256 `6ed970ec3dfcefe083c2c99521595e887ff1fb9473a9cff932f1b47e12128383`), row 48; recorded there as Claude Arch's own call with S-A.]
+
 END OF COVERAGE-TERMS

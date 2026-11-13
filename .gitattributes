@@ -3,3 +3,5 @@
 docs/design/HOW-WE-SPECIFY.md whitespace=cr-at-eol,-blank-at-eol
 # Sealed copy whose last line is blank; kept byte-identical
 docs/spec/RULES-EVALUATOR.md whitespace=cr-at-eol,-blank-at-eof
+# Sealed copy whose last line is blank; kept byte-identical
+docs/spec/RULES-ADMISSION.md whitespace=cr-at-eol,-blank-at-eof
