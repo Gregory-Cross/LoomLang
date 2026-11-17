@@ -315,3 +315,298 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 - **Required time to reconsider (SOURCE; Claude A's call MS-C4 reports the owner's ask):** when D-ATT-1's matching of names is decided, and in any case before the optimizer's slice interfaces are drafted.
 - **Put back to the owner when (PROPOSED):** before permitting sequence creation in an optimizer's attempt, its check or anything either can call, or moving or leaving out a term whose run makes a sequence. Bring the wider rule and its reviewed cases; the present restrictions remain until a further decision changes them.
 - **Sources (SOURCE):** `_relay\inputs\owner-record-2026-11-16-make-a-sequence.json` (SHA-256 `97acf400a9e33e1601f930a68f90a688710b5102af6174b2a1baaa3bd7c35f1e`), with its authenticated answer binding in the further 16 November table above; `_relay\inputs\claude-a-call-2026-11-16-owner-make-a-sequence-calls.json` (SHA-256 `9e3ba710c9f06ab20936ef6523ae79c49db229ef4f4ba546e306ecb43e2e163e`), MS-C1 and MS-C2, for the two exact sentences and D-ATT-1 dependency; `_relay\inputs\claude-a-call-2026-11-16-make-a-sequence-reconsider-calls.json` (SHA-256 `a564842c3044b9a43e9740e4c82065a2a8c85fb3eec7969178a69cf072e6db94`), MS-C4, for the reported cost, widening alternatives and both reconsideration triggers.
+
+## R1 loss-list follow-through (2026-11-16)
+
+SOURCE: the owner took Codex A's 32 recommendations as a batch for exact proposed wording, review and register reminders or reasons; this adopts no design. The record is `_relay\inputs\owner-record-2026-11-16-r1-loss-list-batch.json` (SHA-256 `cf50b653c4a3bb695a23e638af1e3ac5d1bd71dbb20ddade87e5b2633d97055d`). Its exported raw line is `_relay\inputs\owner-lines\owner-record-2026-11-16-r1-loss-list-batch.jsonl` (file SHA-256 `46050c7a0f6c4678bd7584f7238106a80d0e9035d17731b14d4423ced4414824`); the single raw line without its final LF has SHA-256 `0a5f567c9dcbf7c053e74978658759c5a0340788b43df2b0a021a915e27a8c18`, session `6ebc575d-064e-4825-a97a-f091139e8c38`, at 2026-11-17T03:52:38.767Z.
+
+SOURCE: these entries follow `2026-11-16-CODEX-A-R1-LOSS-LIST\LOSS-LIST.json` (SHA-256 `a835c14f2bdeaae3a8eb1404c3efe99bd2fad74274ff99720c68af44b11a6406`), sealed by OUTPUT_BINDINGS.json SHA-256 `18580ba689a3685b8369b46216bf06879ee96a5261f9c5e697b5a96650372a5e`. R-28 to R-55 name the later/deferred candidates and the two reason questions. R-56 to R-62 record seven turns; any unrecorded reason is marked for the owner. CG-007 stays open and has no drafted entry.
+
+PROPOSED: all candidate work, new explanations and reconsideration text below await their stated stage and authority. Recorded source judgments are attributed; none is promoted to an owner reason.
+
+SOURCE: the owner took Arch's eight earlier timing moves and LOSS-19's additional trigger for this proposed wording. The timing record is `_relay/inputs/owner-record-2026-11-16-loss-list-eight-triggers.json` (SHA-256 `97a6eb9f24ee26493acb451855dd1c433fe0e1b5dcaa461a754ecc55e07080cc`). Its exported raw owner line is `_relay/inputs/owner-lines/owner-record-2026-11-16-loss-list-eight-triggers.jsonl` (file SHA-256 `199b045947589d40a059ec4e924a95914121b8484b2af64838e864256e40199b`); the single raw line without its final LF has SHA-256 `1093d696239ffe31a9bad362b8ad0417dc9575c263b795bc2b3917c4500dbd86`, session `6ebc575d-064e-4825-a97a-f091139e8c38`, at 2026-11-17T04:15:56.957Z, saying `yes take all eight`. The exact reminders below are Arch's CALLS.json triggers 1 through 9 (SHA-256 `6a2247d07f5d147a59ec5f1b02b3d2b39976f2135f67b2303f867e636a0e86cf`). Original named points remain. LOSS-27 remains OPEN until the review after handlers, because the replacement reason is not yet shown; LOSS-32 remains DROP with the comparative reason unestablished as stated in R-55. Only drafting and review are authorized; nothing is adopted.
+
+SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-record-2026-11-16-four-turns.json` (SHA-256 `d78458ce8491429d080b18db1b33d423d5052d731100ff63feee20bf88319960`; raw-line SHA-256 `20f002b9432be73461080c82cf9e48709ca43a4f8cf17b36106d979afd4820fc`) and `owner-record-2026-11-16-three-turns-recs.json` (SHA-256 `ef216b27462bd70df6876dcfe73523579436326ac87f4da1dead9ede49ebda65`; raw-line SHA-256 `1cdcc55c28f1929970353de49dbcf905aaaaa133abaa1b4edb78d9087a1dee78`). Both exported raw owner lines match their records, human origins, texts, session and timestamps. Arch exact words come from `THREE-TURNS.md` (SHA-256 `548ed66f42c756c1fe3d9b3289ce10ae94102f4be7074253f475647cd70574bd`). TURN-12 and TURN-14 remain open with tests and also go to a future web round; TURN-16 stands with its sheet sentence. New design wording remains PROPOSED pending the short review in TN-C2. Current reasons are not backdated historical findings.
+
+### R-28. A wanted algebra element found as a gadget (LOSS-05)
+
+- **Later candidate (PROPOSED):** Search small objects for one giving a wanted algebra element, with an exact equation and checked readout.
+- **Why it matters (INFERENCE):** This turns discovered algebraic structure into a reduction gadget.
+- **Put back to the owner when (PROPOSED):** First finite SRE discovery demonstration. Bring its bounded search and checks, distinguishing fixed-parameter results from general claims.
+- **Where it lands (PROPOSED):** D-ENG-12, a D-STO-3 recipe, the worked demonstration and D-OPT-2.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-05; the owner batch binding above.
+
+### R-29. A checked library for combining answers (LOSS-06)
+
+- **Later candidate (PROPOSED):** Exact Plan combinators with the distinct Every and Some constraints, their typing and residual rules.
+- **Why it matters (INFERENCE):** Reusable combinations need explicit answer-space alignment and rules for carrying scope and rows.
+- **Put back to the owner when (PROPOSED):** First LoomLab exact-composition stage, ordered under D-SL-8/R-10. Schedule the executable grammar with its first use.
+- **Where it lands (PROPOSED):** The LoomLab exact library, beside D-THM-1 and after D-ENG-12.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-06; the owner batch binding above.
+
+### R-30. Screening proposals with kept refutations (LOSS-07)
+
+- **Later candidate (PROPOSED):** A budgeted exact screening step that replays applicable kept refutations before deeper synthesis or proof.
+- **Why it matters (INFERENCE):** A known incapability can reject a candidate cheaply; applicability and the replay's charges still need rules.
+- **Put back to the owner when (PROPOSED):** First finite SRE/refinement protocol. Preserve unknown outcomes and refutation sets larger than pairs where several answers are admitted.
+- **Where it lands (PROPOSED):** D-ENG-5/12, D-RL-6/7/13 and D-WEB-1(b).
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-07; the owner batch binding above.
+
+### R-31. Pair coverage for choosing the next experiment (LOSS-08)
+
+- **Later candidate (PROPOSED):** Name pair coverage as a candidate at T-A; leave its algorithm and any guarantee deferred until the acquisition objective is fixed.
+- **Why it matters (INFERENCE):** It gives a concrete way to spend a probe on still-unseparated different-answer pairs.
+- **Put back to the owner when (PROPOSED):** Candidate named now; compare and specify at T-A. Specify the objective before comparing the method at T-A; bring the known-answer pair universe, costs, adaptive premises and multi-answer conditions. No unconditional greedy guarantee follows.
+- **Where it lands (PROPOSED):** D-ENG-7/12, beside T-A.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-08; the owner batch binding above.
+
+### R-32. Joint functional views (LOSS-09)
+
+- **Later candidate (PROPOSED):** A joint-view constructor with the functional kernel-intersection statement.
+- **Why it matters (INFERENCE):** Combining simultaneous views should have a reusable contract beyond the experiment-tuple case.
+- **Put back to the owner when (PROPOSED):** Finite representation work in D-SL-3. State shared-source and choice-alignment obligations separately for relational extensions.
+- **Where it lands (PROPOSED):** D-REP-4, D-ENG-5 and the finite representation library.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-09; the owner batch binding above.
+
+### R-33. Joining representations of overlapping parts (LOSS-10)
+
+- **Deferred candidate (PROPOSED):** A fibre product over declared shared parts, distinct from composing successive naming relations.
+- **Why it matters (INFERENCE):** Compatible representations of subobjects could then form a whole-object representation.
+- **Put back to the owner when (PROPOSED):** Compatible-parts case in the first chosen worked-use stage. Bring matching maps, compatibility, scope and gauge rules, and its soundness cases.
+- **Where it lands (PROPOSED):** Beside D-THM-1 and the counting/gluing demonstration.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-10; the owner batch binding above.
+
+### R-34. Field liveness as a layout proposer (LOSS-11)
+
+- **Later candidate (PROPOSED):** A field-liveness proposer that constructs a projection and its checked trackers.
+- **Why it matters (INFERENCE):** It supplies a simple candidate for removing fields a client cannot observe.
+- **Put back to the owner when (PROPOSED):** First optional layout-proposer demonstration in D-SL-3. Earlier interface reminder: Before the uses of D-STO-4, the row computer's second result, are fixed as trusted text: decide whether they report, for each pattern that matches a constructor, which of its arguments the rule uses. Account for reads, writes, effects and identity or byte observations; build the candidate or record its concrete replacement.
+- **Where it lands (PROPOSED):** The D-OPT/D-ENG proposer roadmap, tested by D-SL-3.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-11; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 2.
+
+### R-35. A family's action on source changes (LOSS-12)
+
+- **Deferred candidate (PROPOSED):** An optional category/action interface joining symmetry and transport across source objects.
+- **Why it matters (INFERENCE):** Per-operation trackers do not alone give this cross-object family contract.
+- **Put back to the owner when (PROPOSED):** First SRE family requiring cross-object change transport. Earlier interface reminder: Before the family registry's interface is drafted (D-ENG-3): leave an optional place for a family's action on changes of its source. State objects, morphisms, identity/composition, equivariance and evidence scope; keep fitting a bare object legal.
+- **Where it lands (PROPOSED):** The optional D-ENG-3/D-REP-1 family protocol and D-IN libraries.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-12; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 8.
+
+### R-36. A total static index language (LOSS-13)
+
+- **Deferred candidate (PROPOSED):** A limited total index language alongside R-22's existing alternatives.
+- **Why it matters (INFERENCE):** It could settle useful dimension equalities beyond one written form; nontermination does not dispose of an explicitly total fragment.
+- **Put back to the owner when (PROPOSED):** R-22 reconsideration after the required rules are reviewed, or its earlier concrete-program trigger. Earlier interface reminder: Before the rules for when an index runs and what it costs are drafted, and before the admission allowance's charging protocol is fixed (GAP 6): put the total index language beside them as a case they must leave room for. Bring the normalizer, totality and soundness policy, canonical forms, metering and cache context. Admission policy stays unchanged until its full contract and an owner decision.
+- **Where it lands (PROPOSED):** D-ADM-12 and R-22.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-13; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 6.
+
+### R-37. Cost search within an exact capability (LOSS-14)
+
+- **Later candidate (PROPOSED):** Search equivalent encodings or gauge choices for a cheaper realization.
+- **Why it matters (INFERENCE):** Equal exact capability need not mean equal computation cost.
+- **Put back to the owner when (PROPOSED):** First representation-cost study. State the allowed family, tracking and invariance obligations, and workload; check the recalled holographic example before relying on it.
+- **Where it lands (PROPOSED):** D-ENG-7, D-OPT-2 and D-ENG-6.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-14; the owner batch binding above.
+
+### R-38. Join-only shared cells (LOSS-15)
+
+- **Deferred candidate (PROPOSED):** Shared cells whose updates only join information.
+- **Why it matters (INFERENCE):** Several tasks could accumulate information without transferring an exclusive cell between holders.
+- **Put back to the owner when (PROPOSED):** D-SL-6 parallel-library planning. Bring join and exchange laws, visibility, ownership, lifetime, effects, resources and tracking.
+- **Where it lands (PROPOSED):** D-CONC shared state or the D-SL-6 parallel libraries.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-15; the owner batch binding above.
+
+### R-39. Anytime correction towers (LOSS-16)
+
+- **Deferred candidate (PROPOSED):** A correction chain producing valid intervals before its final exact level.
+- **Why it matters (INFERENCE):** Resolution and width semantics alone do not specify such a producer or its stopping behaviour.
+- **Put back to the owner when (PROPOSED):** First concrete distortion/precision use under D-PR-6. Earlier interface reminder: Before slice 3 fixes the form of a width claim (D-TR-14, D-TR-19): check that the form can say how a tracker's output width depends on its inputs' widths. Bring correction and remainder bounds, transitions, budgets and interruption rules; convergence is a separate obligation. Present lax/precision semantics remain.
+- **Where it lands (PROPOSED):** The LoomLab exact tier and D-TR-14/D-PR-6.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-16; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 5.
+
+### R-40. Aligning advice and recording dependence (LOSS-17)
+
+- **Deferred candidate (PROPOSED):** Align views before combining advice and retain lineage relevant to dependence.
+- **Why it matters (INFERENCE):** Incompatible scores or shared sources can make a combination misleading; distinct note identities do not establish independence.
+- **Put back to the owner when (PROPOSED):** First LoomLab method that combines advice from several views. Require alignment and dependence rules or explicitly reject combination; do not invent weights now.
+- **Where it lands (PROPOSED):** D-ENG-7/8 methods and notes, within D-PR-4/5's exact conditions and ranking rule.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-17; the owner batch binding above.
+
+### R-41. Disagreement as a probe proposal (LOSS-18)
+
+- **Deferred candidate (PROPOSED):** A method using advisers' disagreement to propose a revealing next probe.
+- **Why it matters (INFERENCE):** Recording disagreement does not itself choose an experiment.
+- **Put back to the owner when (PROPOSED):** First LoomLab trial of a disagreement-driven probe method. Define its input, objective, budget and outcomes, keeping heuristic disagreement separate from exact contradiction. A conflict still licenses nothing.
+- **Where it lands (PROPOSED):** D-ENG-7's research loop.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-18; the owner batch binding above.
+
+### R-42. Isomorphism reduction in a census (LOSS-19)
+
+- **Deferred candidate (PROPOSED):** A theory-specific census reduced modulo isomorphism.
+- **Why it matters (INFERENCE):** It can avoid spending a finite comparison budget on structurally identical copies.
+- **Put back to the owner when (PROPOSED):** Construction of the first theory-specific census. Or when the census record's form is drafted, whichever is first. Decide explicitly whether it is reduced, and justify its isomorphism, reduction and coverage procedure if so; guessed identity must not silently remove cases.
+- **Where it lands (PROPOSED):** D-ENG-3 census records and D-PR-3's finite evidence scope.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-19; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 9.
+
+### R-43. Reusing unique-owner storage (LOSS-20)
+
+- **Deferred candidate (PROPOSED):** Storage reuse when the last live owner permits it.
+- **Why it matters (INFERENCE):** Safe reuse may avoid copies and allocations; reference-counted reclamation alone gives no such permission.
+- **Put back to the owner when (PROPOSED):** First measured planner workload under D-SL-5 that could benefit from reuse. Earlier interface reminder: When RUNTIME-C-OPEN's O04, who owns a definition's parameters, is decided: state what the choice costs reuse in place. If all parameters are borrowed, record that reuse will need a consuming convention added later, and name that as the reason to reconsider. Bring alias and escape conditions, identity and content invariants, and failure/resource accounting; this adds no present runtime permission.
+- **Where it lands (PROPOSED):** D-PATH-9 and D-SL-5's optional representations.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-20; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 3.
+
+### R-44. Temporary regions for search (LOSS-21)
+
+- **Deferred candidate (PROPOSED):** A region representation for temporary search structures.
+- **Why it matters (INFERENCE):** Bulk reclamation may reduce per-object management costs.
+- **Put back to the owner when (PROPOSED):** First measured SRE or planner search whose temporary allocations dominate cost. Earlier interface reminder: When RUNTIME-C-OPEN's O04, who owns a definition's parameters, is decided: state what the choice costs reuse in place. If all parameters are borrowed, record that reuse will need a consuming convention added later, and name that as the reason to reconsider. Compare it with the baseline and state lifetimes, escapes, persistent evidence, accounting and cleanup after failure or stop.
+- **Where it lands (PROPOSED):** D-PATH-9 and that measured search-storage case.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-21; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 3.
+
+### R-45. SIMD and hardware targets (LOSS-22)
+
+- **Deferred candidate (PROPOSED):** SIMD and hardware realizers, with portable fallback.
+- **Why it matters (INFERENCE):** A generic second-target slot does not keep either target visible as a candidate.
+- **Put back to the owner when (PROPOSED):** Selection of the second target under D-SL-5. Decide whether either belongs in the second target or later; retain scalar fallback and state target-specific tracking and qualification obligations.
+- **Where it lands (PROPOSED):** D-SL-5 second-machine planning, D-SL-6 and D-OPT realization choices.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-22; the owner batch binding above.
+
+### R-46. Elaborator holes and proposers (LOSS-23)
+
+- **Deferred candidate (PROPOSED):** An explicit interface from an unfinished elaborated term to the common Proposal record.
+- **Why it matters (INFERENCE):** One crossing record does not specify a hole's context, expected sort or unresolved outcome.
+- **Put back to the owner when (PROPOSED):** D-SYN-1 decision on surface syntax and elaboration. State context, usage obligations and placeholder identity, or record why an explicit hole construct is unnecessary.
+- **Where it lands (PROPOSED):** D-SYN-1, the Read/Mean stages and D-STO Proposal records.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-23; the owner batch binding above.
+
+### R-47. An exact rational library model (LOSS-24)
+
+- **Later candidate (PROPOSED):** A rational-number theory with an exact library model.
+- **Why it matters (INFERENCE):** An explicit exact-ratio model is a library commitment beyond definability using integers.
+- **Put back to the owner when (PROPOSED):** D-SL-6 library catalogue review. Earlier interface reminder: When the first SRE stage's needs are written: say whether its exact arithmetic is over the integers alone. If it is not, the rational model comes with that stage. Add the scoped candidate with normalization, arithmetic, order, division failure, tracking and cost obligations, or record a reason to omit it.
+- **Where it lands (PROPOSED):** D-SL-6 library planning and the declared-theory catalogue.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-24; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 7.
+
+### R-48. A standard Result model (LOSS-25)
+
+- **Deferred candidate (PROPOSED):** A library model for success or error data.
+- **Why it matters (INFERENCE):** Generic sums do not by themselves specify a standard Result interface.
+- **Put back to the owner when (PROPOSED):** First recoverable-error data program considered in D-SL-6 library work. Earlier interface reminder: Before slice 2's recovery interface is drafted: decide whether D-UO-16's datum, a result or a failure with a payload and a residue, is the standard Result model. Decide whether the model is useful; specify constructors, elimination, usage and its relation to control failure.
+- **Where it lands (PROPOSED):** Declared-theory libraries and D-SL-6.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-25; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 4.
+
+### R-49. Recursion schemes beyond fold (LOSS-26)
+
+- **Deferred candidate (PROPOSED):** A further recursion-scheme library, named when a program needs it.
+- **Why it matters (INFERENCE):** Fold's retained entry does not commit to the wider traversal and fusion library.
+- **Put back to the owner when (PROPOSED):** Library planning after fold has been specified and exercised. Choose a scheme and state the effect, usage and law conditions it needs.
+- **Where it lands (PROPOSED):** D-IN libraries after slice-two fold work and D-SL-6.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-26; the owner batch binding above.
+
+### R-50. Whether handlers replace the named monad library (LOSS-27)
+
+- **Disposition (SOURCE; owner timing record):** OPEN until the review after handlers are specified. The reason to drop, that handlers replace the named monad-operations library, is not yet shown.
+- **Reason (INFERENCE):** No recorded reason. The bound list does not establish that handlers replace every intended use of the named monad-operations library.
+- **Follow-through (PROPOSED, for the owner):** For the owner: drop the separate catalogue item only if handlers intentionally cover those uses; otherwise defer a specific library candidate.
+- **Put back to the owner when (PROPOSED):** Review of libraries after handlers are specified. Bring the intended uses and the operations, laws, order and usage rules they need; this records no established replacement.
+- **Where it lands (PROPOSED):** D-IN libraries following the handler stage.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-27; the owner batch binding above. Timing source (SOURCE): the owner timing record above, LOSS-27's disposition.
+
+### R-51. One gauge/loss counterexample workflow (LOSS-28)
+
+- **Deferred candidate (PROPOSED):** Test whether one experimental driver can serve both gauge and loss counterexample searches.
+- **Why it matters (INFERENCE):** Their shared semantic relation suggests reusable work, but does not define either search protocol.
+- **Put back to the owner when (PROPOSED):** First SRE protocol for generating counterexamples. State each obligation, method, scope, finite checks, budget and stopping outcome; retain distinct result scopes.
+- **Where it lands (PROPOSED):** D-ENG-5/12 and D-RL-13.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-28; the owner batch binding above.
+
+### R-52. A behavioural-metric candidate for approximation (LOSS-29)
+
+- **Deferred candidate (PROPOSED):** The behavioural-pseudometric approach named in R1, without assuming its unqualified largest assertion.
+- **Why it matters (INFERENCE):** It is a possible route to compositional error accounting; R1 gave its assertion from memory.
+- **Put back to the owner when (PROPOSED):** First actual distortion job under D-PR-6. Earlier interface reminder: Before slice 3 fixes the form of a width claim (D-TR-14, D-TR-19): check that the form can say how a tracker's output width depends on its inputs' widths. State the metric order, extremal existence and direction, Lipschitz premises, operation moduli and composition obligations, then prove them or find limits.
+- **Where it lands (PROPOSED):** D-PR-6 and D-TR-14.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-29; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 5.
+
+### R-53. A proposed gauge-to-kernel ordering law (LOSS-30)
+
+- **Deferred candidate (PROPOSED):** Under what hypotheses does a larger allowed gauge give a coarser kernel?
+- **Why it matters (INFERENCE):** A proved ordering law could guide search, but the unqualified claim does not automatically extend to relations or covers.
+- **Put back to the owner when (PROPOSED):** First explicit ordered family of gauge actions used in search. State actions, invariant questions and the kernel notion; check finite counterexamples before proposing the theorem.
+- **Where it lands (PROPOSED):** D-REP-3 and D-ENG-6/9 optional gauge theorems.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-30; the owner batch binding above.
+
+### R-54. A concrete recipe for adding bounds (LOSS-31)
+
+- **Later candidate (PROPOSED):** A worked sum whose terms bound disjoint pieces covering the objective.
+- **Why it matters (INFERENCE):** It makes a simple sufficient construction explicit and shows why provenance alone is insufficient.
+- **Put back to the owner when (PROPOSED):** First additive-bound derivation proposed under D-PR-4 or D-WEB-1. State the objective, bound directions, coverage and disjointness proof; other decompositions remain possible when proved.
+- **Where it lands (PROPOSED):** D-PR-4/5 and D-WEB-1's bound-combination derivations.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-31; the owner batch binding above.
+
+### R-55. The comparative reason for changing the first backend (LOSS-32)
+
+- **Disposition (SOURCE; owner timing record):** DROP. Keep the R1 Cranelift-first order set aside under R-2's provisional choice; record its comparative reason at the named point.
+- **Reason (INFERENCE):** No recorded reason. This concerns why C was preferred to Cranelift, not whether the provisional choice itself was recorded.
+- **Follow-through (PROPOSED, for the owner):** For the owner: record a supported comparative reason for setting aside the Cranelift-first order for the current demo, or explicitly leave that reason unestablished.
+- **Put back to the owner when (PROPOSED):** Next owner review of R-2's provisional first-backend order. R-2 records generated C first provisionally, with Cranelift set aside and explicit reopening triggers; preserve its choice, limits and return triggers.
+- **Where it lands (PROPOSED):** R-2, as a qualifier to its provisional first-backend order.
+- **Source (SOURCE):** the sealed R1 loss list, LOSS-32; the owner batch binding above. Timing source (SOURCE): the owner timing record above, LOSS-32's disposition.
+
+### R-56. The SRE's entry is open (TURN-09)
+
+- **Disposition (SOURCE):** SRE entry remains open; owner reason recorded.
+- **Reason (SOURCE, owner's verbatim raw-line reason):** "I think makes sense, having SRE as the goal too early might give Arch and you blinders where every decision is made for the SRE/LL sake and not what's best generally."
+- **Where it lands (SOURCE for current clauses; PROPOSED for new design):** D-SL-8.
+- **Source (SOURCE):** `owner-record-2026-11-16-four-turns.json` (SHA-256 `d78458ce8491429d080b18db1b33d423d5052d731100ff63feee20bf88319960`; raw-line SHA-256 `20f002b9432be73461080c82cf9e48709ca43a4f8cf17b36106d979afd4820fc`).
+
+### R-57. Integers as meaning, words as holdings (TURN-10)
+
+- **Reason (SOURCE, the 11-10 report's judgment):** The 11-10 report favoured integers as the meaning and machine words as holdings because that better fits a mathematics-first language and removes a mode. (11-10 report section4.1, line116, quoted in the sealed loss list Q-039; this is the report's judgment.)
+- **Recording limit (SOURCE):** this turn was recorded only in the 11-10 report; the current text states the result.
+- **Where it lands (SOURCE for current clauses; PROPOSED for new explanation):** D-SYN-1 and the numeric holdings.
+
+### R-58. One computed account in place of three (TURN-11)
+
+- **Reason (SOURCE, Arch's stated reason):** Arch records the reason for replacing two inferred rows and a passport as one computed account in place of three, with the entries' roles retained. (Arch TRACE.json C06.more.reason and C06.more.why; 11-10 report section4.1, line115; R15 D-ROW-7/8.)
+- **Recording limit (SOURCE):** this turn was recorded only in the 11-10 report; the current text states the result.
+- **Where it lands (SOURCE for current clauses; PROPOSED for new explanation):** D-ROW-7/8.
+
+### R-59. The default theory remains open (TURN-12)
+
+- **Disposition (SOURCE):** OPEN with tests.
+- **Reason (SOURCE, Arch's proposed reason taken in the owner's bound record; recorded now, not backdated):** "The predicative default was chosen without a measure of what it costs in mathematics that will not carry over; it is open until slice 4's trials give that measure, and it stays one of the options."
+- **Repair (SOURCE: Arch exact words, owner took):** "- **My view: stay open, with a test,** provided the predicative option is on the table again. Nothing before slice 4 needs the answer."
+- **Trigger (SOURCE: Arch exact words, owner took):** "Before slice 4's foundation trials are designed: say for each position whether its default theory is predicative, and add to the first trial of D-FND-3 a count of the declarations that fail for that reason alone."
+- **Test (SOURCE: Arch exact words, owner took; NOT RUN):** "that count, and for each candidate whether its checker's soundness is proved or entered as an assumption."
+- **Follow-up (SOURCE):** TURN-12 and TURN-14 also go to a web round; this changes no words now (TN-C1).
+- **Historical recording limit (SOURCE):** the turn itself was recorded only in the 11-10 report; its reason is now recorded by the bound owner decision above.
+- **Where it lands (SOURCE for current clauses; PROPOSED for new design):** D-FND-2/3/4.
+- **Source (SOURCE):** `owner-record-2026-11-16-three-turns-recs.json` (SHA-256 `ef216b27462bd70df6876dcfe73523579436326ac87f4da1dead9ede49ebda65`; raw-line SHA-256 `1cdcc55c28f1929970353de49dbcf905aaaaa133abaa1b4edb78d9087a1dee78`); `THREE-TURNS.md` (SHA-256 `548ed66f42c756c1fe3d9b3289ce10ae94102f4be7074253f475647cd70574bd`) section 3.
+
+### R-60. The mathematical core remains open (TURN-14)
+
+- **Disposition (SOURCE):** OPEN with tests.
+- **Reason (SOURCE, Arch's proposed reason taken in the owner's bound record; recorded now, not backdated):** "The fixed framework was decided on argument; it was reopened so that its claim, that trusted text never changes when a foundation is added, is tested and its costs measured before the checker becomes trusted."
+- **Repair (SOURCE: Arch exact words, owner took):** "D-FND-2 says that the third position is the 9 November design's own, with its reasons, so that it reads as the earlier decision now to be tested, and not as one newcomer among three."
+- **Trigger (SOURCE: Arch exact words, owner took):** "Before slice 4's interfaces are drafted, and in any case before the derivation checker enters the trusted base: run the unchanged-hash trial of D-FND-3 and measure the costs of D-FND-4; if the framework passes, it is taken."
+- **Test (SOURCE: Arch exact words, owner took; NOT RUN):** "- **My view: stay open, with the tests R15 already names.** Going back to the earlier position is then one of the two outcomes, on evidence."
+- **Follow-up (SOURCE):** TURN-12 and TURN-14 also go to a web round; this changes no words now (TN-C1).
+- **Where it lands (SOURCE for current clauses; PROPOSED for new design):** D-FND-2/3/4.
+- **Source (SOURCE):** `owner-record-2026-11-16-three-turns-recs.json` (SHA-256 `ef216b27462bd70df6876dcfe73523579436326ac87f4da1dead9ede49ebda65`; raw-line SHA-256 `1cdcc55c28f1929970353de49dbcf905aaaaa133abaa1b4edb78d9087a1dee78`); `THREE-TURNS.md` (SHA-256 `548ed66f42c756c1fe3d9b3289ce10ae94102f4be7074253f475647cd70574bd`) section 4.
+
+### R-61. The plain path retains its named tracking obligation (TURN-15)
+
+- **Reason (SOURCE, current technical reason):** In slice 1 the lowering and backend remain named in the root row because the default representation's tracking claim is settled never; running the plain path does not establish that correspondence. (R15 D-ROW-5, D-STG-4 and D-TB-4 explicitly give this reason; C REVERSE-TRACE.json REV-07.)
+- **Where it lands (SOURCE for current clauses; PROPOSED for new explanation):** D-ROW-5, D-STG-4 and D-TB-4.
+
+### R-62. A workload account instead of a blanket answer-cache refusal (TURN-16)
+
+- **Disposition (SOURCE):** STANDS.
+- **Reason (SOURCE, Arch's proposed reason taken in the owner's bound record; recorded now, not backdated):** "A summary that stores its question's answer is sometimes the best correct one, so it cannot be refused as such; what the refusal meant is done by the workload account, and the sheet says when a summary gains nothing."
+- **Repair (SOURCE: Arch exact words, owner took):** "A sheet that offers a representation states the workload it was judged under and its cost beside asking the object as given; where it is no cheaper, the sheet says that it tells the reader nothing."
+- **Trigger (SOURCE: Arch exact words, owner took):** "Before the sheet's form and the coarsest-representation query are fixed in slice 3."
+- **Test (SOURCE: Arch exact words, owner took; NOT RUN):** "run D-ENG-12's test with and without operations; if answer-only summaries still come out reading as findings, a refusal at the report is needed."
+- **Where it lands (SOURCE for current clauses; PROPOSED for new design):** D-ENG-6.
+- **Source (SOURCE):** `owner-record-2026-11-16-three-turns-recs.json` (SHA-256 `ef216b27462bd70df6876dcfe73523579436326ac87f4da1dead9ede49ebda65`; raw-line SHA-256 `1cdcc55c28f1929970353de49dbcf905aaaaa133abaa1b4edb78d9087a1dee78`); `THREE-TURNS.md` (SHA-256 `548ed66f42c756c1fe3d9b3289ce10ae94102f4be7074253f475647cd70574bd`) section 5.
