@@ -121,6 +121,13 @@ SOURCE — This answer's supplied raw owner line is `_relay\inputs\owner-lines\o
 | **SOURCE — Manifest and tuple names:** the dependency record (D-ROW-1) is the manifest. The evaluator value of several values in fixed positions (D-VAL-1) is a tuple, with provisional bootstrap spelling `tuple`. | `_relay\inputs\owner-record-2026-11-17-row-renamed-manifest-tuple.json` — `6ba500d2aada8c316f06c714d4625325aafd764979697d25868b3774372087df` | Human-origin typed answer “Yeah I like manifest and rename to tuple”, session `6ebc575d-064e-4825-a97a-f091139e8c38`, `2026-11-18T04:05:00.729Z`. Raw answer-line SHA-256 `025575a67d50fc3cc6fd8e9612d6ca343f47233c0360a9360bce93b39b9bd7f0` (terminal LF excluded, 22:05 on 17 November Central time) |
 | **SOURCE — Old-specs reminders and notes, items 2 and 3:** record the 30 later candidates from Arch's merge as reminders, each with its trigger. The reminders adopt nothing. Present notes as shared tool metadata under the three retained core provisions and the two findings in the merge's section 4. | `_relay\inputs\owner-record-2026-11-17-old-specs-three-answers.json` — `21a7a1f60cdcc2321b4de601c43ed86ca5cc630230878ddf465b2f2a8b75d881` | Human-origin typed answer begins “Yes to all 3.”, session `6ebc575d-064e-4825-a97a-f091139e8c38`, `2026-11-18T04:39:05.572Z`. Raw answer-line SHA-256 `14c9449e6cbd7c93c740f08829f3247659504795038329fc6efbf7e99a317473` (terminal LF excluded, 22:39 on 17 November Central time) |
 
+## Decisions of 2026-11-18
+
+| Decision | Owner record and SHA-256 | Owner answer binding |
+|---|---|---|
+| **SOURCE — SRE scope guard and rebuilding reads, items 5a and 5b.** The guard for choices inside slices 1 to 3 is binding (R-56a). Record the rebuilding reads reminder at R-62's trigger. The reminder adopts no new rule. | `_relay\inputs\owner-record-2026-11-18-r20-taken-sort-params-guard.json` — `eb105f327848ee31c0ac7a4f578af0af39fe5647a3585ff21a8b980cf4472fe1` | Human-origin queued answer, item 5 “5 yes.”, session `6ebc575d-064e-4825-a97a-f091139e8c38`, `2026-11-18T06:25:44.127Z`. Raw answer-line SHA-256 `246bdf1002831f99b98cd874fd4e911a7948c6245355f697fc016fd7be99dbbb` (terminal LF excluded) |
+| **SOURCE — Optimizer, LoomLab and sort-parameter batch.** The front page and design distinguish the optimizer's search for a cheaper computation of a defined answer from LoomLab's search for mathematical signals and connections. Cost claims give a workload and comparison. The compiler slice order stands. The owner ruled out an early SRE build and deferred the LOSS-02 storage-cost study until the compiler is close to finished and the SRE-based optimizer is partly built. A reusable declaration lists, in order, the sorts it takes. This is a paper design piece and one review. Milestone B continues on its existing scope. Under item 5a, a decision inside slices 1 to 3 made for the SRE’s sake goes to the owner first. See R-81 for the first-client return. | `_relay\inputs\owner-record-2026-11-18-front-page-in-optimizer-loomlab-check.json` — `f796a35c5d6e17da429a8faae5a74f21a263fecc22a349f4e35eab12dba831d0` <br> `_relay\inputs\owner-record-2026-11-18-no-early-sre-loss02-deferred-forward-gpt2.json` — `d3607895cd3093c605d269c210054ce3f40afb94d888229f53b4380971ee41a0` <br> `_relay\inputs\owner-record-2026-11-18-r20-taken-sort-params-guard.json` — `eb105f327848ee31c0ac7a4f578af0af39fe5647a3585ff21a8b980cf4472fe1` | Human-origin typed answer in session `6ebc575d-064e-4825-a97a-f091139e8c38` at `2026-11-18T06:43:57.266Z`. Raw answer-line SHA-256 `0ecf1a90017854983202f68276bb5cdffc6c24cca8a81d57c006b88dc6180531` (terminal LF excluded). <br> Human-origin typed answer in session `6ebc575d-064e-4825-a97a-f091139e8c38` at `2026-11-18T06:35:51.863Z`. Raw answer-line SHA-256 `97c638fb39ff963fe548a5679aa2eb14fdaa41dac13a221b58089be23c53c819` (terminal LF excluded). <br> Human-origin queued answer in session `6ebc575d-064e-4825-a97a-f091139e8c38` at `2026-11-18T06:25:44.127Z`. Raw answer-line SHA-256 `246bdf1002831f99b98cd874fd4e911a7948c6245355f697fc016fd7be99dbbb` (terminal LF excluded). |
+
 ## To reconsider
 
 SOURCE: These entries distinguish choices for now, present rules, requested proposals, recorded aims, working rules and questions still open. A present rule can remain in force while an extension is open. PROPOSED triggers and follow-through are not new owner decisions or assignments. Whoever reaches a trigger raises it with Claude A, who puts it to the owner.
@@ -215,9 +222,9 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 ### R-10. A finish line for each SRE stage
 - **Aim recorded (SOURCE; 2026-11-05):** a full SRE, first for graphs with infrastructure toward other structures (Arch S-L238385); the audit says this is an aim and adopts no language design.
 - **Set aside (SOURCE):** only the narrower search for swap rules between small graph patches.
-- **Put back to the owner when (PROPOSED):** before any SRE building starts, give every planned stage a finish line someone outside the team can check; for example, a theorem permits an algorithm under one interpretation and refuses it under another.
+- **Put back to the owner when (PROPOSED):** before any SRE building starts, give every planned stage a finish line someone outside the team can check; for example, a theorem permits an algorithm under one interpretation and refuses it under another. For a LoomLab use, another example is a connection between two fitted structures, with the instances on which it holds or a proof for its stated scope.
 - **Sources (SOURCE):** Arch audit section 3.10 and section 6 item 5; R12 D-SL-5; C audit “SRE breadth”.
-- **PROPOSED — M-28 reminder.** Bring the old search menu, including shrinking counterexamples, cheap screens before exact search, breeding hard cases, explaining failed searches and keeping several views in step. They are candidates for untrusted proposers, with scores kept as notes under D-PR-5 and D-RL-9. Bring it with the first SRE stage, D-SL-8 and R-10. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-28, cites G29, G34 to G39, G46 to G54, G56, G57 and D LANG-05, LANG-10.
+- **PROPOSED — M-28 reminder.** Bring the old search menu, including shrinking counterexamples, cheap screens before exact search, breeding hard cases, explaining failed searches and keeping several views in step. They are candidates for untrusted proposers, with scores kept as notes under D-PR-5 and D-RL-9. Bring optimizer methods with the first SRE stage, D-SL-8 and R-10. Bring signal-seeking methods at LoomLab's first stage. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-28, cites G29, G34 to G39, G46 to G54, G56, G57 and D LANG-05, LANG-10.
 
 ### R-11. Changing sequences: out of the first build, to reconsider
 - **Chosen meaning (SOURCE; by 2026-11-12):** changing a sequence changes what every holder sees and preserves its identity (Arch L22130; R12 D-SEQ-1). R12 proposes state-free admission and result checks (D-SEQ-3).
@@ -364,7 +371,7 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 - **Later candidate (PROPOSED):** Search small objects for one giving a wanted algebra element, with an exact equation and checked readout.
 - **Why it matters (INFERENCE):** This turns discovered algebraic structure into a reduction gadget.
 - **Put back to the owner when (PROPOSED):** First finite SRE discovery demonstration. Bring its bounded search and checks, distinguishing fixed-parameter results from general claims.
-- **Where it lands (PROPOSED):** D-ENG-12, a D-STO-3 recipe, the worked demonstration and D-OPT-2.
+- **Where it lands (PROPOSED):** D-ENG-12, a D-STO-3 recipe, the worked demonstration and D-OPT-2. The checked gadget is a LoomLab result. D-OPT-2 applies if it is later used to propose a different algorithm.
 - **Source (SOURCE):** the sealed R1 loss list, LOSS-05; the owner batch binding above.
 
 ### R-29. A checked library for combining answers (LOSS-06)
@@ -438,7 +445,7 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 - **Later candidate (PROPOSED):** Search equivalent encodings or gauge choices for a cheaper realization.
 - **Why it matters (INFERENCE):** Equal exact capability need not mean equal computation cost.
 - **Put back to the owner when (PROPOSED):** First representation-cost study. State the allowed family, tracking and invariance obligations, and workload; check the recalled holographic example before relying on it.
-- **Where it lands (PROPOSED):** D-ENG-7, D-OPT-2 and D-ENG-6.
+- **Where it lands (PROPOSED):** D-ENG-7, D-OPT-2 and D-ENG-6. Cheaper realization is the optimizer's comparison on a stated workload. A connection found while fitting the structures is a separate LoomLab result. The LOSS-02 storage-cost study is deferred until the compiler is close to finished and the SRE-based optimizer is partly built.
 - **Source (SOURCE):** the sealed R1 loss list, LOSS-14; the owner batch binding above.
 
 ### R-38. Join-only shared cells (LOSS-15)
@@ -591,10 +598,18 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 
 ### R-56. The SRE's entry is open (TURN-09)
 
-- **Disposition (SOURCE):** SRE entry remains open; owner reason recorded.
+- **Disposition (SOURCE):** SRE entry remains open; owner reason recorded. **Update (SOURCE, 2026-11-18).** The present compiler slice order stands. There is no early SRE build. Its later placement remains open. Source `owner-record-2026-11-18-no-early-sre-loss02-deferred-forward-gpt2.json`.
 - **Reason (SOURCE, owner's verbatim raw-line reason):** "I think makes sense, having SRE as the goal too early might give Arch and you blinders where every decision is made for the SRE/LL sake and not what's best generally."
 - **Where it lands (SOURCE for current clauses; PROPOSED for new design):** D-SL-8.
 - **Source (SOURCE):** `owner-record-2026-11-16-four-turns.json` (SHA-256 `d78458ce8491429d080b18db1b33d423d5052d731100ff63feee20bf88319960`; raw-line SHA-256 `20f002b9432be73461080c82cf9e48709ca43a4f8cf17b36106d979afd4820fc`).
+- **Guard for that concern (SOURCE).** See R-56a.
+
+#### R-56a. Guard for choices in slices 1 to 3 (decided)
+
+- **Decided guard (SOURCE).** “nothing inside slices 1 to 3 is decided for the SRE's sake without coming to the owner as its own choice.”
+- **Concern it serves (SOURCE).** R-56.
+- **Where it lands (PROPOSED).** D-SL-0.
+- **Source (SOURCE).** `owner-record-2026-11-18-r20-taken-sort-params-guard.json`, SHA-256 `eb105f327848ee31c0ac7a4f578af0af39fe5647a3585ff21a8b980cf4472fe1`, item 5a. Claude Arch's `VIEW.md`, line 23.
 
 ### R-57. Integers as meaning, words as holdings (TURN-10)
 
@@ -648,8 +663,10 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 - **Reason (SOURCE, Arch's proposed reason taken in the owner's bound record; recorded now, not backdated):** "A summary that stores its question's answer is sometimes the best correct one, so it cannot be refused as such; what the refusal meant is done by the workload account, and the sheet says when a summary gains nothing."
 - **Repair (SOURCE: Arch exact words, owner took):** "A sheet that offers a representation states the workload it was judged under and its cost beside asking the object as given; where it is no cheaper, the sheet says that it tells the reader nothing."
 - **Trigger (SOURCE: Arch exact words, owner took):** "Before the sheet's form and the coarsest-representation query are fixed in slice 3."
+- **PROPOSED — Rebuilding reads reminder.** Before the sheet's form and the coarsest-representation query are fixed in slice 3, the sheet also says what an answer's rebuilding may read of the original object, and charges those reads. This reminder adopts no new rule. **SOURCE.** `owner-record-2026-11-18-r20-taken-sort-params-guard.json`, item 5b. Claude Arch's `VIEW.md`, line 83. **Clarification (PROPOSED, 2026-11-18).** This reminder concerns only the optimizer's workload cost account.
 - **Question for that trigger (PROPOSED; web round 11-17, page 14):** The sheet's "coarsest" must name which of three claims it makes: no two names can be merged; a greatest family; or fewest names. The third needs a checked lower bound. With an operation of two hidden arguments and several right answers, a greatest family need not exist. These are distinct candidates for the claim left unchosen in D-ENG-5; D-ENG-5, D-ENG-6 and R-62 stand.
 - **Test (SOURCE: Arch exact words, owner took; NOT RUN):** "run D-ENG-12's test with and without operations; if answer-only summaries still come out reading as findings, a refusal at the report is needed."
+- **Clarification (PROPOSED, 2026-11-18).** The repair concerns the workload cost comparison. The test checks whether storing an already supplied answer is presented as a finding. A sheet reports the saving, if any, against asking the object as given for the stated workload. LoomLab may also report a fit, connection or signal and what supports it as a research result in its own right. A cost claim still needs its workload and comparison.
 - **Where it lands (SOURCE for current clauses; PROPOSED for new design):** D-ENG-6.
 - **Source (SOURCE):** `owner-record-2026-11-16-three-turns-recs.json` (SHA-256 `ef216b27462bd70df6876dcfe73523579436326ac87f4da1dead9ede49ebda65`; raw-line SHA-256 `1cdcc55c28f1929970353de49dbcf905aaaaa133abaa1b4edb78d9087a1dee78`); `THREE-TURNS.md` (SHA-256 `548ed66f42c756c1fe3d9b3289ce10ae94102f4be7074253f475647cd70574bd`) section 5.
 
@@ -739,3 +756,7 @@ SOURCE. The numbering and triggers follow `2026-11-17-CLAUDE-ARCH-OLD-SPECS-MERG
 ### R-80. Host-call contract and threading profile
 
 - **PROPOSED — M-31 reminder.** Consider a complete contract for a call out to the host and a named threading profile. Bring it when GAP 7 is written. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-31, cites G42, G44.
+
+### R-81. Sort parameters at the first client
+
+**PROPOSED — First client.** Bring one actual reusable declaration, its applied-sort identity, a cross-module expansion, and the scope, ownership and old-reader checks. Decide then whether the kernel stores an application or sees only a concrete expansion. Return a proposal for claims quantified over sorts only when slice 4 can carry and check their derivations. [Codex D, L83](C:/Users/grego/.codex/reviews/2026-11-17-CODEX-D-TWO-BRIEFS-SECOND-VOICE-R1/REVIEW.md:83) [Arch, L70](C:/Users/grego/.codex/reviews/2026-11-18-CLAUDE-ARCH-TWO-BRIEFS-SYNTHESIS/VIEW.md:70) [Arch, L71](C:/Users/grego/.codex/reviews/2026-11-18-CLAUDE-ARCH-TWO-BRIEFS-SYNTHESIS/VIEW.md:71)

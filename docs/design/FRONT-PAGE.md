@@ -2,7 +2,7 @@
 
 *Draft explanation for a first reading of Loom.*
 
-The aim is to replace an object with something cheaper that still answers every question its client can ask, even after an allowed update. ([D-REP-1], [D-ENG-6], [November 9 explanation])
+One aim of the optimizer is to replace an object with something cheaper that still answers every question its client can ask, even after an allowed update. ([D-REP-1], [D-ENG-6], [November 9 explanation]) LoomLab uses the same representation tools to find new mathematical connections and decision signals in hard problems. A fit can be useful for what it reveals.
 The client is the part of the program using the object. ([D-REP-1])
 A **name** stands for an object, and each operation the client can reach has a **tracker** that does its work on names. ([D-REP-1])
 
@@ -63,20 +63,20 @@ A term’s **manifest** records what it depends on, including what it does, assu
 
 **Decided.** The number of facets is settled at five. ([D-FAC-1])
 The workload comparison for answer caches stands and comes back before the third development stage (slice 3) fixes the results sheet and the request for a coarsest representation. ([R-62])
-**Open timing.** The Structural Representation Explorer (SRE) builds, checks and combines representations, and a kernel program checks the claims it establishes. ([D-OPT-1], [D-ENG-1])
+**Open timing.** The Structural Representation Explorer (SRE) builds, checks and combines representations, and a kernel program checks the claims it establishes. ([D-OPT-1], [D-ENG-1]) Both the optimizer and LoomLab use the SRE.
 
 The register records graphs as its first application. ([R-10])
-The owner has yet to place its first stage, with finite work possible after slice 3 and an earlier plan placing it after slice 5. ([D-SL-8])
+The existing slice order stands. The owner has ruled out an early SRE build and has yet to set its later start. ([D-SL-8], [owner timing record](C:/Users/grego/.codex/reviews/_relay/inputs/owner-record-2026-11-18-no-early-sre-loss02-deferred-forward-gpt2.json:1))
 The reminder comes due when slice 3 finishes and, in any case, before the relevant slice 5 interfaces are drafted. ([Timing reminder])
 
 ### Four proposals in the design text
 
 The register records the owner’s request to draft and review these proposals. ([Register status])
-- Search within a budget for a representation that answers what one client can reach. ([LOSS-01])
-- Count colourings of graphs joined along a boundary and look for a join that exposes what storing only the count loses. ([LOSS-02])
+- For a compiler request, search within a budget for a representation that answers what one client can reach. ([LOSS-01])
+- In a LoomLab counting experiment, count colourings of graphs joined along a boundary and look for a join that exposes what storing only the count loses. ([LOSS-02])
 
-- Try vector names over a field, such as the rational numbers. When a join multiplies matching entries from the two sides and adds the products, check a lower bound on the number of entries. ([LOSS-03])
-- Compare the pairs of objects that each question with one right answer per object distinguishes on a named collection of examples, keeping the conclusion within that collection. ([LOSS-04])
+- As a shared mathematical check, try vector names over a field, such as the rational numbers. When a join multiplies matching entries from the two sides and adds the products, check a lower bound on the number of entries. ([LOSS-03])
+- To discover questions in LoomLab, compare the pairs of objects that each question with one right answer per object distinguishes on a named collection of examples, keeping the conclusion within that collection. ([LOSS-04])
 
 ### Later questions in the register
 
