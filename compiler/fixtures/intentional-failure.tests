@@ -1,0 +1,2 @@
+# This suite must report one failure and exit 1.
+bootstrap.intentional-failure	greeting.input	wrong.expected

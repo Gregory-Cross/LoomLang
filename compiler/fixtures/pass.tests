@@ -1,0 +1,2 @@
+# name<TAB>input fixture<TAB>expected fixture
+bootstrap.greeting	greeting.input	greeting.expected
