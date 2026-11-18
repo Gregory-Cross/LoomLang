@@ -5,9 +5,9 @@
    This implementation requires OCaml's 63-bit native int (62 magnitude bits):
    max_int = 2^62 - 1. No operation relies on integer wraparound.
    - Addition: (B-1)+(B-1)+1 = 2B-1 < 2^31.
-   - A future schoolbook multiply step, product plus stored result plus carry:
+   - Subtraction: a-b-borrow is in [-B,B-1]; adding B when negative is safe.
+   - Schoolbook multiply step, product plus stored result plus carry:
      (B-1)^2+(B-1)+(B-1) = B^2-1 = 2^60-1 < max_int.
-     Multiplication is not implemented by this piece.
    - Decimal input: 10*(B-1)+9 = 10B-1 < 2^34.
    - Small multiply here uses factors <=30 and carry < factor, hence <30B.
    - Decimal output divides by D=10^9. Its combined numerator is at most
@@ -108,6 +108,50 @@ let add left right =
     done;
     result.(length) <- !carry;
     normalize result
+
+let sub left right =
+  if compare left right <= 0 then zero
+  else
+    let length = Array.length left and right_length = Array.length right in
+    let result = Array.make length 0 in
+    let borrow = ref 0 in
+    for index = 0 to length - 1 do
+      let b = if index < right_length then right.(index) else 0 in
+      (* With borrow in {0,1}, -B <= part <= B-1. A negative part plus
+         B is a limb; otherwise part already is one. No wraparound. *)
+      let part = left.(index) - b - !borrow in
+      if part < 0 then (
+        result.(index) <- part + base;
+        borrow := 1)
+      else (
+        result.(index) <- part;
+        borrow := 0)
+    done;
+    (* left > right ensures the final borrow is zero. *)
+    normalize result
+
+let mul left right =
+  let left_length = Array.length left and right_length = Array.length right in
+  if left_length = 0 || right_length = 0 then zero
+  else (
+    (* Check host capacity before adding lengths, also bounding every index.
+       This resource failure imposes no chosen mathematical maximum. *)
+    if left_length > Sys.max_array_length - right_length then raise Out_of_memory;
+    let result = Array.make (left_length + right_length) 0 in
+    for i = 0 to left_length - 1 do
+      let carry = ref 0 in
+      for j = 0 to right_length - 1 do
+        (* Each operand limb, stored limb and carry is <B. Thus part <=
+           (B-1)^2 + (B-1) + (B-1) = B^2-1 < 2^60 < max_int;
+           the next carry is again <B. All partial sums fit too. *)
+        let part = (left.(i) * right.(j)) + result.(i + j) + !carry in
+        result.(i + j) <- part land mask;
+        carry := part lsr limb_bits
+      done;
+      (* Earlier rows wrote at most i+right_length-1; this cell is untouched. *)
+      result.(i + right_length) <- !carry
+    done;
+    normalize result)
 
 let bit_length value =
   let length = Array.length value in

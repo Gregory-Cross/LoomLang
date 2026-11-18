@@ -1,4 +1,4 @@
-"""Piece 2 commands using piece 1's exact pinned build/process/slot helpers."""
+"""Pieces 2 and 3 commands using piece 1's pinned build/process/slot helpers."""
 import argparse
 from contextlib import ExitStack, contextmanager
 from datetime import datetime, timezone
@@ -93,10 +93,10 @@ def execute(core, args, directory, journal):
     case = directory / ("check-" + args.control + "-" + uuid.uuid4().hex)
     case.mkdir()
     rows, metadata = natural_corpus.generate(PROJECT / "fixtures/naturals-smoke.tsv")
-    if args.control == "wrong-sum":
-        rows = [row for row in rows if row[0] == "control.planted-wrong-sum"]
+    if args.control in ("wrong-sum", "wrong-product"):
+        rows = [row for row in rows if row[0] == "control.planted-" + args.control]
         if len(rows) != 1:
-            raise RuntimeError("missing planted-sum control")
+            raise RuntimeError("missing planted control: " + args.control)
     elif args.control == "zero":
         rows = []
     requests, expected, actual = (case / name for name in ("requests.tsv", "expected.tsv", "actual.tsv"))
@@ -119,8 +119,8 @@ def execute(core, args, directory, journal):
             if result["oracle"]["processed"] != len(rows):
                 raise RuntimeError("oracle count differs from selected")
             argv = [directory / "natural_probe.exe", "--input", requests, "--output", actual]
-            if args.control == "wrong-sum":
-                argv.append("--inject-wrong-sum")
+            if args.control in ("wrong-sum", "wrong-product"):
+                argv.append("--inject-" + args.control)
             probe = command(core, argv, directory, env, journal)
             if probe["stdout"].strip() != "PROCESSED " + str(len(rows)):
                 raise RuntimeError("probe count differs from selected")
@@ -147,7 +147,7 @@ def main():
     build = sub.add_parser("build")
     build.add_argument("--kind", choices=("clean", "rebuild"), required=True)
     check = sub.add_parser("check")
-    check.add_argument("--control", choices=("normal", "wrong-sum", "zero"), default="normal")
+    check.add_argument("--control", choices=("normal", "wrong-sum", "wrong-product", "zero"), default="normal")
     for option in (build, check):
         option.add_argument("--directory", required=True)
         option.add_argument("--wait-seconds", type=int, default=600)

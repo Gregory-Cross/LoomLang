@@ -4,7 +4,7 @@ let natural text =
   | Ok value -> value
   | Error error -> invalid_arg error
 
-let answer row inject_wrong_sum =
+let answer row inject_wrong_sum inject_wrong_product =
   match String.split_on_char '\t' row with
   | [ name; operation; left; right ] when name <> "" ->
       let value =
@@ -16,18 +16,27 @@ let answer row inject_wrong_sum =
         | "roundtrip" -> Natural.to_decimal (natural left)
         | "bits" -> Natural.to_decimal (Natural.bit_length (natural left))
         | "compare" -> string_of_int (Natural.compare (natural left) (natural right))
-        | "add" ->
-            let a = natural left and b = natural right in
+        | "add" | "sub" | "mul" ->
+            let a = natural left in
+            (* Equal text also exercises both arguments aliasing one value. *)
+            let b = if left = right then a else natural right in
             let before_a = Natural.to_decimal a and before_b = Natural.to_decimal b in
-            let sum = Natural.add a b in
-            if Natural.to_decimal a <> before_a || Natural.to_decimal b <> before_b then
-              failwith "addition mutated an input";
-            let sum =
-              if inject_wrong_sum && name = "control.planted-wrong-sum" then
-                Natural.add sum Natural.one
-              else sum
+            let result =
+              match operation with
+              | "add" -> Natural.add a b
+              | "sub" -> Natural.sub a b
+              | "mul" -> Natural.mul a b
+              | _ -> assert false
             in
-            Natural.to_decimal sum
+            if Natural.to_decimal a <> before_a || Natural.to_decimal b <> before_b then
+              failwith (operation ^ " mutated an input");
+            let result =
+              if (inject_wrong_sum && name = "control.planted-wrong-sum")
+                 || (inject_wrong_product && name = "control.planted-wrong-product") then
+                Natural.add result Natural.one
+              else result
+            in
+            Natural.to_decimal result
         | _ -> invalid_arg ("unknown natural operation: " ^ operation)
       in
       name ^ "\t" ^ value ^ "\n"
@@ -54,10 +63,12 @@ let input_row source =
 
 let main () =
   let input = ref "" and output = ref "" and inject = ref false in
+  let inject_product = ref false in
   Arg.parse
     [ ("--input", Arg.Set_string input, "Decimal text requests");
       ("--output", Arg.Set_string output, "Decimal text results");
-      ("--inject-wrong-sum", Arg.Set inject, "Development negative control") ]
+      ("--inject-wrong-sum", Arg.Set inject, "Development negative sum control");
+      ("--inject-wrong-product", Arg.Set inject_product, "Development negative product control") ]
     (fun value -> raise (Arg.Bad ("unexpected argument: " ^ value)))
     "natural_probe --input FILE --output FILE";
   if !input = "" || !output = "" then invalid_arg "input and output are required";
@@ -69,7 +80,7 @@ let main () =
           while not !finished do
             match input_row source with
             | row ->
-                output_string destination (answer row !inject);
+                output_string destination (answer row !inject !inject_product);
                 incr count
             | exception End_of_file -> finished := true
           done;

@@ -17,6 +17,12 @@ val compare : t -> t -> int
 
 val add : t -> t -> t
 
+(** Subtraction stopping at zero: [sub a b] is zero when [a <= b]. *)
+val sub : t -> t -> t
+
+(** Exact product, with the same host-resource limits as the other operations. *)
+val mul : t -> t -> t
+
 (** Exact mathematical bit length, itself a natural: zero has length zero.
     Exposes the argument-size component needed by D-EV-1 without imposing a
     machine-integer bound on later meter arithmetic or choosing its tariff. *)

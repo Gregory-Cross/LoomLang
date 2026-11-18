@@ -18,3 +18,11 @@ invalid.trailing-space	INVALID
 invalid.separator	INVALID
 invalid.letter	INVALID
 valid.leading-zeroes	0
+sub.clamped	0
+sub.equal	0
+sub.basic	3
+mul.zero	0
+mul.one	7
+control.planted-wrong-product	49
+sub.first-borrow	1073741823
+mul.first-two-limbs	1152921502459363329

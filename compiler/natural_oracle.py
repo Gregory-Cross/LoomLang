@@ -26,6 +26,10 @@ def answer(operation, left, right):
     other = natural(right)
     if operation == "add":
         return str(value + other)
+    if operation == "sub":
+        return str(max(0, value - other))
+    if operation == "mul":
+        return str(value * other)
     if operation == "compare":
         return str((value > other) - (value < other))
     raise ValueError("unknown operation: " + operation)

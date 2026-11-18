@@ -18,3 +18,11 @@ invalid.trailing-space	parse	1 	-
 invalid.separator	parse	1_000	-
 invalid.letter	parse	12x	-
 valid.leading-zeroes	parse	00000	-
+sub.clamped	sub	2	5
+sub.equal	sub	7	7
+sub.basic	sub	5	2
+mul.zero	mul	7	0
+mul.one	mul	7	1
+control.planted-wrong-product	mul	7	7
+sub.first-borrow	sub	1073741824	1
+mul.first-two-limbs	mul	1073741823	1073741823
