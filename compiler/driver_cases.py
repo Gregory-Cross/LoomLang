@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import time
 
 
 def checksum(data):
@@ -12,6 +13,30 @@ def checksum(data):
 
 def compact(value):
     return (json.dumps(value, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
+
+
+def capture_recovering_stdout(directory, command, out, err):
+    """Let the fault fixture finish its stderr report before restoring its private stdout file."""
+    import msvcrt
+
+    trace = directory / "fault-trace.txt"
+    with (directory / "stdout.bin").open("r+b", buffering=0) as guard:
+        msvcrt.locking(guard.fileno(), msvcrt.LK_NBLCK, 1)
+        with subprocess.Popen(command, stdin=subprocess.PIPE, stdout=out, stderr=err) as child:
+            try:
+                deadline = time.monotonic() + 10
+                while child.poll() is None:
+                    if trace.exists() and b"stderr-flushed" in trace.read_bytes().splitlines():
+                        msvcrt.locking(guard.fileno(), msvcrt.LK_UNLCK, 1)
+                        child.communicate(input=b"stdout-restored\n", timeout=10)
+                        break
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError("report-fault fixture did not flush stderr")
+                    time.sleep(0.01)
+                return child.pid, child.returncode
+            finally:
+                if child.poll() is None:
+                    child.kill()
 
 
 def capture(directory, mode, exe, argv):
@@ -23,10 +48,14 @@ def capture(directory, mode, exe, argv):
             return path.open("rb")
         return path.open("xb")
 
-    with sink("stdout.bin", mode != "normal") as out, sink("stderr.bin", mode == "both-unwritable") as err:
-        with subprocess.Popen([exe, *argv], stdout=out, stderr=err) as child:
-            code = child.wait()
-    (directory / "process.json").write_bytes(compact({"argv": [exe, *argv], "pid": child.pid, "exit": code}))
+    command = [exe, *argv]
+    with sink("stdout.bin", mode in ("report-io", "both-unwritable")) as out, sink("stderr.bin", mode == "both-unwritable") as err:
+        if mode == "recover-stdout":
+            pid, code = capture_recovering_stdout(directory, command, out, err)
+        else:
+            with subprocess.Popen(command, stdout=out, stderr=err) as child:
+                pid, code = child.pid, child.wait()
+    (directory / "process.json").write_bytes(compact({"argv": command, "pid": pid, "exit": code}))
     return code
 
 
@@ -108,6 +137,8 @@ def run(core, exe, directory, case, control, env, journal, contract, snapshot):
     if case.get("both_unwritable"):
         mode = "both-unwritable"
     if control == "report-faults":
+        if case["fault_mode"] == "recover-stdout":
+            mode = "recover-stdout"
         env = {**env, "LOOM_DRIVER_TEST_FAULT": case["fault_mode"]}
     record = core.launch([sys.executable, "-B", Path(__file__).resolve(), directory, mode, exe, *args],
                          directory, env, journal)
@@ -142,6 +173,10 @@ def run(core, exe, directory, case, control, env, journal, contract, snapshot):
     if control == "report-faults":
         trace = (directory / "fault-trace.txt").read_bytes().splitlines()
         expected_trace = [event.encode("ascii") for event in case["trace"]]
+        if mode == "recover-stdout" and gold is not None:
+            system_error = json.loads(gold)["facts"]["system_error"]
+            if isinstance(system_error, str):
+                expected_trace = [line.replace(b"@OS_ERROR@", system_error.encode("utf-8")) for line in expected_trace]
         if trace != expected_trace:
             errors.append({"field": "fault_trace", "error": "observed calls differ from the selected control"})
     if gold is not None:

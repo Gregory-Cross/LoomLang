@@ -169,7 +169,7 @@ external exit_without_hooks : int -> 'a = "caml_sys_exit"
 let () =
   try
     if not Sys.win32 then Sys.set_signal Sys.sigpipe Sys.Signal_ignore;
-    exit (main Sys.argv)
+    exit_without_hooks (main Sys.argv)
   with _ ->
     (try write_report stderr "loom-b: report unavailable" with _ -> ());
     exit_without_hooks 4

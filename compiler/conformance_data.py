@@ -11,9 +11,9 @@ import driver_cases
 PROJECT = Path(__file__).resolve().parent
 CATALOG = PROJECT / "fixtures/conformance/claims.json"
 EXTRA = PROJECT / "fixtures/conformance/cases.jsonl"
-CATALOG_SHA256 = "c0766f40ccbfae993bbe60660b1a4ac367d5c02097b4d35878764baaa4d339d0"
-CONTRACT_SHA256 = "78d861efc3df3082238f4677c833bf26266b99388c5e6ec5190d23625a0ff2b9"
-BASE_SNAPSHOT = "ce356e28a5df3bfc1ac6e778a4c1ee86f1c9860f411cfe785bf091f3450258ff"
+CATALOG_SHA256 = "9ae137cd5621509c5e492dbb15c913161cf84589f8a5e3f371d8f8ea10336030"
+CONTRACT_SHA256 = "e081cb4d22224b0d82599a3da4ecb357d30b2f90837e635e9f3b16c9c98facf7"
+BASE_SNAPSHOT = "81aa33887915863fc64a9afacdb0afaa2a51f1f1b23808abd256d62333ba4cf4"
 CONSTRUCTOR_ROWS = {
     "R-demo", "R-demo-spare", "F-demo-one-less",
     "R-empty-row", "R-row", "R-order-a", "R-order-b", "R-reuse-full-row",
@@ -100,7 +100,11 @@ def load_suite(manifest_path):
     checked(PROJECT / "natural_oracle.py", cat["oracle_sha256"])
     checked(PROJECT / "DRIVER.md", cat["driver_contract_sha256"])
     checked(PROJECT / "driver_build.py", cat["driver_build_sha256"])
-    checked(PROJECT.parent / "docs/design/DESIGN-TEXT-R20.md", cat["design_file_sha256"])
+    design = PROJECT.parent / "docs/design/DESIGN-TEXT-R20.md"
+    if not design.exists():
+        design = (manifest_path.parent.parent / "2026-11-18-CODEX-F-R20-Q-FIXES"
+                  / "REPLAY-COPY.NOT-THE-REPOSITORY-FILE.DESIGN-TEXT-R20.md")
+    checked(design, cat["design_file_sha256"])
     ev = checked(PROJECT.parent / "docs/spec/RULES-EVALUATOR.md", cat["rules_file_sha256"]).decode().splitlines()
     plan = manifest_path.parent.parent / "2026-11-17-CODEX-A-FIRST-MILESTONE-PLAN-OCAML"
     checked(plan / "PLAN.md", cat["plan_sha256"])

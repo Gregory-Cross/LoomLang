@@ -6,6 +6,8 @@
 
 ## Bound sources
 
+The conformance runner reads the pinned R20 design from the repository when present. Once the tracked design advances, the hash-bound R20 replay copy supplies those same bytes.
+
 | Artifact | SHA-256 |
 |---|---|
 | R20 | `4c95e64359c39d89d9c85430b205e23ca1df794465bf22568f38f49d20ed4350` |
@@ -22,9 +24,9 @@
 | Committed driver fixtures | `ac1e1d09086452ec6def4695b26b622b686fd24a178efa28e64baa33b5e8f5c7` |
 | Independent Python decimal oracle | `7aaa80f5689f945f2cc08f31cb6e5987e00e6ec3e1e6efd116566a6216858fbb` |
 | Piece 17 fixtures/conformance/cases.jsonl | `d2120a1af00987b3a95427bc255e9a1c2c0a113bf60cedc496cf62f00ecd3f5d` |
-| Piece 17 fixtures/conformance/claims.json | `c0766f40ccbfae993bbe60660b1a4ac367d5c02097b4d35878764baaa4d339d0` |
+| Piece 17 fixtures/conformance/claims.json | `9ae137cd5621509c5e492dbb15c913161cf84589f8a5e3f371d8f8ea10336030` |
 
-**SOURCE.** The normal subject begins at commit `219ac9cd97d7fb236f4f033b50e8030056779ff9`. The normal build on the pinned 5.5.2 compiler has snapshot `ce356e28a5df3bfc1ac6e778a4c1ee86f1c9860f411cfe785bf091f3450258ff`. Verify the actual compiled sources, embedded identity and executable against the build ledger while holding the run slot. The candidate schema is `loom-b-report/1-candidate`, the profile `milestone-b-forms/1-candidate` and the meter `milestone-b-ARTW/1-candidate`. A native negative subject binds its own verified executable and snapshot before comparison.
+**SOURCE.** The normal subject begins at commit `3632766012a56f91103cec9a54c9ed989238281c`. The normal build on the pinned 5.5.2 compiler has snapshot `81aa33887915863fc64a9afacdb0afaa2a51f1f1b23808abd256d62333ba4cf4`. Verify the actual compiled sources, embedded identity and executable against the build ledger while holding the run slot. The owning driver regression forces the first stdout flush to fail, restores stdout after the detailed stderr report and checks for exit 4, empty stdout and the preserved execution balance. The candidate schema is `loom-b-report/1-candidate`, the profile `milestone-b-forms/1-candidate` and the meter `milestone-b-ARTW/1-candidate`. A native negative subject binds its own verified executable and snapshot before comparison.
 
 ## Named comparisons
 

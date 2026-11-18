@@ -26,3 +26,16 @@ module Run_record = struct
     | Some "stderr-encode" when result.code = "tool.report_io" -> raise Out_of_memory
     | _ -> encode state result
 end
+
+(* Only the recovery fixture waits between its completed stderr flush and exit. *)
+let flush channel =
+  let recover = Driver_fault.mode = Some "recover-stdout" in
+  (try Stdlib.flush channel with
+   | Sys_error message as exn when recover && channel == stdout ->
+       Driver_fault.trace ("stdout-failed:" ^ message);
+       raise exn);
+  if recover && channel == stderr then begin
+    Driver_fault.trace "stderr-flushed";
+    if input_line stdin <> "stdout-restored" then failwith "missing stdout restoration";
+    Driver_fault.trace "stdout-restored"
+  end
