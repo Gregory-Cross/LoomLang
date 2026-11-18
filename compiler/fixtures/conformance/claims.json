@@ -1,0 +1,2335 @@
+{
+  "schema": "loom-b-conformance/1-candidate",
+  "base_head": "219ac9cd97d7fb236f4f033b50e8030056779ff9",
+  "rules_file_sha256": "b974d98eec15b4458d1d94acce0509d039f0500aaf824fcea8b7eec2098f5868",
+  "design_file_sha256": "4c95e64359c39d89d9c85430b205e23ca1df794465bf22568f38f49d20ed4350",
+  "readiness_sha256": "26611d7af4e48859bfa0b1057f25174a015d50cf837f43f740bf4e9073e2feb4",
+  "plan_sha256": "0fab0248520307e41e487156755001b72e4805563c91e243de2220bbab360976",
+  "contract_manifest_sha256": "480d8212ab38bef6dacceaedf713a20331160feacd97a110582adaf6373ae33d",
+  "paper_sha256": "95c745205b35363775923f2a48758f17af06acf84b23d42a05138373ac824894",
+  "driver_fixtures_sha256": "ac1e1d09086452ec6def4695b26b622b686fd24a178efa28e64baa33b5e8f5c7",
+  "new_fixtures_sha256": "d2120a1af00987b3a95427bc255e9a1c2c0a113bf60cedc496cf62f00ecd3f5d",
+  "oracle_sha256": "7aaa80f5689f945f2cc08f31cb6e5987e00e6ec3e1e6efd116566a6216858fbb",
+  "driver_contract_sha256": "38b41a7c792f403f968048d5984ad0aa33517351d1c2ab64c3e4bd2a796dfe9f",
+  "driver_build_sha256": "548a8e6f2e00d39885a362b486beef6898a65171aaea3e234b0aceca399cde3b",
+  "profile": "milestone-b-forms/1-candidate",
+  "meter": "milestone-b-ARTW/1-candidate",
+  "rules": {
+    "EV-118": {
+      "revision": 1,
+      "line": 1717,
+      "standing_line": 1720,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — PROPOSED conditional transcription of reviewed A4 R2; exact choices and independent EV-G2 review remain.",
+      "title": "Conditional written forms and lexical categories"
+    },
+    "EV-119": {
+      "revision": 1,
+      "line": 1730,
+      "standing_line": 1733,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — PROPOSED conditional transcription of reviewed A4 R2; exact choices and independent EV-G2 review remain.",
+      "title": "Conditional global collection, roles and lexical scopes"
+    },
+    "EV-120": {
+      "revision": 2,
+      "line": 1743,
+      "standing_line": 1746,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — conditional P_A4 profile updated by the selected five-operation set; candidate meanings/tariffs and integration remain bounded; changed bytes need independent review.",
+      "title": "Conditional fixed active profile and held vocabulary"
+    },
+    "EV-003": {
+      "revision": 5,
+      "line": 327,
+      "standing_line": 330,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Equal values are one node"
+    },
+    "EV-005": {
+      "revision": 4,
+      "line": 351,
+      "standing_line": 354,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Row construction"
+    },
+    "EV-036": {
+      "revision": 4,
+      "line": 724,
+      "standing_line": 727,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Ordinary values can be copied"
+    },
+    "EV-114": {
+      "revision": 1,
+      "line": 1664,
+      "standing_line": 1667,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of the positively qualified EV-A1 proposal with Q F1–F9 carried; independent EV-G2 review still required; no adoption.",
+      "title": "Natural addition equation and invoice"
+    },
+    "EV-115": {
+      "revision": 1,
+      "line": 1677,
+      "standing_line": 1680,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of the positively qualified EV-A1 proposal with Q F1–F9 carried; independent EV-G2 review still required; no adoption.",
+      "title": "Natural truncated subtraction equation and invoice"
+    },
+    "EV-116": {
+      "revision": 1,
+      "line": 1690,
+      "standing_line": 1693,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of the positively qualified EV-A1 proposal with Q F1–F9 carried; independent EV-G2 review still required; no adoption.",
+      "title": "Natural multiplication equation and invoice"
+    },
+    "EV-135": {
+      "revision": 1,
+      "line": 1947,
+      "standing_line": 1950,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — SOURCE the shipment/check policy is owner-decided; interface, checker and evidence details remain open. [decision: owner-record-2026-11-12-bignum-check-lookback-working.json; question 2]",
+      "title": "Own arithmetic in programs and independent development checking"
+    },
+    "EV-012": {
+      "revision": 4,
+      "line": 436,
+      "standing_line": 439,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Primitive nonfailure"
+    },
+    "EV-041": {
+      "revision": 3,
+      "line": 786,
+      "standing_line": 789,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — builtin identity and primitive-versus-user payload core; current separately authenticated edges are referenced without adopting full grammar, bytes or resource contracts.",
+      "title": "Primitive-result identities and payload premises"
+    },
+    "EV-092": {
+      "revision": 2,
+      "line": 1400,
+      "standing_line": 1403,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of Arch METER R5 listed proposal, positively reviewed only within G0172 scope; no tariff adoption or whole-meter completion. INFERENCE — The current R16 revision awaits independent review; any inherited positive review covers only its original scope and bytes.",
+      "title": "K-13 Rule E actual-argument edge invoice"
+    },
+    "EV-014": {
+      "revision": 1,
+      "line": 460,
+      "standing_line": 463,
+      "standing": "working",
+      "standing_text": "- standing: working — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Fueled self calls"
+    },
+    "EV-015": {
+      "revision": 1,
+      "line": 472,
+      "standing_line": 475,
+      "standing": "working",
+      "standing_text": "- standing: working — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Exhaustion is unknown"
+    },
+    "EV-016": {
+      "revision": 3,
+      "line": 484,
+      "standing_line": 487,
+      "standing": "working",
+      "standing_text": "- standing: working — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Call charge"
+    },
+    "EV-043": {
+      "revision": 3,
+      "line": 810,
+      "standing_line": 813,
+      "standing": "draft",
+      "standing_text": "- standing: draft — PROPOSED K-5 core; neither reviewer adopts it.",
+      "title": "Proposed strict reference evaluation order (K-5)"
+    },
+    "EV-113": {
+      "revision": 2,
+      "line": 1652,
+      "standing_line": 1655,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of Arch METER R5 listed proposal, positively reviewed only within G0172 scope; no tariff adoption or whole-meter completion.",
+      "title": "K-13 call and loop-turn work events"
+    },
+    "EV-122": {
+      "revision": 2,
+      "line": 1769,
+      "standing_line": 1772,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of the positively reviewed EV-A3 R1 proposal; independent EV-G2 review required; no adoption.",
+      "title": "Structural events and ordinary/memo call composition"
+    },
+    "EV-124": {
+      "revision": 3,
+      "line": 1793,
+      "standing_line": 1796,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of the positively reviewed EV-A3 R1 proposal; independent EV-G2 review required; no adoption. INFERENCE — The current R16 revision awaits independent review; any inherited positive review covers only its original scope and bytes.",
+      "title": "Entry, return and partial start-admission boundary"
+    },
+    "EV-017": {
+      "revision": 1,
+      "line": 496,
+      "standing_line": 499,
+      "standing": "working",
+      "standing_text": "- standing: working — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Result bound precedes construction"
+    },
+    "EV-019": {
+      "revision": 1,
+      "line": 520,
+      "standing_line": 523,
+      "standing": "working",
+      "standing_text": "- standing: working — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Bound computation cannot overflow"
+    },
+    "EV-020": {
+      "revision": 1,
+      "line": 532,
+      "standing_line": 535,
+      "standing": "working",
+      "standing_text": "- standing: working — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Unpayable bounds stop the run"
+    },
+    "EV-022": {
+      "revision": 4,
+      "line": 556,
+      "standing_line": 559,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Work is charged separately"
+    },
+    "EV-086": {
+      "revision": 2,
+      "line": 1328,
+      "standing_line": 1331,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of Arch METER R5 listed proposal, positively reviewed only within G0172 scope; no tariff adoption or whole-meter completion.",
+      "title": "K-13 argument parts"
+    },
+    "EV-087": {
+      "revision": 1,
+      "line": 1340,
+      "standing_line": 1343,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of Arch METER R5 listed proposal, positively reviewed only within G0172 scope; no tariff adoption or whole-meter completion.",
+      "title": "K-13 prospective result cells"
+    },
+    "EV-088": {
+      "revision": 1,
+      "line": 1352,
+      "standing_line": 1355,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of Arch METER R5 listed proposal, positively reviewed only within G0172 scope; no tariff adoption or whole-meter completion.",
+      "title": "K-13 temporary-frame component"
+    },
+    "EV-089": {
+      "revision": 2,
+      "line": 1364,
+      "standing_line": 1367,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of Arch METER R5 listed proposal, positively reviewed only within G0172 scope; no tariff adoption or whole-meter completion. INFERENCE — The current R16 revision awaits independent review; any inherited positive review covers only its original scope and bytes.",
+      "title": "K-13 work-event component"
+    },
+    "EV-090": {
+      "revision": 2,
+      "line": 1376,
+      "standing_line": 1379,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of Arch METER R5 listed proposal, positively reviewed only within G0172 scope; no tariff adoption or whole-meter completion. INFERENCE — The current R16 revision awaits independent review; any inherited positive review covers only its original scope and bytes.",
+      "title": "K-13 atomic known invoice"
+    },
+    "EV-095": {
+      "revision": 1,
+      "line": 1436,
+      "standing_line": 1439,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of Arch METER R5 listed proposal, positively reviewed only within G0172 scope; no tariff adoption or whole-meter completion.",
+      "title": "K-13 row-construction invoice"
+    },
+    "EV-125": {
+      "revision": 1,
+      "line": 1805,
+      "standing_line": 1808,
+      "standing": "draft",
+      "standing_text": "- standing: DRAFT — transcription of the positively reviewed EV-A3 R1 proposal; independent EV-G2 review required; no adoption.",
+      "title": "Integer unit and equal-weight invoice"
+    },
+    "EV-027": {
+      "revision": 3,
+      "line": 616,
+      "standing_line": 619,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Record program"
+    },
+    "EV-028": {
+      "revision": 3,
+      "line": 628,
+      "standing_line": 631,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Record input"
+    },
+    "EV-029": {
+      "revision": 4,
+      "line": 640,
+      "standing_line": 643,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Record output"
+    },
+    "EV-030": {
+      "revision": 4,
+      "line": 652,
+      "standing_line": 655,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Record fuel"
+    },
+    "EV-031": {
+      "revision": 3,
+      "line": 664,
+      "standing_line": 667,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Record build"
+    },
+    "EV-032": {
+      "revision": 4,
+      "line": 676,
+      "standing_line": 679,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Build-relative run evidence"
+    },
+    "EV-033": {
+      "revision": 4,
+      "line": 688,
+      "standing_line": 691,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Eval has its stated conclusion"
+    },
+    "EV-034": {
+      "revision": 4,
+      "line": 700,
+      "standing_line": 703,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Separate scoped soundness"
+    },
+    "EV-018": {
+      "revision": 2,
+      "line": 508,
+      "standing_line": 511,
+      "standing": "working",
+      "standing_text": "- standing: working — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Temporary bound precedes construction"
+    },
+    "EV-021": {
+      "revision": 3,
+      "line": 544,
+      "standing_line": 547,
+      "standing": "draft",
+      "standing_text": "- standing: draft — inherited binding standing as recorded in the pinned R3 OLD_RULES; new details are draft and numeric calibration remains open.",
+      "title": "Uncomputable bounds stop the run"
+    }
+  },
+  "claims": {
+    "pre-run": {
+      "forms": "B-F04–F07, B-O01/O05/O07/O08",
+      "claim": "Invocation, lexical and whole-program refusal; include invalid unused bodies.",
+      "nearest_wrong": "Wrong cause or first offending UTF-8 byte.",
+      "cases": [
+        "paper.P-unknown-flag",
+        "paper.P-duplicate-flag",
+        "paper.P-missing-value",
+        "paper.P-missing-flag",
+        "paper.P-malformed-entry",
+        "paper.P-bad-limit",
+        "paper.P-bad-input",
+        "paper.P-bad-fuel",
+        "paper.P-encoding",
+        "paper.P-character",
+        "paper.P-bom",
+        "paper.P-zero-prefix",
+        "paper.P-syntax",
+        "paper.P-parentheses",
+        "paper.P-reserved-global",
+        "paper.P-duplicate-global",
+        "paper.P-zero-params",
+        "paper.P-two-params",
+        "paper.P-reserved-binder",
+        "paper.P-global-binder",
+        "paper.P-unbound-variable",
+        "paper.P-unknown-call",
+        "paper.P-wrong-role",
+        "paper.P-bare-global-role",
+        "paper.P-primitive-arity",
+        "paper.P-named-arity",
+        "paper.P-entry-missing",
+        "paper.P-empty",
+        "paper.P-entry-role",
+        "paper.P-unused-bad",
+        "paper.P-invalid-fuel-zero",
+        "paper.P-no-check-budget-flag",
+        "source.trailing-definition-at-zero",
+        "trace.renamed-offset"
+      ]
+    },
+    "value-order": {
+      "forms": "B-F02/F06, B-C07, B-O04/O08",
+      "claim": "Returned values, left-to-right fields, repeated references, report-local node order and ordinary names.",
+      "nearest_wrong": "Reversed fields or separate nodes for equal children.",
+      "cases": [
+        "paper.R-identity",
+        "paper.R-zero-literal",
+        "paper.R-crlf",
+        "paper.R-empty-row",
+        "paper.R-row",
+        "paper.R-order-a",
+        "paper.R-order-b",
+        "paper.R-reuse-full-row",
+        "paper.R-none-in-row",
+        "paper.R-wide-input",
+        "paper.R-wide-literal",
+        "paper.R-demo",
+        "paper.R-demo-spare",
+        "graph.shared-ordered",
+        "names.row-function",
+        "names.row-binder",
+        "names.row-entry"
+      ]
+    },
+    "decimal": {
+      "forms": "B-F02, B-C02/C05/C10, B-O04/O08",
+      "claim": "Addition, truncated subtraction and multiplication of obtained naturals under the selected budgets.",
+      "nearest_wrong": "Subtraction for addition or addition for multiplication.",
+      "cases": [
+        "paper.R-add",
+        "paper.R-sub-floor",
+        "paper.R-mul",
+        "paper.R-zero-add",
+        "paper.R-wide-product",
+        "paper.R-zero-product-full-bill",
+        "paper.R-wide-add-carry",
+        "paper.R-wide-sub-borrow"
+      ]
+    },
+    "wrong-kind": {
+      "forms": "B-F06/F07, B-C06/C08, B-O02/O04",
+      "claim": "A fully paid wrong-kind arithmetic call returns ordinary builtin none. An unpaid edge preserves its prefix.",
+      "nearest_wrong": "Free wrong-kind edge at one-short fuel, or an invocation refusal.",
+      "cases": [
+        "paper.R-wrong-kind-none",
+        "paper.R-nested-row-part-one",
+        "paper.F-none-one-less"
+      ]
+    },
+    "calls-order": {
+      "forms": "B-F05/F06, B-C04/C08, B-O02/O03",
+      "claim": "Forward and recursive calls, variable reads and written argument order through the chosen stop.",
+      "nearest_wrong": "Right argument first, or an unpaid call executed for free.",
+      "cases": [
+        "paper.R-forward",
+        "paper.F-call",
+        "paper.F-forward-body",
+        "paper.F-self-call",
+        "paper.F-mutual-call",
+        "paper.F-left-to-right",
+        "trace.argument-order"
+      ]
+    },
+    "atomic-debit": {
+      "forms": "B-C02–C10, B-O02/O03/O08",
+      "claim": "Earlier debits stand and the first unaffordable invoice consumes zero. Include a paid boundary counterpart.",
+      "nearest_wrong": "An omitted debit returns a result, or a failed invoice spends fuel.",
+      "cases": [
+        "paper.F-entry-zero",
+        "paper.F-literal",
+        "paper.F-variable",
+        "paper.F-add-one-less",
+        "paper.F-sub-one-less",
+        "paper.F-mul-one-less",
+        "paper.F-row-one-less",
+        "paper.F-wide-product",
+        "paper.F-demo-one-less",
+        "trace.carry-one-short",
+        "trace.borrow-one-short"
+      ]
+    },
+    "resources": {
+      "forms": "B-F04, B-O02/O03/O06/O08",
+      "claim": "Finite source and value caps and real file/report I/O. Account at the first failing boundary.",
+      "nearest_wrong": "Dropping the observed limit, completed execution or failed operation.",
+      "cases": [
+        "paper.T-source-limit",
+        "paper.T-source-io",
+        "paper.T-value-limit",
+        "limit.value-63",
+        "limit.value-64",
+        "io.unwritable-stdout",
+        "trace.renamed-cap-exact",
+        "trace.renamed-cap-short"
+      ]
+    },
+    "record-binding": {
+      "forms": "B-O03/O04/O07/O08, B-C11",
+      "claim": "Match the actual file, argv, subject, build identity, candidate profiles and raw streams for this run.",
+      "nearest_wrong": "A record from the adjacent source or another build, input or profile passes.",
+      "cases": [
+        "source.refusal-a",
+        "source.refusal-b"
+      ]
+    }
+  },
+  "existing_cases": [
+    "graph.shared-ordered",
+    "names.row-function",
+    "names.row-binder",
+    "names.row-entry",
+    "source.trailing-definition-at-zero",
+    "source.refusal-a",
+    "source.refusal-b",
+    "limit.value-63",
+    "limit.value-64",
+    "io.unwritable-stdout"
+  ],
+  "controls": {
+    "wrong-sum": [
+      "paper.R-wide-add-carry",
+      "trace.carry-one-short"
+    ],
+    "wrong-product": [
+      "paper.R-wide-product"
+    ],
+    "tuple-order": [
+      "paper.R-order-a"
+    ],
+    "argument-order": [
+      "trace.argument-order"
+    ],
+    "wrong-debit": [
+      "paper.F-none-one-less"
+    ],
+    "wrong-call-debit": [
+      "paper.F-call"
+    ],
+    "wrong-read-debit": [
+      "paper.F-variable"
+    ],
+    "wrong-cause": [
+      "paper.P-unknown-flag"
+    ],
+    "wrong-offset": [
+      "trace.renamed-offset"
+    ],
+    "wrong-sharing": [
+      "paper.R-reuse-full-row"
+    ],
+    "wrong-resource": [
+      "paper.T-value-limit"
+    ],
+    "stale-source": [
+      "source.refusal-a"
+    ],
+    "stale-build": [
+      "source.refusal-a"
+    ],
+    "stale-profile": [
+      "source.refusal-a"
+    ],
+    "stale-meter": [
+      "source.refusal-a"
+    ],
+    "stale-input": [
+      "source.refusal-a"
+    ],
+    "missing-id": [
+      "source.refusal-a",
+      "source.refusal-b"
+    ],
+    "duplicate-id": [
+      "source.refusal-a",
+      "source.refusal-b"
+    ],
+    "zero": []
+  },
+  "decimal_requests": {
+    "paper.R-add": [
+      "add",
+      "7",
+      "1"
+    ],
+    "paper.R-sub-floor": [
+      "sub",
+      "2",
+      "5"
+    ],
+    "paper.R-zero-add": [
+      "add",
+      "0",
+      "0"
+    ],
+    "paper.R-wide-product": [
+      "mul",
+      "18446744073709551616",
+      "18446744073709551616"
+    ],
+    "paper.R-zero-product-full-bill": [
+      "mul",
+      "0",
+      "18446744073709551616"
+    ],
+    "paper.R-wide-add-carry": [
+      "add",
+      "18446744073709551615",
+      "1"
+    ],
+    "paper.R-wide-sub-borrow": [
+      "sub",
+      "18446744073709551616",
+      "1"
+    ],
+    "paper.R-mul": [
+      "mul",
+      "7",
+      "7"
+    ]
+  },
+  "finite_traces": {
+    "paper.F-self-call": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "call",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "call",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "variable",
+        "path": [
+          "0"
+        ],
+        "definition": "0",
+        "invoice": {
+          "A": "0",
+          "R": "0",
+          "T": "0",
+          "W": "1",
+          "total": "1"
+        }
+      }
+    },
+    "paper.F-mutual-call": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "call",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "call",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "variable",
+        "path": [
+          "0"
+        ],
+        "definition": "0",
+        "invoice": {
+          "A": "0",
+          "R": "0",
+          "T": "0",
+          "W": "1",
+          "total": "1"
+        }
+      }
+    },
+    "paper.F-call": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "call",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "0",
+          "R": "0",
+          "T": "0",
+          "W": "1",
+          "total": "1"
+        }
+      }
+    },
+    "paper.F-variable": {
+      "paid": [
+        [
+          "entry",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "variable",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "0",
+          "R": "0",
+          "T": "0",
+          "W": "1",
+          "total": "1"
+        }
+      }
+    },
+    "trace.argument-order": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "left operand variable",
+          1
+        ],
+        [
+          "left operand literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "add",
+        "path": [
+          "0"
+        ],
+        "definition": "0",
+        "invoice": {
+          "A": "4",
+          "R": "4",
+          "T": "0",
+          "W": "3",
+          "total": "11"
+        }
+      }
+    },
+    "paper.F-add-one-less": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "add",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "4",
+          "R": "4",
+          "T": "0",
+          "W": "3",
+          "total": "11"
+        }
+      }
+    },
+    "paper.F-sub-one-less": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "sub",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "5",
+          "R": "2",
+          "T": "0",
+          "W": "3",
+          "total": "10"
+        }
+      }
+    },
+    "paper.F-wide-product": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "variable",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "mul",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "130",
+          "R": "130",
+          "T": "0",
+          "W": "4225",
+          "total": "4485"
+        }
+      }
+    },
+    "trace.carry-one-short": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "add",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "65",
+          "R": "65",
+          "T": "0",
+          "W": "64",
+          "total": "194"
+        }
+      }
+    },
+    "trace.borrow-one-short": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "sub",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "66",
+          "R": "65",
+          "T": "0",
+          "W": "65",
+          "total": "196"
+        }
+      }
+    },
+    "paper.F-row-one-less": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "tuple",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "6",
+          "R": "3",
+          "T": "0",
+          "W": "0",
+          "total": "9"
+        }
+      }
+    },
+    "paper.F-none-one-less": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "empty tuple",
+          1
+        ],
+        [
+          "literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "wrong-kind",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "2",
+          "R": "0",
+          "T": "0",
+          "W": "1",
+          "total": "3"
+        }
+      }
+    },
+    "paper.R-forward": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable x",
+          1
+        ],
+        [
+          "call later",
+          1
+        ],
+        [
+          "variable y",
+          1
+        ],
+        [
+          "return",
+          0
+        ],
+        [
+          "return",
+          0
+        ]
+      ]
+    },
+    "paper.R-wide-add-carry": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "add",
+          194
+        ]
+      ]
+    },
+    "paper.R-wide-sub-borrow": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "sub",
+          196
+        ]
+      ]
+    },
+    "paper.R-wide-product": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "mul",
+          4485
+        ]
+      ]
+    },
+    "paper.R-zero-product-full-bill": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "mul",
+          197
+        ]
+      ]
+    },
+    "paper.R-reuse-full-row": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "first empty tuple",
+          1
+        ],
+        [
+          "second empty tuple",
+          1
+        ],
+        [
+          "outer tuple",
+          5
+        ]
+      ]
+    },
+    "paper.R-mul": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "mul",
+          21
+        ]
+      ]
+    },
+    "paper.F-mul-one-less": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "mul",
+        "path": [],
+        "definition": "0",
+        "invoice": {
+          "A": "6",
+          "R": "6",
+          "T": "0",
+          "W": "9",
+          "total": "21"
+        }
+      }
+    },
+    "paper.R-demo": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "call",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "add",
+          13
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "sub",
+          10
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "mul",
+          21
+        ],
+        [
+          "tuple",
+          15
+        ]
+      ]
+    },
+    "paper.R-demo-spare": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "call",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "add",
+          13
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "sub",
+          10
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "mul",
+          21
+        ],
+        [
+          "tuple",
+          15
+        ]
+      ]
+    },
+    "paper.F-demo-one-less": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "call",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "variable",
+          1
+        ],
+        [
+          "add",
+          13
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "sub",
+          10
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "mul",
+          21
+        ]
+      ],
+      "unpaid": {
+        "event": "tuple",
+        "path": [],
+        "definition": "1",
+        "invoice": {
+          "A": "11",
+          "R": "4",
+          "T": "0",
+          "W": "0",
+          "total": "15"
+        }
+      }
+    },
+    "paper.F-left-to-right": {
+      "paid": [
+        [
+          "entry",
+          1
+        ],
+        [
+          "literal",
+          1
+        ],
+        [
+          "literal",
+          1
+        ]
+      ],
+      "unpaid": {
+        "event": "literal",
+        "path": [
+          "1",
+          "1"
+        ],
+        "definition": "0",
+        "invoice": {
+          "A": "0",
+          "R": "0",
+          "T": "0",
+          "W": "1",
+          "total": "1"
+        }
+      }
+    }
+  },
+  "diagnostic_tokens": {
+    "paper.P-unused-bad": "ghost",
+    "paper.P-unknown-call": "ghost",
+    "paper.P-character": "#",
+    "trace.renamed-offset": "#",
+    "source.refusal-a": "#",
+    "source.refusal-b": "#"
+  },
+  "documentary": {
+    "EV-018": "NOT DONE. No positive billable temporary witness in B-C09.",
+    "EV-021": "NOT DONE. No genuine unavailable-bound witness in B-C09.",
+    "EV-033": "Scope of finite evidence only.",
+    "EV-034": "A separate soundness argument is required.",
+    "EV-088": "Scope exclusion under B-C11. Nonempty set search has no B operation."
+  },
+  "case_clauses": {
+    "paper.P-unknown-flag": {
+      "forms": {
+        "B-O05": "Refusal invoke.arguments.unknown_flag with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.arguments.unknown_flag before file access."
+      },
+      "rules": {}
+    },
+    "paper.P-duplicate-flag": {
+      "forms": {
+        "B-O05": "Refusal invoke.arguments.duplicate_flag with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.arguments.duplicate_flag before file access."
+      },
+      "rules": {}
+    },
+    "paper.P-missing-value": {
+      "forms": {
+        "B-O05": "Refusal invoke.arguments.missing_value with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.arguments.missing_value before file access."
+      },
+      "rules": {}
+    },
+    "paper.P-missing-flag": {
+      "forms": {
+        "B-O05": "Refusal invoke.arguments.missing_flag with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.arguments.missing_flag before file access."
+      },
+      "rules": {}
+    },
+    "paper.P-malformed-entry": {
+      "forms": {
+        "B-O05": "Refusal invoke.arguments.malformed_entry with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.arguments.malformed_entry before file access."
+      },
+      "rules": {}
+    },
+    "paper.P-bad-limit": {
+      "forms": {
+        "B-O05": "Refusal invoke.arguments.bad_tool_limit with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.arguments.bad_tool_limit before file access."
+      },
+      "rules": {}
+    },
+    "paper.P-bad-input": {
+      "forms": {
+        "B-O05": "Refusal invoke.bad_input with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.bad_input before file access."
+      },
+      "rules": {}
+    },
+    "paper.P-bad-fuel": {
+      "forms": {
+        "B-O05": "Refusal invoke.bad_fuel with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.bad_fuel before file access."
+      },
+      "rules": {}
+    },
+    "paper.P-encoding": {
+      "forms": {
+        "B-O05": "Refusal read.encoding with its cause facts and offending site.",
+        "B-F04": "read.encoding at byte 0 of the submitted source."
+      },
+      "rules": {}
+    },
+    "paper.P-character": {
+      "forms": {
+        "B-O05": "Refusal read.character with its cause facts and offending site.",
+        "B-F04": "read.character at byte 12 of the submitted source."
+      },
+      "rules": {
+        "EV-118": "The candidate source is rejected for read.character at byte 12."
+      }
+    },
+    "paper.P-bom": {
+      "forms": {
+        "B-O05": "Refusal read.character with its cause facts and offending site.",
+        "B-F04": "read.character at byte 0 of the submitted source."
+      },
+      "rules": {
+        "EV-118": "The candidate source is rejected for read.character at byte 0."
+      }
+    },
+    "paper.P-zero-prefix": {
+      "forms": {
+        "B-O05": "Refusal read.noncanonical_natural with its cause facts and offending site.",
+        "B-F04": "read.noncanonical_natural at byte 12 of the submitted source."
+      },
+      "rules": {}
+    },
+    "paper.P-syntax": {
+      "forms": {
+        "B-O05": "Refusal read.syntax with its cause facts and offending site.",
+        "B-F03": "read.syntax at byte 18 of the submitted source."
+      },
+      "rules": {
+        "EV-118": "The candidate source is rejected for read.syntax at byte 18."
+      }
+    },
+    "paper.P-parentheses": {
+      "forms": {
+        "B-O05": "Refusal read.character with its cause facts and offending site.",
+        "B-F04": "read.character at byte 8 of the submitted source."
+      },
+      "rules": {
+        "EV-118": "The candidate source is rejected for read.character at byte 8."
+      }
+    },
+    "paper.P-reserved-global": {
+      "forms": {
+        "B-O05": "Refusal check.reserved_global with its cause facts and offending site.",
+        "B-F05": "check.reserved_global at byte 4 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports check.reserved_global at byte 4."
+      }
+    },
+    "paper.P-duplicate-global": {
+      "forms": {
+        "B-O05": "Refusal check.duplicate_global with its cause facts and offending site.",
+        "B-F05": "check.duplicate_global at byte 18 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports check.duplicate_global at byte 18."
+      }
+    },
+    "paper.P-zero-params": {
+      "forms": {
+        "B-O05": "Refusal check.unsupported_definition_arity with its cause facts and offending site.",
+        "B-F05": "check.unsupported_definition_arity at byte 4 before execution."
+      },
+      "rules": {}
+    },
+    "paper.P-two-params": {
+      "forms": {
+        "B-O05": "Refusal check.unsupported_definition_arity with its cause facts and offending site.",
+        "B-F05": "check.unsupported_definition_arity at byte 4 before execution."
+      },
+      "rules": {}
+    },
+    "paper.P-reserved-binder": {
+      "forms": {
+        "B-O05": "Refusal check.reserved_binder with its cause facts and offending site.",
+        "B-F05": "check.reserved_binder at byte 9 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports check.reserved_binder at byte 9."
+      }
+    },
+    "paper.P-global-binder": {
+      "forms": {
+        "B-O05": "Refusal check.binder_global_collision with its cause facts and offending site.",
+        "B-F05": "check.binder_global_collision at byte 9 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports check.binder_global_collision at byte 9."
+      }
+    },
+    "paper.P-unbound-variable": {
+      "forms": {
+        "B-O05": "Refusal resolve.unbound_variable with its cause facts and offending site.",
+        "B-F05": "resolve.unbound_variable at byte 12 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports resolve.unbound_variable at byte 12."
+      }
+    },
+    "paper.P-unknown-call": {
+      "forms": {
+        "B-O05": "Refusal resolve.unknown_call with its cause facts and offending site.",
+        "B-F05": "resolve.unknown_call at byte 12 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports resolve.unknown_call at byte 12."
+      }
+    },
+    "paper.P-wrong-role": {
+      "forms": {
+        "B-O05": "Refusal resolve.wrong_role with its cause facts and offending site.",
+        "B-F05": "resolve.wrong_role at byte 12 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports resolve.wrong_role at byte 12."
+      }
+    },
+    "paper.P-bare-global-role": {
+      "forms": {
+        "B-O05": "Refusal resolve.wrong_role with its cause facts and offending site.",
+        "B-F05": "resolve.wrong_role at byte 12 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports resolve.wrong_role at byte 12."
+      }
+    },
+    "paper.P-primitive-arity": {
+      "forms": {
+        "B-O05": "Refusal resolve.primitive_arity with its cause facts and offending site.",
+        "B-F05": "resolve.primitive_arity at byte 12 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports resolve.primitive_arity at byte 12.",
+        "EV-120": "The active add primitive requires two arguments. The checker refuses a one-argument call before execution."
+      }
+    },
+    "paper.P-named-arity": {
+      "forms": {
+        "B-O05": "Refusal resolve.named_arity with its cause facts and offending site.",
+        "B-F05": "resolve.named_arity at byte 12 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports resolve.named_arity at byte 12."
+      }
+    },
+    "paper.P-entry-missing": {
+      "forms": {
+        "B-O05": "Refusal invoke.entry_missing with its cause facts and offending site."
+      },
+      "rules": {}
+    },
+    "paper.P-empty": {
+      "forms": {
+        "B-O05": "Refusal invoke.entry_missing with its cause facts and offending site."
+      },
+      "rules": {}
+    },
+    "paper.P-entry-role": {
+      "forms": {
+        "B-O05": "Refusal invoke.entry_wrong_role with its cause facts and offending site."
+      },
+      "rules": {}
+    },
+    "paper.P-unused-bad": {
+      "forms": {
+        "B-O05": "Refusal resolve.unknown_call with its cause facts and offending site.",
+        "B-F05": "resolve.unknown_call at byte 28 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports resolve.unknown_call at byte 28."
+      }
+    },
+    "paper.P-invalid-fuel-zero": {
+      "forms": {
+        "B-O05": "Refusal resolve.unknown_call with its cause facts and offending site.",
+        "B-F05": "resolve.unknown_call at byte 12 before execution."
+      },
+      "rules": {
+        "EV-119": "Whole-program name or arity check reports resolve.unknown_call at byte 12.",
+        "EV-124": "At zero fuel resolve.unknown_call precedes run entry. The report has started=false."
+      }
+    },
+    "paper.P-no-check-budget-flag": {
+      "forms": {
+        "B-O05": "Refusal invoke.arguments.unknown_flag with its cause facts and offending site.",
+        "B-O01": "The supplied argv produces invoke.arguments.unknown_flag before file access."
+      },
+      "rules": {}
+    },
+    "source.trailing-definition-at-zero": {
+      "forms": {
+        "B-O05": "Refusal read.syntax with its cause facts and offending site.",
+        "B-F03": "read.syntax at byte 26 of the submitted source."
+      },
+      "rules": {
+        "EV-118": "The candidate source is rejected for read.syntax at byte 26.",
+        "EV-124": "At zero fuel read.syntax precedes run entry. The report has started=false."
+      }
+    },
+    "trace.renamed-offset": {
+      "forms": {
+        "B-O05": "Refusal read.character with its cause facts and offending site.",
+        "B-F04": "read.character at byte 20 of the submitted source."
+      },
+      "rules": {
+        "EV-118": "The candidate source is rejected for read.character at byte 20."
+      }
+    },
+    "paper.R-identity": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {}
+    },
+    "paper.R-zero-literal": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {}
+    },
+    "paper.R-crlf": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {}
+    },
+    "paper.R-empty-row": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions."
+      }
+    },
+    "paper.R-row": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions."
+      }
+    },
+    "paper.R-order-a": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions.",
+        "EV-029": "The observed result field and resource outcome match the returned graph or the stopped prefix for this run."
+      }
+    },
+    "paper.R-order-b": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions."
+      }
+    },
+    "paper.R-reuse-full-row": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C07": "The tuple graph and full balance match the field and prospective constructor charges."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions.",
+        "EV-003": "Equal child tuples share a single report-local ID in the enclosing tuple.",
+        "EV-036": "The enclosing tuple contains multiple field references to the same ordinary tuple.",
+        "EV-095": "The independently traced prefix and complete observed balance include the full final tuple invoice."
+      }
+    },
+    "paper.R-none-in-row": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C06": "After payment, arithmetic on an obtained tuple yields the ordinary builtin none."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions.",
+        "EV-012": "The paid wrong-kind add completes with an ordinary none value.",
+        "EV-041": "The returned graph contains the builtin none node produced by wrong-kind add.",
+        "EV-092": "The paid wrong-kind add contributes its actual-argument edge cost to the full balance and returns none."
+      }
+    },
+    "paper.R-wide-input": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {
+        "EV-028": "The canonical input recorded in the report equals the supplied decimal argument."
+      }
+    },
+    "paper.R-wide-literal": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {}
+    },
+    "paper.R-demo": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C07": "The tuple graph and full balance match the field and prospective constructor charges."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions.",
+        "EV-095": "The independently traced prefix and complete observed balance include the full final tuple invoice."
+      }
+    },
+    "paper.R-demo-spare": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C07": "The tuple graph and full balance match the field and prospective constructor charges."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions.",
+        "EV-095": "The independently traced prefix and complete observed balance include the full final tuple invoice."
+      }
+    },
+    "graph.shared-ordered": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions.",
+        "EV-003": "Equal child tuples share a single report-local ID in the enclosing tuple.",
+        "EV-036": "The enclosing tuple contains multiple field references to the same ordinary tuple."
+      }
+    },
+    "names.row-function": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {}
+    },
+    "names.row-binder": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {}
+    },
+    "names.row-entry": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {}
+    },
+    "paper.R-add": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C05": "The full-run balance 14/14/0 and returned natural match the selected add table."
+      },
+      "rules": {
+        "EV-114": "The returned add(7, 1) is 8 at the specified budget.",
+        "EV-135": "A separate development integer process gives 8 for the same add operands as the native result."
+      }
+    },
+    "paper.R-sub-floor": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C05": "The full-run balance 13/13/0 and returned natural match the selected sub table."
+      },
+      "rules": {
+        "EV-115": "The returned sub(2, 5) is 0 at the specified budget.",
+        "EV-135": "A separate development integer process gives 0 for the same sub operands as the native result."
+      }
+    },
+    "paper.R-mul": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C05": "The full-run balance 24/24/0 and returned natural match the selected mul table."
+      },
+      "rules": {
+        "EV-116": "The returned mul(7, 7) is 49 at the specified budget.",
+        "EV-135": "A separate development integer process gives 49 for the same mul operands as the native result."
+      }
+    },
+    "paper.R-zero-add": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C05": "The full-run balance 8/8/0 and returned natural match the selected add table."
+      },
+      "rules": {
+        "EV-114": "The returned add(0, 0) is 0 at the specified budget.",
+        "EV-135": "A separate development integer process gives 0 for the same add operands as the native result."
+      }
+    },
+    "paper.R-wide-product": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C05": "The full-run balance 4488/4488/0 and returned natural match the selected mul table."
+      },
+      "rules": {
+        "EV-116": "The returned mul(18446744073709551616, 18446744073709551616) is 340282366920938463463374607431768211456 at the specified budget.",
+        "EV-135": "A separate development integer process gives 340282366920938463463374607431768211456 for the same mul operands as the native result."
+      }
+    },
+    "paper.R-zero-product-full-bill": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C05": "The full-run balance 200/200/0 and returned natural match the selected mul table."
+      },
+      "rules": {
+        "EV-116": "The returned mul(0, 18446744073709551616) is 0 at the specified budget.",
+        "EV-135": "A separate development integer process gives 0 for the same mul operands as the native result."
+      }
+    },
+    "paper.R-wide-add-carry": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C05": "The full-run balance 197/197/0 and returned natural match the selected add table."
+      },
+      "rules": {
+        "EV-114": "The returned add(18446744073709551615, 1) is 18446744073709551616 at the specified budget.",
+        "EV-135": "A separate development integer process gives 18446744073709551616 for the same add operands as the native result."
+      }
+    },
+    "paper.R-wide-sub-borrow": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C05": "The full-run balance 199/199/0 and returned natural match the selected sub table."
+      },
+      "rules": {
+        "EV-115": "The returned sub(18446744073709551616, 1) is 18446744073709551615 at the specified budget.",
+        "EV-135": "A separate development integer process gives 18446744073709551615 for the same sub operands as the native result."
+      }
+    },
+    "paper.R-wrong-kind-none": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C06": "After payment, arithmetic on an obtained tuple yields the ordinary builtin none."
+      },
+      "rules": {
+        "EV-012": "The paid wrong-kind add completes with an ordinary none value.",
+        "EV-041": "The returned graph contains the builtin none node produced by wrong-kind add.",
+        "EV-092": "The paid wrong-kind add contributes its actual-argument edge cost to the full balance and returns none."
+      }
+    },
+    "paper.R-nested-row-part-one": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs.",
+        "B-C06": "After payment, arithmetic on an obtained tuple yields the ordinary builtin none."
+      },
+      "rules": {
+        "EV-012": "The paid wrong-kind add completes with an ordinary none value.",
+        "EV-041": "The returned graph contains the builtin none node produced by wrong-kind add.",
+        "EV-092": "The paid wrong-kind add contributes its actual-argument edge cost to the full balance and returns none."
+      }
+    },
+    "paper.F-none-one-less": {
+      "forms": {
+        "B-C08": "At wrong-kind, the prefix has budget/used/left 5/3/2 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified wrong-kind site with fuel.insufficient and exit 2.",
+        "B-C06": "The terminal wrong-kind invoice reports A/R/T/W 2/0/0/1."
+      },
+      "rules": {
+        "EV-090": "The unpaid wrong-kind invoice reports 3, debit zero and the retained balance 5/3/2.",
+        "EV-125": "The wrong-kind invoice total 3 equals its four equally weighted components.",
+        "EV-086": "The wrong-kind invoice records A=2 from the parts of its actual operands.",
+        "EV-022": "The terminal wrong-kind lists W=1 separately and includes it in the total.",
+        "EV-089": "The known B wrong-kind work component W=1 is included in the unpaid invoice.",
+        "EV-092": "The obtained tuple and natural select the wrong-kind add invoice with R=T=0 and W=1."
+      }
+    },
+    "paper.R-forward": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {
+        "EV-016": "The named unary call costs one between its completed argument and entry into the called body, as reflected in the balance and terminal site.",
+        "EV-113": "The finite ordinary call path includes one unit per named-call event.",
+        "EV-119": "The forward call resolves the later global definition and returns the supplied input.",
+        "EV-122": "The full balance counts variable reads and the ordinary call on this two-definition path."
+      }
+    },
+    "paper.F-call": {
+      "forms": {
+        "B-C08": "At call, the prefix has budget/used/left 2/2/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified call site with fuel.insufficient and exit 2.",
+        "B-C04": "The first unpaid call has A/R/T/W 0/0/0/1 at the specified site."
+      },
+      "rules": {
+        "EV-090": "The unpaid call invoice reports 1, debit zero and the retained balance 2/2/0.",
+        "EV-125": "The call invoice total 1 equals its four equally weighted components.",
+        "EV-122": "The terminal structural call costs one at the reported definition, path and byte.",
+        "EV-016": "The named unary call costs one between its completed argument and entry into the called body, as reflected in the balance and terminal site.",
+        "EV-113": "The finite ordinary call path includes one unit per named-call event."
+      }
+    },
+    "paper.F-forward-body": {
+      "forms": {
+        "B-C08": "At variable, the prefix has budget/used/left 3/3/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified variable site with fuel.insufficient and exit 2.",
+        "B-C04": "The first unpaid variable has A/R/T/W 0/0/0/1 at the specified site."
+      },
+      "rules": {
+        "EV-090": "The unpaid variable invoice reports 1, debit zero and the retained balance 3/3/0.",
+        "EV-125": "The variable invoice total 1 equals its four equally weighted components.",
+        "EV-122": "The terminal structural variable costs one at the reported definition, path and byte.",
+        "EV-016": "The named unary call costs one between its completed argument and entry into the called body, as reflected in the balance and terminal site.",
+        "EV-113": "The finite ordinary call path includes one unit per named-call event."
+      }
+    },
+    "paper.F-self-call": {
+      "forms": {
+        "B-C08": "At variable, the prefix has budget/used/left 5/5/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified variable site with fuel.insufficient and exit 2.",
+        "B-C04": "The first unpaid variable has A/R/T/W 0/0/0/1 at the specified site."
+      },
+      "rules": {
+        "EV-090": "The unpaid variable invoice reports 1, debit zero and the retained balance 5/5/0.",
+        "EV-125": "The variable invoice total 1 equals its four equally weighted components.",
+        "EV-122": "The terminal structural variable costs one at the reported definition, path and byte.",
+        "EV-014": "The explicit recursive call prefix reaches the stated definition and variable site within its finite fuel.",
+        "EV-015": "The recursive prefix reports exhaustion with no returned value."
+      }
+    },
+    "paper.F-mutual-call": {
+      "forms": {
+        "B-C08": "At variable, the prefix has budget/used/left 5/5/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified variable site with fuel.insufficient and exit 2.",
+        "B-C04": "The first unpaid variable has A/R/T/W 0/0/0/1 at the specified site."
+      },
+      "rules": {
+        "EV-090": "The unpaid variable invoice reports 1, debit zero and the retained balance 5/5/0.",
+        "EV-125": "The variable invoice total 1 equals its four equally weighted components.",
+        "EV-122": "The terminal structural variable costs one at the reported definition, path and byte.",
+        "EV-014": "The explicit recursive call prefix reaches the stated definition and variable site within its finite fuel.",
+        "EV-015": "The recursive prefix reports exhaustion with no returned value."
+      }
+    },
+    "paper.F-left-to-right": {
+      "forms": {
+        "B-C08": "At literal, the prefix has budget/used/left 3/3/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified literal site with fuel.insufficient and exit 2.",
+        "B-C04": "The first unpaid literal has A/R/T/W 0/0/0/1 at the specified site."
+      },
+      "rules": {
+        "EV-090": "The unpaid literal invoice reports 1, debit zero and the retained balance 3/3/0.",
+        "EV-125": "The literal invoice total 1 equals its four equally weighted components.",
+        "EV-122": "The terminal structural literal costs one at the reported definition, path and byte.",
+        "EV-043": "The first unpaid argument site, its event and paid prefix distinguish written left-to-right evaluation."
+      }
+    },
+    "trace.argument-order": {
+      "forms": {
+        "B-C08": "At add, the prefix has budget/used/left 3/3/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified add site with fuel.insufficient and exit 2.",
+        "B-C05": "The terminal add invoice reports A/R/T/W 4/4/0/3."
+      },
+      "rules": {
+        "EV-090": "The unpaid add invoice reports 11, debit zero and the retained balance 3/3/0.",
+        "EV-125": "The add invoice total 11 equals its four equally weighted components.",
+        "EV-086": "The add invoice records A=4 from the parts of its actual operands.",
+        "EV-087": "The unpaid add reports prospective R=4.",
+        "EV-114": "The unpaid natural add reports its operation-specific invoice and no returned value.",
+        "EV-017": "The unpaid add reports R=4 and no result. Internal allocation order is outside this observation.",
+        "EV-020": "The unaffordable add stops with no value and zero failed-operation debit.",
+        "EV-022": "The terminal add lists W=3 separately and includes it in the total.",
+        "EV-089": "The known B add work component W=3 is included in the unpaid invoice.",
+        "EV-043": "The first unpaid argument site, its event and paid prefix distinguish written left-to-right evaluation."
+      }
+    },
+    "paper.F-entry-zero": {
+      "forms": {
+        "B-C08": "At entry, the prefix has budget/used/left 0/0/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified entry site with fuel.insufficient and exit 2.",
+        "B-C04": "The first unpaid entry has A/R/T/W 0/0/0/1 at the specified site."
+      },
+      "rules": {
+        "EV-090": "The unpaid entry invoice reports 1, debit zero and the retained balance 0/0/0.",
+        "EV-125": "The entry invoice total 1 equals its four equally weighted components.",
+        "EV-124": "At budget zero the first unpaid event is entry, with a one-unit invoice."
+      }
+    },
+    "paper.F-literal": {
+      "forms": {
+        "B-C08": "At literal, the prefix has budget/used/left 1/1/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified literal site with fuel.insufficient and exit 2.",
+        "B-C04": "The first unpaid literal has A/R/T/W 0/0/0/1 at the specified site."
+      },
+      "rules": {
+        "EV-090": "The unpaid literal invoice reports 1, debit zero and the retained balance 1/1/0.",
+        "EV-125": "The literal invoice total 1 equals its four equally weighted components.",
+        "EV-122": "The terminal structural literal costs one at the reported definition, path and byte."
+      }
+    },
+    "paper.F-variable": {
+      "forms": {
+        "B-C08": "At variable, the prefix has budget/used/left 1/1/0 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified variable site with fuel.insufficient and exit 2.",
+        "B-C04": "The first unpaid variable has A/R/T/W 0/0/0/1 at the specified site."
+      },
+      "rules": {
+        "EV-090": "The unpaid variable invoice reports 1, debit zero and the retained balance 1/1/0.",
+        "EV-125": "The variable invoice total 1 equals its four equally weighted components.",
+        "EV-122": "The terminal structural variable costs one at the reported definition, path and byte.",
+        "EV-029": "The observed result field and resource outcome match the returned graph or the stopped prefix for this run."
+      }
+    },
+    "paper.F-add-one-less": {
+      "forms": {
+        "B-C08": "At add, the prefix has budget/used/left 13/3/10 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified add site with fuel.insufficient and exit 2.",
+        "B-C05": "The terminal add invoice reports A/R/T/W 4/4/0/3."
+      },
+      "rules": {
+        "EV-090": "The unpaid add invoice reports 11, debit zero and the retained balance 13/3/10.",
+        "EV-125": "The add invoice total 11 equals its four equally weighted components.",
+        "EV-086": "The add invoice records A=4 from the parts of its actual operands.",
+        "EV-087": "The unpaid add reports prospective R=4.",
+        "EV-114": "The unpaid natural add reports its operation-specific invoice and no returned value.",
+        "EV-017": "The unpaid add reports R=4 and no result. Internal allocation order is outside this observation.",
+        "EV-020": "The unaffordable add stops with no value and zero failed-operation debit.",
+        "EV-022": "The terminal add lists W=3 separately and includes it in the total.",
+        "EV-089": "The known B add work component W=3 is included in the unpaid invoice.",
+        "EV-030": "The run record carries the exact starting/used/remaining fuel 13/3/10."
+      }
+    },
+    "paper.F-sub-one-less": {
+      "forms": {
+        "B-C08": "At sub, the prefix has budget/used/left 12/3/9 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified sub site with fuel.insufficient and exit 2.",
+        "B-C05": "The terminal sub invoice reports A/R/T/W 5/2/0/3."
+      },
+      "rules": {
+        "EV-090": "The unpaid sub invoice reports 10, debit zero and the retained balance 12/3/9.",
+        "EV-125": "The sub invoice total 10 equals its four equally weighted components.",
+        "EV-086": "The sub invoice records A=5 from the parts of its actual operands.",
+        "EV-087": "The unpaid sub reports prospective R=2.",
+        "EV-115": "The unpaid natural sub reports its operation-specific invoice and no returned value.",
+        "EV-017": "The unpaid sub reports R=2 and no result. Internal allocation order is outside this observation.",
+        "EV-020": "The unaffordable sub stops with no value and zero failed-operation debit.",
+        "EV-022": "The terminal sub lists W=3 separately and includes it in the total.",
+        "EV-089": "The known B sub work component W=3 is included in the unpaid invoice."
+      }
+    },
+    "paper.F-mul-one-less": {
+      "forms": {
+        "B-C08": "At mul, the prefix has budget/used/left 23/3/20 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified mul site with fuel.insufficient and exit 2.",
+        "B-C05": "The terminal mul invoice reports A/R/T/W 6/6/0/9."
+      },
+      "rules": {
+        "EV-090": "The unpaid mul invoice reports 21, debit zero and the retained balance 23/3/20.",
+        "EV-125": "The mul invoice total 21 equals its four equally weighted components.",
+        "EV-086": "The mul invoice records A=6 from the parts of its actual operands.",
+        "EV-087": "The unpaid mul reports prospective R=6.",
+        "EV-116": "The unpaid natural mul reports its operation-specific invoice and no returned value.",
+        "EV-017": "The unpaid mul reports R=6 and no result. Internal allocation order is outside this observation.",
+        "EV-020": "The unaffordable mul stops with no value and zero failed-operation debit.",
+        "EV-022": "The terminal mul lists W=9 separately and includes it in the total.",
+        "EV-089": "The known B mul work component W=9 is included in the unpaid invoice."
+      }
+    },
+    "paper.F-row-one-less": {
+      "forms": {
+        "B-C08": "At tuple, the prefix has budget/used/left 11/3/8 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified tuple site with fuel.insufficient and exit 2.",
+        "B-C07": "The terminal tuple invoice reports A/R/T/W 6/3/0/0."
+      },
+      "rules": {
+        "EV-090": "The unpaid tuple invoice reports 9, debit zero and the retained balance 11/3/8.",
+        "EV-125": "The tuple invoice total 9 equals its four equally weighted components.",
+        "EV-086": "The tuple invoice records A=6 from the parts of its actual operands.",
+        "EV-087": "The unpaid tuple reports prospective R=3.",
+        "EV-095": "The terminal tuple invoice sums the field parts, reserves one plus its arity, and has zero T and W."
+      }
+    },
+    "paper.F-wide-product": {
+      "forms": {
+        "B-C08": "At mul, the prefix has budget/used/left 4487/3/4484 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified mul site with fuel.insufficient and exit 2.",
+        "B-C05": "The terminal mul invoice reports A/R/T/W 130/130/0/4225."
+      },
+      "rules": {
+        "EV-090": "The unpaid mul invoice reports 4485, debit zero and the retained balance 4487/3/4484.",
+        "EV-125": "The mul invoice total 4485 equals its four equally weighted components.",
+        "EV-086": "The mul invoice records A=130 from the parts of its actual operands.",
+        "EV-087": "The unpaid mul reports prospective R=130.",
+        "EV-116": "The unpaid natural mul reports its operation-specific invoice and no returned value.",
+        "EV-017": "The unpaid mul reports R=130 and no result. Internal allocation order is outside this observation.",
+        "EV-020": "The unaffordable mul stops with no value and zero failed-operation debit.",
+        "EV-022": "The terminal mul lists W=4225 separately and includes it in the total.",
+        "EV-089": "The known B mul work component W=4225 is included in the unpaid invoice.",
+        "EV-019": "The reported finite wide-operand invoice equals the independently computed integer bound for these operands."
+      }
+    },
+    "paper.F-demo-one-less": {
+      "forms": {
+        "B-C08": "At tuple, the prefix has budget/used/left 67/53/14 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified tuple site with fuel.insufficient and exit 2.",
+        "B-C07": "The terminal tuple invoice reports A/R/T/W 11/4/0/0."
+      },
+      "rules": {
+        "EV-090": "The unpaid tuple invoice reports 15, debit zero and the retained balance 67/53/14.",
+        "EV-125": "The tuple invoice total 15 equals its four equally weighted components.",
+        "EV-086": "The tuple invoice records A=11 from the parts of its actual operands.",
+        "EV-087": "The unpaid tuple reports prospective R=4.",
+        "EV-095": "The terminal tuple invoice sums the field parts, reserves one plus its arity, and has zero T and W."
+      }
+    },
+    "trace.carry-one-short": {
+      "forms": {
+        "B-C08": "At add, the prefix has budget/used/left 196/3/193 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified add site with fuel.insufficient and exit 2.",
+        "B-C05": "The terminal add invoice reports A/R/T/W 65/65/0/64."
+      },
+      "rules": {
+        "EV-090": "The unpaid add invoice reports 194, debit zero and the retained balance 196/3/193.",
+        "EV-125": "The add invoice total 194 equals its four equally weighted components.",
+        "EV-086": "The add invoice records A=65 from the parts of its actual operands.",
+        "EV-087": "The unpaid add reports prospective R=65.",
+        "EV-114": "The unpaid natural add reports its operation-specific invoice and no returned value.",
+        "EV-017": "The unpaid add reports R=65 and no result. Internal allocation order is outside this observation.",
+        "EV-020": "The unaffordable add stops with no value and zero failed-operation debit.",
+        "EV-022": "The terminal add lists W=64 separately and includes it in the total.",
+        "EV-089": "The known B add work component W=64 is included in the unpaid invoice.",
+        "EV-019": "The reported finite wide-operand invoice equals the independently computed integer bound for these operands."
+      }
+    },
+    "trace.borrow-one-short": {
+      "forms": {
+        "B-C08": "At sub, the prefix has budget/used/left 198/3/195 and the failed event debits zero.",
+        "B-O02": "Execution stops at the specified sub site with fuel.insufficient and exit 2.",
+        "B-C05": "The terminal sub invoice reports A/R/T/W 66/65/0/65."
+      },
+      "rules": {
+        "EV-090": "The unpaid sub invoice reports 196, debit zero and the retained balance 198/3/195.",
+        "EV-125": "The sub invoice total 196 equals its four equally weighted components.",
+        "EV-086": "The sub invoice records A=66 from the parts of its actual operands.",
+        "EV-087": "The unpaid sub reports prospective R=65.",
+        "EV-115": "The unpaid natural sub reports its operation-specific invoice and no returned value.",
+        "EV-017": "The unpaid sub reports R=65 and no result. Internal allocation order is outside this observation.",
+        "EV-020": "The unaffordable sub stops with no value and zero failed-operation debit.",
+        "EV-022": "The terminal sub lists W=65 separately and includes it in the total.",
+        "EV-089": "The known B sub work component W=65 is included in the unpaid invoice.",
+        "EV-019": "The reported finite wide-operand invoice equals the independently computed integer bound for these operands."
+      }
+    },
+    "paper.T-source-limit": {
+      "forms": {
+        "B-O06": "The driver reports tool.source_limit, with the operation or limit and exit 4."
+      },
+      "rules": {}
+    },
+    "paper.T-source-io": {
+      "forms": {
+        "B-O06": "The driver reports tool.source_io, with the operation or limit and exit 4."
+      },
+      "rules": {}
+    },
+    "paper.T-value-limit": {
+      "forms": {
+        "B-O06": "The driver reports tool.value_limit, with the operation or limit and exit 4.",
+        "B-O03": "Completed evaluation balances survive the value-rendering limit fault."
+      },
+      "rules": {
+        "EV-030": "The run record carries the exact starting/used/remaining fuel 2/2/0."
+      }
+    },
+    "limit.value-63": {
+      "forms": {
+        "B-O06": "The driver reports tool.value_limit, with the operation or limit and exit 4."
+      },
+      "rules": {}
+    },
+    "limit.value-64": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {}
+    },
+    "io.unwritable-stdout": {
+      "forms": {
+        "B-O06": "The driver reports tool.report_io, with the operation or limit and exit 4."
+      },
+      "rules": {}
+    },
+    "trace.renamed-cap-exact": {
+      "forms": {
+        "B-O04": "The returned value matches the expected report-local graph, including its root and ordered node IDs."
+      },
+      "rules": {
+        "EV-005": "The returned tuple has the specified field count and the displayed values in their written positions."
+      }
+    },
+    "trace.renamed-cap-short": {
+      "forms": {
+        "B-O06": "The driver reports tool.source_limit, with the operation or limit and exit 4."
+      },
+      "rules": {}
+    },
+    "source.refusal-a": {
+      "forms": {
+        "B-O05": "Refusal read.character with its cause facts and offending site.",
+        "B-F04": "read.character at byte 12 of the submitted source.",
+        "B-O03": "The record binds source, input, build snapshot, candidate profile and candidate meter to the actual invocation."
+      },
+      "rules": {
+        "EV-118": "The candidate source is rejected for read.character at byte 12.",
+        "EV-027": "The report binds the entire submitted source by its byte length and SHA-256 after a reader refusal.",
+        "EV-031": "The capture names the build snapshot verified against the executable ledger.",
+        "EV-032": "The observed record is compared against the exact verified subject snapshot for this invocation.",
+        "EV-028": "The canonical input recorded in the report equals the supplied decimal argument."
+      }
+    },
+    "source.refusal-b": {
+      "forms": {
+        "B-O05": "Refusal read.character with its cause facts and offending site.",
+        "B-F04": "read.character at byte 12 of the submitted source.",
+        "B-O03": "The record binds source, input, build snapshot, candidate profile and candidate meter to the actual invocation."
+      },
+      "rules": {
+        "EV-118": "The candidate source is rejected for read.character at byte 12.",
+        "EV-027": "The report binds the entire submitted source by its byte length and SHA-256 after a reader refusal.",
+        "EV-031": "The capture names the build snapshot verified against the executable ledger.",
+        "EV-032": "The observed record is compared against the exact verified subject snapshot for this invocation."
+      }
+    }
+  },
+  "control_targets": {
+    "wrong-sum": {
+      "case": "paper.R-wide-add-carry",
+      "clause": "EV-114",
+      "field": "decimal.value"
+    },
+    "wrong-product": {
+      "case": "paper.R-wide-product",
+      "clause": "EV-116",
+      "field": "decimal.value"
+    },
+    "tuple-order": {
+      "case": "paper.R-order-a",
+      "clause": "EV-005",
+      "field": "value"
+    },
+    "argument-order": {
+      "case": "trace.argument-order",
+      "clause": "EV-043",
+      "field": "trace.path"
+    },
+    "wrong-debit": {
+      "case": "paper.F-none-one-less",
+      "clause": "EV-092",
+      "field": "trace.invoice"
+    },
+    "wrong-call-debit": {
+      "case": "paper.F-call",
+      "clause": "EV-016",
+      "field": "trace.event"
+    },
+    "wrong-read-debit": {
+      "case": "paper.F-variable",
+      "clause": "EV-122",
+      "field": "trace.event"
+    },
+    "wrong-cause": {
+      "case": "paper.P-unknown-flag",
+      "clause": "B-O01",
+      "field": "code"
+    },
+    "wrong-offset": {
+      "case": "trace.renamed-offset",
+      "clause": "B-F04",
+      "field": "diagnostic.byte_offset"
+    },
+    "wrong-sharing": {
+      "case": "paper.R-reuse-full-row",
+      "clause": "EV-003",
+      "field": "value"
+    },
+    "wrong-resource": {
+      "case": "paper.T-value-limit",
+      "clause": "EV-030",
+      "field": "execution"
+    },
+    "stale-source": {
+      "case": "source.refusal-a",
+      "clause": "EV-027",
+      "field": "source_sha256"
+    },
+    "stale-build": {
+      "case": "source.refusal-a",
+      "clause": "EV-031",
+      "field": "build_snapshot_sha256"
+    },
+    "stale-profile": {
+      "case": "source.refusal-a",
+      "clause": "B-O03",
+      "field": "profile"
+    },
+    "stale-meter": {
+      "case": "source.refusal-a",
+      "clause": "B-O03",
+      "field": "meter"
+    },
+    "stale-input": {
+      "case": "source.refusal-a",
+      "clause": "EV-028",
+      "field": "input"
+    },
+    "missing-id": {
+      "boundary": "roster",
+      "field": "missing"
+    },
+    "duplicate-id": {
+      "boundary": "roster",
+      "field": "duplicate"
+    },
+    "zero": {
+      "boundary": "roster",
+      "field": "zero compared count"
+    }
+  }
+}
