@@ -4,7 +4,7 @@
 
 - Card 0031, all four parts done. The card and its eight inputs matched their hashes (section 6).
 - My main findings:
-  1. **The design already contains most of a specification method.** Its claim record, its row, its rule that evidence is kept and status is read, and its cache keyed by what a check asked are the links the outside research was asked to find. I propose we use those shapes for our own spec work now, in plain files, and not invent a second scheme.
+  1. **The design already contains most of a specification method.** Its claim record, its manifest, its rule that evidence is kept and status is read, and its cache keyed by what a check asked are the links the outside research was asked to find. I propose we use those shapes for our own spec work now, in plain files, and not invent a second scheme.
   2. **A spec here has three kinds of binding item:** texts that define by being run, numbered rules that something else must satisfy, and declarations taken as true. Each rule names where it came from, and carries one deciding case.
   3. **E's proposals:** I accept 1, 3, 4, 5, 6 and 7 with changes, and accept the aim of 2 while rejecting its mechanism (hashes of marked spans of code).
   4. **Specification can't start on the design as it stands,** because the 48 corrections are all proposals and there is no single design text to cite. Section 5 lists that and eight more items, two of which are gaps I found that the design does not list.
@@ -18,7 +18,7 @@ One author's view. Not reviewed or accepted; no owner decision.
 ### What the design already fixes
 
 - SOURCE D L346: the reference run is a program for the evaluator; "This fixes what the reference does. The compiled program must agree with it".
-- SOURCE D L375: seven program texts are trusted because "They define what a row, a use, a run, a clause, a reading of evidence and a derivation are, whatever runs them."
+- SOURCE D L375: seven program texts are trusted because "They define what a [manifest], a use, a run, a clause, a reading of evidence and a derivation are, whatever runs them."
 - SOURCE D L368, L548-L565: the evaluator is the only trusted machine code, built twice by independent means, and is given by a grammar, a list of primitives and a meter.
 - SOURCE D L377-L378: the statements of section 2 are "trusted to say what is meant", and a build takes its declarations as true.
 - SOURCE D L382: the elaborator, the planner, every proposer, the passes, the engine and the lab are not trusted.
@@ -47,7 +47,7 @@ PROPOSED. An item binds in one of three ways, told apart by what it means to con
 | Reasons, alternatives, the seven places it may be wrong, the tests of open questions, measurements | Decision records and prose | SOURCE `docs/adr/README.md` L7-L13 keeps rule, rationale and evidence apart |
 | Surface syntax | Nothing yet | Open: D L152 |
 
-**Rule and text can disagree, and neither wins silently.** PROPOSED: for what a program's run observes, a build is compared with the reference run's text at its recorded hash, as D L346 has it. A rule that the text is found to break is a defect report against the trusted base. If mending it can alter any of the six things named under "a change needs rules and evidence" (what some program's run observes; what is admitted or refused; a row; a reading of evidence, and so a licence; a format or hash on which two builds or a replay must agree; the trusted base), the owner decides. The deciding cases are evidence for that question and never the whole of it: a mend that leaves every case where it was can still change the contract. Only where none of the six can change does the reviewer confirm, and the confirmation says why. INFERENCE: this keeps D L375 (the text defines) and still gives a reviewer something to hold the text against.
+**Rule and text can disagree, and neither wins silently.** PROPOSED: for what a program's run observes, a build is compared with the reference run's text at its recorded hash, as D L346 has it. A rule that the text is found to break is a defect report against the trusted base. If mending it can alter any of the six things named under "a change needs rules and evidence" (what some program's run observes; what is admitted or refused; a manifest; a reading of evidence, and so a licence; a format or hash on which two builds or a replay must agree; the trusted base), the owner decides. The deciding cases are evidence for that question and never the whole of it: a mend that leaves every case where it was can still change the contract. Only where none of the six can change does the reviewer confirm, and the confirmation says why. INFERENCE: this keeps D L375 (the text defines) and still gives a reviewer something to hold the text against.
 
 **Writing the defining texts is specification, not implementation.** INFERENCE from D L346 and L375: if the reference run is the definition, then until it is written the definition does not exist, and it can't be checked by reading alone. The specification phase therefore needs one evaluator able to run it. I state this as a dependency only.
 
@@ -89,8 +89,8 @@ SOURCE for each row; that they line up is INFERENCE.
 
 | What the research asks for | What the design has | Where |
 |---|---|---|
-| An evidence record | The claim record: statement, status, evidence, assumptions, row, settled, notes | D L253-L261 |
-| The oracle a verdict rested on | The row of the evidence: the build, a decider or checker with what it assumes | D L84 |
+| An evidence record | The claim record: statement, status, evidence, assumptions, manifest, settled, notes | D L253-L261 |
+| The oracle a verdict rested on | The manifest of the evidence: the build, a decider or checker with what it assumes | D L84 |
 | Stale evidence | A check is reused "only while every question still has the same answer", including the answer that nothing was there | D L295 |
 | No status written by hand | "Evidence is never changed or removed. The status of a claim is a reading of its evidence" | C32 (L478-L480) |
 | Two results that disagree | The reading is a conflict, which licenses nothing and shows both | C32 (L480-L483) |
@@ -98,7 +98,7 @@ SOURCE for each row; that they line up is INFERENCE.
 | A reviewer's opinion | A note. "A note is not evidence, and no licence can cite one" | D L261 |
 | How strong the evidence is | Kinds are not ranks. Running cases gives "a yes for the enumerated set, by name" | D L276, L270 |
 | What a checker's yes shows | That the checker returned yes. The statement needs the checker's soundness claim as well | C29 (L433-L437) |
-| A waiver | A claim assumed by name, settled never, shown in the row and in the semantic part of the lock | D L275; C26, C28 |
+| A waiver | A claim assumed by name, settled never, shown in the manifest and in the semantic part of the lock | D L275; C26, C28 |
 | Code conforms to its meaning | Code is a name for its term, under a tracking claim | D L124; C38 (L602-L603) |
 
 ### E's proposal 1, where each fact lives: accept, with four changes
@@ -157,11 +157,11 @@ Four fields go beyond E's list.
 - **The statement, with its scope.** SOURCE D L251: "a claim never says more than its statement." Without this field, "evidence for rule R" always claims the whole rule. The record of C22's test is the model: it says what ran and then "Not covered: the whole language, handlers beyond small fixed cases, sort indices, and lowering" (C L267-L277).
 - **What the oracle was built from:** the rule's text, a design item, another implementation, or the subject itself. INFERENCE: two programs written apart are not two readings written apart. Every lane reads the same rule, and no record can show a rule that all of them misread alike. What this field does catch is a test derived from the code it tests.
 - **The four counts,** for a run over generated or enumerated inputs. Generated: the distinct inputs made. Admitted: those that passed every check standing before the thing under test. Reached: those whose run got as far as the thing under test. Compared: those whose outcome was set against the oracle's and given a verdict. Each count is at most the one before it. The statement's scope is the compared set and no larger one. For a comparison of agreement with the reference run, fuel exhaustion alone gives no verdict and does not count the input as compared. A mismatch already established by the completed prefix counts as a comparison for disagreement and is never erased by a later fuel cut; only the uncompleted remainder is inconclusive. A compared count of 0 has checked nothing, whatever the command returned. The record gives the main reason for the largest drop. A control is a run and gives its own four. A record of such a run without them reads in the ledger as ran, population not shown. This applies to records written from now on; an earlier record is not edited.
-- **The transfer account.** Where what was examined is a model on paper, a model in another language or a finite fixture, and not the subject the rule names, the record's subject is that model, by hash, and its statement says so. The record then gives the account that carries the result to the named subject, or says `none`. An account names the subject by its kind, and by its hash once it exists; says which part of the model answers to which part of the subject; and puts every step it does not show among the record's assumptions. The account is not evidence of its own steps: a step counts only where a record of its own shows it. With `none`, the record is a result about the model: it can show a rule's text wrong or its case consistent, and it is no evidence that any subject conforms. With an account, the ledger shows the record under the named subject as a model result with its open assumptions, and never as a plain yes while one is open. A model that serves as the oracle for a real subject needs no account: the subject is what ran, and the model is in the row. This applies to records written from now on; an earlier record is not edited.
+- **The transfer account.** Where what was examined is a model on paper, a model in another language or a finite fixture, and not the subject the rule names, the record's subject is that model, by hash, and its statement says so. The record then gives the account that carries the result to the named subject, or says `none`. An account names the subject by its kind, and by its hash once it exists; says which part of the model answers to which part of the subject; and puts every step it does not show among the record's assumptions. The account is not evidence of its own steps: a step counts only where a record of its own shows it. With `none`, the record is a result about the model: it can show a rule's text wrong or its case consistent, and it is no evidence that any subject conforms. With an account, the ledger shows the record under the named subject as a model result with its open assumptions, and never as a plain yes while one is open. A model that serves as the oracle for a real subject needs no account: the subject is what ran, and the model is in the manifest. This applies to records written from now on; an earlier record is not edited.
 
-E's "two verdicts resting on one oracle count once" becomes: a reading counts distinct rows, not records.
+E's "two verdicts resting on one oracle count once" becomes: a reading counts distinct manifests, not records.
 
-**The smallest trial that would show it wrong.** Write these records for the three lanes' tests of C22 (C L264-L273: one lane's census, and another's recount "with its own program"). It fails if a field can't be filled from the packages as delivered, if the record loses something the HANDOFF says that a reader needs, or if two records with different rows turn out to share a source the row did not show. For this trial on packages delivered before the counts and transfer fields were required, record missing counts or transfer information as absent; their absence alone does not fail the trial or enlarge what the earlier evidence shows.
+**The smallest trial that would show it wrong.** Write these records for the three lanes' tests of C22 (C L264-L273: one lane's census, and another's recount "with its own program"). It fails if a field can't be filled from the packages as delivered, if the record loses something the HANDOFF says that a reader needs, or if two records with different manifests turn out to share a source the manifest did not show. For this trial on packages delivered before the counts and transfer fields were required, record missing counts or transfer information as absent; their absence alone does not fail the trial or enlarge what the earlier evidence shows.
 
 ### How the links run
 
@@ -175,7 +175,7 @@ E's "two verdicts resting on one oracle count once" becomes: a reading counts di
 
 - **Decision to rule.** The rule's `from` cites the decision record by hash. When a decision is replaced, a generated view lists the rules whose origin no longer stands, and they return to working.
 - **Rule to code and tests.** Nothing is authored on the rule. Generated views list rules with no test, rules with no case, and tests that name a retired rule.
-- **Evidence to all three.** The record names the rule and its hash, the subject and its hash, and the check in its row.
+- **Evidence to all three.** The record names the rule and its hash, the subject and its hash, and the check in its manifest.
 - **Generated, never edited:** reverse views, the stale list (records whose rule hash or subject hash is not the current one), and what rests on a rule.
 
 PROPOSED, where they live: rules in the repository, since they are semantic (SOURCE AGENTS.md: Claude D "records semantic decisions ... in the repository"); evidence records inside sealed packages outside it (SOURCE AGENTS.md: evidence stays outside the repository); the ledger generated from both. Whether the new rules sit beside the pilot's manifest or apart from it is not decided here.
@@ -212,7 +212,7 @@ All PROPOSED. Lanes are named as the card names them.
 | 6. Write each defining text from the approved rules alone. Every question the writer has to ask is logged as a gap | An author who did not write the rules. By AGENTS.md's roles that is Claude C | The text, and more gaps |
 | 7. Review the text against the rules | Codex C (Core Reviewer) | A review, or a finding |
 | 8. For each checker: its definition, its soundness statement, its damaged corpus (D L396; C29) | Codex R (Certificates) | What a named checker owes |
-| 9. For the few rules worth a proof: the formal statement and the derivation | Codex N (Lean), reviewed with proposal 7's list by a lane that did not write it | A derivation with its row |
+| 9. For the few rules worth a proof: the formal statement and the derivation | Codex N (Lean), reviewed with proposal 7's list by a lane that did not write it | A derivation with its manifest |
 | 10. Keep the ledger: index the evidence records, compute the readings, the stale list and the coverage views | Codex V (Test Ledger) | Generated views |
 | 11. Apply reviewed rule files to the repository | Claude D, as AGENTS.md has it | A commit |
 
@@ -257,7 +257,7 @@ SOURCE E L142. The outside answer draws the line at one or two files (G L477), o
 PROPOSED: a change needs rules and evidence when it can alter any of six things:
 1. what some program's run observes;
 2. what is admitted or refused;
-3. a row;
+3. a manifest;
 4. a reading of evidence, and so a licence;
 5. a format or hash on which two builds or a replay must agree;
 6. the trusted base.
@@ -275,7 +275,7 @@ SOURCE E L143. The answer's figures for how often this happens are unverified (O
 4. a helper definition under the statement is changed (G L171);
 5. the statement proved is not the rule's formal statement.
 
-INFERENCE: the design's answer is the row. A derivation's row lists the laws it used and names the guest kernel (D L84, L141, L146). So a derivation's evidence record binds the statement as elaborated, everything it depends on, and the axioms used. The list is for whichever lane reviews Codex N (Lean)'s work.
+INFERENCE: the design's answer is the manifest. A derivation's manifest lists the laws it used and names the guest kernel (D L84, L141, L146). So a derivation's evidence record binds the statement as elaborated, everything it depends on, and the axioms used. The list is for whichever lane reviews Codex N (Lean)'s work.
 
 PROPOSED, the widening: one short list for each kind of evidence, of how a yes says less than it seems. Ours so far, each from a source in front of me:
 - a command that returns success having checked nothing (N L17);
@@ -326,7 +326,7 @@ Items only. Items 1 and 2 stand under every rule. Items 3 to 9 stand under the r
 8. **Quotation.** Whether a term handed to an operation is seen as written or as its value. The mark is owed and its written form is untested (C21, L202-L203).
 9. **A written form for terms in rules and cases, with its reading as nodes.** INFERENCE, a gap I found: the surface syntax is open (D L152), and every case in every rule needs one.
 
-**Open, and able to wait.** INFERENCE: the design marks each of these Open with a test, and a working rule can carry it. The use-once check on the whole language (D L459). The two theorems (D L460-L462). The clauses for effects (D L228-L232; C15, C16). The backward form's open points (C12, C24, C47). Where a tracker must be defined (C17). Whether an interpretation and a record are one thing (D L70). Whether tracking evidence is affordable (D L466). The foundation (D L141-L148; C48). The core for rule 9, which "cannot be judged before then" (C46, L673-L674). Identity across versions, which has a default (D L608). The roles of row entries (C35). The surface syntax for everything but the reader of text. Where the engine enters (D L497). Search at size, the payoff, and guarantees in probability (D L470-L474).
+**Open, and able to wait.** INFERENCE: the design marks each of these Open with a test, and a working rule can carry it. The use-once check on the whole language (D L459). The two theorems (D L460-L462). The clauses for effects (D L228-L232; C15, C16). The backward form's open points (C12, C24, C47). Where a tracker must be defined (C17). Whether an interpretation and a record are one thing (D L70). Whether tracking evidence is affordable (D L466). The foundation (D L141-L148; C48). The core for rule 9, which "cannot be judged before then" (C46, L673-L674). Identity across versions, which has a default (D L608). The roles of manifest entries (C35). The surface syntax for everything but the reader of text. Where the engine enters (D L497). Search at size, the payoff, and guarantees in probability (D L470-L474).
 
 ## 6. What I checked
 
