@@ -1,0 +1,115 @@
+{"id":"paper.R-identity","source":"def main[x]=x","fuel":"2","input":"4","entry":"main","paper":"R-identity"}
+{"id":"paper.R-zero-literal","source":"def main[x]=0","fuel":"2","input":"4","entry":"main","paper":"R-zero-literal"}
+{"id":"paper.R-crlf","source":"def main[x]=\r\nx\r\n","fuel":"2","input":"4","entry":"main","paper":"R-crlf"}
+{"id":"paper.R-empty-row","source":"def main[x]=tuple[]","fuel":"2","input":"4","entry":"main","paper":"R-empty-row"}
+{"id":"paper.R-row","source":"def main[x]=tuple[4,7]","fuel":"12","input":"4","entry":"main","paper":"R-row"}
+{"id":"paper.R-order-a","source":"def main[x]=tuple[1,2]","fuel":"9","input":"4","entry":"main","paper":"R-order-a"}
+{"id":"paper.R-order-b","source":"def main[x]=tuple[2,1]","fuel":"9","input":"4","entry":"main","paper":"R-order-b"}
+{"id":"paper.R-reuse-full-row","source":"def main[x]=tuple[tuple[],tuple[]]","fuel":"8","input":"4","entry":"main","paper":"R-reuse-full-row"}
+{"id":"paper.R-forward","source":"def main[x]=later[x] def later[y]=y","fuel":"4","input":"4","entry":"main","paper":"R-forward"}
+{"id":"paper.R-wide-input","source":"def main[x]=x","fuel":"2","input":"18446744073709551616","entry":"main","paper":"R-wide-input"}
+{"id":"paper.R-wide-literal","source":"def main[x]=18446744073709551616","fuel":"2","input":"4","entry":"main","paper":"R-wide-literal"}
+{"id":"paper.F-entry-zero","source":"def main[x]=x","fuel":"0","input":"4","entry":"main","paper":"F-entry-zero"}
+{"id":"paper.F-literal","source":"def main[x]=0","fuel":"1","input":"4","entry":"main","paper":"F-literal"}
+{"id":"paper.F-variable","source":"def main[x]=x","fuel":"1","input":"4","entry":"main","paper":"F-variable"}
+{"id":"paper.F-call","source":"def main[x]=id[x] def id[y]=y","fuel":"2","input":"4","entry":"main","paper":"F-call"}
+{"id":"paper.F-forward-body","source":"def main[x]=later[x] def later[y]=y","fuel":"3","input":"4","entry":"main","paper":"F-forward-body"}
+{"id":"paper.F-row-one-less","source":"def main[x]=tuple[4,7]","fuel":"11","input":"4","entry":"main","paper":"F-row-one-less"}
+{"id":"paper.F-self-call","source":"def main[x]=main[x]","fuel":"5","input":"4","entry":"main","paper":"F-self-call"}
+{"id":"paper.F-mutual-call","source":"def main[x]=other[x] def other[y]=main[y]","fuel":"5","input":"4","entry":"main","paper":"F-mutual-call"}
+{"id":"identity.exact","source":"def main[x]=x","fuel":"exact"}
+{"id":"identity.one-less","source":"def main[x]=x","fuel":"one-less"}
+{"id":"identity.0","source":"def main[x]=x","fuel":"0"}
+{"id":"literal.exact","source":"def main[x]=93","fuel":"exact"}
+{"id":"literal.one-less","source":"def main[x]=93","fuel":"one-less"}
+{"id":"literal.0","source":"def main[x]=93","fuel":"0"}
+{"id":"empty-tuple.exact","source":"def main[x]=tuple[]","fuel":"exact"}
+{"id":"empty-tuple.one-less","source":"def main[x]=tuple[]","fuel":"one-less"}
+{"id":"empty-tuple.0","source":"def main[x]=tuple[]","fuel":"0"}
+{"id":"both-reads.exact","source":"def main[x]=tuple[x,x]","fuel":"exact"}
+{"id":"both-reads.one-less","source":"def main[x]=tuple[x,x]","fuel":"one-less"}
+{"id":"both-reads.2","source":"def main[x]=tuple[x,x]","fuel":"2"}
+{"id":"both-reads.3","source":"def main[x]=tuple[x,x]","fuel":"3"}
+{"id":"ordered-nested.exact","source":"def main[x]=tuple[tuple[1,x],tuple[],tuple[x,2],tuple[]]","fuel":"exact"}
+{"id":"ordered-nested.one-less","source":"def main[x]=tuple[tuple[1,x],tuple[],tuple[x,2],tuple[]]","fuel":"one-less"}
+{"id":"ordered-nested.4","source":"def main[x]=tuple[tuple[1,x],tuple[],tuple[x,2],tuple[]]","fuel":"4"}
+{"id":"ordered-nested.12","source":"def main[x]=tuple[tuple[1,x],tuple[],tuple[x,2],tuple[]]","fuel":"12"}
+{"id":"same-subtrees.exact","source":"def main[x]=tuple[tuple[x,2],tuple[x,2]]","fuel":"exact"}
+{"id":"same-subtrees.one-less","source":"def main[x]=tuple[tuple[x,2],tuple[x,2]]","fuel":"one-less"}
+{"id":"same-subtrees.15","source":"def main[x]=tuple[tuple[x,2],tuple[x,2]]","fuel":"15"}
+{"id":"empty-repeat.exact","source":"def main[x]=tuple[tuple[],tuple[],tuple[]]","fuel":"exact"}
+{"id":"empty-repeat.one-less","source":"def main[x]=tuple[tuple[],tuple[],tuple[]]","fuel":"one-less"}
+{"id":"empty-repeat.3","source":"def main[x]=tuple[tuple[],tuple[],tuple[]]","fuel":"3"}
+{"id":"argument-before-call.exact","source":"def main[x]=id[tuple[x,3]] def id[z]=z","fuel":"exact"}
+{"id":"argument-before-call.one-less","source":"def main[x]=id[tuple[x,3]] def id[z]=z","fuel":"one-less"}
+{"id":"argument-before-call.1","source":"def main[x]=id[tuple[x,3]] def id[z]=z","fuel":"1"}
+{"id":"argument-before-call.2","source":"def main[x]=id[tuple[x,3]] def id[z]=z","fuel":"2"}
+{"id":"argument-before-call.3","source":"def main[x]=id[tuple[x,3]] def id[z]=z","fuel":"3"}
+{"id":"argument-before-call.12","source":"def main[x]=id[tuple[x,3]] def id[z]=z","fuel":"12"}
+{"id":"restore-binder.exact","source":"def main[x]=tuple[callee[7],x,callee[tuple[x,8]]] def callee[y]=tuple[y,y]","fuel":"exact"}
+{"id":"restore-binder.one-less","source":"def main[x]=tuple[callee[7],x,callee[tuple[x,8]]] def callee[y]=tuple[y,y]","fuel":"one-less"}
+{"id":"restore-binder.5","source":"def main[x]=tuple[callee[7],x,callee[tuple[x,8]]] def callee[y]=tuple[y,y]","fuel":"5"}
+{"id":"multiple-callers.exact","source":"def id[i]=i def main[x]=tuple[g[x],id[6],x] def g[y]=id[y]","fuel":"exact"}
+{"id":"multiple-callers.one-less","source":"def id[i]=i def main[x]=tuple[g[x],id[6],x] def g[y]=id[y]","fuel":"one-less"}
+{"id":"multiple-callers.3","source":"def id[i]=i def main[x]=tuple[g[x],id[6],x] def g[y]=id[y]","fuel":"3"}
+{"id":"multiple-callers.4","source":"def id[i]=i def main[x]=tuple[g[x],id[6],x] def g[y]=id[y]","fuel":"4"}
+{"id":"first-stopped-child.exact","source":"def main[x]=tuple[id[x],tuple[]] def id[y]=y","fuel":"exact"}
+{"id":"first-stopped-child.one-less","source":"def main[x]=tuple[id[x],tuple[]] def id[y]=y","fuel":"one-less"}
+{"id":"first-stopped-child.1","source":"def main[x]=tuple[id[x],tuple[]] def id[y]=y","fuel":"1"}
+{"id":"first-stopped-child.2","source":"def main[x]=tuple[id[x],tuple[]] def id[y]=y","fuel":"2"}
+{"id":"first-stopped-child.3","source":"def main[x]=tuple[id[x],tuple[]] def id[y]=y","fuel":"3"}
+{"id":"first-stopped-child.4","source":"def main[x]=tuple[id[x],tuple[]] def id[y]=y","fuel":"4"}
+{"id":"stop-second-child.exact","source":"def main[x]=tuple[tuple[],id[x]] def id[y]=y","fuel":"exact"}
+{"id":"stop-second-child.one-less","source":"def main[x]=tuple[tuple[],id[x]] def id[y]=y","fuel":"one-less"}
+{"id":"stop-second-child.2","source":"def main[x]=tuple[tuple[],id[x]] def id[y]=y","fuel":"2"}
+{"id":"stop-second-child.3","source":"def main[x]=tuple[tuple[],id[x]] def id[y]=y","fuel":"3"}
+{"id":"stop-second-child.4","source":"def main[x]=tuple[tuple[],id[x]] def id[y]=y","fuel":"4"}
+{"id":"repeated-paid-calls.exact","source":"def main[x]=tuple[id[x],id[x]] def id[y]=y","fuel":"exact"}
+{"id":"repeated-paid-calls.one-less","source":"def main[x]=tuple[id[x],id[x]] def id[y]=y","fuel":"one-less"}
+{"id":"repeated-paid-calls.5","source":"def main[x]=tuple[id[x],id[x]] def id[y]=y","fuel":"5"}
+{"id":"bounded-self.1","source":"def main[x]=main[x]","fuel":"1"}
+{"id":"bounded-self.2","source":"def main[x]=main[x]","fuel":"2"}
+{"id":"bounded-self.3","source":"def main[x]=main[x]","fuel":"3"}
+{"id":"bounded-self.6","source":"def main[x]=main[x]","fuel":"6"}
+{"id":"bounded-self.33","source":"def main[x]=main[x]","fuel":"33"}
+{"id":"bounded-self.70","source":"def main[x]=main[x]","fuel":"70"}
+{"id":"bounded-mutual.1","source":"def first[a]=second[a] def second[b]=first[b]","fuel":"1","entry":"second"}
+{"id":"bounded-mutual.2","source":"def first[a]=second[a] def second[b]=first[b]","fuel":"2","entry":"second"}
+{"id":"bounded-mutual.3","source":"def first[a]=second[a] def second[b]=first[b]","fuel":"3","entry":"second"}
+{"id":"bounded-mutual.4","source":"def first[a]=second[a] def second[b]=first[b]","fuel":"4","entry":"second"}
+{"id":"bounded-mutual.6","source":"def first[a]=second[a] def second[b]=first[b]","fuel":"6","entry":"second"}
+{"id":"bounded-mutual.33","source":"def first[a]=second[a] def second[b]=first[b]","fuel":"33","entry":"second"}
+{"id":"bounded-mutual.70","source":"def first[a]=second[a] def second[b]=first[b]","fuel":"70","entry":"second"}
+{"id":"unused-dispatch.exact","source":"def never[n]=mul[n,n] def main[x]=x","fuel":"exact"}
+{"id":"unused-dispatch.one-less","source":"def never[n]=mul[n,n] def main[x]=x","fuel":"one-less"}
+{"id":"preintern.empty.exact","source":"def main[x]=tuple[]","fuel":"exact","preload":"empty"}
+{"id":"preintern.empty.one-less","source":"def main[x]=tuple[]","fuel":"one-less","preload":"empty"}
+{"id":"preintern.pair.exact","source":"def main[x]=tuple[x,x]","fuel":"exact","preload":"pair"}
+{"id":"preintern.pair.one-less","source":"def main[x]=tuple[x,x]","fuel":"one-less","preload":"pair"}
+{"id":"preintern.nested.exact","source":"def main[x]=tuple[tuple[],tuple[]]","fuel":"exact","preload":"empty"}
+{"id":"preintern.nested.one-less","source":"def main[x]=tuple[tuple[],tuple[]]","fuel":"one-less","preload":"empty"}
+{"id":"dispatch.add.exact","source":"def main[x]=add[tuple[x],7]","fuel":"exact"}
+{"id":"dispatch.add.one-less","source":"def main[x]=add[tuple[x],7]","fuel":"one-less"}
+{"id":"dispatch.add.0","source":"def main[x]=add[tuple[x],7]","fuel":"0"}
+{"id":"dispatch.sub.exact","source":"def main[x]=sub[8,id[x]] def id[y]=tuple[y]","fuel":"exact"}
+{"id":"dispatch.sub.one-less","source":"def main[x]=sub[8,id[x]] def id[y]=tuple[y]","fuel":"one-less"}
+{"id":"dispatch.sub.0","source":"def main[x]=sub[8,id[x]] def id[y]=tuple[y]","fuel":"0"}
+{"id":"dispatch.mul.exact","source":"def main[x]=mul[tuple[],x]","fuel":"exact"}
+{"id":"dispatch.mul.one-less","source":"def main[x]=mul[tuple[],x]","fuel":"one-less"}
+{"id":"dispatch.mul.0","source":"def main[x]=mul[tuple[],x]","fuel":"0"}
+{"id":"dispatch.earliest.exact","source":"def main[x]=tuple[add[x,3],sub[0,1]]","fuel":"exact"}
+{"id":"dispatch.earliest.one-less","source":"def main[x]=tuple[add[x,3],sub[0,1]]","fuel":"one-less"}
+{"id":"dispatch.earliest.0","source":"def main[x]=tuple[add[x,3],sub[0,1]]","fuel":"0"}
+{"id":"control.order","source":"def main[x]=tuple[id[x],tuple[]] def id[y]=y","fuel":"2"}
+{"id":"control.repeat","source":"def main[x]=tuple[x,x]","fuel":"2"}
+{"id":"control.call","source":"def main[x]=id[x] def id[y]=y","fuel":"2"}
+{"id":"control.read","source":"def main[x]=x","fuel":"1"}
+{"id":"uncapped.budget","source":"def main[x]=tuple[x,x]","fuel":"1000000000000000000000000000000000000000000000000000000000000000000000000000","input":"1461501637330902918203684832716283019655932542976"}
+{"id":"deep.chain.exact","generator":"chain","depth":20000,"entry":"f0","fuel":"exact"}
+{"id":"deep.chain.one-less","generator":"chain","depth":20000,"entry":"f0","fuel":"one-less"}
+{"id":"deep.chain.1","generator":"chain","depth":20000,"entry":"f0","fuel":"1"}
+{"id":"deep.nested.exact","generator":"nested","depth":30000,"entry":"main","fuel":"exact"}
+{"id":"deep.nested.one-less","generator":"nested","depth":30000,"entry":"main","fuel":"one-less"}
+{"id":"deep.nested.1","generator":"nested","depth":30000,"entry":"main","fuel":"1"}
+{"id":"deep.release.240003","source":"def main[x]=tuple[spin[x],77] def spin[y]=spin[y]","fuel":"240003","generator":"deep-stop","mode":"cleanup"}
+{"id":"deep.release.240004","source":"def main[x]=tuple[spin[x],77] def spin[y]=spin[y]","fuel":"240004","generator":"deep-stop","mode":"cleanup"}
