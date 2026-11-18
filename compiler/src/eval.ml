@@ -98,3 +98,16 @@ end) = struct
       Ok (enter index argument [])
     with Exhausted stop -> Error stop
 end
+
+module With_primitives (Store : sig
+  type scope
+  val none : scope Value.t
+  val natural : Natural.t -> scope Value.t
+  val tuple : scope Value.t array -> scope Value.t
+end) = struct
+  module Frames = Make (Store)
+  module Arithmetic = Primitives.Make (Store)
+
+  let run ~meter ~input program =
+    Frames.run ~meter ~primitive:Arithmetic.dispatch ~input program
+end

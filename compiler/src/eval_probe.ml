@@ -1,19 +1,22 @@
-(* Author probe. All semantic execution is through the admitted program and
-   Eval.Make. Only the tuple store and the internal piece 15 boundary are observed. *)
+(* Author probe for the injectable frames and the normal arithmetic evaluator.
+   Store observations record the balance at the real lookup or construction. *)
 let nat s = match Natural.of_decimal s with Ok n -> n | Error why -> invalid_arg why
 let dec = Natural.to_decimal
 
 let balance (state : Meter.accounting) = dec state.Meter.used ^ "," ^ dec state.Meter.remaining
 
-let location at =
-  let path = match Eval.expression_path at with
+let show_location definition expr_path source_offset =
+  let path = match expr_path with
     | None -> "-"
     | Some xs when List.length xs > 128 && List.for_all ((=) 0) xs ->
         "zeros(" ^ string_of_int (List.length xs) ^ ")"
     | Some xs -> "[" ^ String.concat "," (List.map string_of_int xs) ^ "]"
   in
-  let offset = match Eval.source_offset at with None -> "-" | Some n -> string_of_int n in
-  Printf.sprintf "%d:%s@%s" (Eval.definition_index at) path offset
+  let offset = match source_offset with None -> "-" | Some n -> string_of_int n in
+  Printf.sprintf "%d:%s@%s" definition path offset
+
+let location at =
+  show_location (Eval.definition_index at) (Eval.expression_path at) (Eval.source_offset at)
 
 let primitive_name = function Checker.Add -> "add" | Checker.Sub -> "sub" | Checker.Mul -> "mul"
 
@@ -45,6 +48,17 @@ let value_text root =
   visit [root]
 
 exception Primitive_boundary of string * Eval.location
+
+let stop_receipt meter stop =
+  (match Meter.stopped meter with
+  | Some original when original == stop -> ()
+  | Some _ | None -> failwith "stop identity lost");
+  let bill = match stop.Meter.cause with
+    | Meter.Insufficient i -> String.concat "," (List.map dec [i.Meter.a; i.Meter.r; i.Meter.t; i.Meter.w; i.Meter.total])
+    | Meter.Bound_unavailable reason -> "?" ^ reason
+  in
+  Meter.stop_code stop.Meter.cause, event_name stop.Meter.failed_event,
+  location stop.Meter.at, bill, dec stop.Meter.failed_operation_debit
 
 let run_case filename entry input_text budget_text preload mode =
   let module Raw = Value.Make () in
@@ -112,16 +126,7 @@ let run_case filename entry input_text budget_text preload mode =
     match Sys.opaque_identity result with
     | `Returned value -> "returned", value_text value, "-", "-", "-"
     | `Dispatch (operands, at) -> "internal-dispatch", operands, location at, "-", "-"
-    | `Stopped stop ->
-        (match Meter.stopped meter with
-        | Some original when original == stop -> ()
-        | Some _ | None -> failwith "stop identity lost");
-        let bill = match stop.Meter.cause with
-          | Meter.Insufficient i -> String.concat "," (List.map dec [i.Meter.a; i.Meter.r; i.Meter.t; i.Meter.w; i.Meter.total])
-          | Meter.Bound_unavailable reason -> "?" ^ reason
-        in
-        Meter.stop_code stop.Meter.cause, event_name stop.Meter.failed_event,
-        location stop.Meter.at, bill, dec stop.Meter.failed_operation_debit
+    | `Stopped stop -> stop_receipt meter stop
   in
   let state = Meter.accounting meter in
   if Natural.compare state.Meter.budget budget <> 0 ||
@@ -129,6 +134,59 @@ let run_case filename entry input_text budget_text preload mode =
     failwith "fuel conservation";
   let log = match List.rev !calls with [] -> "-" | data -> String.concat ";" data in
   String.concat "|" [status; detail; site; invoice; failed; balance state; log; released]
+
+let run_primitives filename entry input_text budget_text =
+  let module Raw = Value.Make () in
+  let budget = nat budget_text in
+  let meter = Meter.create ~budget and writes = ref [] in
+  let observe kind construct =
+    let paid = balance (Meter.accounting meter) and before = Raw.interned_count () in
+    let result = construct () in
+    let added = Raw.interned_count () - before in
+    writes := Printf.sprintf "%s:%s:%d:%s" kind paid added (value_text result) :: !writes;
+    result
+  in
+  let module Store = struct
+    type scope = Raw.scope
+    let none = Raw.none
+    let natural n =
+      if Natural.compare (Meter.accounting meter).Meter.used Natural.zero = 0 then Raw.natural n
+      else observe "n" (fun () -> Raw.natural n)
+    let tuple fields = observe "t" (fun () -> Raw.tuple fields)
+  end in
+  let module Source = Reader.Make (Raw) in
+  let module Evaluator = Eval.With_primitives (Store) in
+  let bytes = In_channel.with_open_bin filename In_channel.input_all in
+  let tree = match Source.read_bytes bytes with
+    | Ok tree -> tree | Error e -> failwith (Reader.error_code e)
+  in
+  let started, (status, detail, at, invoice, failed) =
+    match Checker.check ~entry tree with
+    | Error (Checker.Tool_error e) -> failwith (Reader.error_code (Reader.Tool_error e))
+    | Error (Checker.Refused r) ->
+        let code, facts = Checker.describe r.Checker.cause in
+        let fields = String.concat "," (List.map (fun (key, v) -> key ^ "=" ^ v) facts) in
+        let at = match r.Checker.at with
+          | Checker.Entry_argument -> "entry"
+          | Checker.In_definition { definition_index; expr_path; position } ->
+              show_location definition_index expr_path (Some position.Reader.source_offset)
+        in
+        "0", ("refused", code ^ ":" ^ fields, at, "-", "-")
+    | Ok program ->
+        let result = match Evaluator.run ~meter ~input:(nat input_text) program with
+          | Error stop -> stop_receipt meter stop
+          | Ok value ->
+              if Value.kind value = Value.Builtin_none && value != Raw.none then
+                failwith "wrong-kind result is not the store's builtin none";
+              "returned", value_text value, "-", "-", "-"
+        in
+        "1", result
+  in
+  let state = Meter.accounting meter in
+  if Natural.compare (Natural.add state.Meter.used state.Meter.remaining) budget <> 0 then
+    failwith "primitive fuel conservation";
+  let log = match List.rev !writes with [] -> "-" | xs -> String.concat ";" xs in
+  String.concat "|" [status; detail; at; invoice; failed; balance state; started; log]
 
 let run requests actual =
   let count = ref 0 in
@@ -139,6 +197,9 @@ let run requests actual =
         | Some line ->
             let line = if String.ends_with ~suffix:"\r" line then String.sub line 0 (String.length line - 1) else line in
             (match String.split_on_char '\t' line with
+            | [id; "primitives"; source; entry; argument; fuel; "-"] ->
+                let filename = Filename.concat (Filename.dirname requests) source in
+                Printf.fprintf output "%s\t%s\n" id (run_primitives filename entry argument fuel)
             | [id; mode; source; entry; argument; fuel; preload] ->
                 let filename = Filename.concat (Filename.dirname requests) source in
                 Printf.fprintf output "%s\t%s\n" id (run_case filename entry argument fuel preload mode)

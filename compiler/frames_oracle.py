@@ -72,6 +72,8 @@ def value_text(value):
         if isinstance(item, tuple):
             parts.append("T" + str(len(item)))
             pending.extend(reversed(item))
+        elif item is None:
+            parts.append("O")
         else:
             parts.append("N" + str(item))
     return ",".join(parts)

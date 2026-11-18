@@ -24,3 +24,15 @@ end) : sig
     input:Natural.t -> Store.scope Checker.program ->
     (Store.scope Value.t, location Meter.stop) result
 end
+
+(** Normal milestone B execution, with metered add, sub and mul installed. *)
+module With_primitives (Store : sig
+  type scope
+  val none : scope Value.t
+  val natural : Natural.t -> scope Value.t
+  val tuple : scope Value.t array -> scope Value.t
+end) : sig
+  val run :
+    meter:location Meter.t -> input:Natural.t -> Store.scope Checker.program ->
+    (Store.scope Value.t, location Meter.stop) result
+end
