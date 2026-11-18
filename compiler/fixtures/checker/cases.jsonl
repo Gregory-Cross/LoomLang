@@ -1,0 +1,82 @@
+{"id":"P-reserved-global","source":"def add[x]=x","entry":"main","expect":"check.reserved_global|at=0:-@4/1/5|name=add|declaration_index=0"}
+{"id":"P-duplicate-global","source":"def main[x]=x def main[y]=y","entry":"main","expect":"check.duplicate_global|at=1:-@18/1/19|name=main|first_index=0|second_index=1"}
+{"id":"P-zero-params","source":"def main[]=0","entry":"main","expect":"check.unsupported_definition_arity|at=0:-@4/1/5|name=main|actual=0"}
+{"id":"P-two-params","source":"def main[x,y]=x","entry":"main","expect":"check.unsupported_definition_arity|at=0:-@4/1/5|name=main|actual=2"}
+{"id":"P-reserved-binder","source":"def main[add]=0","entry":"main","expect":"check.reserved_binder|at=0:-@9/1/10|name=add|definition_index=0"}
+{"id":"P-global-binder","source":"def main[main]=0","entry":"main","expect":"check.binder_global_collision|at=0:-@9/1/10|name=main|definition_index=0|global_index=0"}
+{"id":"P-unbound-variable","source":"def main[x]=y","entry":"main","expect":"resolve.unbound_variable|at=0:[]@12/1/13|name=y"}
+{"id":"P-unknown-call","source":"def main[x]=ghost[x]","entry":"main","expect":"resolve.unknown_call|at=0:[]@12/1/13|name=ghost"}
+{"id":"P-wrong-role","source":"def main[x]=x[1]","entry":"main","expect":"resolve.wrong_role|at=0:[]@12/1/13|name=x|actual_role=local|required_role=callable"}
+{"id":"P-bare-global-role","source":"def main[x]=id def id[y]=y","entry":"main","expect":"resolve.wrong_role|at=0:[]@12/1/13|name=id|actual_role=definition|required_role=local"}
+{"id":"P-primitive-arity","source":"def main[x]=add[1]","entry":"main","expect":"resolve.primitive_arity|at=0:[]@12/1/13|name=add|expected=2|actual=1"}
+{"id":"P-named-arity","source":"def main[x]=id[] def id[y]=y","entry":"main","expect":"resolve.named_arity|at=0:[]@12/1/13|name=id|expected=1|actual=0"}
+{"id":"P-entry-missing","source":"def other[x]=x","entry":"main","expect":"invoke.entry_missing|at=entry|name=main"}
+{"id":"P-empty","source":"","entry":"main","expect":"invoke.entry_missing|at=entry|name=main"}
+{"id":"P-entry-role","source":"def main[x]=x","entry":"add","expect":"invoke.entry_wrong_role|at=entry|name=add|actual_role=primitive"}
+{"id":"P-unused-bad","source":"def main[x]=0 def unused[y]=ghost[y]","entry":"main","expect":"resolve.unknown_call|at=1:[]@28/1/29|name=ghost"}
+{"id":"P-invalid-fuel-zero","source":"def main[x]=ghost[x]","entry":"main","invocation_fuel":"0","expect":"resolve.unknown_call|at=0:[]@12/1/13|name=ghost"}
+{"id":"accept.identity","source":"def main[x]=x","entry":"main","expect":"ok|entry=0|0:main[x]=$0"}
+{"id":"accept.literal","source":"def main[x]=1844674407370955161600000000007","entry":"main","expect":"ok|entry=0|0:main[x]=n1844674407370955161600000000007"}
+{"id":"accept.first-order","source":"def twice[x]=add[x,x]\r\ndef main[x]=tuple[twice[x],sub[2,5],mul[7,7]]","entry":"main","expect":"ok|entry=1|0:twice[x]=add($0,$0)|1:main[x]=tuple[call#0($0),sub(n2,n5),mul(n7,n7)]"}
+{"id":"accept.forward","source":"def main[x]=later[x] def later[z]=z","entry":"main","expect":"ok|entry=0|0:main[x]=call#1($0)|1:later[z]=$0"}
+{"id":"accept.self","source":"def f[x]=f[x]","entry":"f","expect":"ok|entry=0|0:f[x]=call#0($0)"}
+{"id":"accept.mutual","source":"def a[x]=b[x] def b[x]=a[x]","entry":"b","expect":"ok|entry=1|0:a[x]=call#1($0)|1:b[x]=call#0($0)"}
+{"id":"accept.unreachable","source":"def dormant[z]=dormant[z] def main[x]=1 def spare[y]=tuple[]","entry":"main","expect":"ok|entry=1|0:dormant[z]=call#0($0)|1:main[x]=n1|2:spare[y]=tuple[]"}
+{"id":"accept.wrong-runtime-kind","source":"def main[x]=add[tuple[],x]","entry":"main","expect":"ok|entry=0|0:main[x]=add(tuple[],$0)"}
+{"id":"accept.ordered","source":"def main[x]=tuple[3,x,3,tuple[0],sub[x,1]]","entry":"main","expect":"ok|entry=0|0:main[x]=tuple[n3,$0,n3,tuple[n0],sub($0,n1)]"}
+{"id":"accept.row-global","source":"def row[y]=y def main[x]=row[x]","entry":"main","expect":"ok|entry=1|0:row[y]=$0|1:main[x]=call#0($0)"}
+{"id":"accept.row-local","source":"def main[row]=tuple[row]","entry":"main","expect":"ok|entry=0|0:main[row]=tuple[$0]"}
+{"id":"accept.case-sensitive","source":"def Main[ADD]=ADD def main[_1]=Main[_1]","entry":"main","expect":"ok|entry=1|0:Main[ADD]=$0|1:main[_1]=call#0($0)"}
+{"id":"accept.adjacent","source":"def a[x]=0def b[y]=a[y]def c[z]=tuple[]","entry":"c","expect":"ok|entry=2|0:a[x]=n0|1:b[y]=call#0($0)|2:c[z]=tuple[]"}
+{"id":"global.reserved.def","source":"def good[x]=0\r\ndef def[z]=z","entry":"main","expect":"check.reserved_global|at=1:-@19/2/5|name=def|declaration_index=1"}
+{"id":"binder.reserved.def","source":"def fine[a]=a\ndef main[\tdef]=0","entry":"main","expect":"check.reserved_binder|at=1:-@24/2/11|name=def|definition_index=1"}
+{"id":"ref.reserved.def","source":"def main[x]=tuple[0,def]","entry":"main","expect":"resolve.wrong_role|at=0:[1]@20/1/21|name=def|actual_role=keyword|required_role=local"}
+{"id":"entry.reserved.def","source":"def main[x]=0","entry":"def","expect":"invoke.entry_wrong_role|at=entry|name=def|actual_role=keyword"}
+{"id":"global.reserved.add","source":"def good[x]=0\r\ndef add[z]=z","entry":"main","expect":"check.reserved_global|at=1:-@19/2/5|name=add|declaration_index=1"}
+{"id":"binder.reserved.add","source":"def fine[a]=a\ndef main[\tadd]=0","entry":"main","expect":"check.reserved_binder|at=1:-@24/2/11|name=add|definition_index=1"}
+{"id":"ref.reserved.add","source":"def main[x]=tuple[0,add]","entry":"main","expect":"resolve.wrong_role|at=0:[1]@20/1/21|name=add|actual_role=primitive|required_role=local"}
+{"id":"entry.reserved.add","source":"def main[x]=0","entry":"add","expect":"invoke.entry_wrong_role|at=entry|name=add|actual_role=primitive"}
+{"id":"global.reserved.sub","source":"def good[x]=0\r\ndef sub[z]=z","entry":"main","expect":"check.reserved_global|at=1:-@19/2/5|name=sub|declaration_index=1"}
+{"id":"binder.reserved.sub","source":"def fine[a]=a\ndef main[\tsub]=0","entry":"main","expect":"check.reserved_binder|at=1:-@24/2/11|name=sub|definition_index=1"}
+{"id":"ref.reserved.sub","source":"def main[x]=tuple[0,sub]","entry":"main","expect":"resolve.wrong_role|at=0:[1]@20/1/21|name=sub|actual_role=primitive|required_role=local"}
+{"id":"entry.reserved.sub","source":"def main[x]=0","entry":"sub","expect":"invoke.entry_wrong_role|at=entry|name=sub|actual_role=primitive"}
+{"id":"global.reserved.mul","source":"def good[x]=0\r\ndef mul[z]=z","entry":"main","expect":"check.reserved_global|at=1:-@19/2/5|name=mul|declaration_index=1"}
+{"id":"binder.reserved.mul","source":"def fine[a]=a\ndef main[\tmul]=0","entry":"main","expect":"check.reserved_binder|at=1:-@24/2/11|name=mul|definition_index=1"}
+{"id":"ref.reserved.mul","source":"def main[x]=tuple[0,mul]","entry":"main","expect":"resolve.wrong_role|at=0:[1]@20/1/21|name=mul|actual_role=primitive|required_role=local"}
+{"id":"entry.reserved.mul","source":"def main[x]=0","entry":"mul","expect":"invoke.entry_wrong_role|at=entry|name=mul|actual_role=primitive"}
+{"id":"global.reserved.tuple","source":"def good[x]=0\r\ndef tuple[z]=z","entry":"main","expect":"check.reserved_global|at=1:-@19/2/5|name=tuple|declaration_index=1"}
+{"id":"binder.reserved.tuple","source":"def fine[a]=a\ndef main[\ttuple]=0","entry":"main","expect":"check.reserved_binder|at=1:-@24/2/11|name=tuple|definition_index=1"}
+{"id":"ref.reserved.tuple","source":"def main[x]=tuple[0,tuple]","entry":"main","expect":"resolve.wrong_role|at=0:[1]@20/1/21|name=tuple|actual_role=constructor|required_role=local"}
+{"id":"entry.reserved.tuple","source":"def main[x]=0","entry":"tuple","expect":"invoke.entry_wrong_role|at=entry|name=tuple|actual_role=constructor"}
+{"id":"call.keyword","source":"def main[x]=tuple[def[ghost]]","entry":"main","expect":"resolve.wrong_role|at=0:[0]@18/1/19|name=def|actual_role=keyword|required_role=callable"}
+{"id":"call.local-before-children","source":"def main[x]=tuple[x[missing,ghost[]]]","entry":"main","expect":"resolve.wrong_role|at=0:[0]@18/1/19|name=x|actual_role=local|required_role=callable"}
+{"id":"ref.other-function-binder","source":"def id[y]=y\r\ndef main[x]=tuple[x,y]","entry":"main","expect":"resolve.unbound_variable|at=1:[1]@33/2/21|name=y"}
+{"id":"call.row-not-alias","source":"def main[x]=row[x]","entry":"main","expect":"resolve.unknown_call|at=0:[]@12/1/13|name=row"}
+{"id":"ref.unbound-before-entry","source":"def f[x]=bad","entry":"tuple","expect":"resolve.unbound_variable|at=0:[]@9/1/10|name=bad"}
+{"id":"globals.first-occurrence","source":"def alpha[a]=a def Beta[b]=b\r\n def alpha[c]=c def tuple[k]=k","entry":"main","expect":"check.duplicate_global|at=2:-@35/2/6|name=alpha|first_index=0|second_index=2"}
+{"id":"order.duplicate-before-body","source":"def m[a]=bogus def m[b]=b","entry":"main","expect":"check.duplicate_global|at=1:-@19/1/20|name=m|first_index=0|second_index=1"}
+{"id":"order.collect-before-count","source":"def bad[]=0 def mul[x]=x","entry":"main","expect":"check.reserved_global|at=1:-@16/1/17|name=mul|declaration_index=1"}
+{"id":"order.counts-before-binders","source":"def earlier[tuple]=0 def later[x,y]=0","entry":"main","expect":"check.unsupported_definition_arity|at=1:-@25/1/26|name=later|actual=2"}
+{"id":"entry.wrong-count","source":"def good[x]=x\r\n\tdef chosen[a,b]=a","entry":"chosen","expect":"check.unsupported_definition_arity|at=1:-@20/2/6|name=chosen|actual=2"}
+{"id":"order.unused-count","source":"def main[x]=x def unused[]=0","entry":"main","expect":"check.unsupported_definition_arity|at=1:-@18/1/19|name=unused|actual=0"}
+{"id":"binder.future-global","source":"def main[future]=future def future[z]=z","entry":"main","expect":"check.binder_global_collision|at=0:-@9/1/10|name=future|definition_index=0|global_index=1"}
+{"id":"binder.past-global","source":"def id[q]=q def main[id]=id","entry":"main","expect":"check.binder_global_collision|at=1:-@21/1/22|name=id|definition_index=1|global_index=0"}
+{"id":"order.binders-before-bodies","source":"def main[x]=unknown[x] def unused[tuple]=0","entry":"main","expect":"check.reserved_binder|at=1:-@34/1/35|name=tuple|definition_index=1"}
+{"id":"order.binder-first","source":"def first[def]=0 def second[first]=0","entry":"main","expect":"check.reserved_binder|at=0:-@10/1/11|name=def|definition_index=0"}
+{"id":"order.definition-bodies","source":"def first[x]=tuple[1,missing] def second[x]=ghost[]","entry":"main","expect":"resolve.unbound_variable|at=0:[1]@21/1/22|name=missing"}
+{"id":"order.children-left-to-right","source":"def main[x]=tuple[add[x,left],right[],z]","entry":"main","expect":"resolve.unbound_variable|at=0:[0,1]@24/1/25|name=left"}
+{"id":"order.unknown-before-child","source":"def main[x]=tuple[unknown[bad]]","entry":"main","expect":"resolve.unknown_call|at=0:[0]@18/1/19|name=unknown"}
+{"id":"order.primitive-before-children","source":"def main[x]=tuple[x,mul[ghost[]]]","entry":"main","expect":"resolve.primitive_arity|at=0:[1]@20/1/21|name=mul|expected=2|actual=1"}
+{"id":"order.named-before-children","source":"def foo[y]=y def main[x]=tuple[foo[ghost[],no]]","entry":"main","expect":"resolve.named_arity|at=1:[0]@31/1/32|name=foo|expected=1|actual=2"}
+{"id":"arity.sub.zero","source":"def main[x]=sub[]","entry":"main","expect":"resolve.primitive_arity|at=0:[]@12/1/13|name=sub|expected=2|actual=0"}
+{"id":"arity.add.excess","source":"def main[x]=add[1,2,3]","entry":"main","expect":"resolve.primitive_arity|at=0:[]@12/1/13|name=add|expected=2|actual=3"}
+{"id":"arity.forward-call","source":"def main[x]=later[x,x] def later[z]=z","entry":"main","expect":"resolve.named_arity|at=0:[]@12/1/13|name=later|expected=1|actual=2"}
+{"id":"path.wide-child","source":"def main[x]=tuple[0,1,2,3,4,5,6,7,8,9,10,11,missing]","entry":"main","expect":"resolve.unbound_variable|at=0:[12]@44/1/45|name=missing"}
+{"id":"path.nested-crlf","source":"def helper[y]=y\r\ndef main[x]=tuple[x,tuple[0,\r\n\tadd[x,missing]]]","entry":"main","expect":"resolve.unbound_variable|at=1:[1,1,1]@54/3/8|name=missing"}
+{"id":"path.sibling-asymmetry","source":"def main[x]=tuple[0,1,add[tuple[0,boom[]],x]]","entry":"main","expect":"resolve.unknown_call|at=0:[2,0,1]@34/1/35|name=boom"}
+{"id":"control.location.lf","source":"def main[x]=tuple[x,\n\tghost[x]]","entry":"main","expect":"resolve.unknown_call|at=0:[1]@22/2/2|name=ghost"}
+{"id":"control.location.cr","source":"def main[x]=tuple[x,\r\tghost[x]]","entry":"main","expect":"resolve.unknown_call|at=0:[1]@22/2/2|name=ghost"}
+{"id":"control.location.crlf","source":"def main[x]=tuple[x,\r\n\tghost[x]]","entry":"main","expect":"resolve.unknown_call|at=0:[1]@23/2/2|name=ghost"}
+{"id":"control.planted-wrong-cause","source":"def ok[a]=a\r\ndef main[x]=tuple[x,\r\n\tghost[x]]","entry":"main","expect":"resolve.unknown_call|at=1:[1]@36/3/2|name=ghost"}
+{"id":"deep.fixed-self-calls","call_depth":30000,"leaf":"x","entry":"a","view":"chain","expect":"ok|entry=0|call_depth=30000|leaf=$0"}
+{"id":"deep.refusal","call_depth":12000,"leaf":"missing","entry":"a","view":"deep-error","expect":"resolve.unbound_variable|at=0:zeros(12000)@24009/1/24010|name=missing"}
