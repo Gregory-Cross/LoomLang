@@ -119,6 +119,7 @@ SOURCE — This answer's supplied raw owner line is `_relay\inputs\owner-lines\o
 | **SOURCE — Making, moving and consuming, Q4 (D-ATT-7):** C-A: returning, passing along and putting a use-once value inside data move the same value; taking the data apart uses up the data and hands on its fields. The function promised to be called once remains unwritten and open. | `_relay\inputs\owner-record-2026-11-17-first-milestone-four-answers.json` — `a0f86bba36b02980ef9e6f4941a4cb21a926dfe133adf158bc927be9674f7b08` | Human-origin accepted answer “yes to all four, go with Arch's recommendations”, session `6ebc575d-064e-4825-a97a-f091139e8c38`, `2026-11-17T23:37:57.026Z`; raw answer-line SHA-256 `f176b7f1cf8e1e594fba8a09c07663e364ad34b977614cf2cf97278c4a75b79b` (terminal LF excluded) |
 | **SOURCE — Closed operations taking use-once values:** in the first build an operation with no rules that is closed (implemented in the host, or an evaluated definition) takes no use-once value, bare or inside data. Refuse its declaration as not yet supported, naming the parameter and the inside sort. A selected interpretation whose image has rules goes through the image. D-ATT-7's earlier general consumption sentence is withdrawn. The later shape remains open, before slice 2's interfaces, with D-UO-17's split and the host ownership interface; see R-64. | `_relay\inputs\owner-record-2026-11-17-box-sink-first-build-refuse.json` — `50c3f35704edc8b0fb1b860f2ed66b55a1af6d0fb0d0b05c29cd4e5dd4b987b7` | Human-origin accepted answer “yes to the recomendations and recording the later shape as open”, session `6ebc575d-064e-4825-a97a-f091139e8c38`, `2026-11-18T03:31:45.259Z`; raw answer-line SHA-256 `dfb213a87bde4830a83f1a6a743c7a71c17a829f9deb875b7a6643ceeef2da37` (terminal LF excluded; 21:31 on 17 November, Central time) |
 | **SOURCE — Manifest and tuple names:** the dependency record (D-ROW-1) is the manifest. The evaluator value of several values in fixed positions (D-VAL-1) is a tuple, with provisional bootstrap spelling `tuple`. | `_relay\inputs\owner-record-2026-11-17-row-renamed-manifest-tuple.json` — `6ba500d2aada8c316f06c714d4625325aafd764979697d25868b3774372087df` | Human-origin typed answer “Yeah I like manifest and rename to tuple”, session `6ebc575d-064e-4825-a97a-f091139e8c38`, `2026-11-18T04:05:00.729Z`. Raw answer-line SHA-256 `025575a67d50fc3cc6fd8e9612d6ca343f47233c0360a9360bce93b39b9bd7f0` (terminal LF excluded, 22:05 on 17 November Central time) |
+| **SOURCE — Old-specs reminders and notes, items 2 and 3:** record the 30 later candidates from Arch's merge as reminders, each with its trigger. The reminders adopt nothing. Present notes as shared tool metadata under the three retained core provisions and the two findings in the merge's section 4. | `_relay\inputs\owner-record-2026-11-17-old-specs-three-answers.json` — `21a7a1f60cdcc2321b4de601c43ed86ca5cc630230878ddf465b2f2a8b75d881` | Human-origin typed answer begins “Yes to all 3.”, session `6ebc575d-064e-4825-a97a-f091139e8c38`, `2026-11-18T04:39:05.572Z`. Raw answer-line SHA-256 `14c9449e6cbd7c93c740f08829f3247659504795038329fc6efbf7e99a317473` (terminal LF excluded, 22:39 on 17 November Central time) |
 
 ## To reconsider
 
@@ -145,6 +146,7 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 - **The mark split is decided before slice 2's interfaces are drafted (SOURCE: answer 4a; R-26):** decide whether to replace the present exactly-once mark with separate no-copy and no-drop marks, since that changes which values must survive a failure. R12 D-UO-17 records two marks as the direction, not work adopted now. Foreign cleanup examples depend on particular unwinding or registration conditions; they do not release every resource or decide which marks Loom needs (Q web check row 27). **Sources (SOURCE):** Arch audit section 3.6 and entry 22; Web check section 5 entry 21; R12 D-UO-17; Q web check row 27.
 - **Sources:** `2026-11-11-CLAUDE-ARCH-RECOVERY-A-R2\REPORT.md` (SHA-256 `1d30b247ada934556e70330cc5f7d6b41646cf185336f804893614ccf99c222e`; revision 1 re-checked by Codex Q, card 0109, whose repairs revision 2 applies) sections 5 to 7; the O3 owner record above.
 - **Status (2026-11-11):** the section 6 test has run (Codex S, card 0023) and was reviewed SOUND (Codex Q, card 0112): trigger 1 has not fired. Two callback probes stayed unresolved and are reported; how often real programs meet the unrecovered failure is still unmeasured. SOURCE: R13 D-UO-16 reports this finite result, the independent review, unresolved probes and unmeasured frequency.
+- **PROPOSED — M-04 reminder.** Ask what a loop or fold carrying a use-once value must hand back if a called function fails. Bring it on R-1's return. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-04, cites G9.
 
 ### R-2. The backend beyond generated C
 
@@ -199,6 +201,7 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 - **Set aside (SOURCE):** count only declarations the run can reach. **INFERENCE:** including an unused helper can change sequence names across edits.
 - **Put back to the owner when (PROPOSED):** evidence or a recorded run is first proposed for reuse across edits of a program; bring an unused-helper edit and show which names and comparisons change.
 - **Sources (SOURCE):** Arch audit entry 38 and section 6 item 5; the existing OC-05 to OC-09 row; R12 Annex A and D-SEQ-2.
+- **PROPOSED — M-12 reminder.** Consider keeping apart the identity of what a program means, what authorised a build of it, and what was built. Bring it on R-8's return. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-12, cites G18 and D COMP-03.
 
 ### R-9. Declared look-back — OPEN FOR THE OWNER: argument execution only
 - **Answer recorded (SOURCE; 2026-11-12, question 3):** the callee-declared form, applied by name only, is working until its rule for running the argument is written and accepted and four tests pass. Here working is the recorded provisional standing, not a promise that the declared form may be relied on. R13 D-LB-3 says it returns to decided only after the argument-execution rule is written and accepted and its four tests pass. Only the mark written at the call may be relied on meanwhile. The bound `owner-record-2026-11-12-bignum-check-lookback-working.json` above records this standing and the direction to queue the tests; it does not choose the argument-execution rule.
@@ -214,6 +217,7 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 - **Set aside (SOURCE):** only the narrower search for swap rules between small graph patches.
 - **Put back to the owner when (PROPOSED):** before any SRE building starts, give every planned stage a finish line someone outside the team can check; for example, a theorem permits an algorithm under one interpretation and refuses it under another.
 - **Sources (SOURCE):** Arch audit section 3.10 and section 6 item 5; R12 D-SL-5; C audit “SRE breadth”.
+- **PROPOSED — M-28 reminder.** Bring the old search menu, including shrinking counterexamples, cheap screens before exact search, breeding hard cases, explaining failed searches and keeping several views in step. They are candidates for untrusted proposers, with scores kept as notes under D-PR-5 and D-RL-9. Bring it with the first SRE stage, D-SL-8 and R-10. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-28, cites G29, G34 to G39, G46 to G54, G56, G57 and D LANG-05, LANG-10.
 
 ### R-11. Changing sequences: out of the first build, to reconsider
 - **Chosen meaning (SOURCE; by 2026-11-12):** changing a sequence changes what every holder sees and preserves its identity (Arch L22130; R12 D-SEQ-1). R12 proposes state-free admission and result checks (D-SEQ-3).
@@ -265,6 +269,8 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 - **Put back to the owner when (PROPOSED, Claude Arch's):** slice 4 names its first outside checker; or earlier, if a real outside checker is needed before slice 4, or a worked case shows that the calculator version of a needed checker is out of reach. Bring two worked cases: a small certificate checker, and a guest's core, each with the size of the calculator program it would need. Settle then whether a guest's core that stands in a manifest is an unproved checker in this rule's sense; read strictly, Arch says it is.
 - **Checker and middle-row controls (PROPOSED; web round 11-17, page 11):** Bring the checker that accepts everything: a true "yes" from an unsound checker proves nothing. Consistency alone never licenses an existence row. A universal finite check needs a bridge from a failing run to a refutation. Carry these controls both to R-18's checker cases and to D-RL-11's middle evidence rows; the first-and-last-row policy stays. The answer's classifier and adapters are paper proposals.
 - **Source (SOURCE):** `2026-11-12-CLAUDE-ARCH-METER-QUESTIONS-OWNER-PAGE\OWNER-PAGE-MOVES-11-14.md`, Question 14, lines 43–49 and 57–67.
+- **PROPOSED — M-13 reminder.** Consider keeping withdrawal of a checker distinct from refutation of a claim, and checking a policy and publishing under it as one step. Bring it in slice 4, with R-18. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-13, cites G8.
+- **PROPOSED — M-19 reminder.** Consider an outside checker behind a fenced boundary without a version written for the evaluator. Bring it on R-18's return. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-19, cites G41.
 
 ### R-19. Rule 10: checked handles (10-B) or no freeing during a run (10-C)
 - **Chosen for now (SOURCE; 2026-11-12):** 10-A; the owner record is in the rule 10 row above.
@@ -300,6 +306,7 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 - **What would make it safe (SOURCE):** the census and its review, owed under either answer before the rules for use-once values, the stored function signature and which values a call may accept are fixed; and, under D-B, the open question of when a use-once value counts as used up must also cover a function kept in a box. What has already run: the census ran clean on its frozen grammar, with functions held in data in stage B. Through size eight, neither setting accepted a wrong term, and every registered control passed; a blind recount agrees term by term through size seven, and size eight is not cross-checked. Claude Arch's result note is proposed and not reviewed. It counts this as finite evidence for the frozen grammar only: the rules stay working rules, to be tested, and the census of the whole language under D-CONC-3 is still owed.
 - **Put back to the owner when (PROPOSED):** the census result note (card 0130) has its review, and before the use-once check, signature record or admission is fixed. Bring the reviewed result with its non-claims, and the standing of the question of when a use-once value counts as used up. Moving to D-B then takes out one marked refusal and rewrites nothing.
 - **Sources (SOURCE):** `2026-11-13-CLAUDE-ARCH-MORNING-PAGE-R3\MORNING-PAGE-R3.md`, lines 52–64; `2026-11-13-CLAUDE-ARCH-SLICE-1-WORDS-R2\OWNER-PAGE-4-R1.md`, Question 2, lines 31–40; `2026-11-13-CLAUDE-ARCH-CENSUS-RESULT-R1\RESULT-NOTE.md`, lines 3, 5, 45–46, 57 and 173–174; R14 (SHA-256 `b115a3c448a6101f04a17039e9eb3e16059d5c45338d2f0f9afa64963a55a0fb`), D-CONC-2 and D-CONC-3, lines 634 and 636.
+- **PROPOSED — M-03 reminder.** Consider a contract for how often a passed function is called, whether calling uses up what it holds, and how to keep it with the argument it was paired with. Bring it on R-23's return and in any case before slice 2's interfaces. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-03, cites G4 and D COMP-04, COMP-01.
 
 ### R-24. TM: a term among its own parts (TM-A)
 - **Chosen for now (SOURCE; 2026-11-13):** TM-A. A term is made from parts that exist before it; a record that describes a term as its own part, directly and with no name in between, is refused. A function that calls itself by its name stays allowed.
@@ -315,6 +322,7 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 - **What would make widening safe (PROPOSED):** written and reviewed rules for the starting state, the reads and writes a term and its calls depend on, and the conditions for reuse, moving, dropping and an optimizer's attempt and check. Show what happens when an attempt is refused and the fallback runs.
 - **Put back to the owner when (PROPOSED):** before allowing one of those operations for a term or call that reads or writes a sequence. Bring the three-line case, the refused-attempt case and the rules that would admit them safely; the cautious repair remains until a further decision changes it.
 - **Sources (SOURCE):** `_relay\inputs\owner-record-2026-11-16-seven-answers.json` (SHA-256 `4e8317f178144df349d7b45ff1da18071b81e298419a49ebc981f91aaa9d67e4`), with its authenticated answer binding in the 16 November table above; `2026-11-14-CLAUDE-ARCH-OVERNIGHT-PLAN\PLAN.md`, section 4, item 1, lines 74–77 (SHA-256 `a8a4b9ffb65fb44f52bcd664d02d2d51446468983dffe312ab87d9fcb76f24db`); `2026-11-14-CLAUDE-ARCH-WEB-ROUND-4-TRIAGE-2\REPORT.md`, action 3, lines 59–65 (SHA-256 `7c6f0e890f5a63daa065927d11de46fc552700614f68ff7acea35b2e692f20c3`).
+- **PROPOSED — M-21 reminder.** Consider facts true only in one branch and facts that end when state changes. Bring it on R-25's return. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-21, cites G7 and D COMP-02.
 
 ### R-26. One use-once mark through slice 1; the split before slice 2
 
@@ -324,6 +332,8 @@ SOURCE: The open follow-through discussed in these entries has no drafting, test
 - **Recovery controls (PROPOSED; web round 11-17, page 02):** For slice 2's recovery interfaces and R-26's mark split, bring five program shapes: cleanup that finishes, finishes with an error after discharging the obligation, or hands on a surviving successor state; a success closure that may be handed on but may not lawfully be called; overlapping ownership when a held value is taken out; who may return a lock's current state; and running out while reporting survivors. These are program shapes, not a corpus. The recorded recovery answer and one mark remain; exact two-mark rules are owed before slice 2 by this entry's trigger.
 - **Put back to the owner when (SOURCE; answer 4a):** before slice 2's interfaces are drafted. PROPOSED: bring the split's exact rules and their review, with what they change from the one-mark rule.
 - **Sources (SOURCE):** `_relay\inputs\owner-record-2026-11-16-seven-answers.json` (SHA-256 `4e8317f178144df349d7b45ff1da18071b81e298419a49ebc981f91aaa9d67e4`), with its authenticated answer binding in the 16 November table above; `2026-11-14-CLAUDE-ARCH-OVERNIGHT-PLAN\PLAN.md`, section 4, item 3, lines 82–85 (SHA-256 `a8a4b9ffb65fb44f52bcd664d02d2d51446468983dffe312ab87d9fcb76f24db`); D-UO-17 in the R14 base (SHA-256 `b115a3c448a6101f04a17039e9eb3e16059d5c45338d2f0f9afa64963a55a0fb`), line 161, whose two-mark direction remains a proposal.
+- **PROPOSED — M-02 reminder.** Consider a way to look at a use-once value without using it up, with a view that cannot outlive that value. Bring it before slice 2's interfaces, with R-26 and R-64. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-02, cites G1 and D LANG-01.
+- **PROPOSED — M-05 reminder.** Consider marks on a data sort that contains itself if marks are ever worked out without declarations. Bring it with the split in R-26. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-05, cites G11.
 
 ### R-27. Making a sequence in an optimizer attempt, or in a term moved or left out
 
@@ -421,6 +431,7 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 - **Index-check reminder (PROPOSED; web round 11-17, page 10):** On reconsideration, work an affine fragment first, with a bridge from "the indices are equal" to "the value is a member". Read every index check with two distinctions: not shown equal is not shown unequal, and running out of allowance is not unequal. These reading rules also bind the first obligation generator, which emits a membership claim for each application (D-SL-1). R-22 (I-A) stays; the answer supplies no refusal corpus or measured cost.
 - **Where it lands (PROPOSED):** D-ADM-12 and R-22.
 - **Source (SOURCE):** the sealed R1 loss list, LOSS-13; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 6.
+- **PROPOSED — M-20 reminder.** Consider keeping kinds of equality apart and requiring a hash to agree with the equality chosen for its sort. Bring it with D-SL-6 libraries and R-36. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-20, cites G26.
 
 ### R-37. Cost search within an exact capability (LOSS-14)
 
@@ -477,6 +488,7 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 - **Put back to the owner when (PROPOSED):** First measured planner workload under D-SL-5 that could benefit from reuse. Earlier interface reminder: When RUNTIME-C-OPEN's O04, who owns a definition's parameters, is decided: state what the choice costs reuse in place. If all parameters are borrowed, record that reuse will need a consuming convention added later, and name that as the reason to reconsider. Bring alias and escape conditions, identity and content invariants, and failure/resource accounting; this adds no present runtime permission.
 - **Where it lands (PROPOSED):** D-PATH-9 and D-SL-5's optional representations.
 - **Source (SOURCE):** the sealed R1 loss list, LOSS-20; the owner batch binding above. Timing source (SOURCE): the owner timing record above, trigger 3.
+- **PROPOSED — M-16 reminder.** Consider changing storage in place when one holder remains and joining passes only where the failure points stay the same. R-49 also records the related deferred work. Bring it on R-43's return and R-11's reopening. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-16, cites G10.
 
 ### R-44. Temporary regions for search (LOSS-21)
 
@@ -589,12 +601,14 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 - **Reason (SOURCE, the 11-10 report's judgment):** The 11-10 report favoured integers as the meaning and machine words as holdings because that better fits a mathematics-first language and removes a mode. (11-10 report section4.1, line116, quoted in the sealed loss list Q-039; this is the report's judgment.)
 - **Recording limit (SOURCE):** this turn was recorded only in the 11-10 report; the current text states the result.
 - **Where it lands (SOURCE for current clauses; PROPOSED for new explanation):** D-SYN-1 and the numeric holdings.
+- **PROPOSED — M-26 reminder.** Consider separate library theories for bounded arithmetic that stops, wraps round or sticks at the end. Bring it with D-SL-6 and slice 3 holdings. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-26, cites D LANG-00 and G17, G61.
 
 ### R-58. One computed account in place of three (TURN-11)
 
 - **Reason (SOURCE, Arch's stated reason):** Arch records the reason for replacing two inferred manifests and a passport as one computed account in place of three, with the entries' roles retained. (Arch TRACE.json C06.more.reason and C06.more.why; 11-10 report section4.1, line115; R15 D-ROW-7/8.)
 - **Recording limit (SOURCE):** this turn was recorded only in the 11-10 report; the current text states the result.
 - **Where it lands (SOURCE for current clauses; PROPOSED for new explanation):** D-ROW-7/8.
+- **PROPOSED — M-10 reminder.** Consider separate views of the one manifest for outside effects, failure and resource stops, and the view of being total under a stated condition. Bring it with slice 2 manifest bounds. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-10, cites G6.
 
 ### R-59. The default theory remains open (TURN-12)
 
@@ -608,6 +622,7 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 - **Historical recording limit (SOURCE):** the turn itself was recorded only in the 11-10 report; its reason is now recorded by the bound owner decision above.
 - **Where it lands (SOURCE for current clauses; PROPOSED for new design):** D-FND-2/3/4.
 - **Source (SOURCE):** `owner-record-2026-11-16-three-turns-recs.json` (SHA-256 `ef216b27462bd70df6876dcfe73523579436326ac87f4da1dead9ede49ebda65`; raw-line SHA-256 `1cdcc55c28f1929970353de49dbcf905aaaaa133abaa1b4edb78d9087a1dee78`); `THREE-TURNS.md` (SHA-256 `548ed66f42c756c1fe3d9b3289ce10ae94102f4be7074253f475647cd70574bd`) section 3.
+- **PROPOSED — M-18 reminder.** Bring the named Lean hazards and a field-by-field account of an imported declaration, distinguishing kept, dropped, kept for reasoning only and refused. Add it to what R-59 asks to be brought for slice 4 trials. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-18, cites G16 and D ROOT-02.
 
 ### R-60. The mathematical core remains open (TURN-14)
 
@@ -656,3 +671,71 @@ SOURCE: the four formerly unrecorded turn reasons are now recorded by `owner-rec
 - **Still open (SOURCE):** entitlement by theory; the "given out" event; per-kind discard; operation declarations; the mirror case of a closed operation returning a use-once value; and who may name a constructor, since any rule naming a constructor can end a token. These are recorded as open, not adopted as the later rules.
 - **Where it lands (SOURCE):** D-ATT-7; D-UO-17; the host ownership interface still unwritten at D-ROW-9 (B-07).
 - **Source (SOURCE):** `owner-record-2026-11-17-box-sink-first-build-refuse.json` (SHA-256 `50c3f35704edc8b0fb1b860f2ed66b55a1af6d0fb0d0b05c29cd4e5dd4b987b7`; raw answer-line SHA-256 `dfb213a87bde4830a83f1a6a743c7a71c17a829f9deb875b7a6643ceeef2da37`, terminal LF excluded), `authorizes_only`.
+
+## Old-specs reminders (2026-11-17)
+
+SOURCE. The numbering and triggers follow `2026-11-17-CLAUDE-ARCH-OLD-SPECS-MERGE\MERGE.md` section 2. D identifiers refer to the old-source citations in `2026-11-17-CODEX-D-OLD-SPECS-SWEEP\CANDIDATES.json`. G numbers refer to the citations in `_relay\inputs\AGY-OUTPUTS-2026-11-17\agy-1117-archive-reader-a-sweep\RESPONSE.md`. These source labels also apply to the reminders added to existing entries.
+
+### R-65. Two default-selection controls
+
+- **PROPOSED — M-06 reminder.** Consider counting a competitor whose laws remain unknown and keeping a choice already fixed inside an imported module. Bring a control for each. Bring them when slice 2's default selection is written. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-06, cites G24 and G19 in part.
+
+### R-66. Exactness of a test and possibly empty sorts
+
+- **PROPOSED — M-07 reminder.** Consider the caution that a failed test shows nothing without a claim of exactness, and the caution against dropping context facts when a sort may have no values. Bring a control with slice 2's call conditions and the empty-sort caution with slice 4. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-07, cites G31 and D COMP-11.
+
+### R-67. Interpretations and records of operations
+
+- **PROPOSED — M-08 reminder.** Consider whether an interpretation and a record of operations are one thing or two, what is dropped after checking and what stays at run time, and whether two routes between theories must agree or one must be chosen. Bring the old split as one answer for D-TM-4's test. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-08, cites G12, G25 and D COMP-12, LANG-09.
+
+### R-68. Module boundaries and naming
+
+- **PROPOSED — M-09 reminder.** Consider usable public contracts, separate cached maker and client views, modules with meaning and no code, and whether two applications of a module give one identity or two. Bring it when the notation's rules for naming another theory's symbols are drafted. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-09, cites G14, G19, G32 and D COMP-05, LANG-07, COMP-06.
+
+### R-69. Store snapshots, search and export
+
+- **PROPOSED — M-11 reminder.** Bring the option of pinned build snapshots, private search workspaces, whole or by-reference exports, decoding without admission, and reusing only with support that is still valid. Bring this as one more option when D-STO-1's writer question goes to the owner. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-11, cites G5, G15, G30, G45, G58, G60 and D COMP-10.
+
+### R-70. Value-free bytes at equality and outside boundaries
+
+- **PROPOSED — M-14 reminder.** Consider excluding bytes that carry no value, such as padding and the unused space of a case, from equality, hashing and outside boundaries. Bring it with slice 3 holdings. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-14, cites G21 and D ROOT-04.
+
+### R-71. Giving up a partly built value
+
+- **PROPOSED — M-15 reminder.** Consider giving up exactly the places already filled when building a value of many places fails part-way. Bring it with sequences or slice 3, whichever is first. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-15, cites G20.
+
+### R-72. Policy for resource stops in run comparisons
+
+- **PROPOSED — M-17 reminder.** Consider a stated policy for which resource stops count and their order when comparing two runs. Bring it with gaps B-07 and B-09. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-17, cites G13.
+
+### R-73. Checked branch removal and replacement handoff
+
+- **PROPOSED — M-22 reminder.** Consider requiring a checked reason to drop a branch and ensuring the next stage consumes the replacement that was accepted. Bring it with slice 5 interfaces. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-22, cites G22 and D COMP-07.
+
+### R-74. The direction of a one-sided answer
+
+- **PROPOSED — M-23 reminder.** Ask a one-sided analysis to say whether its answer contains the truth or the truth contains the answer. Bring it with the first analysis claim. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-23, cites D COMP-09.
+
+### R-75. A text library over bytes
+
+- **PROPOSED — M-24 reminder.** Consider a text library model over bytes that distinguishes byte length from a count of characters. Bring it with D-SL-6 or the first program that handles text. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-24, cites G27 and D ROOT-01.
+
+### R-76. Exact choices and candidate holdings for real numbers
+
+- **PROPOSED — M-25 reminder.** Consider separate sign, comparison and justified equality questions for real numbers, a strict margin to settle an exact finite choice, and continued fractions as one candidate holding. Related reminders are R-39, R-47 and R-52. Bring it with D-SL-6. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-25, cites G28 and D LANG-12, LANG-06.
+
+### R-77. Library recipes and how to ask a relation
+
+- **PROPOSED — M-27 reminder.** Consider maps built from data descriptions, one-hole contexts, makers that return facts about their results, ways to compute, check or ask for the only answer or all answers of a relation, and named recursion schemes. Bring it with R-35, R-49 and slice 2 libraries. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-27, cites D LANG-02, LANG-03, LANG-08, LANG-04, LANG-11 and G55.
+
+### R-78. Localising a compiled and reference mismatch
+
+- **PROPOSED — M-29 reminder.** Consider shrinking a failing input while keeping the same failure and interpreting the checked low-level form to distinguish a lowering fault from a backend fault. Bring it at the first compiled-against-reference mismatch that is hard to place. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-29, cites D ROOT-03 and G43.
+
+### R-79. Bootstrap declaration and dead-rule controls
+
+- **PROPOSED — M-30 reminder.** Account for every declaration and report a rule that can never match. RD-C1 routes the first control to reader piece 12a and the second to resolver and checker piece 12b. Bring the controls now as bootstrap checks under that existing operational routing. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-30, cites G62, G40 in part.
+
+### R-80. Host-call contract and threading profile
+
+- **PROPOSED — M-31 reminder.** Consider a complete contract for a call out to the host and a named threading profile. Bring it when GAP 7 is written. Adopts nothing. **SOURCE.** Arch's merge, section 2 M-31, cites G42, G44.
