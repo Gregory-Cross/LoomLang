@@ -76,7 +76,7 @@ Relayed Codex lanes start in this repository (owner, 2026-11-19). Only the two r
 ## Team knowledge
 
 Team know-how (practices, pitfalls, tool tips, Loom terms) is in `C:\LoomKnowledge`: read `index.md` and open only the notes your task needs. It is not authority: AGENTS.md, owner records and your card win
-Offer lessons in a `LESSONS.md` in your output folder; the curator merges them. Each Codex lane may keep its own working notes in `C:\LoomKnowledge\lanes\<lane>.md`, editing only its own file
+Any agent may propose additions or fixes at any time, unasked (tips, tricks, conventions, hard-won lessons): put one note per file in `C:\LoomKnowledge\inbox\` in the format its README gives, or a `LESSONS.md` in your output folder; the curator (Claude Eng) merges them. Each Codex lane may keep its own working notes in `C:\LoomKnowledge\lanes\<lane>.md`, editing only its own file
 Codex memories are a recall aid only; where a memory differs from a card, AGENTS.md or the repository, those win
 
 ## Subagents
