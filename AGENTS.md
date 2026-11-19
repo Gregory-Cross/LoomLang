@@ -71,6 +71,13 @@ Scoped snapshots and caches (`loom_dev.py context delta`; rules in `loom-archite
 Keep private source local, and logs, receipts, scratch and archives outside the repository
 Alternate-source builds follow `docs/tooling/LOOM_MUTATION_BUILD_ISOLATION.md` (in the archive; see ARCHIVE.md)
 In relayed Codex sandboxes Git refuses this repository (ownership guard): work from the verified archive or files the card names; never change Git trust settings to get around it
+Relayed Codex lanes start in this repository (owner, 2026-11-19). Only the two repository writers write here; every other lane treats it as read-only although its sandbox allows writes, and keeps scratch in its output folder or the system temp folder, never here
+
+## Team knowledge
+
+Team know-how (practices, pitfalls, tool tips, Loom terms) is in `C:\LoomKnowledge`: read `index.md` and open only the notes your task needs. It is not authority: AGENTS.md, owner records and your card win
+Offer lessons in a `LESSONS.md` in your output folder; the curator merges them. Each Codex lane may keep its own working notes in `C:\LoomKnowledge\lanes\<lane>.md`, editing only its own file
+Codex memories are a recall aid only; where a memory differs from a card, AGENTS.md or the repository, those win
 
 ## Subagents
 
@@ -84,10 +91,10 @@ Don't delegate Git mutation, installation, network/MCP, global configuration or 
 Worker tests need exact parent-assigned commands. The primary verifies decisive evidence, preservation, gates and owner decisions
 A requested model or setting is not proof it was applied; check the session
 
-The primary schedules within host capacity, with **one active repository writer** across the team and **one native build at a time**; don't add lanes, keep the existing ones busy
+The primary schedules within host capacity, with **two repository writers** (below) and **one native build at a time**; don't add lanes, keep the existing ones busy
 **Codex Y (Writer) is the repository writer** (owner, 2026-11-11, replacing Claude D, who held it from 2026-10-28): it applies, builds, tests and checks code, picks each piece and its independent peer reviewer, and records semantic decisions (what the compiler must do or allow) in the repository; operational choices need only a line in the coordination state. Its sandbox cannot write `.git`, so it seals a commit manifest and Claude A commits it with the fixed script `C:\Users\grego\mods\loom-commit\commit_manifest.py` (owner, 2026-11-11); the writer never pushes
-**Codex E (Grunt Work) is a second repository writer for `docs/design` and `docs/spec` only** (owner, 2026-11-16; the one exception to the one-writer rule above): it applies only text that has passed independent review, runs no native build, never shares a file with Codex Y's work, and seals a commit manifest the same way; Claude A makes every commit, one at a time, each checked against its exact file list
-Other authors write exact-preimage outside patches only (no repository write, Git mutation or native build); each patch gets an independent peer review before Codex Y (or Codex E, for those two folders) applies it. Reviews the writer is waiting on come before outside writing
+**Codex E (Grunt Work) is the second repository writer** (owner, 2026-11-19, widening the 2026-11-16 docs-only exception): it may write any repository file whenever Codex Y is on a task that writes nothing in the repository, never while Codex Y is writing; it applies only work that has passed its required review, never shares a file with Codex Y's open work, holds the shared slot for any native build, and seals a commit manifest the same way; Claude A makes every commit, one at a time, each checked against its exact file list
+Other authors write exact-preimage outside patches only (no repository write, Git mutation or native build); each patch gets an independent peer review before Codex Y or Codex E applies it. Reviews the writer is waiting on come before outside writing
 Owner exceptions, all on isolated scratch copies outside the repository with no commit: Claude C, or another assigned Claude, may run measurements (2026-10-13; no model level required since 2026-11-13); assigned Codex authors may, before sealing an outside patch, run an offline compile check and only their own new test selections, targeted and serial (2026-10-16). Author runs are author evidence only, never independent measurement, review or acceptance
 Every native build or compile check must hold the shared slot via `C:\Users\grego\mods\loom-build-slot\slot.py`, and a test run the run slot too; release them when the build, check or run ends, including failure. Keep subject-isolated outputs, existing serial test requirements, sandbox limits and all review/commit-time gates
 Roles: Claude C writes the important production patches; Codex Y takes well-specified coding that Claude C may assign directly, copying Claude A. Codex A designs and drafts decision briefs, Codex B does accounts and data analysis, Codex C adversarial source review, Codex D conformance, specs and research synthesis, Codex E package bundling and grunt work, Codex F outside patches and reviews
