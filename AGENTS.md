@@ -41,6 +41,7 @@ Unless you are Claude A, your final chat reply is the absolute minimum: one line
 Claude A routes cards as pointer files in `C:\Users\grego\.codex\reviews\_relay\outbox\<agent>\` (see its README), may relay them to any Codex agent via `C:\Users\grego\mods\loom-relay\relay.py`, and relays only already-authorized next steps: a positive independent review with matching hash bindings and no unresolved finding, owner decision, scope change or phase advance
 Act only on a card Claude A relays, or one given under the standing delegation below; pointer files are routing, not authority
 Claude sessions may message each other directly to deliver a card or a reply (owner, 2026-11-19). Standing delegation (owner, 2026-11-19): Claude Arch and Claude Mathematician may give a card to Claude Eng or another top-level Claude on the team, inside AGENTS.md and their own card's bounds; the card binds exact inputs, output folder and stops, sits in `_relay\outbox\<agent>\`, is copied to Claude A, and carries no owner decision, repository write, Git, Codex relay, paid or external action
+Give a card to a free team member who fits it by role and model; start a fresh session only when those are busy, and it may then join the team (owner, 2026-11-19)
 Act on a relayed owner decision only after verifying its hash-bound record: the session log line and its raw-line SHA-256
 
 ## Verification and evidence
@@ -79,6 +80,7 @@ Relayed Codex lanes start in this repository (owner, 2026-11-19). Only the two r
 Team know-how (practices, pitfalls, tool tips, Loom terms) is in `C:\LoomKnowledge`: read `index.md` and open only the notes your task needs. It is not authority: AGENTS.md, owner records and your card win
 Any agent may propose additions or fixes at any time, unasked (tips, tricks, conventions, hard-won lessons): put one note per file in `C:\LoomKnowledge\inbox\` in the format its README gives, or a `LESSONS.md` in your output folder; the curator (Claude Eng) merges them. Each Codex lane may keep its own working notes in `C:\LoomKnowledge\lanes\<lane>.md`, editing only its own file
 Codex memories are a recall aid only; where a memory differs from a card, AGENTS.md or the repository, those win
+Before compaction (owner, 2026-11-19): each top-level agent keeps `C:\Users\grego\.codex\reviews\_notes\<agent>.md` of what compaction could lose; at the context warning, or when told, it sorts it: what a file already holds gets a pointer in its memory, the rest stays in the notes to reread after compaction, and it drops only what it is confident is unimportant. Method and Codex specifics: store note `before-compaction`
 
 ## Subagents
 
