@@ -2,9 +2,40 @@
    of its driver is copied byte for byte from the selected source tree. *)
 module Driver_fault = struct
   let mode = Sys.getenv_opt "LOOM_DRIVER_TEST_FAULT"
+  let source_probe = mode = Some "read-before-eof" || mode = Some "copy-after-eof"
+  let reads = ref 0
+  let eof_seen = ref false
   let trace event =
     Out_channel.with_open_gen [Open_wronly; Open_creat; Open_append; Open_binary] 0o600
       "fault-trace.txt" (fun channel -> output_string channel event; output_char channel '\n')
+end
+
+(* Both EOF-length controls read the actual channel in short positive chunks.
+   Their first injected exception differs only in whether EOF was observed. *)
+let input channel bytes offset length =
+  if not Driver_fault.source_probe then Stdlib.input channel bytes offset length
+  else begin
+    if Driver_fault.mode = Some "read-before-eof" && !(Driver_fault.reads) = 1 then begin
+      Driver_fault.trace "read:oom";
+      raise Out_of_memory
+    end;
+    let count = Stdlib.input channel bytes offset (min length 5) in
+    incr Driver_fault.reads;
+    if count = 0 then begin
+      Driver_fault.eof_seen := true;
+      Driver_fault.trace "read:EOF"
+    end else Driver_fault.trace ("read:" ^ string_of_int count);
+    count
+  end
+
+module Buffer = struct
+  include Buffer
+  let contents data =
+    if Driver_fault.source_probe then
+      Driver_fault.trace ("copy:" ^ string_of_int (length data));
+    if Driver_fault.mode = Some "copy-after-eof" && !(Driver_fault.eof_seen) then
+      raise Out_of_memory;
+    contents data
 end
 
 module Sha256 = struct

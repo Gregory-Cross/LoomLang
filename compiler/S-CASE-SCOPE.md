@@ -4,9 +4,9 @@
 
 ## Trace subject
 
-SOURCE. Candidate snapshot `a2e195c5548fc6dccf6371edfced073aa61f4567`. The catalog labels its base `74534515e48f1f3d6bd00a82a3cb3d48ff0f24a7`.
+SOURCE. Candidate based on commit `a793cb2b3315bce979d09ffb27881a629f6ade3e`. The catalog labels its base `a793cb2b3315bce979d09ffb27881a629f6ade3e`.
 SOURCE. Forms `milestone-b-forms/1-candidate`, meter `milestone-b-ARTW/1-candidate`, forms package seal `480d8212ab38bef6dacceaedf713a20331160feacd97a110582adaf6373ae33d`.
-SOURCE. [Claims catalog](fixtures/conformance/claims.json) SHA-256 `8dc5658e465fe9887024af12043bf46c7d1c634ca8ba9acc5bb47c5b0790cb3a`. [Evaluator rules](../docs/spec/RULES-EVALUATOR.md) SHA-256 `b974d98eec15b4458d1d94acce0509d039f0500aaf824fcea8b7eec2098f5868`.
+SOURCE. [Claims catalog](fixtures/conformance/claims.json) SHA-256 `3917073055bb47266ceeb20d9aad9e2f0543bc3488c8c69fd155fc2fc04cfa58`. [Evaluator rules](../docs/spec/RULES-EVALUATOR.md) SHA-256 `b974d98eec15b4458d1d94acce0509d039f0500aaf824fcea8b7eec2098f5868`.
 
 PROPOSED. The S-case dispositions encode Codex D's R2 at `a2e195c5548fc6dccf6371edfced073aa61f4567`. Disposition SHA-256 `3ea95b5c1746cdce67695fd6f91e89fbeca807b2e690d990576ee8ab40dcd87a`. Package seal `cabedf24b41d40ac931329a9916a22bd80d1b29af57b7f3fd406ec0058f6bd67`.
 

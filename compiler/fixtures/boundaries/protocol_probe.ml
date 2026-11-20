@@ -89,7 +89,7 @@ let unavailable_case () =
   context.Run_record.entry_index <- Some (Checker.entry_index program);
   context.Run_record.argument <- Some "4";
   context.Run_record.budget <- Some "9";
-  context.Run_record.source_bytes <- Some (String.length source);
+  context.Run_record.source_bytes <- String.length source;
   context.Run_record.source_sha256 <- Some (Sha256.hex source);
   context.Run_record.meter <- Some meter;
   Run_record.obj

@@ -24,9 +24,9 @@ The conformance runner reads the pinned R20 design from the repository when pres
 | Committed driver fixtures | `54313bfe48aca87d4f6ebb10df12029d180b937fe135083e8b6defa143cbb6d5` |
 | Independent Python decimal oracle | `7aaa80f5689f945f2cc08f31cb6e5987e00e6ec3e1e6efd116566a6216858fbb` |
 | Piece 17 fixtures/conformance/cases.jsonl | `d2120a1af00987b3a95427bc255e9a1c2c0a113bf60cedc496cf62f00ecd3f5d` |
-| Piece 17 fixtures/conformance/claims.json | `8dc5658e465fe9887024af12043bf46c7d1c634ca8ba9acc5bb47c5b0790cb3a` |
+| Piece 17 fixtures/conformance/claims.json | `3917073055bb47266ceeb20d9aad9e2f0543bc3488c8c69fd155fc2fc04cfa58` |
 
-**SOURCE.** The normal subject begins at commit `74534515e48f1f3d6bd00a82a3cb3d48ff0f24a7`. The normal build on the pinned 5.5.2 compiler has snapshot `fe314eac74de38cab34cefbfc13cddf56c3f85d90b62e25ec08450f72aa68626`. Verify the actual compiled sources, embedded identity and executable against the build ledger while holding the run slot. The owning driver regression forces the first stdout flush to fail, restores stdout after the detailed stderr report and checks for exit 4, empty stdout and the preserved execution balance. The candidate schema is `loom-b-report/1-candidate`, the profile `milestone-b-forms/1-candidate` and the meter `milestone-b-ARTW/1-candidate`. A native negative subject binds its own verified executable and snapshot before comparison.
+**SOURCE.** The normal subject begins at commit `a793cb2b3315bce979d09ffb27881a629f6ade3e`. The normal build on the pinned 5.5.2 compiler has snapshot `a0b5a1fce8292becdb0a22b554ac7c177a3244deadd88380ab92ed7f2095aecc`. Verify the actual compiled sources, embedded identity and executable against the build ledger while holding the run slot. The owning driver regression forces the first stdout flush to fail, restores stdout after the detailed stderr report and checks for exit 4, empty stdout and the preserved execution balance. The candidate schema is `loom-b-report/1-candidate`, the profile `milestone-b-forms/1-candidate` and the meter `milestone-b-ARTW/1-candidate`. A native negative subject binds its own verified executable and snapshot before comparison.
 
 ## Named comparisons
 

@@ -1,6 +1,6 @@
 {
   "schema": "loom-b-s-scope/1-candidate",
-  "subject": "a2e195c5548fc6dccf6371edfced073aa61f4567",
+  "subject": "a793cb2b3315bce979d09ffb27881a629f6ade3e",
   "profile": {
     "name": "milestone-b-forms/1-candidate",
     "meter": "milestone-b-ARTW/1-candidate",
@@ -14,9 +14,9 @@
   "source_sha256": {
     "docs/spec/S-CASES.json": "4a8ca434a570c1ca14f445acfe2049cd63bed27440f240ff2fd9d98171f907c0",
     "docs/spec/S-CASES.md": "9c1174b63b68663c8e4cb3888ce2c1cd9ac7621af52604a4b86066f915af45c4",
-    "compiler/fixtures/conformance/claims.json": "8dc5658e465fe9887024af12043bf46c7d1c634ca8ba9acc5bb47c5b0790cb3a",
+    "compiler/fixtures/conformance/claims.json": "3917073055bb47266ceeb20d9aad9e2f0543bc3488c8c69fd155fc2fc04cfa58",
     "compiler/DRIVER.md": "38b41a7c792f403f968048d5984ad0aa33517351d1c2ab64c3e4bd2a796dfe9f",
-    "compiler/src/driver.ml": "dad946dc030329c8cfbe9ee9f1d735bdacca5b21650d24172112a74032b25867",
+    "compiler/src/driver.ml": "99cc7c2beeb7f5d9f9821aba7e1ec0345c5451095e4cb9cd253c2374e0a38736",
     "compiler/src/checker.mli": "9a8f05938d913ba1fadbd25e56f67a1ec8689fc6f3b1f757b30553ef6ca2aa80",
     "docs/spec/RULES-RUN1.md": "37c757816131ae868efa01ac9073a45f921584785d732ba9a630609ec37d3421",
     "docs/spec/GAPS-RUN1.md": "ac95dc8c4b73b2362d40d393fefe86b19beadf500ce05abb5514ba5920026eba"

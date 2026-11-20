@@ -48,7 +48,7 @@ let parse_argv state argv =
 
 exception Source_fault of Reader.fault
 
-let read_source path limit =
+let read_source state path limit =
   let io operation work =
     try work () with Sys_error system_error -> raise (Source_fault (Reader.Source_io { operation; system_error }))
   in
@@ -61,7 +61,10 @@ let read_source path limit =
       let left = ceiling - size in
       let wanted = if left < Bytes.length chunk then left + 1 else Bytes.length chunk in
       let n = io "read" (fun () -> input channel chunk 0 wanted) in
-      if n = 0 then Buffer.contents data
+      if n = 0 then begin
+        state.source_bytes <- size;
+        Buffer.contents data
+      end
       else if n > left then begin
         let limit = as_nat limit in
         raise (Source_fault (Reader.Source_limit { limit; observed_at_least = Natural.add limit Natural.one }))
@@ -115,8 +118,7 @@ let invoke state phase argv =
   | Error refused -> refused
   | Ok (file, entry, argument, fuel) ->
       phase := "read";
-      let bytes = read_source file state.source_limit in
-      state.source_bytes <- Some (String.length bytes);
+      let bytes = read_source state file state.source_limit in
       state.source_sha256 <- Some (Sha256.hex bytes);
       let module Store = Value.Make () in
       let module Source = Reader.Make (Store) in

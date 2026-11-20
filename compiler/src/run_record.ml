@@ -45,7 +45,7 @@ type context = {
   mutable budget : string option;
   mutable source_limit : string;
   mutable value_limit : string;
-  mutable source_bytes : int option;
+  mutable source_bytes : int; (* -1 until EOF; publishing the count must not allocate. *)
   mutable source_sha256 : string option;
   mutable entry_attempted : bool;
   mutable meter : Eval.location Meter.t option;
@@ -54,7 +54,7 @@ type context = {
 let context () =
   let default = Natural.to_decimal Reader.default_source_limit in
   { name = None; entry_index = None; argument = None; budget = None;
-    source_limit = default; value_limit = default; source_bytes = None; source_sha256 = None; entry_attempted = false; meter = None }
+    source_limit = default; value_limit = default; source_bytes = -1; source_sha256 = None; entry_attempted = false; meter = None }
 
 let mark_entry_attempt state () = state.entry_attempted <- true
 
@@ -111,7 +111,7 @@ let encode state result =
        "contract_manifest_sha256", quote Driver_identity.contract_manifest_sha256;
        "build_snapshot_sha256", quote Driver_identity.build_snapshot_sha256;
        "source_sha256", optional quote state.source_sha256;
-       "source_bytes", optional integer state.source_bytes;
+       "source_bytes", (if state.source_bytes < 0 then "null" else integer state.source_bytes);
        "entry", obj ["name", optional quote state.name; "definition_index", optional integer state.entry_index];
        "input", optional quote state.argument;
        "checking", strings ["reading", "unmetered"; "resolving", "unmetered"; "checking", "unmetered"];
