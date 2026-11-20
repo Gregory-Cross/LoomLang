@@ -9,8 +9,8 @@ When a rule, number or limit blocks progress, ask where it came from, whether it
 
 ## Scope and authority
 
-New session: read `C:\Users\grego\.codex\reviews\COORDINATION_STATE.md`, then check HEAD, status and your lane's latest hash-bound HANDOFF
-The state file is operational only; the repository and HANDOFFs win. Claude A maintains it: send corrections, don't edit it
+New session: check HEAD, status and your lane's latest hash-bound HANDOFF; for team status run `python -B C:\Users\grego\mods\loom-status\status.py` (generated and operational only: the repository and HANDOFFs win)
+`COORDINATION_STATE.md` stopped on 2026-11-09 and is history, not a starting point (owner, 2026-11-19)
 First find the actual worktree (several may exist), branch, HEAD, index and dirty files; preserve existing changes and the real index; never reset to a previously reported commit
 Owner standing authorization: commit authorized work locally without asking again; verify the exact staged scope and preserve unrelated changes. It waives no required review or other authority boundary
 Push, tag, stash, clean, branch switches, destructive, paid or external actions and compiler phase advancement need applicable owner authorization
@@ -39,7 +39,8 @@ Stop after delivering unless a continuation card names the next task, the owner 
 No polling, inbox scanning or inferred consent
 Unless you are Claude A, your final chat reply is the absolute minimum: one line naming your output folder and its status, or why you stopped without sealing
 Claude A routes cards as pointer files in `C:\Users\grego\.codex\reviews\_relay\outbox\<agent>\` (see its README), may relay them to any Codex agent via `C:\Users\grego\mods\loom-relay\relay.py`, and relays only already-authorized next steps: a positive independent review with matching hash bindings and no unresolved finding, owner decision, scope change or phase advance
-Act only on a card Claude A relays; pointer files are routing, not authority
+Act only on a card Claude A relays, or one given under the standing delegation below; pointer files are routing, not authority
+Claude sessions may message each other directly to deliver a card or a reply (owner, 2026-11-19). Standing delegation (owner, 2026-11-19): Claude Arch and Claude Mathematician may give a card to Claude Eng or another top-level Claude on the team, inside AGENTS.md and their own card's bounds; the card binds exact inputs, output folder and stops, sits in `_relay\outbox\<agent>\`, is copied to Claude A, and carries no owner decision, repository write, Git, Codex relay, paid or external action
 Act on a relayed owner decision only after verifying its hash-bound record: the session log line and its raw-line SHA-256
 
 ## Verification and evidence
