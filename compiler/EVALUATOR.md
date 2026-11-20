@@ -22,7 +22,7 @@
 | Natural literal | Deliver the admitted piece 11 value. |
 | Local slot zero | Deliver the argument of this activation. Each written read pays again. |
 | Named unary call | First obtain the argument in the caller. Pay at the call site, bind the argument in the fixed callee and visit its body. |
-| Ordered tuple | Obtain every field once, left to right, including equal or repeated fields. Quote the entire ordered list to the meter. On success call the piece 11 constructor once, including for an empty or previously interned tuple. |
+| Ordered tuple | Obtain every field once, left to right, including equal or repeated fields. Quote the obtained fields to the meter. After payment restore their written order and call the piece 11 constructor once, including for an empty or previously interned tuple. |
 | Function return | Return the obtained body value to the waiting frame. The piece 13 return invoice has zero cost. The entry body's return completes the run. |
 
 **PROPOSED.** A tuple frame remembers the caller's activation and tuple location, the remaining fields, the next written position and the already obtained values in reverse order. Completed callees release their own binder. Pending siblings run with their original caller's binder. The array passed to the value store is created inside the paid callback. The first unpaid child prevents visits to later siblings and prevents the enclosing construction.

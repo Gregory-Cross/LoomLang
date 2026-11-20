@@ -1,6 +1,6 @@
 """Run the milestone B boundary regressions in a fresh private compiler build directory.
 
-python -B boundary_checks.py --directory DIR [--row A-T1|...|N5]
+python -B boundary_checks.py --directory DIR [--row ROW]
 The selection, observed values, native process records and slot journal are in RESULTS.json.
 """
 import argparse
@@ -17,7 +17,7 @@ import reader_build
 
 PROJECT = Path(__file__).resolve().parent
 FIXTURES = PROJECT / "fixtures/boundaries"
-ROWS = ("A-T1", "A-T2", "A-T3", "A-T4", "A-T5", "A-T6", "A-T7", "A-D2", "A-D3", "N5")
+ROWS = ("A-T1", "A-T2", "A-T3", "A-T4", "A-T5", "A-T6", "A-T7", "A-D2", "A-D3", "N5", "Entry", "tuple-payment")
 
 
 def replace_once(data, site, replacement):
@@ -30,7 +30,16 @@ def observed_source(name, data):
     """Observe work and exception sites only in the private test build."""
     if name == "value.ml":
         site = b"let rec visit a b pending ="
-        return replace_once(data, site, site + b"\n    incr Visit_counter.count;")
+        data = replace_once(data, site, site + b"\n    incr Visit_counter.count;")
+        data = replace_once(data, b"let natural n = intern (Number n)",
+                            b'let natural n = Eval_observer.test_eval_fault "store.natural" "input"; intern (Number n)')
+        data = replace_once(data, b"let tuple fields = intern (Fields (Array.copy fields))",
+                            b'let tuple fields = Eval_observer.test_eval_fault "store.tuple" "tuple"; intern (Fields (Array.copy fields))')
+    if name == "meter.ml":
+        site = b"let structural event ="
+        data = replace_once(data, site, site + b'\n  if event = Entry then Eval_observer.test_eval_fault "entry.invoice" "entry";\n ')
+    if name == "eval.ml":
+        data = replace_once(data, b"List.rev reversed_values", b"Eval_observer.rev reversed_values")
     if name == "natural.ml":
         site = b"let of_decimal text ="
         return replace_once(data, site, site + b"""
@@ -60,20 +69,20 @@ def build_probes(core, directory, env, journal):
              "test_runner.ml", "reader_probe.ml")
     for name in names:
         (directory / name).write_bytes(observed_source(name, (PROJECT / "src" / name).read_bytes()))
-    for name in ("protocol_probe.ml", "value_counts.ml"):
+    for name in ("protocol_probe.ml", "value_counts.ml", "eval_observer.ml"):
         (directory / name).write_bytes((FIXTURES / name).read_bytes())
     (directory / "visit_counter.ml").write_bytes(b"let count = ref 0\n")
     sources = {p.name: shared.sha(p) for p in sorted(directory.glob("*.ml*"))}
     snapshot = hashlib.sha256(driver_cases.compact(sources)).hexdigest()
     (directory / "driver_identity.ml").write_bytes(driver_build.identity_source(snapshot))
     core.save(directory / "OBSERVED-SOURCES.json", sources)
-    modules = ["visit_counter.ml", *driver_build.COMMON, "driver_identity.ml", *driver_build.DRIVER,
+    modules = ["eval_observer.ml", "visit_counter.ml", *driver_build.COMMON, "driver_identity.ml", *driver_build.DRIVER,
                "bootstrap.mli", "bootstrap.ml", "test_runner.ml", "reader_probe.ml", "protocol_probe.ml", "value_counts.ml"]
     shared.command(core, [core.OCAMLOPT, *driver_build.FLAGS, "-c", *modules], directory, env, journal)
     common = ["visit_counter", *driver_build.CORE, "sha256", "driver_identity", "run_record"]
     for target, deps in (("driver", common), ("protocol_probe", common), ("reader_probe", common[:4]),
                          ("value_counts", common[:3]), ("test_runner", ["bootstrap"])):
-        objects = [name + ".cmx" for name in (*deps, target)]
+        objects = [name + ".cmx" for name in ("eval_observer", *deps, target)]
         shared.command(core, [core.OCAMLOPT, *objects, "-o", target + ".exe"], directory, env, journal)
     return snapshot
 
@@ -93,6 +102,7 @@ def run(directory, rows, result):
     env = core.private_environment(directory)
     journal, cases = result["journal"], result["cases"]
     driver_rows = [json.loads(line) for line in (PROJECT / driver_build.FIXTURES).read_bytes().splitlines()]
+    entry_rows = [json.loads(line) for line in (FIXTURES / "entry-cases.jsonl").read_bytes().splitlines()]
     expected_protocol = json.loads((FIXTURES / "protocol.json").read_bytes())
 
     def record(name, passed, **details):
@@ -105,11 +115,13 @@ def run(directory, rows, result):
         snapshot = build_probes(core, directory, env, journal)
         for row in rows:
             start = len(cases)
-            for fixture in driver_rows:
-                if not fixture["id"].startswith("agy." + row + "."):
+            for fixture in (entry_rows if row == "Entry" else driver_rows):
+                if row != "Entry" and not fixture["id"].startswith("agy." + row + "."):
                     continue
                 dest = directory / fixture["id"]
                 case_env = env
+                if row == "Entry":
+                    case_env = {**env, "LOOM_TEST_EVAL_FAULT": fixture["fault_mode"]}
                 if row == "N5":
                     case_env = {**env, "LOOM_TEST_DECIMAL_SIZES": str(dest / "decimal-sizes.txt")}
                 item = driver_cases.run(core, directory / "driver.exe", dest, fixture, "normal",
@@ -119,6 +131,11 @@ def run(directory, rows, result):
                     # OCaml's host ceiling is at most 19 decimal digits on the supported 63-bit host.
                     item["conversion_sizes"] = sizes
                     item["passed"] = item["passed"] and bool(sizes) and max(sizes) <= 19
+                if row == "Entry":
+                    trace = dest / "eval-fault-trace.txt"
+                    events = trace.read_text(encoding="ascii").splitlines() if trace.exists() else []
+                    item["events"] = events
+                    item["passed"] = item["passed"] and events == fixture["eval_trace"]
                 cases.append(item)
             for name, expected in expected_protocol.items():
                 if not name.startswith(row.lower().replace("-", "") + "-"):
@@ -187,7 +204,7 @@ def run(directory, rows, result):
                 ok = obs["exit_code"] == 0 and not obs["stderr"] and len(lines) == 17 and lines[-1] == "OBSERVATIONS 16\tFAILURES 0"
                 record("equality.visit-counts", ok, observations=lines, stderr=obs["stderr"])
             expected_count = {"A-T1": 7, "A-T2": 1, "A-T3": 2, "A-T4": 4, "A-T5": 4,
-                              "A-T6": 2, "A-T7": 2, "A-D2": 7, "A-D3": 1, "N5": 3}
+                              "A-T6": 2, "A-T7": 2, "A-D2": 7, "A-D3": 1, "N5": 3, "Entry": 6, "tuple-payment": 2}
             if len(cases) - start != expected_count[row]:
                 raise ValueError("incomplete case selection for " + row)
 

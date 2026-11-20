@@ -36,7 +36,7 @@ module Make (Store : sig
   val natural : Natural.t -> scope Value.t
   val tuple : scope Value.t array -> scope Value.t
 end) = struct
-  let run ~meter ~(primitive : Store.scope primitive_dispatch) ~input program =
+  let run ?(on_entry_attempt = fun () -> ()) ~meter ~(primitive : Store.scope primitive_dispatch) ~input program =
     let pay at estimate build = obtained (Meter.pay meter ~at estimate ~build) in
     let structural at event = pay at (Meter.structural event) (fun _ -> ()) in
     let rec enter index argument stack =
@@ -68,8 +68,8 @@ end) = struct
     and next_field activation at index reversed_values fields stack =
       match fields with
       | [] ->
-          let ordered = List.rev reversed_values in
-          let value = pay at (Meter.tuple ordered) (fun _ -> Store.tuple (Array.of_list ordered)) in
+          let value = pay at (Meter.tuple reversed_values) (fun _ ->
+            Store.tuple (Array.of_list (List.rev reversed_values))) in
           deliver value stack
       | field :: rest ->
           let frame = Tuple_field (activation, at, index + 1, rest, reversed_values) in
@@ -94,6 +94,7 @@ end) = struct
     let argument = Store.natural input and index = Checker.entry_index program in
     let entry = { definition = index; reversed_path = None; offset = None } in
     try
+      on_entry_attempt ();
       structural entry Meter.Entry;
       Ok (enter index argument [])
     with Exhausted stop -> Error stop
@@ -108,6 +109,6 @@ end) = struct
   module Frames = Make (Store)
   module Arithmetic = Primitives.Make (Store)
 
-  let run ~meter ~input program =
-    Frames.run ~meter ~primitive:Arithmetic.dispatch ~input program
+  let run ?on_entry_attempt ~meter ~input program =
+    Frames.run ?on_entry_attempt ~meter ~primitive:Arithmetic.dispatch ~input program
 end

@@ -133,7 +133,7 @@ let invoke state phase argv =
               phase := "evaluate";
               let input = as_nat argument and meter = Meter.create ~budget:(as_nat fuel) in
               state.meter <- Some meter;
-              match Execute.run ~meter ~input admitted with
+              match Execute.run ~on_entry_attempt:(mark_entry_attempt state) ~meter ~input admitted with
               | Error stop -> stopped stop
               | Ok value ->
                   phase := "report";

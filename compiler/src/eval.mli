@@ -18,9 +18,10 @@ module Make (Store : sig
   val tuple : scope Value.t array -> scope Value.t
 end) : sig
   (** Use the same store as the reader and a fresh meter for this invocation.
-      The caller can inspect its accounting after a return or fuel stop. *)
+      The entry callback runs after input interning, just before the Entry invoice.
+      The caller can inspect accounting after a return or fuel stop. *)
   val run :
-    meter:location Meter.t -> primitive:Store.scope primitive_dispatch ->
+    ?on_entry_attempt:(unit -> unit) -> meter:location Meter.t -> primitive:Store.scope primitive_dispatch ->
     input:Natural.t -> Store.scope Checker.program ->
     (Store.scope Value.t, location Meter.stop) result
 end
@@ -33,6 +34,6 @@ module With_primitives (Store : sig
   val tuple : scope Value.t array -> scope Value.t
 end) : sig
   val run :
-    meter:location Meter.t -> input:Natural.t -> Store.scope Checker.program ->
+    ?on_entry_attempt:(unit -> unit) -> meter:location Meter.t -> input:Natural.t -> Store.scope Checker.program ->
     (Store.scope Value.t, location Meter.stop) result
 end

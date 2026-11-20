@@ -11,9 +11,9 @@ import driver_cases
 PROJECT = Path(__file__).resolve().parent
 CATALOG = PROJECT / "fixtures/conformance/claims.json"
 EXTRA = PROJECT / "fixtures/conformance/cases.jsonl"
-CATALOG_SHA256 = "43b9cc54c017bf13dfb0b3130cec2fbdf2b0b187c8cc9098b35409a8952df988"
-CONTRACT_SHA256 = "423e262c4d742e85eeb5f2846e0a843a1e064d59b335e308c5e82532b063538e"
-BASE_SNAPSHOT = "92e3c5b01918f2cce7d3269b1bf3fa459589ec1146e03dd4c2e4f9451b7e1658"
+CATALOG_SHA256 = "5409c42e9fd268301e342c477bc111d7c52515e7a1aeeababdfc841e9cb87022"
+CONTRACT_SHA256 = "45d9f8bdaa8cf68594c40271e3e53cdc408924c884e1a386f272ee8fa0fc2784"
+BASE_SNAPSHOT = "ae6aaa4b817a4ac0796437d96cfb499195d06fac28ab7e40106cd5aa567be391"
 CONSTRUCTOR_ROWS = {
     "R-demo", "R-demo-spare", "F-demo-one-less",
     "R-empty-row", "R-row", "R-order-a", "R-order-b", "R-reuse-full-row",

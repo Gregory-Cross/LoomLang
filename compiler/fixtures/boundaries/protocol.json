@@ -148,5 +148,38 @@
       "remaining": "0",
       "stopped": false
     }
+  },
+  "tuplepayment-short": {
+    "case": "tuplepayment-short",
+    "result": "out_of_fuel",
+    "reversed_cells": 0,
+    "reversals": [],
+    "store_calls": 0,
+    "store_used": [],
+    "accounting": {"budget": "13", "used": "4", "remaining": "9"},
+    "stopped": true,
+    "latched_identity": true,
+    "stop": {
+      "code": "fuel.insufficient",
+      "event": "tuple",
+      "at": {"definition_index": "0", "expr_path": [], "source_offset": "12"},
+      "invoice": {"A": "6", "R": "4", "T": "0", "W": "0", "total": "10"},
+      "failed_operation_debit": "0",
+      "accounting": {"budget": "13", "used": "4", "remaining": "9"}
+    },
+    "ordered_fields": null
+  },
+  "tuplepayment-exact": {
+    "case": "tuplepayment-exact",
+    "result": "returned",
+    "reversed_cells": 3,
+    "reversals": [{"cells": 3, "used": "14"}],
+    "store_calls": 1,
+    "store_used": ["14"],
+    "accounting": {"budget": "14", "used": "14", "remaining": "0"},
+    "stopped": false,
+    "latched_identity": null,
+    "stop": null,
+    "ordered_fields": ["4", "1", "2"]
   }
 }

@@ -47,13 +47,16 @@ type context = {
   mutable value_limit : string;
   mutable source_bytes : int option;
   mutable source_sha256 : string option;
+  mutable entry_attempted : bool;
   mutable meter : Eval.location Meter.t option;
 }
 
 let context () =
   let default = Natural.to_decimal Reader.default_source_limit in
   { name = None; entry_index = None; argument = None; budget = None;
-    source_limit = default; value_limit = default; source_bytes = None; source_sha256 = None; meter = None }
+    source_limit = default; value_limit = default; source_bytes = None; source_sha256 = None; entry_attempted = false; meter = None }
+
+let mark_entry_attempt state () = state.entry_attempted <- true
 
 type status = Returned | Out_of_fuel | Refused | Tool_error
 type outcome = {
@@ -96,12 +99,11 @@ let encode state result =
     obj ["A", natural i.Meter.a; "R", natural i.Meter.r; "T", natural i.Meter.t; "W", natural i.Meter.w; "total", natural i.Meter.total]
   in
   let path xs = "[" ^ String.concat "," (List.map integer xs) ^ "]" in
-  let used, remaining, started = match state.meter with
-    | None -> "0", state.budget, false
+  let used, remaining = match state.meter with
+    | None -> "0", state.budget
     | Some m ->
         let a = Meter.accounting m in
-        Natural.to_decimal a.Meter.used, Some (Natural.to_decimal a.Meter.remaining),
-        (Natural.compare a.Meter.used Natural.zero <> 0 || Option.is_some (Meter.stopped m))
+        Natural.to_decimal a.Meter.used, Some (Natural.to_decimal a.Meter.remaining)
   in
   obj ["schema", quote "loom-b-report/1-candidate"; "status", quote (status_name result.status);
        "code", quote result.code; "profile", quote "milestone-b-forms/1-candidate";
@@ -115,7 +117,7 @@ let encode state result =
        "checking", strings ["reading", "unmetered"; "resolving", "unmetered"; "checking", "unmetered"];
        "reporting", quote "unmetered";
        "limits", strings ["source_bytes", state.source_limit; "value_bytes", state.value_limit];
-       "execution", obj ["started", string_of_bool started; "budget", optional quote state.budget;
+       "execution", obj ["started", string_of_bool state.entry_attempted; "budget", optional quote state.budget;
                          "used", quote used; "remaining", optional quote remaining];
        "at", obj ["definition_index", optional integer result.at.definition;
                   "expr_path", optional path result.at.path; "source_offset", optional integer result.at.offset];
