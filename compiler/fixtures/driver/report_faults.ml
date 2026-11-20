@@ -23,8 +23,13 @@ module Run_record = struct
     match Driver_fault.mode with
     | Some "encode-always" -> raise Out_of_memory
     | Some "encode-once" when !attempts = 1 -> raise Out_of_memory
+    | Some "encode-once-stdout" when !attempts = 1 -> raise Stack_overflow
     | Some "stderr-encode" when result.code = "tool.report_io" -> raise Out_of_memory
-    | _ -> encode state result
+    | _ ->
+        let report = encode state result in
+        if Driver_fault.mode = Some "encode-once-stdout" then
+          Driver_fault.trace ("encoded:" ^ result.code);
+        report
 end
 
 (* Only the recovery fixture waits between its completed stderr flush and exit. *)

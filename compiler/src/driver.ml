@@ -147,14 +147,14 @@ let write_report channel report =
 let main argv =
   let state = context () and phase = ref "invocation" in
   let result = try invoke state phase argv with exn -> external_error !phase exn in
-  let report, status =
-    try encode state result, result.status with exn ->
-      let failure = external_error "report" exn in encode state failure, failure.status
+  let report, status, recovering =
+    try encode state result, result.status, false with exn ->
+      let failure = external_error "report" exn in encode state failure, failure.status, true
   in
   try
     write_report stdout report;
     exit_code status
-  with exn ->
+  with exn when not recovering ->
     let failure = match exn with
       | Sys_error system_error -> outcome ~facts:["operation", "write"; "system_error", system_error] Tool_error "tool.report_io"
       | other -> external_error "report" other

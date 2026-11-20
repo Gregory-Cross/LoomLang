@@ -1,6 +1,6 @@
 {
   "schema": "loom-b-conformance/1-candidate",
-  "base_head": "16741f0800361451e636473afa9a8af2ba97c7ba",
+  "base_head": "74534515e48f1f3d6bd00a82a3cb3d48ff0f24a7",
   "rules_file_sha256": "b974d98eec15b4458d1d94acce0509d039f0500aaf824fcea8b7eec2098f5868",
   "design_file_sha256": "4c95e64359c39d89d9c85430b205e23ca1df794465bf22568f38f49d20ed4350",
   "readiness_sha256": "26611d7af4e48859bfa0b1057f25174a015d50cf837f43f740bf4e9073e2feb4",
