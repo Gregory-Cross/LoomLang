@@ -1,0 +1,124 @@
+{
+  "schema": "loom-b-s-scope/1-candidate",
+  "subject": "a2e195c5548fc6dccf6371edfced073aa61f4567",
+  "profile": {
+    "name": "milestone-b-forms/1-candidate",
+    "meter": "milestone-b-ARTW/1-candidate",
+    "contract_manifest_sha256": "480d8212ab38bef6dacceaedf713a20331160feacd97a110582adaf6373ae33d"
+  },
+  "disposition": {
+    "subject": "a2e195c5548fc6dccf6371edfced073aa61f4567",
+    "seal_sha256": "cabedf24b41d40ac931329a9916a22bd80d1b29af57b7f3fd406ec0058f6bd67",
+    "document_sha256": "3ea95b5c1746cdce67695fd6f91e89fbeca807b2e690d990576ee8ab40dcd87a"
+  },
+  "source_sha256": {
+    "docs/spec/S-CASES.json": "4a8ca434a570c1ca14f445acfe2049cd63bed27440f240ff2fd9d98171f907c0",
+    "docs/spec/S-CASES.md": "9c1174b63b68663c8e4cb3888ce2c1cd9ac7621af52604a4b86066f915af45c4",
+    "compiler/fixtures/conformance/claims.json": "8dc5658e465fe9887024af12043bf46c7d1c634ca8ba9acc5bb47c5b0790cb3a",
+    "compiler/DRIVER.md": "38b41a7c792f403f968048d5984ad0aa33517351d1c2ab64c3e4bd2a796dfe9f",
+    "compiler/src/driver.ml": "dad946dc030329c8cfbe9ee9f1d735bdacca5b21650d24172112a74032b25867",
+    "compiler/src/checker.mli": "9a8f05938d913ba1fadbd25e56f67a1ec8689fc6f3b1f757b30553ef6ca2aa80",
+    "docs/spec/RULES-RUN1.md": "37c757816131ae868efa01ac9073a45f921584785d732ba9a630609ec37d3421",
+    "docs/spec/GAPS-RUN1.md": "ac95dc8c4b73b2362d40d393fefe86b19beadf500ce05abb5514ba5920026eba"
+  },
+  "cases": [
+    {
+      "id": "S-SEQ-01",
+      "runtime": "NOT RUN",
+      "premise": "Start both sides from matched contents of the corresponding reachable input sequence, with two aliases, no host requests and no use-once values. One side writes 7 at index 0 and returns none, the other returns none. Use separate physical starting states. A checked dropped change is a mismatch. Missing state evidence leaves the comparison incomplete. Changing sequences stay out of the first build, with room left on paper. Reopen at slice 2’s first real search or handler design, with its program in hand. Ask whether the build needs sequences and what waiting would cost in rework. This sets a decision point. It selects no sequence implementation, identity encoding or comparison fixture for slice 2.",
+      "b_disposition": "B constructs immutable tuples. It admits no sequence location or write through an alias, and produces no change record with which to decide this case."
+    },
+    {
+      "id": "S-SEQ-02",
+      "runtime": "NOT RUN",
+      "premise": "Write 7 then restore 0 versus no writes. Ordinary result and final contents coincide. Compare ordered changes and distinguish two equal-content fresh sequences using a supplied identity relation. The owner deferred the operation, and the later identity construction remains a premise.",
+      "b_disposition": "B can share equal immutable tuple nodes. Their report-local IDs cannot witness fresh mutable identity or the intervening writes."
+    },
+    {
+      "id": "S-REUSE-01",
+      "runtime": "NOT RUN",
+      "premise": "Read a row from a sequence, write through an alias and read again. Keep the unchanged-state and guarded controls. The R4 conditional asks what happens *if eligible*. The owner’s 16 November answer 1a bars reuse for any term that reads or writes a sequence, including transitive access. An unchanged identity, unchanged contents or a guard grants no exception. No slice-2 relaxation or invalidation algorithm has been selected.",
+      "b_disposition": "B’s local slot delivers an already obtained argument. Its tuple interning and the full constructor invoice in `paper.R-reuse-full-row` give no witness for caching a state-dependent computation. B implements no such transformation."
+    },
+    {
+      "id": "S-MATCH-01",
+      "runtime": "NOT RUN",
+      "premise": "On 10 November the owner took Claude A’s recommendation to admit a call to a symbol with rules even when none matches the obtained arguments. A declared symbol with no way to run is refused at admission. The uncaught no-match payload gives the symbol and its arguments at observed sorts. A use-once argument stays held and is omitted from the payload. Claude Arch proposes original parameter order for the retained arguments in D-PATH-3 and gives the proposed fixed-bound reading in D-ROW-14. The owner kept one use-once mark through slice 1 and left the split to be decided before slice-2 interfaces. The slice-2 matcher and held-account representation remain unselected.",
+      "b_disposition": "B resolves a named unary body ahead of evaluation. An unknown target can be refused at zero execution fuel. Paid wrong-kind arithmetic returns ordinary none. Neither path runs a no-match rule or reports the held argument."
+    },
+    {
+      "id": "S-MATCH-02",
+      "runtime": "NOT RUN",
+      "premise": "The first constructor pattern partly inspects and rejects an obtained value. The next rule must see that same value and consume its obligation once. Compare the faulty matcher that loses it. RUN1-001 S1 transcribes written-order, first-match constructor/once-occurring-variable patterns and infers preservation on rejection. Literal patterns are outside that grammar. The owner’s one-mark choice applies in slice 1. No slice-2 matcher, identity scheme or use-count witness is selected.",
+      "b_disposition": "B dispatches to a single checked definition index with one evaluated argument. Neither tuple construction nor argument evaluation implements ordered object-language patterns or the use-once account."
+    },
+    {
+      "id": "S-HOST-01",
+      "runtime": "NOT RUN",
+      "premise": "A selected interpretation answers a local asked yield. Its compiled lowering implements that interpretation without going to the host. Add a genuinely residual request. Compare the ordered requests reaching the host and the selected interpretation’s required observations. The owner selected one output through Ask for slice 1, sending bytes and receiving a contentless done. Slice 1 has no program handler. The slice-2 handler roadmap supplies no particular interpretation or request projection for the case.",
+      "b_disposition": "B reads a program file and evaluates with internal frames. File I/O and arithmetic do not produce a residual language request. B has no handler lowering or paired reference execution."
+    },
+    {
+      "id": "S-HOST-02",
+      "runtime": "NOT RUN",
+      "premise": "Equal ask_line requests can receive different replies. Check the accepted reply against its request and external context on both sides. Matched replies can reveal a wrong result. Hidden replies may be related with unequal representations. An unchecked context leaves the dependent comparison incomplete, while an established independent irreversible violation remains a mismatch. The owner chose output/done and host ownership until acceptance in slice 1. The hypothetical ask_line, a later host theory, its correlation interface and its observed sorts remain unselected.",
+      "b_disposition": "B binds one input and one execution to the source file. Its output report and initial argument supply no external reply/context pair."
+    },
+    {
+      "id": "S-SCOPE-01",
+      "runtime": "NOT RUN",
+      "premise": "ROW1-A O2(a), O2(b) and O1(e) select refused-reply, wait and literal-allowance policies in slice 1. No source selects their extension to slice 2. RUN1-004 T4 concerns the first-call build.",
+      "b_disposition": "The S-SCOPE-01 documentary comparison checks B’s single profile, unmetered preliminary checking and absence of a host request. Count it once. Slice 2 execution is **NOT DONE**."
+    },
+    {
+      "id": "S-FAILURE-01-AFTER-DECISION",
+      "runtime": "NOT RUN",
+      "premise": "Under owner O2(c), the slice-1 host reports an uncaught failure with its observed payload and what was held. Equal observed payloads meet the payload obligation. Checked unequal observed payloads establish mismatch. For a hidden sort, Arch’s proposed reading compares related, possibly unequal values only after eligibility and the applicability of the payload obligation are established separately. A missing required witness leaves the comparison incomplete unless another irreversible mismatch is checked. No later host-reporting rule is selected.",
+      "b_disposition": "B reports values, refusals, fuel stops and tool errors. None produces the required terminal failure with payload and held account. Source readiness for the observed branch requires independent changed-line review and checked premises. A hidden branch relying solely on the unresolved no-payload host remains NOT DONE."
+    },
+    {
+      "id": "C4-S01.related_unequal_hidden_payload",
+      "runtime": "NOT RUN",
+      "premise": "Reference payload a and compiled name b have a checked relation. Requests, consumption counts and held accounts are empty. Given all common checks, Arch’s relation reading yields agreement. The literal semantic-equality alternative yields established mismatch.",
+      "b_disposition": "B can compare ordinary immutable values. It has no failure F with hidden payload, checked naming witness or qualified pair of runs."
+    },
+    {
+      "id": "C4-S02.related_unequal_with_use_and_held",
+      "runtime": "NOT RUN",
+      "premise": "Keep the same checked relation. Both runs issue fixture request Q(7) with a matching accepted reply and context. Match the identities and activations for one consumption of u0@activation0 and held h0, with no licensed count difference. Neither appears in the payload. Conditional agreement under the relation and mismatch under literal equality follow only after these independent checks. Q is fixture notation.",
+      "b_disposition": "B’s execution-fuel balance and report-local tuple IDs do not measure consumption or held ownership. B implements no Q or paired host interaction."
+    },
+    {
+      "id": "C4-S03.unchecked_relation_checked_inequality",
+      "runtime": "NOT RUN",
+      "premise": "Keep the same terminal failures and checked semantic inequality. Only the required relation witness is unchecked. All other obligations hold with empty request, consumption and held accounts, and no independently established irreversible violation. The relation reading leaves comparison incomplete. The literal reading establishes mismatch from the checked inequality.",
+      "b_disposition": "B emits no evidence for either payload predicate on a pair of eligible failing runs. Absence of a witness in its reports establishes no mismatch."
+    }
+  ],
+  "documentary_results": [
+    {
+      "id": "S-SCOPE-01",
+      "classification": "documentary",
+      "result": "CONSISTENT WITH THE B PROFILE",
+      "slice_1": [
+        {
+          "decision": "ROW1-A O2(a)",
+          "policy": "A refused reply does not resume the run. Record the attempt and retain the same pending request and continuation. The host may retry or end the run. Refusal adds no language failure."
+        },
+        {
+          "decision": "ROW1-A O2(b)",
+          "policy": "A never-answered request stays asked and waiting. With no terminal outcome, the dependent comparison is incomplete unless a separate irreversible mismatch is already established. See RUN1-003 A3 and A4."
+        },
+        {
+          "decision": "ROW1-A O1(e)",
+          "policy": "A literal check with the slice-1 bound uses one allowance common across hosts and runs, separate from execution fuel. The amount and charging protocol remain open."
+        }
+      ],
+      "slice_2": {
+        "selected_policies": [],
+        "execution": "NOT DONE"
+      },
+      "b_profile": "The single B profile checks the complete program and selects the entry before creating the execution meter. Its preliminary reading, resolving and checking are unmetered. The checked forms and file-driven invocation expose no slice selector, language host request or reply entry point. The source-byte ceiling can report tool.source_limit. It is a tool limit. RUN1-004 T4 concerns the slice-2 first-call build. It and RG-003, RG-004, RG-006 and RG-007 supply no selected extension for these slice-1 policies."
+    }
+  ]
+}
