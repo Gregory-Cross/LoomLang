@@ -61,7 +61,8 @@ let equal left right =
      equality. The worklist also handles deeply linked immutable tuples. *)
   let visited = Hashtbl.create 16 in
   let rec visit a b pending =
-    if a.fingerprint <> b.fingerprint then false
+    if a == b then advance pending
+    else if a.fingerprint <> b.fingerprint then false
     else
       match a.content, b.content with
       | None_case, None_case -> advance pending

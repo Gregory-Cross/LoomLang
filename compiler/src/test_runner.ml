@@ -17,10 +17,16 @@ let load_tests path =
   let names = Hashtbl.create 8 in
   read_file path |> String.split_on_char '\n'
   |> List.filter_map (fun raw ->
-         let line = String.trim raw in
-         if line = "" || line.[0] = '#' then None
+         let visible = String.trim raw in
+         if visible = "" || visible.[0] = '#' then None
          else
-           match String.split_on_char '\t' line with
+           (* Count delimiters before trimming can hide an empty outer field. *)
+           let fields =
+             if List.length (String.split_on_char '\t' raw) = 3 then
+               String.split_on_char '\t' visible
+             else []
+           in
+           match fields with
            | [ name; input; expected ] when name <> "" ->
                if Hashtbl.mem names name then
                  invalid_arg ("duplicate test name: " ^ name);

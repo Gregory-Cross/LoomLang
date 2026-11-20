@@ -21,12 +21,12 @@ The conformance runner reads the pinned R20 design from the repository when pres
 | Original 74 paper fixture lines | `95c745205b35363775923f2a48758f17af06acf84b23d42a05138373ac824894` |
 | Committed DRIVER.md | `38b41a7c792f403f968048d5984ad0aa33517351d1c2ab64c3e4bd2a796dfe9f` |
 | Committed driver_build.py | `548a8e6f2e00d39885a362b486beef6898a65171aaea3e234b0aceca399cde3b` |
-| Committed driver fixtures | `ac1e1d09086452ec6def4695b26b622b686fd24a178efa28e64baa33b5e8f5c7` |
+| Committed driver fixtures | `54313bfe48aca87d4f6ebb10df12029d180b937fe135083e8b6defa143cbb6d5` |
 | Independent Python decimal oracle | `7aaa80f5689f945f2cc08f31cb6e5987e00e6ec3e1e6efd116566a6216858fbb` |
 | Piece 17 fixtures/conformance/cases.jsonl | `d2120a1af00987b3a95427bc255e9a1c2c0a113bf60cedc496cf62f00ecd3f5d` |
-| Piece 17 fixtures/conformance/claims.json | `9ae137cd5621509c5e492dbb15c913161cf84589f8a5e3f371d8f8ea10336030` |
+| Piece 17 fixtures/conformance/claims.json | `43b9cc54c017bf13dfb0b3130cec2fbdf2b0b187c8cc9098b35409a8952df988` |
 
-**SOURCE.** The normal subject begins at commit `3632766012a56f91103cec9a54c9ed989238281c`. The normal build on the pinned 5.5.2 compiler has snapshot `81aa33887915863fc64a9afacdb0afaa2a51f1f1b23808abd256d62333ba4cf4`. Verify the actual compiled sources, embedded identity and executable against the build ledger while holding the run slot. The owning driver regression forces the first stdout flush to fail, restores stdout after the detailed stderr report and checks for exit 4, empty stdout and the preserved execution balance. The candidate schema is `loom-b-report/1-candidate`, the profile `milestone-b-forms/1-candidate` and the meter `milestone-b-ARTW/1-candidate`. A native negative subject binds its own verified executable and snapshot before comparison.
+**SOURCE.** The normal subject begins at commit `424b01a83eb11d0d9534d54737f71199568563e1`. The normal build on the pinned 5.5.2 compiler has snapshot `92e3c5b01918f2cce7d3269b1bf3fa459589ec1146e03dd4c2e4f9451b7e1658`. Verify the actual compiled sources, embedded identity and executable against the build ledger while holding the run slot. The owning driver regression forces the first stdout flush to fail, restores stdout after the detailed stderr report and checks for exit 4, empty stdout and the preserved execution balance. The candidate schema is `loom-b-report/1-candidate`, the profile `milestone-b-forms/1-candidate` and the meter `milestone-b-ARTW/1-candidate`. A native negative subject binds its own verified executable and snapshot before comparison.
 
 ## Named comparisons
 

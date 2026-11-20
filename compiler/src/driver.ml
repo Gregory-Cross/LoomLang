@@ -122,7 +122,7 @@ let invoke state phase argv =
       let module Source = Reader.Make (Store) in
       let module Execute = Eval.With_primitives (Store) in
       let module Display = Graph (Store) in
-      match Source.read_bytes ~max_source_bytes:(as_nat state.source_limit) bytes with
+      match Source.read_bytes ~max_source_bytes:(as_nat (string_of_int (host_limit state.source_limit))) bytes with
       | Error e -> reader_error e
       | Ok program ->
           phase := "check";

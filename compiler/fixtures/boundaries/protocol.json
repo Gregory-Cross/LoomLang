@@ -1,0 +1,152 @@
+{
+  "at1-root": {
+    "case": "at1-root",
+    "limit": "0",
+    "result": "value_limit",
+    "failure_sites": [
+      "root"
+    ],
+    "rendered": null
+  },
+  "at1-edge": {
+    "case": "at1-edge",
+    "limit": "1",
+    "result": "value_limit",
+    "failure_sites": [
+      "edge"
+    ],
+    "rendered": null
+  },
+  "at1-child": {
+    "case": "at1-child",
+    "limit": "2",
+    "result": "value_limit",
+    "failure_sites": [
+      "child"
+    ],
+    "rendered": null
+  },
+  "at1-emit": {
+    "case": "at1-emit",
+    "limit": "3",
+    "result": "value_limit",
+    "failure_sites": [
+      "emit"
+    ],
+    "rendered": null
+  },
+  "at1-render": {
+    "case": "at1-render",
+    "limit": "4096",
+    "result": "returned",
+    "failure_sites": [],
+    "rendered": {
+      "root": "0",
+      "nodes": [
+        {
+          "id": "0",
+          "kind": "tuple",
+          "fields": [
+            "1"
+          ]
+        },
+        {
+          "id": "1",
+          "kind": "natural",
+          "decimal": "4"
+        }
+      ]
+    }
+  },
+  "at3-quote": {
+    "case": "at3-quote",
+    "input_hex": "00ff41e29883",
+    "quoted_hex": "225c75303030305c756666666441e2988322",
+    "rendered": "\u0000�A☃"
+  },
+  "at4-unavailable": {
+    "case": "at4-unavailable",
+    "synthetic": true,
+    "dispatches": 1,
+    "callbacks": 0,
+    "latched_identity": true,
+    "report": {
+      "schema": "loom-b-report/1-candidate",
+      "status": "out_of_fuel",
+      "code": "fuel.bound_unavailable",
+      "profile": "milestone-b-forms/1-candidate",
+      "meter": "milestone-b-ARTW/1-candidate",
+      "source_bytes": "20",
+      "entry": {
+        "name": "main",
+        "definition_index": "0"
+      },
+      "input": "4",
+      "execution": {
+        "started": true,
+        "budget": "9",
+        "used": "3",
+        "remaining": "6"
+      },
+      "at": {
+        "definition_index": "0",
+        "expr_path": [],
+        "source_offset": "12"
+      },
+      "invoice": null,
+      "value": null,
+      "facts": {
+        "event": "mul",
+        "failed_operation_debit": "0",
+        "reason": "synthetic unavailable mul bound"
+      },
+      "source_sha256": "7fa8c0739b06bf6fad8bcf699418a44fc1e0bb93a37174fec4c13551239adb67",
+      "checking": {
+        "reading": "unmetered",
+        "resolving": "unmetered",
+        "checking": "unmetered"
+      },
+      "reporting": "unmetered",
+      "limits": {
+        "source_bytes": "1048576",
+        "value_bytes": "1048576"
+      }
+    }
+  },
+  "at6-guards": {
+    "case": "at6-guards",
+    "guards": [
+      {
+        "guard": "zero-left",
+        "exception": "Invalid_argument",
+        "callbacks": 0,
+        "used": "0",
+        "remaining": "1",
+        "stopped": false
+      },
+      {
+        "guard": "zero-right",
+        "exception": "Invalid_argument",
+        "callbacks": 0,
+        "used": "0",
+        "remaining": "1",
+        "stopped": false
+      },
+      {
+        "guard": "blank-reason",
+        "exception": "Invalid_argument",
+        "callbacks": 0,
+        "used": "0",
+        "remaining": "1",
+        "stopped": false
+      }
+    ],
+    "entry": {
+      "result": "paid",
+      "callbacks": 1,
+      "used": "1",
+      "remaining": "0",
+      "stopped": false
+    }
+  }
+}
