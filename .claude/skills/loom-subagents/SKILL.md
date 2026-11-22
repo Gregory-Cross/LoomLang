@@ -61,8 +61,8 @@ Re-derive a sample yourself, such as a re-hash, a grep or a spot read, and check
 ## What this doesn't change
 
 - A child under you isn't an independent reviewer.
-- Non-author measurements stay with Claude C, or a Claude on Fable `high`. Native builds and slots stay with the session holding the card.
-- Commits stay with Claude D.
+- Non-author measurements stay with Claude C or another assigned Claude that is not the author; no model level is required. Native builds and slots stay with the session holding the card.
+- Commits stay with Claude A.
 
 ## Report
 

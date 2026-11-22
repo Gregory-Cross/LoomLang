@@ -5,7 +5,7 @@ builtin result `option.none`. The owner renamed the fixed-position value
 called “row” in the original passages to **tuple**. B supplies no general case
 constructor, bytes, set or sequence. A tuple can hold any admitted value,
 including another tuple or builtin none. [Forms B-F01, B-F02, B-F05 and B-F07](C:/Users/grego/.codex/reviews/2026-11-17-CODEX-D-MILESTONE-B-FORMS-R1/FORMS.md:8)
-[Design D-VAL-1 and D-VAL-2](../docs/design/DESIGN-TEXT-R17.md#values-choices-and-sets)
+[Design D-VAL-1 and D-VAL-2](../docs/design/DESIGN.md#ch-16)
 [Owner terminology decision](C:/Users/grego/.codex/reviews/_relay/inputs/owner-record-2026-11-17-row-renamed-manifest-tuple.json)
 
 | B value | Content and invariants | Basis |
@@ -19,7 +19,7 @@ Reading an in-range field containing none gives that same ordinary value. The
 width distinguishes those situations. An obtained wrong-kind operand of
 `add`, `sub` or `mul` produces the existing none after the edge invoice is
 paid. Wrong arity is refused before evaluation. Running out of fuel yields a
-separate outcome. [D-VAL-6, including the option payload](C:/LoomLang/docs/design/DESIGN-TEXT-R17.md:1062)
+separate outcome. [D-VAL-6, including the option payload](C:/LoomLang/docs/design/DESIGN.md:2035)
 [B-F05](C:/Users/grego/.codex/reviews/2026-11-17-CODEX-D-MILESTONE-B-FORMS-R1/FORMS.md:45)
 [B-O02](C:/Users/grego/.codex/reviews/2026-11-17-CODEX-D-MILESTONE-B-FORMS-R1/OUTCOMES.md:23)
 
@@ -27,7 +27,7 @@ separate outcome. [D-VAL-6, including the option payload](C:/LoomLang/docs/desig
 occurrence is still evaluated and charged. The B forms provide no observation
 of allocation, address, interner membership or construction history. A later
 development report assigns its own first-encounter IDs and preserves sharing
-and field order. [D-EV-1/D-EV-2](C:/LoomLang/docs/design/DESIGN-TEXT-R17.md:1001)
+and field order. [D-EV-1/D-EV-2](C:/LoomLang/docs/design/DESIGN.md:1846)
 [B-F02 and B-F06](C:/Users/grego/.codex/reviews/2026-11-17-CODEX-D-MILESTONE-B-FORMS-R1/FORMS.md:54)
 [B-O04](C:/Users/grego/.codex/reviews/2026-11-17-CODEX-D-MILESTONE-B-FORMS-R1/OUTCOMES.md:69)
 
@@ -49,7 +49,7 @@ mismatch. A hash match always requires a content check. An explicit worklist
 and a set of visited pairs of store-local node numbers avoid recursive host
 stack growth and repeated expansion of shared subgraphs. A pair is meaningful
 only within that traversal, with one store per side. Equal numbers in separate
-stores prove nothing about the values. [D-VAL-1/D-VAL-4](C:/LoomLang/docs/design/DESIGN-TEXT-R17.md:1046)
+stores prove nothing about the values. [D-VAL-1/D-VAL-4](C:/LoomLang/docs/design/DESIGN.md:1994)
 [Owner decision on a single equality route](C:/Users/grego/.codex/reviews/_relay/inputs/owner-record-2026-11-17-sequences-room-on-paper-new-reopen-test.json)
 
 **PROPOSED local encoding and hash (B-value-v1).** These are private
@@ -87,7 +87,7 @@ mutation, or alternate frame layout. [Owner reservation](C:/Users/grego/.codex/r
 `part(n) = max(1, bit_length(n))` and `part(tuple) = part(none) = 1`.
 Its exact proposed invoice is `A + R + T + W`. The evaluator must pay the
 whole invoice before canonical lookup and construction, including a reuse
-hit. A failed debit leaves that operation's result unbuilt. [D-EV-1](C:/LoomLang/docs/design/DESIGN-TEXT-R17.md:1023)
+hit. A failed debit leaves that operation's result unbuilt. [D-EV-1](C:/LoomLang/docs/design/DESIGN.md:1898)
 [Charge sheet B-C01–B-C08](C:/Users/grego/.codex/reviews/2026-11-17-CODEX-D-MILESTONE-B-FORMS-R1/CHARGES.md:11)
 
 | Event | Piece 13's proposed charge |
