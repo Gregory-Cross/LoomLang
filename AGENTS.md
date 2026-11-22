@@ -77,10 +77,11 @@ Relayed Codex lanes start in this repository (owner, 2026-11-19). Only the two r
 
 ## Team knowledge
 
-Team know-how (practices, pitfalls, tool tips, Loom terms) is in `C:\LoomKnowledge`: read `index.md` and open only the notes your task needs. It is not authority: AGENTS.md, owner records and your card win
-Any agent may propose additions or fixes at any time, unasked (tips, tricks, conventions, hard-won lessons): put one note per file in `C:\LoomKnowledge\inbox\` in the format its README gives, or a `LESSONS.md` in your output folder; the curator (Claude Eng) merges them. Each Codex lane may keep its own working notes in `C:\LoomKnowledge\lanes\<lane>.md`, editing only its own file
+Team know-how (practices, pitfalls, tool tips, Loom terms) is in `C:\LoomKnowledge`: read the notes your card's Knowledge line names; with no such line, read `index.md` and open only the notes your task needs. It is not authority: AGENTS.md, owner records and your card win
+Any agent may propose additions or fixes at any time, unasked (tips, tricks, conventions, hard-won lessons): put one note per file in `C:\LoomKnowledge\inbox\` in the format its README gives, or a `LESSONS.md` in your output folder; the curator (Claude Curator) merges them. Each Codex lane may keep its own working notes in `C:\LoomKnowledge\lanes\<lane>.md`, editing only its own file
+Every HANDOFF has one `Lessons:` line, just before what needs Claude A or the owner: a reusable tip, pitfall or method the card taught, with its evidence path, or `Lessons: none`
 Codex memories are a recall aid only; where a memory differs from a card, AGENTS.md or the repository, those win
-Before compaction (owner, 2026-11-19): each top-level agent keeps `C:\Users\grego\.codex\reviews\_notes\<agent>.md` of what compaction could lose; at the context warning, or when told, it sorts it: what a file already holds gets a pointer in its memory, the rest stays in the notes to reread after compaction, and it drops only what it is confident is unimportant. Method and Codex specifics: store note `before-compaction`
+Before compaction (owner, 2026-11-19): each top-level agent keeps `C:\Users\grego\.codex\reviews\_notes\<agent>.md` of what compaction could lose, and may write that file and its own memory pointer to it whatever its card's write scope says; at the context warning, or when told, it sorts it: what a file already holds gets a pointer in its memory, the rest stays in the notes to reread after compaction, and it drops only what it is confident is unimportant. Method and Codex specifics: store note `before-compaction`
 
 ## Subagents
 
