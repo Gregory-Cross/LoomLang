@@ -6,6 +6,7 @@ Facets are our "dimensions" of what was Type
 
 Lesson (owner): a well-made spec is easy to treat as dogma. Team spent a day engineering around an arbitrary limit nobody had derived
 When a rule, number or limit blocks progress, ask where it came from, whether it is derived or a placeholder, and what changing it would cost; take that to Claude A before building around it
+Sunk costs are SUNK, don't let them influence your thinking or decisions
 
 ## Scope and authority
 

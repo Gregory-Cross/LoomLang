@@ -1,6 +1,6 @@
 # Design
 
-Use [DESIGN.md](DESIGN.md) for all current design work. It is the reviewed technical design R3 with Codex D's replacement for line 652. The R25 row records its earlier adoption. The SHA-256 column identifies the named sources under `C:\Users\grego\.codex\reviews\`. The schema citation for `HOW-WE-SPECIFY.md` refers to the archived report.
+Use [DESIGN.md](DESIGN.md) for all current design work. It is the reviewed technical design R4, based on R3 with Codex D's replacement for line 652 and the four narrow fixes authorized by the owner. The R25 row records its earlier adoption. The SHA-256 column identifies the named sources under `C:\Users\grego\.codex\reviews\`. The schema citation for `HOW-WE-SPECIFY.md` refers to the archived report.
 
 | File | Source package and file | SHA-256 | Review |
 |---|---|---|---|

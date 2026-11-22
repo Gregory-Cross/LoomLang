@@ -531,7 +531,7 @@ What a caller observes at a boundary, the public law and the two-run description
 **§3.4 One form.**
 One form, forward or backward, for all operations on a hidden sort and for all hidden sorts of $\rho$. Mixing forms is unsound. Values chosen together are represented together, under one relation on the tuple. `[decided]`
 Open: a licence for mixed forms where the graph of which witness depends on which has no cycle (not run). `[open]`
-Case: hidden sorts $F$ (forward) and $B$ (backward), each with values 0, 1 and one name for both. `make` gives $\langle 0, 0 \rangle$ or $\langle 1, 1 \rangle$, its tracker the two names. `test(x, y)` gives whether $x = y$, its tracker false. Checking the two components under separate quantifiers admits that answer, yet `test(make())` is true in the meaning and false on names. `[decided]`
+Case: hidden sorts $F$ (forward) and $B$ (backward), each with values 0, 1 and one name for both. `make` gives $\langle 0, 0 \rangle$ or $\langle 1, 1 \rangle$, its tracker the two names. `test(x, y)` gives whether $x = y$, its tracker false. Checking the two components under separate quantifiers admits that answer, yet `test(make())` is true in the meaning and false on names. `[decided]` A representation that fits neither form alone may instead be given as a chain of links, each in one form, and is then kept as a chain (§14.2). `[decided]` Illustration: one hidden sort that both forgets detail and settles a choice late. In the meaning, `init()` picks a bit $b$ and holds $(b, c)$ with $c = 0$, `inc` adds 1 to $c$, `par` returns $c \bmod 2$ and `reveal` returns $b$; the implementation holds $c \bmod 2$, and draws $b$ at the first `reveal` and keeps it. The forward form alone fails at `reveal`: by F1 the name `init` gives stands for some value, whose bit is settled, and the tracker of `reveal` may draw the other bit (F3). The backward form alone fails at the second `inc`, which comes back to the name `init` gave: by B1 and B0 that name stands for some $(b, 0)$, and `inc` never gives $c = 0$ (B2). Two links pass, each in its own form: a backward link naming the values by the drawn bit, if any, and the exact $c$, and a forward link naming those names by the implementation's names, the drawn bit, if any, and $c \bmod 2$.
 
 **§3.5 Common clauses C1 to C3.**
 
@@ -546,7 +546,7 @@ A tracker owes its clauses where its own conditions hold, and no more. The plan 
 **§3.7 Forward form (the world chooses the value): F1 to F3.**
 A name may stand for several values, and what is said must hold for each. Layouts, analyses, invariants and quotients take this form.
 
-- F1, start. For each $c$ making a value of $S$ from observed arguments $a$: $\mathrm{names}(\tilde c(a), c(a))$.
+- F1, start. For each $c$ making a value of $S$ from observed arguments $a$: $\mathrm{names}(\tilde c(a), c(a))$. Where a start can give several results, F1 reads as F3 reads a step: every result of the start's tracker names some result of the start, $\forall \tilde n \in \mathrm{Out}(\tilde c(a)).\ \exists v \in \mathrm{Out}(c(a)).\ \mathrm{names}(\tilde n, v)$, with any observed results related as in C2. As with any tracker, one that settles the start's choice is a selection under §11.2.
 - F2, step. If $\mathrm{names}(n, v)$ and $\tilde f$ is defined at $n$, then $f$ is defined at $v$, observed results are related as in C2 and hidden results related.
 - F3, open choices. F2 holds for every outcome of $\tilde f$ and asks for some outcome of $f$: $\forall \tilde o \in \mathrm{Out}(\tilde f(n)).\ \exists o \in \mathrm{Out}(f(v)).\ \tilde o \sim o$.
 
@@ -737,7 +737,7 @@ Evidence is read where it is used, each assumption replaced by the site's own ev
 1. some $r_i$ is no: the evidence gives nothing, whatever the others read. Nothing is named as missing, since settling it would not help;
 2. otherwise some $r_i$ is conflict: nothing, and the conflict is reported (§4.2);
 3. otherwise some $r_i$ is unknown: unknown, naming each missing one;
-4. Otherwise it gives yes.
+4. Otherwise it gives what it is evidence of: yes where it supports the statement, and no where it is evidence against it, for example a refutation (§4.7) or a counterexample (§14.7).
 
 For one statement with several pieces: a yes from one and a no from another is a conflict; a yes with no no is yes; a no with no yes is no; where no piece gives yes or no the reading is unknown, with what each piece that gave unknown is missing. `[decided]`
 Grounded support. A positive reading needs finite, grounded support. When following one chain of support would revisit the same claim at the same site, under the same bound and store state, that chain supplies no support from itself. This gives nothing from that route, not a no for the claim. Other pieces are still read: independent grounded support can give yes, and admitted yes and no still give conflict. If no piece gives yes or no the reading remains unknown, with the unresolved support identified. An assumption allowed by name remains an assumption (§1.43, §3.5, §4.13): permission to assume it is not evidence that makes it yes. The reader distinguishes an unfinished support chain from completed readings in their context, and a result that depends on the unfinished chain is not reused as an unconditional reading of the claim under §5.2. `[decided]` Illustration: with only "$P$ if $Q$" and "$Q$ if $P$" as evidence, each chain comes back to its own claim, so both read unknown; a separate proof of $Q$ then grounds $P$.
@@ -1661,9 +1661,9 @@ A run counts as Close only if it is a run of one fixed program on a description 
 
 It concludes what §13.10 allows and no more: the tracking clauses for every finite term over those generators, on the relation given. That the representation's own naming relation is the relation given is part of $D$ and is checked. It is one more trusted text, or one more entry of the obligation generator for tracking clauses; the count in §13.2 goes up either way. `[proposed]`
 
-Its test has six cases it must refuse: a table fitted to answers where the real operation differs; a start clause applied only after removal; a tracker with an outcome the meaning lacks; one name for every natural number; a tracker that agrees with a made-up question and not the real one; a table that is not the representation's own relation. Run: one fixed first-order program over a registry, on eighteen descriptions: five accepted and thirteen refused, the six among them, each at its own stage. The finite trial checked 45 definitions and 352 obligations, with no unknown verdict. An independent recount with a separate interpreter agrees (§23.2 row 26). The registry, with its covering facts and where they come from, is a trusted input of that test, and its fuel is not the meter of §15.1. Not done: arbitrary descriptions, covers without end, failures as outcomes, a second build. `[proposed]`
+Its test has six cases it must refuse: a table fitted to answers where the real operation differs; a relation that passes only because a start clause changed it after removal, by removing or adding pairs, and removal did not run again; a tracker with an outcome the meaning lacks; one name for every natural number; a tracker that agrees with a made-up question and not the real one; a table that is not the representation's own relation. Run: one fixed first-order program over a registry, on eighteen descriptions: five accepted and thirteen refused, the six among them, each at its own stage. The finite trial checked 45 definitions and 352 obligations, with no unknown verdict. An independent recount with a separate interpreter agrees (§23.2 row 26). The registry, with its covering facts and where they come from, is a trusted input of that test, and its fuel is not the meter of §15.1. Not done: arbitrary descriptions, covers without end, failures as outcomes, a second build. `[proposed]`
 
-The negative control says “a start clause applied only after removal” without specifying a direction. The finite procedure puts backward starts into its initial relation and checks forward starts after removal (§14.5). Open: how the undirected refusal is to be read with that explicit forward check. `[open]`
+
 
 ### Checked guarantees and strict builds
 
@@ -1742,7 +1742,7 @@ For finite systems both forms are inequalities between tables of true and false.
 
 $$\text{forward:}\ \ R^{\top} \tilde F \le F R^{\top} \qquad\qquad \text{backward:}\ \ \tilde F R \le R F$$
 
-Each is kept when two operations are put in sequence, so each holds for every finite sequence. The calculation, which uses only that the Boolean product is monotone: $R^{\top} \tilde F_1 \tilde F_2 \le F_1 R^{\top} \tilde F_2 \le F_1 F_2 R^{\top}$ forward, and $\tilde F_1 \tilde F_2 R \le \tilde F_1 R F_2 \le R F_1 F_2$ backward; induction on the length gives every finite sequence. The greatest relation that passes is computed by removal, and the start clause takes part from the first step.
+Each is kept when two operations are put in sequence, so each holds for every finite sequence. The calculation, which uses only that the Boolean product is monotone: $R^{\top} \tilde F_1 \tilde F_2 \le F_1 R^{\top} \tilde F_2 \le F_1 F_2 R^{\top}$ forward, and $\tilde F_1 \tilde F_2 R \le \tilde F_1 R F_2 \le R F_1 F_2$ backward; induction on the length gives every finite sequence. The greatest relation that passes is computed by removal. A start clause that removes pairs (B1) takes part from the first step, or removal runs again after it; a start clause that asks for pairs (F1) is checked on what removal leaves, and a check made only before removal is not enough.
 
 *Backward.* Begin with the pairs $(n, w)$ such that, for every start case $c$ and every argument $a$ whose start name $\tilde c(a)$ is $n$, $w$ is an outcome of $c(a)$, as B1 of §3.8 has it. A name that is no start name begins paired with every value. Remove $(n', w)$ whenever some step on names from $n$ to $n'$ has no step on values to $w$, with the same observation, from a value still paired with $n$. Repeat until nothing is removed, and begin again after any further restriction. Then each name that must be reached needs at least one value.
 
@@ -1750,7 +1750,7 @@ Each is kept when two operations are put in sequence, so each holds for every fi
 
 In both forms the steps are those of the real generators, at every argument and outcome (§13.10), and a pair is of whole configurations (§3.9). The result is for the steps and the scope named. `[proposed]`
 
-The general removal rule says the start clause takes part from the first step. The direction-specific forward procedure above checks its start clause at stability. The finite trials found six bad relations in 48 cases when the start clause was applied only after removal. The count gives no direction for those cases (§23.2 row 8). The scope of the unqualified negative control remains open (§13.12). `[open]`
+The finite trials found six bad relations in 48 cases when the start clause was applied only after removal. The count gives no direction for those cases (§23.2 row 8).
 
 Case, direction of the forward form: one name, one value, a meaning that gives only 0 and a tracker that gives 0 or 1. A removal that matches the steps on values keeps the pair, and the tracker gives 1 where the meaning cannot. `[proposed]`
 
@@ -2682,7 +2682,6 @@ Each question below is unresolved in its stated scope. `[open]`
 - What contract must the first-call loader meet? (§12.4)
 - Should fixed build slots take unit jobs by the loss each avoids? The proposal’s two sources could not be checked. (§22.6)
 - When the trusted texts are written, is Close counted with the case split, in slice 2, or as an eighth text? (§§13.2, 13.12)
-- Is Close’s refusal of a start clause applied only after removal specific to the backward direction, given the forward check on the remaining pairs? (§§13.12, 14.5)
 - Which concrete bytes name a starting state in a run record and in Eval? (§§13.7, 17.2–17.3)
 - How does an externally written evaluator value map to its interned node? (§15.2)
 - What is the byte form of a choice name, alternative count and case number? (§16.2)
