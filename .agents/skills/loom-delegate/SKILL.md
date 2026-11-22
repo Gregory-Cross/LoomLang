@@ -73,8 +73,8 @@ Owner model preferences (moved from AGENTS.md, 2026-11-09). GPT-6 models only:
 |---|---|---|
 | `gpt-6-luna` | Not used until a new version (owner, 2026-11-10) | none |
 | `gpt-6.1-terra` | Default for cheap subagents and bounded mechanical work: `low` for purely rote work, `medium` where anything could go wrong | `low`, `medium`, `high` |
-| `gpt-6.1-sol` | Default workhorse: coding, tracing, specs and reviews. Raise effort with complexity | `low` to `max`, `ultra` |
-| `gpt-6-astra` | Hardest reasoning, planning, debugging, architecture and proofs; or when speed matters | `high`, `xhigh`, `max`, `ultra` |
+| `gpt-6.2-sol` | Default workhorse: coding, tracing, specs and reviews. Raise effort with complexity | `low` to `max`, `ultra` |
+| `gpt-6.2-astra` | Hardest reasoning, planning, debugging, architecture and proofs; or when speed matters | `high`, `xhigh`, `max`, `ultra` |
 
 Prefer Sol two or three effort levels higher over Astra: it is competitive, just
 slower. Use Astra when other critical work is waiting. A child follows the rule of
