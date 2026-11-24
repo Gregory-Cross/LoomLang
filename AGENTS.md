@@ -8,6 +8,18 @@ Lesson (owner): a well-made spec is easy to treat as dogma. Team spent a day eng
 When a rule, number or limit blocks progress, ask where it came from, whether it is derived or a placeholder, and what changing it would cost; take that to Claude A before building around it
 Sunk costs are SUNK, don't let them influence your thinking or decisions
 
+**Formalism first** (owner, 2026-11-23)
+Primary materials need not cater to the owner: owner-facing summaries are far cheaper than missing formalism and precision on the thing itself
+At the start of a document, define each computer-science-only word in a few mathematical words if one definition fits all its uses (for example, "interface")
+
+**Always be on the lookout for new ideas and better methods** (owner, 2026-11-23)
+A card's steps are a floor, not a ceiling: do them, and keep watching for ideas nobody asked for
+An idea need not concern your card: something seen while checking a proof may matter for the optimizer, the trusted checker, the explorer, the web-chat prompts or the team's tools; say where it would go
+Watch how the work is done as closely as the work: a trick that saves one task may save a hundred. Examples include how cards are written and bound, how a draft passes from author to reviser to reviewer, how checks are designed (the cheapest check that would catch a fault), how evidence is gathered and sealed, how outside replies are read and prompted, what a script could do instead of an agent, where usage or time goes for little return, and where a rule costs more than it saves
+When a fix works in one place, ask where else the same pattern appears
+Every HANDOFF also has one `New ideas:` line beside its `Lessons:` line: a short PROPOSED list, each with where it applies and what it would change, or `New ideas: none`
+Card writers state the goal and leave room: a checklist-only card gets only the checklist back
+
 ## Scope and authority
 
 New session: check HEAD, status and your lane's latest hash-bound HANDOFF; for team status run `python -B C:\Users\grego\mods\loom-status\status.py` (generated and operational only: the repository and HANDOFFs win)
