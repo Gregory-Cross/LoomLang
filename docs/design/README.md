@@ -1,6 +1,6 @@
 # Design
 
-Use [DESIGN.md](DESIGN.md) for all current design work. It is the reviewed technical design R5: R4 with Codex D's fuel text, the owner's fuel and emission decisions of 2026-11-22, and Codex C's review fixes. The R25 row records its earlier adoption. The SHA-256 column identifies the named sources under `C:\Users\grego\.codex\reviews\`. The schema citation for `HOW-WE-SPECIFY.md` refers to the archived report.
+Use [DESIGN.md](DESIGN.md) for all current design work. It is technical design R6, which applies the owner's construction-shortfall decision of 2026-11-25 to §§15.9 and 15.12. The reviewed R5 combined R4 with Codex D's fuel text, the owner's fuel and emission decisions of 2026-11-22, and Codex C's review fixes. The R25 row records its earlier adoption. The SHA-256 column identifies the named sources under `C:\Users\grego\.codex\reviews\`. The schema citation for `HOW-WE-SPECIFY.md` refers to the archived report.
 
 | File | Source package and file | SHA-256 | Review |
 |---|---|---|---|
