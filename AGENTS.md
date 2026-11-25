@@ -1,12 +1,13 @@
 # Loom repository guidance
 
-Facets are our "dimensions" of what was Type
+Facets are our "dimensions" of what was Type; Loom has no types: say sort, theory, model and carrier, as DESIGN.md does
 
 **Question assumptions, question the spec**
 
 Lesson (owner): a well-made spec is easy to treat as dogma. Team spent a day engineering around an arbitrary limit nobody had derived
 When a rule, number or limit blocks progress, ask where it came from, whether it is derived or a placeholder, and what changing it would cost; take that to Claude A before building around it
 Sunk costs are SUNK, don't let them influence your thinking or decisions
+Before proposing or endorsing a rule or fix that feels obvious, name its premise, try to break it with the smallest case, and write at least three other answers (refuse the case; it does not arise; question the terms) before giving a lean; a finding and its fix are separate claims
 
 **Formalism first** (owner, 2026-11-23)
 Primary materials need not cater to the owner: owner-facing summaries are far cheaper than missing formalism and precision on the thing itself
@@ -46,6 +47,7 @@ Filenames, timestamps and old assistant reports are not authority
 Deliverables go in fresh dated folders `C:\Users\grego\.codex\reviews\YYYY-MM-DD-<AGENT>-<TOPIC>`, each with HANDOFF.md and SHA-256 input and output bindings; write OUTPUT_BINDINGS.json last
 Never edit a delivered folder; add `-R1`, an addendum or an erratum
 Label claims SOURCE, INFERENCE or PROPOSED
+Never type a time or a hash: take each time from the clock (an owner decision's from its record line's own timestamp) in the same command or script that writes it, and each hash from a hash command run in the same turn; correct a wrong one by appending, never by editing
 Reviewers verify with their own finite checks, never by running the author's scripts
 Preserve line endings; don't convert LF/CRLF
 Stop after delivering unless a continuation card names the next task, the owner pointed to or pre-approved it, it is independent of the work just delivered, and no review gate, owner decision, conflicting finding or source drift intervenes

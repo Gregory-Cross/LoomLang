@@ -29,7 +29,7 @@ AGENTS.md lets a session assigned a card delegate one level, unless the card for
   - checking a list of citations against their sources;
   - mechanical tables or file sets built by exact rules.
 - **Keep:** the final verdict, findings you will sign, owner or authority questions, and an independent review the card gives you. A child may gather evidence or draft a part for these, but the judgment and the check stay yours. Also keep anything you could finish faster than you could brief it.
-- **Model:** set both model and effort on every spawn, because the fallback is Sol `xhigh`.
+- **Model:** set both model and effort on every spawn, with an exact model ID from the table below: `gpt-6.2-sol`, `gpt-6.2-astra` or `gpt-6.1-terra`. The spawn list also offers previous generations (`gpt-6.1-sol`, `gpt-6-astra`, `gpt-6-sol`, `gpt-6-luna` and older); never use them, and never ask for a bare "Sol" or "Astra" (owner, 2026-11-24: helpers asked for as "Sol" ran on `gpt-6.1-sol`).
   - Mechanical work: `gpt-6.1-terra` at `low` when it is purely rote, at `medium` when anything in it could go wrong, and at `high` when the rules are intricate. Don't use `gpt-6-luna` (owner, 2026-11-10: not until a new version).
   - A part that needs your judgment: your own model, at your effort or one level up. **Rule of thumb (owner, 2026-11-10): same model, at most one effort level up, or send it back to Claude A.**
   - If a pair is refused, do the work yourself and say so; never substitute silently.
@@ -75,6 +75,8 @@ Owner model preferences (moved from AGENTS.md, 2026-11-09). GPT-6 models only:
 | `gpt-6.1-terra` | Default for cheap subagents and bounded mechanical work: `low` for purely rote work, `medium` where anything could go wrong | `low`, `medium`, `high` |
 | `gpt-6.2-sol` | Default workhorse: coding, tracing, specs and reviews. Raise effort with complexity | `low` to `max`, `ultra` |
 | `gpt-6.2-astra` | Hardest reasoning, planning, debugging, architecture and proofs; or when speed matters | `high`, `xhigh`, `max`, `ultra` |
+
+No other model: a model the spawn list offers but this table does not name is not used.
 
 Prefer Sol two or three effort levels higher over Astra: it is competitive, just
 slower. Use Astra when other critical work is waiting. A child follows the rule of
