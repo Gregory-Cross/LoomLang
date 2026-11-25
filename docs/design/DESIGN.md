@@ -29,7 +29,7 @@ A worked example that begins "Case:" belongs to the design and has the standing 
 ### 0.3 Names
 
 - **SRE** stands for Structural Representation Explorer (§20).
-- **LoomLab** is the lab, a client of the SRE. It seeks mathematical signals and connections for hard problems. A fit can have value in its own right. `[decided]`
+- **SkeinLab** is the lab, a client of the SRE. It seeks mathematical signals and connections for hard problems. A fit can have value in its own right. `[decided]`
 - **The optimizer** is the compiler's optional optimization paths (§20.1). The SRE serves both clients. One way the optimizer may optimize is to compute an already defined answer more cheaply. Any claim of a cost advantage needs a workload and a comparison. `[decided]`
 - **Facets.** The design retains five views used to describe a term (§1.59). `[decided]` The proposed account distinguishes meaning, effects, usage, representation and evidence. Their checks can depend on one another. `[proposed]`
 - **The backend.** For now, generated C is the route to qualify for the first compiled demonstration. `[decided]` For the long-term native Windows x64 checked path, prefer a simple emitter from the checked low-level form (§10.5). Require independent per-build validation of the final executable bytes against that form, under explicit machine, loader, ABI, runtime and resource contracts. An alternative producer may satisfy the same check. Claim only the covered form-to-machine step. The targets come in this order: x86-64 first, Arm next on the same scheme, and GPUs later, for bounded kernels only. `[decided]` Return the choice to the project owner if qualification of the C route fails at a stage, if a build during a run in slice 2 proves too costly under C, or when the second target of slice 5 is planned. Revisit the producer choice if a restricted existing backend meets the same contract at lower total cost, or if the checker or runtime boundary cannot be kept reviewable. `[decided]`
@@ -102,7 +102,7 @@ These conventions apply across sections. Variables bound by a formula and abbrev
 **Part V. The plan, the explorer and the optimizer**
 
 - [§19 The first five slices](#ch-19)
-- [§20 The SRE, LoomLab and the optimizer](#ch-20)
+- [§20 The SRE, SkeinLab and the optimizer](#ch-20)
 
 **Part VI. Open matters and evidence**
 
@@ -834,7 +834,7 @@ It is an ordinary statement that names what is drawn ($x$), by what law ($\mathc
 
 **§4.18 Scores.**
 A score, whether a code length under a named decoder with every part counted, a cost, a worth or an estimate, is a note recorded with its method (§20.2). It orders proposals inside a set that exact checks have already fixed. It gives the one claim that this program returned this number on these bytes. Entropy is said only of a distribution that is itself a term. `[decided]`
-LoomLab can keep the score with its method as an observation and investigate what it predicts. Any claim about that prediction states its scope and evidence. `[proposed]`
+SkeinLab can keep the score with its method as an observation and investigate what it predicts. Any claim about that prediction states its scope and evidence. `[proposed]`
 
 **§4.19 Distortion, laws of draws and sample guarantees.**
 These three questions have different standings. `[proposed]`
@@ -1612,7 +1612,7 @@ Only the rows below belong to the trusted base (§14.1). `[decided]` The hash-pr
 A rendering shows a run that is bound once apart from code that stands at two places. Under §8.3 those are two programs: the second consumes twice where the first consumes once. `[decided]` Open: which form the checked correspondence takes after slice 1. `[open]`
 
 **§13.4 Not trusted.**
-The elaborator, the planner, every proposer and solver, the passes, the assembler, the SRE, LoomLab, the optimizer, and agents. The two theorems of §14.2 and §14.4 are results with manifests. Until they are proved, evidence for the one program serves: a derivation from slice 4 on, and before that the lowering is named in the manifest. `[decided]`
+The elaborator, the planner, every proposer and solver, the passes, the assembler, the SRE, SkeinLab, the optimizer, and agents. The two theorems of §14.2 and §14.4 are results with manifests. Until they are proved, evidence for the one program serves: a derivation from slice 4 on, and before that the lowering is named in the manifest. `[decided]`
 
 **§13.5 Three routes for a fact established by a run.**
 Replay defines evidence. The second route is the default for flat work, and the manifest names the route taken. `[decided]` The project owner reported the measurements below for generated proofs of two shapes, long lists of clauses and trees.
@@ -2256,29 +2256,29 @@ Proposed matched separator case for the full optional planner: at the first slic
 After these come the real numbers with enclosures, parallel schedules licensed by exchange laws, hosted foundations, file formats and their migration, the compiler written in Loom, and a rehearsal of changing the foundation. `[decided]`
 
 **§19.13 Where the SRE enters.**
-The current slice order stands, finite cases can inform the interfaces, and an early SRE build is ruled out. `[decided]` Open, for the project owner: the SRE's later placement. The suggestion to place the SRE just after slice 3 rests on that slice providing runs, covering facts and forward representations for finite objects. A second suggested order places the SRE and LoomLab after slice 5. Substitution by a law is in slice 2 and the planner in slice 5 whichever is chosen, so neither waits on this choice. `[open]` Before any SRE building starts, put an externally checkable finish line for each planned stage to the project owner. `[proposed]`
+The current slice order stands, finite cases can inform the interfaces, and an early SRE build is ruled out. `[decided]` Open, for the project owner: the SRE's later placement. The suggestion to place the SRE just after slice 3 rests on that slice providing runs, covering facts and forward representations for finite objects. A second suggested order places the SRE and SkeinLab after slice 5. Substitution by a law is in slice 2 and the planner in slice 5 whichever is chosen, so neither waits on this choice. `[open]` Before any SRE building starts, put an externally checkable finish line for each planned stage to the project owner. `[proposed]`
 
 Proposed finish check for the first SRE stage, the counting demonstration: from graph-colouring counts and boundary gluing, build the census table, its rank and algebra, check a minor as §20.9 proposes, seek the addition-contraction identity, find a closure witness against storing only the count, and search for an equality gadget with a checked readout. Each result names its parameters, census and evidence; a black box needs the link of §20.7 before a claim reaches beyond the answers recorded. A census identity remains a conjecture about all graphs until proved; remembered rank and cross-domain claims await checked imports. Its scaling test runs the pipeline on ten parameters on small graphs, recording sizes, budgets and how many yield an interpretable algebra. It runs at the first SRE stage chosen, whose place is open (not run). `[proposed]`
 
-A LoomLab result here can be an algebra, identity, witness or checked gadget with its stated scope. The count of cases yielding an interpretable algebra measures LoomLab's mathematical results. Recovering meanings from a fit can be a research result in its own right. `[proposed]` The separate storage-cost study, including whether fewer structure constants reduce cost, is deferred until the compiler is close to finished and the SRE-based optimizer is partly built (deferral). `[decided]`
+A SkeinLab result here can be an algebra, identity, witness or checked gadget with its stated scope. The count of cases yielding an interpretable algebra measures SkeinLab's mathematical results. Recovering meanings from a fit can be a research result in its own right. `[proposed]` The separate storage-cost study, including whether fewer structure constants reduce cost, is deferred until the compiler is close to finished and the SRE-based optimizer is partly built (deferral). `[decided]`
 
 Bring finite cases when slice 3 meets its finish check and in any case before drafting the slice 5 proposer queries, planner and crossing record. `[decided]` The proposed second client for those interfaces uses a black box, an experiment table, a census and refutations found by question. `[proposed]`
 
 <a id="ch-20"></a>
 
-## 20. The SRE, LoomLab and the optimizer
+## 20. The SRE, SkeinLab and the optimizer
 
 ### Names, notes and roles
 
 **§20.1 Names.**
-SRE is the Structural Representation Explorer, the part that builds and checks representations. It is shared infrastructure for two clients: LoomLab, a metaprogram that is not part of the compiler, and the compiler's optional optimization paths, called the optimizer until the project owner names them. The plain path always runs without the optimizer. `[decided]`
+SRE is the Structural Representation Explorer, the part that builds and checks representations. It is shared infrastructure for two clients: SkeinLab, a metaprogram that is not part of the compiler, and the compiler's optional optimization paths, called the optimizer until the project owner names them. The plain path always runs without the optimizer. `[decided]`
 
 **§20.2 Notes.**
 A note is shared tool metadata recording the nodes it is about, its kind, its method and its content. Estimates and samples record estimated or measured information. Candidates and proposals offer something to be checked and are a main result of a proposer. A note may stand alone, as a candidate theory does. `[decided]`
-Uses: the SRE and LoomLab keep candidates and proposals from their searches as notes (§5.3, §5.6, §20.3); the optimizer uses scores with their methods to order proposals inside a set already fixed by exact checks (§4.18); the estimated benefit passed to the compiler or to a person is a note (§20.25); tests of the trusted base keep the damaged-certificate corpus result as a note (§13.6). §4.1 gives the rule for every note. `[proposed]`
+Uses: the SRE and SkeinLab keep candidates and proposals from their searches as notes (§5.3, §5.6, §20.3); the optimizer uses scores with their methods to order proposals inside a set already fixed by exact checks (§4.18); the estimated benefit passed to the compiler or to a person is a note (§20.25); tests of the trusted base keep the damaged-certificate corpus result as a note (§13.6). §4.1 gives the rule for every note. `[proposed]`
 
 **§20.3 Roles and trust.**
-The SRE builds, checks and combines representations of objects. LoomLab uses the SRE to find questions, laws and theories. Both are libraries and proposers over the store. Neither is trusted: whatever either establishes is a claim that a kernel program checked. Nothing in the rest of the design is specific to them, and the compiler is the first client of every construct they use. `[decided]`
+The SRE builds, checks and combines representations of objects. SkeinLab uses the SRE to find questions, laws and theories. Both are libraries and proposers over the store. Neither is trusted: whatever either establishes is a claim that a kernel program checked. Nothing in the rest of the design is specific to them, and the compiler is the first client of every construct they use. `[decided]`
 
 ### What the SRE takes and returns
 
@@ -2293,7 +2293,7 @@ The SRE builds, checks and combines representations of objects. LoomLab uses the
 | A width or a distortion for this object | The kernel, or a checker in exact arithmetic | The definition of the measure | Use the answer at that width |
 | An estimate | Nobody | Nothing | Nothing: it guides search only |
 
-Each row of the table has this standing. `[decided]` LoomLab may report an observation or use it to choose a further experiment, with its method and scope. `[proposed]`
+Each row of the table has this standing. `[decided]` SkeinLab may report an observation or use it to choose a further experiment, with its method and scope. `[proposed]`
 
 **§20.5 Trial at the first extension that supplies evidence to an existing consumer.**
 Offer a lower bound where the consumer asks for exactness, and an exact certificate for the wrong revision; use the claim and site check already in force if they tell the two apart. An obstacle of relational expressivity goes to the comparison of foundations that §1.61 to §1.63 leave open. `[proposed]`
@@ -2318,7 +2318,7 @@ For summaries of dimension $d$ whose answer on a gluing factors as $f(\mathrm{gl
 ### Sheets; coarsest and cheapest
 
 **§20.10 What comes out.**
-For each representation, a sheet with one line for each question already named; LoomLab can also keep a fit or a newly suggested question as a candidate note. A line says whether the answer is exact, within a width, one-sided or not given; it carries the claim and its cost, and says so when it tells the reader nothing. A refutation is a set of values with one name and no common answer, kept with the class of realisers it rules out. Also returned: the coarsest representation that still answers a given set of questions, found by refinement and checked clause by clause. `[decided]`
+For each representation, a sheet with one line for each question already named; SkeinLab can also keep a fit or a newly suggested question as a candidate note. A line says whether the answer is exact, within a width, one-sided or not given; it carries the claim and its cost, and says so when it tells the reader nothing. A refutation is a set of values with one name and no common answer, kept with the class of realisers it rules out. Also returned: the coarsest representation that still answers a given set of questions, found by refinement and checked clause by clause. `[decided]`
 Checked clause by clause, a representation is shown sound, not coarsest: one with a spare name passes every clause. That it is coarsest is a statement of its own and needs a claim that a kernel program checked (§20.3); without one the sheet does not say coarsest. Where a question has several right answers, exact on a line means the answer given is one of them (§3.2), and the line's claim says so. `[proposed]`
 Open: which claim says that a representation is coarsest; it is not chosen here. `[open]`
 
@@ -2351,11 +2351,11 @@ What a line of a sheet says (exact, within a width, one-sided, refuted or nothin
 **§20.17 When accumulated reports are complete.**
 At the first reusable domain with §4.2, consider: "A domain merge records the question, scope and evidence of its inputs. Its completion test requires a consistent, certified answer." Try an inconsistent pair, two distinct existential witnesses, and claims with disjoint assumptions. Report the support for a conflict separately from completion, and distinguish a budget stop from a certified result. `[proposed]`
 
-### LoomLab
+### SkeinLab
 
-**§20.18 LoomLab's loop.**
-Exploration proposes laws and theories through the candidate-theories query, as §5.6 ranks it when that passage's test condition is met. The query for which unknown claims would give a goal proposes what to settle. Worth ranks both. LoomLab's first duty is finding questions: what the representations distinguish on a census. `[decided]`
-The provisional ranking concerns relevance to open goals under §5.6 and its test. A fit may also reveal a common structure or suggest which answer to try. Report what was observed and on which instances. LoomLab looks for mathematical signals and connections that help find answers otherwise out of reach on hard problems such as the travelling salesman problem. A signal or connection may be a research result in its own right; a claim of cheaper computation needs a workload and a cost comparison. `[proposed]`
+**§20.18 SkeinLab's loop.**
+Exploration proposes laws and theories through the candidate-theories query, as §5.6 ranks it when that passage's test condition is met. The query for which unknown claims would give a goal proposes what to settle. Worth ranks both. SkeinLab's first duty is finding questions: what the representations distinguish on a census. `[decided]`
+The provisional ranking concerns relevance to open goals under §5.6 and its test. A fit may also reveal a common structure or suggest which answer to try. Report what was observed and on which instances. SkeinLab looks for mathematical signals and connections that help find answers otherwise out of reach on hard problems such as the travelling salesman problem. A signal or connection may be a research result in its own right; a claim of cheaper computation needs a workload and a cost comparison. `[proposed]`
 
 **§20.19 First joint-view case.**
 Where two observations together answer a question, the account may give a pair of inputs for each observation alone. That observation agrees on the pair while the requested answers differ. The reconstruction specifies which observations it uses. `[proposed]`
@@ -2364,13 +2364,13 @@ Where two observations together answer a question, the account may give a pair o
 At the first SRE stage for finding questions, compare the kernels of functional invariants on one named census. Equal kernels suggest equivalence; a strict refinement suggests a map from finer names to coarser names to synthesise and check; incomparable kernels give a separating pair in each direction and a joint-view candidate. Keep their kernel-inclusion order as a candidate catalogue. Each statement carries that census as its scope; beyond it, it is a conjecture until further evidence is checked (not run). `[proposed]` In symbols, for invariants $h_i$ on one census $C$ the kernel is $x \sim_i y \iff h_i(x) = h_i(y)$: $\sim_i\ =\ \sim_j$ suggests equivalence, and $\sim_i\ \subsetneq\ \sim_j$ a map from the names of $h_i$, the finer, to those of $h_j$.
 
 **§20.21 Held-out sets.**
-A held-out set is reached only through the operations of a named protocol, and a claim about inputs outside it cites that protocol's theorem. Where no theorem covers the path taken, LoomLab reports what was observed and no more. (the rule; apart from the counting of looks in §9.15) `[decided]`
+A held-out set is reached only through the operations of a named protocol, and a claim about inputs outside it cites that protocol's theorem. Where no theorem covers the path taken, SkeinLab reports what was observed and no more. (the rule; apart from the counting of looks in §9.15) `[decided]`
 Owed: the test of the mechanism for held-out sets: the set is a use-once value of a hidden sort $S$ whose signature is the protocol's operations; the use-once check then holds every client to the protocol, and a protocol that allows a second look hands back a new value to look with (to test). `[proposed]`
 
 **§20.22 Assessing a later research method.**
-At the first authorized later research client using an exact classification, check both maps and one client operation. Compare with the false inference that groups of equal size have the same operations. For the first learned-policy comparison, report warranted findings from fresh searches under one allowance. A mathematical result states its scope and evidence; a saving needs its workload and comparison. When a LoomLab method first combines advice from several views, establish common meaning and equal disclosure; record lineage and adaptive looks. For each conclusion link the signal, alternatives, budget and decision to the relevant evidence (feasibility, optimality, completeness, approximation or a new population). Compare against advice derived from a shared source. At the first disagreement-selected probe, record its question, budget and the outcome that would change the explanation. Under the same disclosure and lineage conditions, match the budget against a control, such as reversing order or retaining every candidate. Later branch removal needs checked coverage (§20.36). `[proposed]`
+At the first authorized later research client using an exact classification, check both maps and one client operation. Compare with the false inference that groups of equal size have the same operations. For the first learned-policy comparison, report warranted findings from fresh searches under one allowance. A mathematical result states its scope and evidence; a saving needs its workload and comparison. When a SkeinLab method first combines advice from several views, establish common meaning and equal disclosure; record lineage and adaptive looks. For each conclusion link the signal, alternatives, budget and decision to the relevant evidence (feasibility, optimality, completeness, approximation or a new population). Compare against advice derived from a shared source. At the first disagreement-selected probe, record its question, budget and the outcome that would change the explanation. Under the same disclosure and lineage conditions, match the budget against a control, such as reversing order or retaining every candidate. Later branch removal needs checked coverage (§20.36). `[proposed]`
 
-**§20.23 Four-city paper example, for the next LoomLab investigation commissioned by the project owner.**
+**§20.23 Four-city paper example, for the next SkeinLab investigation commissioned by the project owner.**
 A symmetric complete graph on $A = (0,0)$, $B = (4,0)$, $C = (4,3)$, $D = (0,3)$, the rectangle kept fixed. For $0 \le \lambda \le 3$ the costs are $AB = 4 + \lambda$, $CD = 4$, $AD = BC = 3$, $AC = BD = 5$. The rectangle fit gives exact distances at $\lambda = 0$ and an edge error of $\lambda$ on $AB$ thereafter. Each undirected tour omits a perfect matching, and every omitted matching gives one tour; tour cost = total of all six edges minus the matching's weight:
 
 | Omitted matching | $\{AC, BD\}$ (perimeter) | $\{AB, CD\}$ | $\{AD, BC\}$ |
@@ -2979,9 +2979,9 @@ Controls on one line belong to the same trial. Later trials carry their triggers
 - Test held-out access through a use-once value of a hidden sort and the named protocol. A permitted second look receives a new value. Beyond observed inputs the theorem must cover the actual access path. (§20.21)
 - When an authorized later research client first uses an exact classification, check both maps and a client operation against the equal-cardinality control. (§20.22)
 - At the first learned-policy comparison record warranted findings on fresh searches under one allowance. (§20.22)
-- When a LoomLab method first combines advice from several views, compare evidence for each contribution with shared-source advice under equal disclosure. (§20.22)
+- When a SkeinLab method first combines advice from several views, compare evidence for each contribution with shared-source advice under equal disclosure. (§20.22)
 - At the first disagreement-selected probe, name the outcome that would change the explanation. Compare the probe with a budget-matched control under the same disclosure and lineage conditions. (§20.22)
-- In the next LoomLab investigation commissioned by the project owner, use the four-city example to check the tour switch and tie. Move the penalty at fixed mean error and rotate geometry under fixed axes. Compare one-tour and exhaustive budgets and record the resolver at equal cost. (§§20.23–20.24)
+- In the next SkeinLab investigation commissioned by the project owner, use the four-city example to check the tour switch and tie. Move the penalty at fixed mean error and rotate geometry under fixed axes. Compare one-tour and exhaustive budgets and record the resolver at equal cost. (§§20.23–20.24)
 - At the first checked cross-version correction, name both versions, transport and evidence. At the first concrete precision client test overlapping removals and correction under a change of coordinates. (§20.26)
 - For every system of ≤4 values with one or two operations of one hidden argument and one question with a set of right answers for each value, find the fewest names over closed partitions and over closed covers, and the greatest closed family. Repeat with one binary hidden operation. Compare every cover’s name-runs with allowed outcomes, using hand-found representations as controls. (§20.27)
 - At the first conditional rewrite using an observation algebra, compare selecting 0 before requiring 1 with filtering {0,1} first. Check which witness remains available. (§20.34)
