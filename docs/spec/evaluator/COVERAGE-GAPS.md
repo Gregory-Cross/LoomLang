@@ -1,0 +1,18 @@
+# Evaluator evidence and open gaps
+
+A *projection* is the record visible to one observer. A *witness* is evidence tied to a reached event. Presence counts whether that event emitted a witness; inclusion checks whether a projected record is allowed at the fixed start, grant and observer.
+
+| Subject | Evidence class and extent | Outstanding |
+|---|---|---|
+| [Add](ADD.md), descriptor `pilot-pair` | SOURCE · Outside-model conformance run. First case 21, then 20 single-event controls. Independent trace comparison agreed with all 42 selected public observations. An independent decoder checked 46 genuine event witnesses from the same capture, rejected 18 invalid private variants and reported both deliberately withheld selected events missing. | Project evaluator **NOT RUN**. The finite result covers only these starts, schedules, reference prices and observer choices. |
+| [Truncated subtraction](SUB.md), descriptor `sub-pair` | SOURCE · Two independent paper derivations agreed on the 28 private records and both projections per start. The comparison distinguishes width-certified, measured and unresolved demand. | Model and project execution, emitted witnesses, decoder and conformance **NOT RUN**. |
+| [FORMAL imports](IMPORTS.md) | SOURCE · E gives the operational subject. OC2 requires same-index record inclusion. Actual event presence was checked separately for the Add outside model. | O18 remains open for the project evaluator. Reverse coverage, general adequacy and implementation qualification are open. |
+
+## Relation to the historical drafts
+
+* **SOURCE / INFERENCE · EV-114 and EV-115.** For obtained Add(1,1) both result equations give 2. Historical N8 A02 costs 5 scalar units; the trial invoice is (24,2). At grant (24,1) exact sizing is reached and no debit commits. Truncated subtraction keeps the natural underflow zero. Reprice its event under the paired descriptor. Old N8 examples establish neither a paired price nor a workspace bound. [Historical evaluator rules](../RULES-EVALUATOR.md) · [Coverage](../COVERAGE-EVALUATOR.md)
+* **SOURCE / INFERENCE · EV-015, EV-027–032.** Checker exhaustion leaves its claim unknown. Retain program, admitted input, return or stopped prefix, supplied grant and executing build. Re-derive paired fields under DESIGN §§15.9 and 15.12. A replay requires the original start and descriptor. The old coverage cells carry no executed check for these mappings. [Evaluator coverage](../COVERAGE-EVALUATOR.md)
+* **SOURCE · records and comparison.** REC-007 identifies a resource stop and its evidence; REC-010 separates the comparison verdict. A permitted physical stop can leave comparison incomplete. Missing evidence alone does not establish a prohibition. Historical RUN1 C01–C16 and REC-010 C07–C09 remain proposed and NOT RUN. [Records](../RULES-RECORDS.md) · [RUN1](../RULES-RUN1.md)
+* **SOURCE · prior case inventory.** All 12 historical S-case execution statuses are NOT RUN and keep their individual premises and readiness qualifications. The Add outside run and the Sub paper cases are separate selections. [Historical cases](../S-CASES.md)
+
+**SOURCE · open work.** These rules concern one serial scope and already obtained naturals. They do not close E-3, E-18 or E-27, establish a general primitive tariff, specify a production wire format, qualify storage bounds, or make either exact field set mandatory for other exports. [Historical gaps](../GAPS-EVALUATOR.md) · [DESIGN §§3.19, 15.9–13](../../design/DESIGN.md)

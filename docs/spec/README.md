@@ -2,6 +2,8 @@
 
 **DRAFT. Nothing here is adopted.** These are byte-identical copies of the reviewed draft rules, gaps and coverage, from sealed packages under `C:\Users\grego\.codex\reviews\`. Open owner choices stay open in the gap files; decided ones are listed in `docs/design/DECISIONS.md`. The evaluator and admission files keep their original line endings, byte for byte.
 
+**Draft evaluator specification.** Under [DESIGN](../design/DESIGN.md), the [Add rule](evaluator/ADD.md) has an [outside-model conformance run](evaluator/CASES-ADD.md). The [subtraction rule and cases](evaluator/SUB.md) have independent paper derivations. The project evaluator is NOT RUN for both. The [import register](evaluator/IMPORTS.md) fixes the two FORMAL clauses used in these trials. [Coverage and gaps](evaluator/COVERAGE-GAPS.md) records what each check establishes alongside the historical drafts below.
+
 | File | Source package and file | SHA-256 | Positive review |
 |---|---|---|---|
 | `RULES-EVALUATOR.md` | `2026-11-12-CODEX-Y-EVALUATOR-RULES-R17-R2-IN-REPO\RULES-EVALUATOR.md` | `b974d98eec15b4458d1d94acce0509d039f0500aaf824fcea8b7eec2098f5868` | `2026-11-12-CODEX-O-EVALUATOR-R17-R2-WORDS-CHECK`: SOUND (evaluator rules R17-R2: Codex B's two wording repairs from `2026-11-12-CODEX-B-EVALUATOR-R17-R1-CRITIQUE-ADJUDICATION`. R-WIDEN: a later M-A profile carries no promise about admitted programs' charges until it is specified and reviewed. R-FRAME-WORDS: T is a once-per-search reservation, not the observed peak. No other byte changed). R17-R1 before it: `2026-11-12-CODEX-O-EVALUATOR-RULES-R17-R1-RECHECK`, SOUND for the changed lines |
