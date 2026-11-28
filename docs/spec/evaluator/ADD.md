@@ -17,7 +17,7 @@ Fix two obtained naturals x,y in their admitted order and exact invoice arithmet
 - **Ordinary.** Publish the natural returned or the named stop (work, construction, or controlled host interruption with its named cause), in the usual result or stop position. The public action sequence and later-readable state are empty in these fixtures.
 - **Exact opt-in.** At this boundary and the selected Add occurrence only, publish the ordinary observation plus the paired-profile meter fields specified here. Publish the debit of this event. Remaining is the available pair after commit or stop cleanup. On interruption sample the phase and outstanding reservation immediately before cleanup. At a work refusal also publish the work deficit, construction deficit image, status and bound expression. The bound construction-deficit expression on a work refusal carries or resolves to its descriptor, row, reached event, two ordered immutable operand references and effective C. Compare those bindings as opaque references. Preserve both positions even when they alias. At a construction refusal publish its exact deficit. At the controlled host stop publish the reached phase (StagedBeforeCommit for this schedule), outstanding reservation at interruption and prior committed pair. For the prefix trial, this prior pair is the componentwise sum of earlier committed debits in the shared scope immediately before the selected event. No other run-record field is bought. The fixture’s opt-in is declared and checked as part of the linked boundary.
 
-**SOURCE · sample instants.** DESIGN §15.9 identifies the last committed pair at a host stop. The selected exact observer in these fixtures buys the cumulative prior debit. The private ordered prefix retains the last debit. In case 21 the two quantities differ. Prices, the selected readings and the sampling convention have trial standing. [Case 21](CASES-ADD.md)
+**SOURCE · sample instants.** At a controlled host stop DESIGN §15.9 records the run account’s cumulative committed pair. If there was a committed event, its most recent debit is also recoverable from the record or bound evidence. The selected exact observer in these fixtures buys the cumulative prior pair. In case 21 its private ordered prefix also identifies the distinct latest debit. Prices, the selected readings and the sampling convention have trial standing. [Case 21](CASES-ADD.md)
 
 ## Evidence at the event
 
@@ -25,7 +25,7 @@ Fix two obtained naturals x,y in their admitted order and exact invoice arithmet
 
 ## Governing clauses
 
-**SOURCE.** D locators refer to the DESIGN snapshot bound in the import register. The ordinary public default, work-first order, priority on joint shortage and atomic successful commit carry their local decided standing. The candidate prices, detailed evidence and precommit cleanup retain their proposed standing. D13 governs tag scope.
+**SOURCE.** The D locators on this page refer to the current governing DESIGN edition in the import register. That register also identifies the edition used for the Add run. The ordinary public default, work-first order, priority on joint shortage and atomic successful commit carry their local decided standing. The candidate prices, detailed evidence and precommit cleanup retain their proposed standing. D13 governs tag scope.
 
 > D13 · A tag covers every sentence after the previous tag or the start of its paragraph.
 
@@ -51,4 +51,4 @@ Fix two obtained naturals x,y in their admitted order and exact invoice arithmet
 
 > D1956 · A successful event commits the exact pair, value or mutation and mandatory record together.
 
-> D1956 · A controlled host stop before commit records the outstanding reservation and the prior committed pair. It discards unpublished staging, including tentative interner entries, and releases the private reservation.
+> D1956 · A controlled host stop before commit records the outstanding reservation and the committed pair (§15.9). It discards unpublished staging, including tentative interner entries, and releases the private reservation.
