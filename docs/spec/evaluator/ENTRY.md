@@ -1,0 +1,58 @@
+# Top entry of the entry definition
+
+**PROPOSED · paired reference row.** For this trial `b2-pair` names the candidate paired prices of DESIGN §15.12 with exact integer quotation. A *start* fixes the program and input handle offered for admission, the export and its limits, the initial balances, the prior state, the schedule and the linked observer. A *site* is a place in a program where an event can occur, and a *visit* numbers the arrivals at one site within a run, from 1. An *event* is one reached transition at a site and visit. Its *price* is an ordered pair (work, construction). A *hold* reserves credit privately. A *commit* publishes an event's selected value or binding, its paired debit and its mandatory record in one step. The *starting pool* is the set of value nodes identified before execution. Let P be an admitted program whose entry definition is the unary definition `top(x) = e` with no memo mark, let v be the admitted natural input, and let k = (W,C) be the effective balances of the sole serial root scope at export `b`.
+
+## Rule and phases
+
+The top entry is the run's first event, at site `top.entry`, visit 1. Let q be its price. Under `b2-pair`, q = (1,0). Affordability q ≤ k holds when both component inequalities hold, here 1 ≤ W and 0 ≤ C, and its failure is ¬(q ≤ k).
+
+**P-Top.** If q ≤ k, the top entry pays q, binds `x` to v and evaluates the body as P-Call does:
+
+    [x := v] ⊢ e ⇓^(k − q → k′) r
+
+The run's result is then r, with remainder k′. If ¬(q ≤ k), the run's result is the allowance cut at `top.entry`, visit 1, whose reason under `b2-pair` is work, and its remainder is k. P-Top adds no judgment form. It is P-Call without argument evaluation, since the input is already admitted, and without a memo test, since `top` carries no mark. A marked entry definition is outside this page.
+
+0. **Before entry.** Outside the grant, the export's limits are resolved and the program and the input handle are admitted. Admission places each program literal in the starting pool and binds each local occurrence to its resolved parameter. An input handle is admitted only through an entry that the admission state holds for it, giving its value and validated metadata. An absent required limit, an out-of-range selection or an unresolvable profile is a configuration refusal before entry. An input or program that admission does not admit gives a pre-run refusal. Neither refusal reaches an event: there is no top entry, witness, allowance cut, debit, return or event projection. A grant of 0 on either axis is valid, so it is no configuration refusal. INFERENCE: DESIGN fixes no order between the configuration and admission checks. A start with both faults would need that order, and this page does not supply it.
+1. **Quote.** The price row supplies (1,0). The quote inspects no value, header, width or payload, and no node of the body.
+2. **W < 1**, that is W = 0. Stop for work at `top.entry`, visit 1. Record the requested pair (1,0), the balances before the attempt (0,C), the work deficit 1 and the construction deficit 0, which the price row fixes. Work is the reason. No hold, binding, body event, debit or prefix change occurs, and both balances stay as they were. The cut ends the evaluation; its caller cannot resume the entry against the same grant.
+3. **W ≥ 1.** The construction test 0 ≤ C holds for every admitted C. Hold (1,0), bind the parameter `x` to the admitted input's reference, which constructs nothing, and commit the debit (1,0) with the entry's record. Settle to (W−1,C) and enter the body under that remainder. Entering the body is not charged a second time. The run's result is the body's: returning a value that the body obtained adds no event, and a cut inside the body is reported at its own site and visit while the entry's debit stands.
+
+**Resource account (trial scope).** The quote is a constant, and the affordability test needs only whether the work balance is zero. A refusal record holds the site, visit, kind, requested pair, both deficits and references to the pre-attempt balances; it copies no value. A paid entry stages one binding, a reference to the admitted input, and constructs no value. A copy of a value that a build keeps belongs to the build's separately bounded storage, not to either price.
+
+**SOURCE · standing.** D1962 prices top entry at (1,0); the leading tag of D1970 marks that table proposed, and D1958 calls its rows candidate prices for a new reference profile. DESIGN writes no top-entry judgment, so P-Top is PROPOSED here. It follows P-Call (D1854, a display with no tag of its own), the record's "program and entry" (D1925, proposed) and the partial driver, which "reads and checks a first-order program before starting a named unary definition on a natural input" (D1898, built). The scalar development profile also charges entry one unit (D1904; D1911, built, says these figures describe that one development profile); it supplies no paired price. D1848 (proposed) fixes the paired judgment and componentwise affordability. D654 decides that 0 is a valid grant and that there is no implicit unlimited grant, and proposes the configuration refusal before entry. D1898 (built) puts reading, resolution, checking and interning before execution, outside fuel, and distinguishes a pre-run refusal in reports. The admission state's entries for input handles are this trial's PROPOSED interface; DESIGN supplies no handle format. D1888 decides that neither allowance pays the other's price and that neither is spent when the pair cannot pay; the positive work price and "Returning an already obtained value adds no event" are proposed. D1956 decides atomic commit of a successful event. D1927 decides that work is the primary reason when both components fall short; its record of the first unpaid event is proposed. D1850, D1866, D1925, the layout and copy-accounting segment of D1935, and the one-terminal-attempt sentences of D1952 are proposed. D1935’s opening construction-cell count is decided.
+
+## Common trial record
+
+**PROPOSED.** A start fixes the program and input handle offered for admission, the entry definition, build, descriptors, export and its limits, scope, initial balances, prior state, schedule and linked observer. A *witness* is evidence captured where an event actually reaches a phase. Units in a pair are ordered (work, construction). Each event of the three kinds on these pages, top entry, literal read and local read, ends in one of two phases: WorkCheck, where its quote is refused for work, or Commit. None has a size pass, and its construction test holds by the price row.
+
+Validate the start before the top entry: resolve the export's limits and admit the program and the input handle. Bind the input to its immutable reference and validated metadata, each literal occurrence to its pooled node and each local occurrence to its resolved parameter. Intern admitted natural values by content. Retain the source binding of each read in its private witness. After resolution a display name never identifies a parameter. A configuration or admission refusal prevents entry and is reported before the run. It supplies no reached-event witness, allowance cut, return or event projection.
+
+Bind each private witness to the admitted start, descriptors, actual event (definition, site, visit and kind), the source binding of a read (the literal occurrence and its pooled node, or the resolved parameter and the input reference bound to it), the scope supplying the grant, the observer and the schedule. Retain the pre-attempt balances, reached phase, requested pair, deficits on refusal, limiting scope, live and released holds, debit, settled remainder, result or stop, committed pair, request/trail prefix and held account. The witnesses of one run are ordered as their events occurred. These three transitions emit no semantic request or trail item and add no holding. A successful transition retains its mandatory commit record as recoverable evidence. A checked reference may stand for a field if the checker can recover it at this start. A zero event debit means there was no commit.
+
+The run account's committed pair is the componentwise sum of its committed debits, (0,0) for an empty account. With no outstanding hold, initial = committed + remaining for that account. The first unpaid event ends the evaluation, and earlier commits stand. A start that schedules no host interruption does not exercise the host-stop record.
+
+**PROPOSED · observers.** Run the ordinary and the linked trial-exact observer separately at export `b`. Ordinary buys the returned value or the visible primary stop in its proper position, the public actions and the later-readable state. At this boundary the latter two are empty. Trial-exact adds **only** the debit of the selected event and the available pair after that event's commit or after the run's stop cleanup. The selected event is the event at the start's selected site and visit. If that event commits nothing, because it is refused or never reached, its debit in this projection is (0,0). The entry debit, phases, requested pairs, deficits, first unpaid site, source bindings, holds, latest debit and committed pair are not additional purchases. A pre-run refusal has no projection under either observer. Compare projected records only at the same start, grant, schedule and observer. The inclusion obligation applies to actual records; independently establish that each reached event emitted evidence.
+
+**Evidence origin.** Capture each private record at its reached transition before projecting it. Bind every value, header or payload access, when present, to its reference and phase through the implementation's access boundary. PROPOSED: the quotes on these pages are constants, so a refused event needs no value, and a reference model reads none at the quote; D1954 moves any value-dependent quote work to a charged stage. Keep entry point and capture provenance separately. A self-reported no-read flag or agreement on a public result alone cannot establish private access behavior. Missing or inconsistent bindings fail validation.
+
+**SOURCE · governing DESIGN SHA-256** `6439d9cfb70cfb02457ba06a90cfea999b7535bf9ae063cd131bd18c2fa8870a`. The following excerpts retain their local standing.
+
+> D654 · $0$ is a valid grant on either axis.
+
+> D654 · An absent required value, an out-of-range selection, or an unresolvable profile is a configuration refusal before entry.
+
+> D1848 · Affordability $q\le k$ means both component inequalities.
+
+> D1854 · `\frac{\eta \vdash \vec e \Downarrow^{k \to k_1} \vec v \quad D(f,\vec v,\mu_1) \quad k_1 \ge c_{\mathsf{call}} \quad [\vec x := \vec v] \vdash e_f \Downarrow^{k_1 - c_{\mathsf{call}} \to k'} r}{\eta \vdash f(\vec e) \Downarrow^{k \to k'} r}\ \textsf{(P-Call)}`
+
+> D1888 · Spend neither if the pair cannot pay. Neither allowance can pay the other's price.
+
+> D1898 · Reading, resolution, checking, interning the input and literals before execution, and reporting are outside execution fuel.
+
+> D1925 · Name a reached event by definition, occurrence and visit, phase, and the effective boundary and limiting scope.
+
+> D1927 · At the first unpaid event, report requested work and construction, balances before the attempt, and the deficit in each known component, $\max(0,w-W)$ or $\max(0,c-C)$.
+
+> D1952 · Once a cut ends that evaluation its caller cannot resume the unpaid event repeatedly against the same grant.
+
+> D1962 · | Top entry, local read, literal read, ordinary call after its argument, or completed eligible memo hit | $1$ per indicated event. Body entry is not charged a second time for the same call. | $0$ |
